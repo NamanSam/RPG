@@ -1,8 +1,8 @@
-let csrf;
-
 export async function api(path, options = {}) {
   const method = options.method || "GET";
-  if (method !== "GET" && !csrf) csrf = await api("/auth/csrf");
+  // Cookie authentication can rotate CSRF state between requests. Never reuse a
+  // previous submission's token, including when retrying an incorrect answer.
+  const csrf = method !== "GET" ? await api("/auth/csrf") : null;
   const response = await fetch(`/api${path}`, {
     credentials: "same-origin",
     ...options,
@@ -14,7 +14,6 @@ export async function api(path, options = {}) {
   });
   const body = await response.json().catch(() => null);
   if (!response.ok) {
-    if (response.status === 403) csrf = undefined;
     const error = new Error(
       body?.message ||
         (response.status === 401
@@ -25,8 +24,4 @@ export async function api(path, options = {}) {
     throw error;
   }
   return body;
-}
-
-export function resetCsrf() {
-  csrf = undefined;
 }

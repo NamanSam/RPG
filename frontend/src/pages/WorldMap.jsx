@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { api, resetCsrf } from "../services/api";
+import { api } from "../services/api";
 import { worlds } from "../features/world-map/worlds";
 import { Npc, PixelScene } from "../features/world-map/PixelScene";
 import { GuideDialog } from "../features/world-map/GuideDialog";
@@ -22,7 +22,6 @@ export function WorldMap({ user, setUser, preview = false }) {
   const [celebrating, setCelebrating] = useState(false);
   const [unlockAnimating, setUnlockAnimating] = useState(false);
   const expired = useCallback(() => {
-    resetCsrf();
     setUser(null);
     navigate("/login");
   }, [setUser, navigate]);
@@ -96,7 +95,6 @@ export function WorldMap({ user, setUser, preview = false }) {
   async function logout() {
     try {
       await api("/auth/logout", { method: "POST" });
-      resetCsrf();
       setUser(null);
       navigate("/preview");
     } catch (e) {

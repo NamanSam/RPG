@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { api, resetCsrf } from "../services/api";
+import { api } from "../services/api";
 import { PixelScene } from "../features/world-map/PixelScene";
 
 export function AuthPage({ register = false, onAuth, serverError }) {
@@ -18,7 +18,6 @@ export function AuthPage({ register = false, onAuth, serverError }) {
         method: "POST",
         body: JSON.stringify(data),
       });
-      resetCsrf();
       onAuth(user);
     } catch (e) {
       setError(e.message);
