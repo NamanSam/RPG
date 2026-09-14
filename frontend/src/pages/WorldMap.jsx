@@ -10,6 +10,12 @@ import {
 } from "../features/quests/BeachQuestNodes";
 import { QuestDialog } from "../features/quests/QuestDialog";
 import { BeachCelebration } from "../features/quests/BeachCelebration";
+import {
+  VillageQuestNodes,
+  villagePreview,
+  MillSprite,
+} from "../features/quests/VillageQuestNodes";
+import { VillageCelebration } from "../features/quests/VillageCelebration";
 
 export function WorldMap({ user, setUser, preview = false }) {
   const [selected, setSelected] = useState(null);
@@ -70,20 +76,22 @@ export function WorldMap({ user, setUser, preview = false }) {
       totalXp: result.progress.totalXp,
       level: result.progress.level,
     }));
-    if (result.beachCompletedNow) setPendingCelebration(true);
+    if (result.completedWorld) setPendingCelebration(result.completedWorld);
   }
   function closeQuest() {
     setQuestId(null);
     if (pendingCelebration) {
       setPendingCelebration(false);
-      setCelebrating(true);
+      setCelebrating(pendingCelebration);
     }
   }
   function finishCelebration() {
+    const nextWorld =
+      celebrating === "loop-village" ? "array-forest" : "loop-village";
     setCelebrating(false);
-    setUnlockAnimating(true);
+    setUnlockAnimating(nextWorld);
     requestAnimationFrame(() => {
-      const zone = document.getElementById("loop-village");
+      const zone = document.getElementById(nextWorld);
       zone?.focus({ preventScroll: true });
       zone?.scrollIntoView({
         behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -178,11 +186,17 @@ export function WorldMap({ user, setUser, preview = false }) {
             </div>
             <div className="xp-label">
               <span>Experience</span>
-              <span>{user?.totalXp || 0} / 300 XP</span>
+              <span>{(user?.totalXp || 0) % 300} / 300 XP</span>
             </div>
             <div className="xp-track">
               <div style={{ width: `${((user?.totalXp || 0) % 300) / 3}%` }} />
             </div>
+            {user?.totalXp >= 300 && (
+              <div className="xp-total">
+                Total XP: {user.totalXp} · progress toward level{" "}
+                {user.level + 1}
+              </div>
+            )}
             {!preview && (
               <div className="beach-progress" aria-live="polite">
                 {loadingProgress
@@ -190,9 +204,15 @@ export function WorldMap({ user, setUser, preview = false }) {
                   : progress
                     ? `Beginner Beach · ${progress.beachCompleted} / 3 complete`
                     : "Progress unavailable"}
+                {progress && (
+                  <span className="village-progress-line">
+                    Loop Village · {progress.villageCompleted} / 3 complete
+                  </span>
+                )}
                 {progress?.badges.map((badge) => (
                   <span className="earned-badge" key={badge.id}>
-                    ⚑ {badge.name}
+                    {badge.id === "loop-village" ? <MillSprite badge /> : "⚑"}{" "}
+                    {badge.name}
                   </span>
                 ))}
               </div>
@@ -210,7 +230,7 @@ export function WorldMap({ user, setUser, preview = false }) {
             <h2>A world of possibilities</h2>
           </div>
           <span className="map-meta">
-            5 regions <i /> 3 playable beach quests
+            5 regions <i /> 6 playable quests
           </span>
         </div>
         <div className="map-layout">
@@ -242,7 +262,11 @@ export function WorldMap({ user, setUser, preview = false }) {
                 closer to the next region.
               </p>
               <p className="milestone-note">
-                {preview ? "Sign in to begin" : "Beginner Beach"}
+                {preview
+                  ? "Sign in to begin"
+                  : progress?.beachCompleted === 3
+                    ? "Loop Village"
+                    : "Beginner Beach"}
                 <br />
                 Three quests. One new horizon.
               </p>
@@ -251,7 +275,7 @@ export function WorldMap({ user, setUser, preview = false }) {
           <div className="world-scroll">
             {worlds.map((world, i) => (
               <section
-                className={`world-section ${world.theme} ${!isUnlocked(world) ? "zone-locked" : ""} ${world.slug === "loop-village" && unlockAnimating ? "area-unlocking" : ""}`}
+                className={`world-section ${world.theme} ${!isUnlocked(world) ? "zone-locked" : ""} ${world.slug === unlockAnimating ? "area-unlocking" : ""}`}
                 id={world.slug}
                 key={world.slug}
                 aria-label={world.name}
@@ -276,6 +300,15 @@ export function WorldMap({ user, setUser, preview = false }) {
                       } else setQuestId(id);
                     }}
                   />
+                ) : i === 1 ? (
+                  <VillageQuestNodes
+                    quests={
+                      (!preview && progress?.villageQuests) || villagePreview
+                    }
+                    worldUnlocked={!!isUnlocked(world)}
+                    busy={!preview && (loadingProgress || !progress)}
+                    onSelect={setQuestId}
+                  />
                 ) : (
                   <button
                     className="npc-node"
@@ -284,8 +317,8 @@ export function WorldMap({ user, setUser, preview = false }) {
                       setSelected({
                         ...world,
                         dialogMessage:
-                          world.slug === "loop-village" && isUnlocked(world)
-                            ? "Loop Village is unlocked! Your beach training is saved. Village quests will arrive in a later milestone."
+                          world.slug === "array-forest" && isUnlocked(world)
+                            ? "Array Forest is unlocked! Your village training is saved. Forest quests are not playable in this milestone."
                             : undefined,
                       })
                     }
@@ -323,9 +356,11 @@ export function WorldMap({ user, setUser, preview = false }) {
                       ? !preview && progress?.beachCompleted === 3
                         ? "✓ BEACH COMPLETE"
                         : "✦ START HERE"
-                      : isUnlocked(world)
-                        ? "◆ UNLOCKED"
-                        : "◇ UNDISCOVERED"}
+                      : i === 1 && !preview && progress?.villageCompleted === 3
+                        ? "✓ VILLAGE COMPLETE"
+                        : isUnlocked(world)
+                          ? "◆ UNLOCKED"
+                          : "◇ UNDISCOVERED"}
                   </span>
                 </div>
               </section>
@@ -341,7 +376,7 @@ export function WorldMap({ user, setUser, preview = false }) {
       <footer className="site-footer">
         <span>CODEQUEST RPG</span>
         <span>Made for curious minds. Built one quest at a time.</span>
-        <span>MILESTONE 02</span>
+        <span>MILESTONE 03</span>
       </footer>
       {selected && (
         <GuideDialog
@@ -359,7 +394,15 @@ export function WorldMap({ user, setUser, preview = false }) {
           onExpired={expired}
         />
       )}
-      {celebrating && <BeachCelebration onClose={finishCelebration} />}
+      {celebrating &&
+        (celebrating === "loop-village" ? (
+          <VillageCelebration
+            totalXp={progress.totalXp}
+            onClose={finishCelebration}
+          />
+        ) : (
+          <BeachCelebration onClose={finishCelebration} />
+        ))}
     </div>
   );
 }

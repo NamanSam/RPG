@@ -57,7 +57,7 @@ export function QuestDialog({ id, onClose, onResult, onExpired }) {
   return (
     <dialog
       ref={dialog}
-      className="guide-dialog quest-dialog"
+      className={`guide-dialog quest-dialog ${data?.worldName === "Loop Village" ? "village-quest-dialog" : ""}`}
       aria-labelledby="quest-title"
       onCancel={(e) => {
         if (busy) e.preventDefault();
@@ -75,7 +75,8 @@ export function QuestDialog({ id, onClose, onResult, onExpired }) {
       {data ? (
         <>
           <p className="eyebrow">
-            BEGINNER BEACH · {data.quest.difficulty.toUpperCase()}
+            {data.worldName.toUpperCase()} ·{" "}
+            {data.quest.difficulty.toUpperCase()}
           </p>
           <h2 id="quest-title">{data.quest.title}</h2>
           <div className="quest-meta">
@@ -90,13 +91,38 @@ export function QuestDialog({ id, onClose, onResult, onExpired }) {
           <p className="quest-story">“{data.story}”</p>
           <p className="quest-lesson">{data.lesson}</p>
           <form onSubmit={submit}>
-            <label className="quest-task" htmlFor="quest-answer">
+            <label
+              id="quest-task-text"
+              className="quest-task"
+              htmlFor={data.kind === "CODE_CHOICE" ? undefined : "quest-answer"}
+            >
               {data.task}
             </label>
             <pre className="quest-code">
               <code>{data.starterCode}</code>
             </pre>
-            {data.kind === "TYPE_CHOICE" ? (
+            {data.kind === "CODE_CHOICE" ? (
+              <fieldset
+                className="code-options"
+                aria-describedby="quest-task-text"
+                disabled={busy}
+              >
+                <legend>Choose your code</legend>
+                {data.options.map((option) => (
+                  <label className="code-option" key={option}>
+                    <input
+                      type="radio"
+                      name="code-answer"
+                      value={option}
+                      checked={answer === option}
+                      onChange={(e) => setAnswer(e.target.value)}
+                      required
+                    />
+                    <code>{option}</code>
+                  </label>
+                ))}
+              </fieldset>
+            ) : data.kind === "TYPE_CHOICE" ? (
               <select
                 id="quest-answer"
                 value={answer}
@@ -160,7 +186,7 @@ export function QuestDialog({ id, onClose, onResult, onExpired }) {
               )}
               {result.correct && (
                 <button className="primary-button" onClick={onClose}>
-                  {result.beachCompletedNow
+                  {result.completedWorld
                     ? "Celebrate your adventure →"
                     : "Return to the map →"}
                 </button>
@@ -171,7 +197,7 @@ export function QuestDialog({ id, onClose, onResult, onExpired }) {
       ) : (
         <>
           <h2 id="quest-title">Opening your quest…</h2>
-          <p>Unrolling Captain Byte’s instructions.</p>
+          <p>Unrolling your guide’s instructions.</p>
         </>
       )}
       {error && (
