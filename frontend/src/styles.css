@@ -1,0 +1,1207 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #e9ecdf;
+  background: #15282b;
+  font-synthesis: none;
+  font-weight: 400;
+  --muted: #9fafa7;
+  --gold: #ecc77e;
+  --ink: #172e2b;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input {
+  font: inherit;
+}
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid #fbd581;
+  outline-offset: 5px;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+button {
+  color: inherit;
+}
+::selection {
+  background: #cda865;
+  color: #132b27;
+}
+.game-shell {
+  max-width: 1600px;
+  margin: auto;
+}
+.topbar {
+  height: 86px;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 0 6%;
+  border-bottom: 1px solid #ffffff12;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font:
+    700 17px "Space Mono",
+    monospace;
+  letter-spacing: -0.8px;
+  white-space: nowrap;
+}
+.brand-icon {
+  color: var(--gold);
+  font:
+    700 23px "Space Mono",
+    monospace;
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #ecc77e80;
+  background: #243b32;
+  box-shadow: 3px 3px 0 #0e1e21;
+}
+.brand small {
+  font:
+    10px "Space Mono",
+    monospace;
+  color: var(--gold);
+  border: 1px solid #617263;
+  padding: 3px 5px;
+  margin-left: 5px;
+}
+.topbar nav {
+  display: flex;
+  gap: 30px;
+  font-size: 13px;
+  color: var(--muted);
+  height: 100%;
+  align-items: center;
+}
+.topbar nav a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.topbar nav .nav-active {
+  color: #f2d69a;
+  border-bottom: 2px solid var(--gold);
+}
+.account {
+  margin-left: auto;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 12px;
+}
+.text-button {
+  background: transparent;
+  border: 1px solid #53615a;
+  padding: 10px 16px;
+  font-size: 12px;
+}
+.text-button:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+main:not(.auth-page) {
+  padding: 0 6%;
+}
+.intro {
+  padding: 64px 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.eyebrow {
+  font:
+    10px "Space Mono",
+    monospace;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.online-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #bcd399;
+  box-shadow: 0 0 0 3px #bcd39917;
+  margin-right: 9px;
+}
+.intro h1 {
+  font-size: clamp(36px, 4.3vw, 59px);
+  line-height: 1.06;
+  letter-spacing: -2.5px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.intro h1 em {
+  font-style: normal;
+  color: var(--gold);
+}
+.intro-copy {
+  font-size: 14px;
+  color: #aebcb3;
+  line-height: 1.8;
+}
+.primary-button {
+  background: var(--gold);
+  color: #24372c;
+  border: 0;
+  border-bottom: 3px solid #a98550;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 14px 21px;
+  font-weight: 700;
+  font-size: 12px;
+  box-shadow: 3px 3px 0 #071b1c50;
+}
+.primary-button:hover {
+  background: #f6d798;
+  transform: translateY(-1px);
+}
+.intro .primary-button {
+  margin-top: 12px;
+}
+.adventure-pass {
+  width: 330px;
+  background: #21372f;
+  border: 1px solid #53624a;
+  box-shadow: 6px 6px 0 #0e2121;
+  padding: 23px;
+  position: relative;
+}
+.adventure-pass:before,
+.adventure-pass:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #899c70;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+.adventure-pass:after {
+  left: auto;
+  right: 6px;
+}
+.pass-top {
+  display: flex;
+  justify-content: space-between;
+  font:
+    9px "Space Mono",
+    monospace;
+  letter-spacing: 1.5px;
+  color: #c8c7a1;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #637152;
+}
+.pass-player {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+.portrait {
+  width: 54px;
+  height: 64px;
+  background: #334c3b;
+  border: 1px solid #617653;
+  display: grid;
+  place-items: center;
+}
+.portrait .npc-sprite {
+  width: 38px;
+  height: 53px;
+}
+.pass-player small {
+  font:
+    7px "Space Mono",
+    monospace;
+  color: #a9b698;
+  letter-spacing: 1px;
+}
+.pass-player strong {
+  display: block;
+  font-size: 17px;
+  margin: 5px 0;
+}
+.pass-player span {
+  font-size: 11px;
+  color: #bac3a9;
+}
+.xp-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #bfc6b1;
+  margin-bottom: 8px;
+}
+.xp-track {
+  background: #142820;
+  height: 8px;
+  padding: 2px;
+}
+.xp-track div {
+  background: var(--gold);
+  height: 100%;
+  transition: width 0.6s;
+}
+.adventure-pass > p {
+  font-size: 9px;
+  color: #98aa91;
+  margin: 13px 0 0;
+}
+.map-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-top: 1px solid #ffffff12;
+  padding: 28px 0 25px;
+}
+.map-heading .eyebrow {
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+.map-heading h2 {
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: -0.6px;
+  margin: 8px 0 0;
+}
+.map-meta {
+  font:
+    10px "Space Mono",
+    monospace;
+  color: #a8b4a9;
+}
+.map-meta i {
+  display: inline-block;
+  background: #a2b090;
+  width: 3px;
+  height: 3px;
+  margin: 0 9px;
+  vertical-align: middle;
+}
+.map-layout {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+.region-nav {
+  position: sticky;
+  top: 30px;
+  padding: 12px 0;
+}
+.region-nav > .eyebrow {
+  display: block;
+  font-size: 8px;
+  color: #99ab9b;
+  margin-bottom: 22px;
+}
+.region-nav > a {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 29px;
+  font-size: 12px;
+  position: relative;
+  color: #bdc7b9;
+}
+.region-nav > a:not(:nth-of-type(5)):before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 24px;
+  height: 32px;
+  border-left: 1px dashed #50634f;
+}
+.region-nav > a:hover {
+  color: var(--gold);
+}
+.region-nav a small {
+  display: block;
+  font:
+    7px "Space Mono",
+    monospace;
+  letter-spacing: 1.2px;
+  color: #829982;
+  margin-bottom: 6px;
+}
+.region-dot {
+  color: #788e76;
+  font-size: 20px;
+}
+.region-dot.current {
+  color: var(--gold);
+}
+.guide-note {
+  border-top: 1px solid #ffffff12;
+  padding-top: 23px;
+  margin-top: 16px;
+  max-width: 165px;
+}
+.guide-note > span {
+  color: var(--gold);
+  font-size: 25px;
+}
+.guide-note h3 {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+.guide-note p {
+  font-size: 11px;
+  color: #93a697;
+  line-height: 1.8;
+}
+.guide-note .milestone-note {
+  font:
+    8px/1.8 "Space Mono",
+    monospace;
+  color: #bec495;
+  margin-top: 24px;
+}
+.world-scroll {
+  border: 4px solid #344c3f;
+  box-shadow:
+    0 0 0 1px #52644b,
+    7px 7px 0 #0d2022;
+}
+.world-section {
+  position: relative;
+  aspect-ratio: 800/480;
+  isolation: isolate;
+  overflow: hidden;
+  scroll-margin-top: 20px;
+}
+.pixel-scene {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: -2;
+  display: block;
+}
+.world-section:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 12px 24px #182b3112;
+  pointer-events: none;
+  z-index: -1;
+}
+.world-caption {
+  position: absolute;
+  top: 7%;
+  left: 5%;
+  color: #354c3b;
+  padding: 14px 18px;
+  background: #f8e6b5eb;
+  box-shadow: 4px 4px 0 #806f422a;
+  border-left: 3px solid #977a48;
+  max-width: 70%;
+}
+.world-kicker {
+  font:
+    7px "Space Mono",
+    monospace;
+  letter-spacing: 1px;
+}
+.world-kicker span {
+  opacity: 0.5;
+  margin: 0 5px;
+}
+.world-caption h2 {
+  font:
+    700 clamp(16px, 2vw, 25px) "Space Mono",
+    monospace;
+  letter-spacing: -1.4px;
+  margin: 7px 0;
+}
+.world-caption p {
+  font-size: 10px;
+  margin: 0;
+  opacity: 0.8;
+}
+.npc-node {
+  position: absolute;
+  transform: translate(-50%, -10%);
+  background: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 125px;
+  padding: 5px;
+  color: #fff0c4;
+}
+.npc-sprite {
+  width: 42px;
+  height: 58px;
+  overflow: visible;
+}
+.npc-body {
+  animation: npc-idle 2.8s steps(2, end) infinite;
+  transform-origin: center bottom;
+}
+.quest-marker {
+  background: #ffe092;
+  color: #4c4c32;
+  font:
+    700 19px "Space Mono",
+    monospace;
+  width: 25px;
+  height: 28px;
+  box-shadow: 3px 3px 0 #84663b;
+  display: grid;
+  place-items: center;
+  margin-bottom: 7px;
+  animation: marker-bob 1.8s steps(4, end) infinite;
+  position: relative;
+}
+.quest-marker:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 9px;
+  width: 7px;
+  height: 5px;
+  background: inherit;
+}
+.npc-name {
+  background: #21372eee;
+  border: 1px solid #b9bf8e;
+  padding: 5px 10px;
+  font:
+    8px "Space Mono",
+    monospace;
+  white-space: nowrap;
+  box-shadow: 2px 2px 0 #17292755;
+}
+.npc-action {
+  font:
+    6px "Space Mono",
+    monospace;
+  letter-spacing: 0.7px;
+  background: #20372ede;
+  padding: 5px 8px;
+  color: #e9d5a0;
+}
+.npc-node:hover .npc-name {
+  background: #f5d086;
+  color: #263d32;
+}
+.npc-node:hover .npc-sprite {
+  filter: drop-shadow(0 0 4px #ffedab);
+}
+.world-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 4%;
+  color: #384f39;
+  background: #f8e6b5b8;
+  font-size: 8px;
+  gap: 12px;
+}
+.world-footer > span:last-child {
+  font:
+    7px "Space Mono",
+    monospace;
+  white-space: nowrap;
+}
+.zone-locked .pixel-scene {
+  filter: saturate(0.65) brightness(0.85);
+}
+.zone-locked .world-caption {
+  background: #e0ddbddc;
+  border-color: #687d67;
+}
+.zone-locked .npc-sprite {
+  filter: saturate(0.5);
+}
+.locked-marker {
+  background: #b7c3a6;
+  color: #4b645a;
+  box-shadow: 3px 3px 0 #465c50;
+  animation: none;
+  font-size: 12px;
+}
+.zone-status {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: #21372fe6;
+  border: 1px solid #a2af8766;
+  color: #d3d8b9;
+  padding: 9px 12px;
+  font:
+    7px "Space Mono",
+    monospace;
+}
+.zone-status span {
+  color: var(--gold);
+  padding-right: 5px;
+}
+.forest .world-caption {
+  background: #d3dbb5dd;
+}
+.forest .world-footer {
+  background: #b9c59fc9;
+}
+.canyon .world-caption {
+  background: #f0cba8e0;
+}
+.canyon .world-footer {
+  background: #e1b68ec9;
+}
+.kingdom .world-caption {
+  background: #dfe0c9e0;
+}
+.kingdom .world-footer {
+  background: #c9d0b6c9;
+}
+.map-end {
+  text-align: center;
+  background: #243b32;
+  padding: 35px 10px;
+  color: #cbd0ad;
+}
+.map-end > span:first-child {
+  color: var(--gold);
+  font-size: 22px;
+}
+.map-end p {
+  margin: 12px 0;
+  font-size: 15px;
+}
+.map-end > span:last-child {
+  font:
+    7px "Space Mono",
+    monospace;
+  letter-spacing: 1.5px;
+  color: #8fa68c;
+}
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 36px 6%;
+  font:
+    8px "Space Mono",
+    monospace;
+  color: #829587;
+  margin-top: 40px;
+  border-top: 1px solid #ffffff12;
+}
+.water-ripples {
+  animation: water 5s steps(4, end) infinite;
+}
+.fireflies {
+  animation: glow 3s steps(3, end) infinite;
+}
+.guide-dialog {
+  background: #f0e3bc;
+  color: #2c4436;
+  max-width: 440px;
+  width: calc(100% - 36px);
+  border: 4px solid #425642;
+  padding: 30px;
+  box-shadow: 8px 8px 0 #0a1d26;
+  overflow: visible;
+}
+.guide-dialog::backdrop {
+  background: #102627c9;
+  backdrop-filter: blur(3px);
+}
+.guide-dialog h2 {
+  font:
+    700 24px "Space Mono",
+    monospace;
+  margin: 14px 0;
+}
+.guide-dialog > .eyebrow {
+  color: #637853;
+  margin-bottom: 6px;
+}
+.guide-dialog > p {
+  line-height: 1.7;
+  font-size: 13px;
+}
+.dialog-npc {
+  margin-bottom: 15px;
+}
+.dialog-npc .npc-sprite {
+  width: 50px;
+  height: 70px;
+}
+.dialog-close {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  background: none;
+  border: 0;
+  color: #385340;
+  font-size: 28px;
+}
+.dialog-note {
+  border-top: 1px dashed #8a9874;
+  margin: 20px 0;
+  padding-top: 16px;
+  font-size: 12px;
+}
+.dialog-note span {
+  display: block;
+  font-size: 10px;
+  margin-top: 8px;
+}
+.dialog-note p {
+  line-height: 1.7;
+  margin-top: 15px;
+  color: #667453;
+}
+.guide-dialog .primary-button {
+  background: #2b5141;
+  color: #f1e5be;
+  border-color: #18372d;
+}
+.boot-screen {
+  min-height: 100vh;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.boot-screen a {
+  color: var(--gold);
+}
+.error-banner {
+  padding: 14px;
+  color: #f7b4a2;
+  text-align: center;
+}
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.auth-landscape {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 45px;
+  overflow: hidden;
+  color: #2b463d;
+}
+.auth-landscape .pixel-scene {
+  filter: brightness(0.8);
+  height: 100%;
+  width: 170%;
+  left: -35%;
+}
+.auth-landscape:after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  z-index: -1;
+  background: linear-gradient(0deg, #102e2bed, transparent 90%);
+}
+.auth-landscape > .brand {
+  color: #f6e3b6;
+  font-size: 15px;
+}
+.auth-landscape > div {
+  color: #eee8c5;
+  margin-bottom: 30px;
+}
+.auth-landscape h1 {
+  font-size: clamp(32px, 4vw, 54px);
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+.auth-landscape p {
+  font-size: 13px;
+}
+.auth-landscape .eyebrow {
+  font-size: 9px;
+}
+.auth-form-wrap {
+  padding: 40px clamp(30px, 6vw, 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 45px;
+}
+.back-link {
+  font-size: 12px;
+  color: #a8b9a9;
+}
+.auth-form-wrap form {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+}
+.auth-form-wrap h1 {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+.auth-form-wrap form > p:not(.eyebrow) {
+  color: #a6b7a6;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.auth-form-wrap label {
+  display: block;
+  font-size: 11px;
+  color: #d5deca;
+  margin: 25px 0 8px;
+}
+.auth-form-wrap input {
+  display: block;
+  margin-top: 9px;
+  width: 100%;
+  padding: 13px 12px;
+  background: #20382f;
+  border: 1px solid #526449;
+  color: #f0eac9;
+  border-radius: 0;
+  font-size: 13px;
+}
+.auth-form-wrap input::placeholder {
+  color: #81917d;
+}
+.auth-form-wrap form > small {
+  font-size: 10px;
+  color: #99a995;
+}
+.auth-form-wrap .primary-button {
+  width: 100%;
+  margin-top: 26px;
+}
+.auth-switch {
+  text-align: center;
+  margin-top: 20px;
+}
+.auth-switch a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.auth-footnote {
+  font:
+    8px "Space Mono",
+    monospace;
+  letter-spacing: 1px;
+  color: #83977f;
+}
+.auth-form-wrap form > .form-error {
+  color: #ffc2aa !important;
+  background: #623e363b;
+  border: 1px solid #b5836566;
+  padding: 12px;
+  margin-top: 18px;
+}
+@keyframes npc-idle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+}
+@keyframes marker-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes water {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(7px);
+    opacity: 0.7;
+  }
+}
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@media (min-width: 1500px) {
+  .world-caption h2 {
+    font-size: 28px;
+  }
+  .world-caption p {
+    font-size: 12px;
+  }
+  .npc-sprite {
+    width: 50px;
+    height: 69px;
+  }
+  .npc-name {
+    font-size: 10px;
+  }
+  .npc-action {
+    font-size: 8px;
+  }
+}
+@media (max-width: 1000px) {
+  .topbar {
+    gap: 25px;
+  }
+  .map-layout {
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 18px;
+  }
+  .region-nav > a {
+    font-size: 10px;
+  }
+  .world-caption {
+    padding: 10px 12px;
+  }
+  .world-caption p {
+    font-size: 8px;
+  }
+  .world-kicker {
+    font-size: 6px;
+  }
+  .world-footer {
+    font-size: 7px;
+  }
+  .world-footer > span:last-child {
+    display: none;
+  }
+  .npc-sprite {
+    width: 34px;
+    height: 47px;
+  }
+  .npc-name {
+    font-size: 7px;
+  }
+  .quest-marker {
+    width: 20px;
+    height: 23px;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .zone-status {
+    font-size: 6px;
+    bottom: 12%;
+    padding: 6px;
+  }
+  .npc-action {
+    font-size: 5px;
+  }
+  .adventure-pass {
+    width: 295px;
+    flex-shrink: 0;
+  }
+  .intro {
+    gap: 25px;
+  }
+  .intro-copy {
+    font-size: 12px;
+  }
+}
+@media (max-width: 720px) {
+  .topbar {
+    padding: 0 5%;
+    height: 70px;
+  }
+  .brand {
+    font-size: 14px;
+  }
+  .brand small {
+    display: none;
+  }
+  .brand-icon {
+    width: 30px;
+    height: 32px;
+    font-size: 19px;
+  }
+  .topbar nav {
+    display: none;
+  }
+  .text-button {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+  .account > span {
+    display: none;
+  }
+  main:not(.auth-page) {
+    padding: 0 5%;
+  }
+  .intro {
+    padding: 38px 0 32px;
+    display: block;
+  }
+  .intro h1 {
+    font-size: 46px;
+  }
+  .intro .eyebrow {
+    font-size: 8px;
+  }
+  .adventure-pass {
+    width: 100%;
+    margin-top: 30px;
+    padding: 17px;
+  }
+  .pass-top {
+    padding-bottom: 12px;
+  }
+  .pass-player {
+    margin: 13px 0;
+  }
+  .portrait {
+    width: 42px;
+    height: 52px;
+  }
+  .adventure-pass > p {
+    font-size: 9px;
+  }
+  .map-heading {
+    align-items: start;
+    gap: 10px;
+  }
+  .map-heading h2 {
+    font-size: 21px;
+  }
+  .map-meta {
+    font-size: 8px;
+    margin-top: 5px;
+    max-width: 80px;
+    line-height: 1.8;
+    text-align: right;
+  }
+  .map-layout {
+    display: block;
+  }
+  .region-nav {
+    position: static;
+    display: flex;
+    gap: 8px;
+    overflow: auto;
+    padding: 0 0 18px;
+    scrollbar-width: thin;
+  }
+  .region-nav > .eyebrow,
+  .region-nav .guide-note,
+  .region-dot,
+  .region-nav > a:before {
+    display: none;
+  }
+  .region-nav > a {
+    white-space: nowrap;
+    padding: 9px 11px;
+    border: 1px solid #53624b;
+    font-size: 9px;
+  }
+  .region-nav a small {
+    font-size: 6px;
+  }
+  .world-section {
+    aspect-ratio: auto;
+    height: 390px;
+  }
+  .pixel-scene {
+    width: 100%;
+    height: 100%;
+  }
+  .world-caption {
+    max-width: 90%;
+    top: 6%;
+    left: 5%;
+  }
+  .world-caption h2 {
+    font-size: 20px;
+  }
+  .world-caption p {
+    font-size: 9px;
+  }
+  .world-kicker {
+    font-size: 7px;
+  }
+  .npc-sprite {
+    width: 40px;
+    height: 55px;
+  }
+  .quest-marker {
+    width: 24px;
+    height: 26px;
+    font-size: 18px;
+  }
+  .npc-name {
+    font-size: 8px;
+  }
+  .npc-action {
+    font-size: 6px;
+  }
+  .zone-status {
+    font-size: 6px;
+    bottom: 12%;
+    padding: 8px;
+    max-width: 94%;
+    white-space: normal;
+    text-align: center;
+  }
+  .world-footer {
+    font-size: 7px;
+    padding: 12px 4%;
+  }
+  .site-footer {
+    padding: 26px 5%;
+    font-size: 7px;
+    margin-top: 20px;
+  }
+  .site-footer > span:nth-child(2) {
+    display: none;
+  }
+  .auth-page {
+    grid-template-columns: 1fr;
+  }
+  .auth-landscape {
+    display: none;
+  }
+  .auth-form-wrap {
+    min-height: 100vh;
+    padding: 30px;
+  }
+  .auth-form-wrap form {
+    margin: 20px auto;
+  }
+  .auth-form-wrap h1 {
+    font-size: 29px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Keep the signed-in experience focused on the map rather than the welcome hero. */
+.active-adventure .intro {
+  padding: 25px 0;
+  gap: 24px;
+}
+.active-adventure .intro h1 {
+  font-size: 30px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+}
+.active-adventure .intro h1 br {
+  display: none;
+}
+.active-adventure .intro .eyebrow {
+  margin-bottom: 10px;
+  font-size: 8px;
+}
+.active-adventure .intro-copy,
+.active-adventure .intro > div > .primary-button {
+  display: none;
+}
+.active-adventure .adventure-pass {
+  padding: 12px 16px;
+  width: 300px;
+  box-shadow: 3px 3px 0 #0e2121;
+}
+.active-adventure .pass-top,
+.active-adventure .adventure-pass > p {
+  display: none;
+}
+.active-adventure .pass-player {
+  margin: 0 0 10px;
+}
+.active-adventure .portrait {
+  height: 45px;
+  width: 40px;
+}
+.active-adventure .portrait .npc-sprite {
+  height: 43px;
+  width: 31px;
+}
+@media (max-width: 720px) {
+  .active-adventure .intro h1 {
+    font-size: 25px;
+  }
+  .active-adventure .adventure-pass {
+    width: 100%;
+    margin-top: 18px;
+  }
+  .active-adventure .intro {
+    padding: 24px 0 20px;
+  }
+}
+
+/* Leave space between NPC nameplates, lock notices, and the region footer. */
+.zone-status {
+  bottom: 8%;
+}

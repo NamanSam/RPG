@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: codequest-api
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3307/codequest}
+    username: ${DB_USERNAME:codequest}
+    password: ${DB_PASSWORD}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+server:
+  port: ${PORT:8085}
+  address: ${BIND_ADDRESS:127.0.0.1}
+  error:
+    include-message: never
+app:
+  jwt-secret: ${JWT_SECRET}
+  jwt-ttl-seconds: 7200
+  secure-cookie: ${COOKIE_SECURE:true}

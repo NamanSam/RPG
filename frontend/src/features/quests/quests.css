@@ -1,0 +1,295 @@
+.beach-quest-node .npc-name {
+  font-size: 8px;
+}
+.beach-quest-node.completed .quest-marker {
+  background: #b8db93;
+  color: #28543d;
+  animation: none;
+}
+.beach-quest-node.locked {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+.beach-quest-node:disabled:hover .npc-name {
+  background: #21372eee;
+  color: #fff0c4;
+}
+.beach-progress {
+  font-size: 10px;
+  color: #d2dbb5;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+.earned-badge {
+  display: block;
+  color: #f4ce81;
+  padding-top: 6px;
+}
+.quest-dialog {
+  max-width: 650px;
+  max-height: 90dvh;
+  overflow-y: auto;
+  padding: 28px;
+}
+.quest-dialog h2 {
+  font-size: 25px;
+  padding-right: 15px;
+}
+.quest-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11px;
+  border-bottom: 1px dashed #8f9770;
+  padding-bottom: 13px;
+}
+.quest-meta strong {
+  color: #546d3b;
+}
+.quest-dialog .quest-story {
+  font-style: italic;
+  line-height: 1.65;
+  margin: 18px 0 12px;
+  font-size: 13px;
+}
+.quest-lesson {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.quest-task {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.quest-code {
+  background: #243d34;
+  color: #f5dcaa;
+  padding: 18px;
+  overflow-x: auto;
+  font:
+    13px/1.7 "Space Mono",
+    monospace;
+  border-left: 4px solid #c29959;
+}
+.quest-dialog input,
+.quest-dialog select {
+  width: 100%;
+  padding: 13px;
+  background: #fff6d6;
+  border: 2px solid #758362;
+  border-radius: 0;
+  color: #293d30;
+  font:
+    14px "Space Mono",
+    monospace;
+}
+.quest-hint {
+  font-size: 12px;
+  margin: 16px 0;
+}
+.quest-hint summary {
+  cursor: pointer;
+  color: #4c6346;
+  min-height: 30px;
+  padding: 5px 0;
+}
+.quest-hint p {
+  line-height: 1.6;
+  margin: 8px 0;
+}
+.quest-feedback {
+  margin-top: 20px;
+  border: 2px solid #618957;
+  background: #d7e3b7;
+  padding: 16px;
+  animation: feedback-in 0.25s ease-out;
+}
+.quest-feedback.incorrect {
+  border-color: #b07355;
+  background: #edd2ad;
+}
+.quest-feedback p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+.quest-feedback > span {
+  font:
+    12px "Space Mono",
+    monospace;
+  display: block;
+}
+.quest-feedback .primary-button {
+  margin-top: 16px;
+}
+.xp-gain {
+  color: #315a38;
+  animation: xp-rise 0.8s steps(5, end);
+}
+.replay-note {
+  padding: 9px 12px;
+  background: #d6dfae;
+  font-size: 11px !important;
+}
+.quest-dialog .form-error {
+  font-size: 13px;
+  color: #843d31;
+  border: 1px solid #b98c6a;
+  padding: 12px;
+}
+.beach-celebration {
+  text-align: center;
+  max-width: 480px;
+  max-height: 90dvh;
+  overflow: auto;
+}
+.beach-celebration h2 {
+  font-size: 24px;
+}
+.beach-celebration p {
+  line-height: 1.7;
+  font-size: 13px;
+}
+.beach-celebration > strong {
+  font-size: 13px;
+  color: #426339;
+}
+.beach-badge {
+  font-size: 44px;
+  display: grid;
+  place-items: center;
+  background: #e9c176;
+  border: 4px double #7b6840;
+  width: 90px;
+  height: 90px;
+  margin: 20px auto;
+  box-shadow: 5px 5px 0 #ad9e68;
+  animation: badge-arrive 0.5s steps(5, end);
+}
+.celebration-sparks {
+  font-size: 27px;
+  letter-spacing: 10px;
+  color: #8f7537;
+  animation: marker-bob 2s steps(4, end) 3;
+}
+.unlock-announcement {
+  padding: 16px 10px;
+  margin: 20px 0;
+  background: #2c503f;
+  color: #f4d69b;
+  font:
+    12px/1.6 "Space Mono",
+    monospace;
+}
+.area-unlocking {
+  animation: area-reveal 2.4s ease-out;
+}
+.world-section .pixel-scene {
+  transition: filter 1.2s ease;
+}
+.quest-dialog .primary-button:disabled {
+  transform: none;
+}
+.quest-dialog button:focus-visible,
+.quest-dialog input:focus-visible,
+.quest-dialog select:focus-visible,
+.beach-celebration button:focus-visible {
+  outline-color: #36583e;
+}
+.quest-dialog:focus-visible {
+  outline: none;
+}
+@keyframes feedback-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes xp-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes badge-arrive {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes area-reveal {
+  0%,
+  35% {
+    box-shadow:
+      inset 0 0 0 8px #ffedaa,
+      inset 0 0 80px #ffe38d99;
+  }
+  100% {
+    box-shadow: inset 0 0 0 0 transparent;
+  }
+}
+@media (max-width: 720px) {
+  .world-section.beach {
+    height: 520px;
+  }
+  .beach-quest-node {
+    min-width: 110px;
+    padding: 3px;
+  }
+  .beach-quest-node .npc-name {
+    font-size: 7px;
+    padding: 6px;
+  }
+  .beach-quest-node .npc-action {
+    font-size: 6px;
+  }
+  .quest-dialog {
+    padding: 23px 18px;
+    max-height: 92dvh;
+  }
+  .quest-dialog h2 {
+    font-size: 22px;
+  }
+  .quest-meta {
+    flex-wrap: wrap;
+  }
+  .quest-code {
+    font-size: 12px;
+    padding: 13px;
+  }
+  .quest-dialog input,
+  .quest-dialog select {
+    font-size: 16px;
+  }
+  .beach-celebration {
+    padding: 24px 18px;
+  }
+  .beach-celebration h2 {
+    font-size: 21px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .area-unlocking,
+  .xp-gain,
+  .quest-feedback,
+  .beach-badge,
+  .celebration-sparks {
+    animation: none;
+  }
+  .world-section .pixel-scene {
+    transition: none;
+  }
+}

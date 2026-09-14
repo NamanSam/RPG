@@ -1,0 +1,9 @@
+node_modules/
+dist/
+target/
+.tools/
+.env
+*.log
+.idea/
+.vscode/
+test-results/

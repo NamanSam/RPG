@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:codequest;MODE=MySQL;DB_CLOSE_DELAY=-1;DATABASE_TO_LOWER=TRUE
+    username: sa
+    password: ''
+app:
+  jwt-secret: test-only-codequest-secret-at-least-thirty-two-bytes
+  secure-cookie: false
