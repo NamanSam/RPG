@@ -3,6 +3,7 @@ import { Link, Navigate, Route, Routes } from "react-router-dom";
 import { api } from "./services/api";
 import { AuthPage } from "./pages/AuthPage";
 import { WorldMap } from "./pages/WorldMap";
+import { DsaWorldMap } from "./pages/DsaWorldMap";
 
 export function App() {
   const [user, setUser] = useState(null);
@@ -33,6 +34,7 @@ export function App() {
     );
   return (
     <Routes>
+      <Route path="/dsa" element={user ? <DsaWorldMap /> : <Navigate to="/login" replace />} />
       <Route
         path="/"
         element={<Navigate to={user ? "/world" : "/preview"} replace />}

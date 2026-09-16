@@ -1,0 +1,1963 @@
+{
+  "topic": "arrays",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Shoreline Basics"
+    },
+    {
+      "number": 2,
+      "name": "Prefix Lagoon"
+    },
+    {
+      "number": 3,
+      "name": "Two Pointer Cliffs"
+    },
+    {
+      "number": 4,
+      "name": "Subarray Caverns"
+    },
+    {
+      "number": 5,
+      "name": "Mastery Temple"
+    }
+  ],
+  "questions": [
+    {
+      "id": "arrays-01",
+      "slug": "array-length",
+      "title": "Array length",
+      "topic": "arrays",
+      "subtopic": "basics",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A dock ledger is declared as int[] crates = {4, 8, 2, 9}. Which expression returns its number of entries?",
+      "examples": [
+        {
+          "input": "{7, 3}",
+          "output": "length is 2"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "int[] crates = {4, 8, 2, 9};",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "crates.size()"
+        },
+        {
+          "id": "b",
+          "text": "crates.length"
+        },
+        {
+          "id": "c",
+          "text": "length(crates)"
+        },
+        {
+          "id": "d",
+          "text": "crates.length()"
+        }
+      ],
+      "hints": [
+        "Look for a field accessed on the array."
+      ],
+      "explanation": "An array exposes length as a field, not a method.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "basics",
+        "concept"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "OPTION"
+    },
+    {
+      "id": "arrays-02",
+      "slug": "zero-based-lookout",
+      "title": "Zero-based lookout",
+      "topic": "arrays",
+      "subtopic": "indexing",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "What does the lookout print?",
+      "examples": [
+        {
+          "input": "{8, 5}, index 1",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "int[] flags = {6, 4, 9, 2};\nSystem.out.println(flags[2]);",
+      "expectedAnswer": "9",
+      "options": [],
+      "hints": [
+        "Count positions from zero."
+      ],
+      "explanation": "Index 2 selects the third entry because indexing begins at zero.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "indexing",
+        "concept"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-03",
+      "slug": "last-safe-step",
+      "title": "Last safe step",
+      "topic": "arrays",
+      "subtopic": "bounds",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the blank with the last valid index expression for a nonempty array a. Use the variable a exactly as shown.",
+      "examples": [
+        {
+          "input": "a = {2, 6, 4}",
+          "output": "last index: 2"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "int last = a[____];",
+      "expectedAnswer": "a.length - 1",
+      "options": [],
+      "hints": [
+        "The first position is zero."
+      ],
+      "explanation": "There are length positions numbered from zero through length minus one.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bounds",
+        "concept"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "arrays-04",
+      "slug": "empty-supply-slots",
+      "title": "Empty supply slots",
+      "topic": "arrays",
+      "subtopic": "initialization",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "New integer slots have a default value. What is printed?",
+      "examples": [
+        {
+          "input": "new int[1]",
+          "output": "the sole entry is 0"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "int[] cargo = new int[3];\nSystem.out.println(cargo[1]);",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "No assignment has changed slot 1."
+      ],
+      "explanation": "Java initializes each entry in a newly allocated int array to zero.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "initialization",
+        "concept"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-05",
+      "slug": "lantern-traversal",
+      "title": "Lantern traversal",
+      "topic": "arrays",
+      "subtopic": "traversal",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Follow the loop and give the printed sum.",
+      "examples": [
+        {
+          "input": "{2, 5}",
+          "output": "sum: 7"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "int[] a = {3, 1, 7, 4};\nint sum = 0;\nfor (int x : a) sum += x;\nSystem.out.println(sum);",
+      "expectedAnswer": "15",
+      "options": [],
+      "hints": [
+        "Every entry contributes once."
+      ],
+      "explanation": "The loop visits all four entries: 3 + 1 + 7 + 4 = 15.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "traversal",
+        "concept"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-06",
+      "slug": "insert-at-the-pier",
+      "title": "Insert at the pier",
+      "topic": "arrays",
+      "subtopic": "insertion",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "A logical list occupies [4, 8, 12] inside an array with spare capacity. Insert 6 at index 1, shifting later values right. Return only the used entries as a JSON integer array.",
+      "examples": [
+        {
+          "input": "[2, 9], insert 5 at index 1",
+          "output": "[2,5,9]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integers in the requested order."
+      ],
+      "starterCode": "// Return the resulting used entries; no code is executed.",
+      "expectedAnswer": "[4,6,8,12]",
+      "options": [],
+      "hints": [
+        "Preserve the order of the old entries."
+      ],
+      "explanation": "Move 12 and 8 right before writing 6, so no existing value is overwritten.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "insertion",
+        "implementation-trace"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "arrays-07",
+      "slug": "remove-a-broken-plank",
+      "title": "Remove a broken plank",
+      "topic": "arrays",
+      "subtopic": "deletion",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Delete the entry at index 2 from [7, 2, 9, 4, 6]. Shift the suffix left. Return the remaining logical array.",
+      "examples": [
+        {
+          "input": "[3, 8, 5], delete index 0",
+          "output": "[8,5]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integers in the requested order."
+      ],
+      "starterCode": "// Return a JSON integer array.",
+      "expectedAnswer": "[7,2,4,6]",
+      "options": [],
+      "hints": [
+        "Delete by index, not by value."
+      ],
+      "explanation": "Index 2 holds 9. Moving 4 and 6 left closes that gap.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "deletion",
+        "implementation-trace"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "arrays-08",
+      "slug": "first-beacon-search",
+      "title": "First beacon search",
+      "topic": "arrays",
+      "subtopic": "linear search",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Find the first index containing 5 in [8, 5, 2, 5, 1]. Return a zero-based index.",
+      "examples": [
+        {
+          "input": "[4, 7, 7], target 7",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Stop at the first match."
+      ],
+      "explanation": "Scanning from the start encounters 5 at index 1 before the later occurrence.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "linear search",
+        "concept"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-09",
+      "slug": "two-highest-peaks",
+      "title": "Two highest peaks",
+      "topic": "arrays",
+      "subtopic": "extrema",
+      "difficulty": "Hard",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Find the second-largest distinct value in [9, 9, -2, 5, 3]. Return one integer.",
+      "examples": [
+        {
+          "input": "[4, 1, 4, 2]",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "// Answer with the second distinct maximum.",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Track distinct values rather than positions."
+      ],
+      "explanation": "The distinct values in descending order start 9, 5. Repeated maximum values do not take second place.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "extrema",
+        "implementation-trace"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-10",
+      "slug": "in-place-reversal-trace",
+      "title": "In-place reversal trace",
+      "topic": "arrays",
+      "subtopic": "reversal",
+      "difficulty": "Hard",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Reverse [2, 7, 1, 8, 3] by swapping the outer pair and moving inward. Return the final array.",
+      "examples": [
+        {
+          "input": "[6, 4, 9]",
+          "output": "[9,4,6]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integers in the requested order."
+      ],
+      "starterCode": "// Supply the resulting array, not Java source.",
+      "expectedAnswer": "[3,8,1,7,2]",
+      "options": [],
+      "hints": [
+        "Each swap fixes two final positions."
+      ],
+      "explanation": "Swap 2 with 3 and 7 with 8; the middle value stays in place.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "reversal",
+        "implementation-trace"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "arrays-11",
+      "slug": "prefix-at-the-inlet",
+      "title": "Prefix at the inlet",
+      "topic": "arrays",
+      "subtopic": "prefix sums",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For [2, 5, 1, 4], what is the inclusive prefix sum at index 2?",
+      "examples": [
+        {
+          "input": "[3, 2], index 1",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Inclusive means the named index is counted."
+      ],
+      "explanation": "The prefix includes positions 0, 1, and 2: 2 + 5 + 1.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "prefix sums",
+        "concept"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-12",
+      "slug": "zero-prefix-anchor",
+      "title": "Zero prefix anchor",
+      "topic": "arrays",
+      "subtopic": "prefix sums",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "An exclusive prefix array p satisfies p[i + 1] = p[i] + a[i]. Which starting value belongs in p[0]?",
+      "examples": [
+        {
+          "input": "a = {5, 2}",
+          "output": "p = {0, 5, 7}"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "0"
+        },
+        {
+          "id": "b",
+          "text": "a[0]"
+        },
+        {
+          "id": "c",
+          "text": "1"
+        },
+        {
+          "id": "d",
+          "text": "a.length"
+        }
+      ],
+      "hints": [
+        "Think of an empty prefix."
+      ],
+      "explanation": "The sum of zero entries is zero. This lets ranges starting at index zero use the same formula.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "prefix sums",
+        "concept"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "OPTION"
+    },
+    {
+      "id": "arrays-13",
+      "slug": "suffix-tide",
+      "title": "Suffix tide",
+      "topic": "arrays",
+      "subtopic": "suffix sums",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For [3, 6, 2, 5], sum the suffix beginning at index 2.",
+      "examples": [
+        {
+          "input": "[1, 4, 8], start 1",
+          "output": "12"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "A suffix continues to the end."
+      ],
+      "explanation": "Only indices 2 and 3 remain in that suffix, giving 2 + 5.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "suffix sums",
+        "concept"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-14",
+      "slug": "range-formula",
+      "title": "Range formula",
+      "topic": "arrays",
+      "subtopic": "range queries",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "For exclusive prefixes p, fill the expression for the inclusive range sum a[l..r]. Use p, l and r; include spaces around + and -.",
+      "examples": [
+        {
+          "input": "a = {2, 4, 6}, l = 1, r = 2",
+          "output": "10"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "int rangeSum = ____;",
+      "expectedAnswer": "p[r + 1] - p[l]",
+      "options": [],
+      "hints": [
+        "Remove the prefix that precedes the range."
+      ],
+      "explanation": "Subtract the entries before l from the prefix ending just after r.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "range queries",
+        "concept"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "arrays-15",
+      "slug": "build-the-prefix-chart",
+      "title": "Build the prefix chart",
+      "topic": "arrays",
+      "subtopic": "prefix sums",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Build the exclusive prefix array for [4, -1, 3, 2], including the initial zero.",
+      "examples": [
+        {
+          "input": "[2, -3]",
+          "output": "[0,2,-1]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integers in the requested order."
+      ],
+      "starterCode": "// Return all prefix entries.",
+      "expectedAnswer": "[0,4,3,6,8]",
+      "options": [],
+      "hints": [
+        "The answer has one more entry than the input."
+      ],
+      "explanation": "Starting at zero, add each entry to the previous cumulative total.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "prefix sums",
+        "implementation-trace"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "arrays-16",
+      "slug": "lagoon-range-query",
+      "title": "Lagoon range query",
+      "topic": "arrays",
+      "subtopic": "range queries",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Using [5, -2, 4, 3, -1], find the sum from index 1 through index 3, inclusive.",
+      "examples": [
+        {
+          "input": "[6, 2, 1], range 0..1",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "The endpoints both belong to the range."
+      ],
+      "explanation": "The selected values are -2, 4 and 3. Their total is 5.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "range queries",
+        "concept"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-17",
+      "slug": "balance-point",
+      "title": "Balance point",
+      "topic": "arrays",
+      "subtopic": "equilibrium",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Return the first index whose left-side sum equals its right-side sum in [1, 7, 3, 6, 5, 6]. Exclude the value at the index itself.",
+      "examples": [
+        {
+          "input": "[2, 1, 2]",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "// Return an index, or -1 if none exists.",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Use total minus left minus current for the right side."
+      ],
+      "explanation": "At index 3, the left sum is 1 + 7 + 3 = 11 and the right sum is 5 + 6 = 11.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "equilibrium",
+        "implementation-trace"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-18",
+      "slug": "suffix-skyline",
+      "title": "Suffix skyline",
+      "topic": "arrays",
+      "subtopic": "suffix maximum",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Return the maximum value in each inclusive suffix of [3, 7, 2, 6].",
+      "examples": [
+        {
+          "input": "[5, 1, 4]",
+          "output": "[5,4,4]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integers in the requested order."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[7,7,6,6]",
+      "options": [],
+      "hints": [
+        "Walk backward while retaining the largest value seen."
+      ],
+      "explanation": "From right to left, the running maximum is 6, 6, 7, 7; return these aligned with original indices.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "suffix maximum",
+        "implementation-trace"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "arrays-19",
+      "slug": "product-of-array-except-self",
+      "title": "Product of Array Except Self",
+      "topic": "arrays",
+      "subtopic": "prefix suffix products",
+      "difficulty": "Hard",
+      "questionType": "CODING_CHALLENGE",
+      "description": "For [2, 3, 0, 4], return the product of all other entries for each index. Reason without division.",
+      "examples": [
+        {
+          "input": "[2, 4, 3]",
+          "output": "[12,6,8]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integers in the requested order."
+      ],
+      "starterCode": "// Return a JSON array of products.",
+      "expectedAnswer": "[0,0,24,0]",
+      "options": [],
+      "hints": [
+        "Combine products strictly to the left and right."
+      ],
+      "explanation": "Only the zero's position excludes the zero itself. Its other values multiply to 24; every other position includes zero.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "prefix suffix products",
+        "implementation-trace"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "arrays-20",
+      "slug": "range-additions",
+      "title": "Range additions",
+      "topic": "arrays",
+      "subtopic": "difference arrays",
+      "difficulty": "Hard",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Begin with five zeros. Add 3 to indices 1..3, then add 2 to indices 2..4, both inclusive. Return the final array.",
+      "examples": [
+        {
+          "input": "three zeros; add 4 to 0..1",
+          "output": "[4,4,0]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integers in the requested order."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[0,3,5,5,2]",
+      "options": [],
+      "hints": [
+        "Mark interval starts and ends, then accumulate."
+      ],
+      "explanation": "The overlapping indices 2 and 3 receive both increments. Index 0 receives neither.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "difference arrays",
+        "implementation-trace"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "arrays-21",
+      "slug": "opposite-shores",
+      "title": "Opposite shores",
+      "topic": "arrays",
+      "subtopic": "two pointers",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "In a sorted ascending array, a left/right pair sums below the target. Which move can increase the sum while retaining the right endpoint?",
+      "examples": [
+        {
+          "input": "[1, 3, 7], endpoints sum 8, target 10",
+          "output": "move left to index 1"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "Move right leftward"
+        },
+        {
+          "id": "b",
+          "text": "Move left rightward"
+        },
+        {
+          "id": "c",
+          "text": "Move both outward"
+        },
+        {
+          "id": "d",
+          "text": "Stop: no answer exists"
+        }
+      ],
+      "hints": [
+        "Use the array's sorted order."
+      ],
+      "explanation": "Moving the left pointer right selects an equal or larger value.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "two pointers",
+        "concept"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "OPTION"
+    },
+    {
+      "id": "arrays-22",
+      "slug": "one-step-rotation",
+      "title": "One step rotation",
+      "topic": "arrays",
+      "subtopic": "rotation",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Rotate [1, 2, 3, 4] right by one position. Return the array.",
+      "examples": [
+        {
+          "input": "[8, 5, 2], right by 1",
+          "output": "[2,8,5]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integers in the requested order."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[4,1,2,3]",
+      "options": [],
+      "hints": [
+        "Right rotation wraps the tail around."
+      ],
+      "explanation": "The last entry wraps to the front while the others move one place right.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "rotation",
+        "concept"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "arrays-23",
+      "slug": "mirror-crossing",
+      "title": "Mirror crossing",
+      "topic": "arrays",
+      "subtopic": "two pointers",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many swaps are needed to reverse an array of seven entries using outer-pair swaps?",
+      "examples": [
+        {
+          "input": "array length 4",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Each swap handles two entries."
+      ],
+      "explanation": "Three disjoint pairs swap; the central entry needs no swap.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "two pointers",
+        "concept"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-24",
+      "slug": "rotation-normalization",
+      "title": "Rotation normalization",
+      "topic": "arrays",
+      "subtopic": "rotation",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "For a nonempty array of length n, reduce a nonnegative right-rotation count k to an equivalent count below n. Fill the expression using k and n.",
+      "examples": [
+        {
+          "input": "n = 4, k = 10",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "int steps = ____;",
+      "expectedAnswer": "k % n",
+      "options": [],
+      "hints": [
+        "Use the remainder operator."
+      ],
+      "explanation": "Every group of n rotations returns the array to its original arrangement.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "rotation",
+        "concept"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "arrays-25",
+      "slug": "move-zeroes",
+      "title": "Move Zeroes",
+      "topic": "arrays",
+      "subtopic": "stable compaction",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Move all zeros in [0, 4, 0, 2, 7, 0] to the end while preserving nonzero order. Return the resulting array.",
+      "examples": [
+        {
+          "input": "[3, 0, 1]",
+          "output": "[3,1,0]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integers in the requested order."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[4,2,7,0,0,0]",
+      "options": [],
+      "hints": [
+        "Compaction must be stable."
+      ],
+      "explanation": "Write nonzeros in encounter order, then fill the remaining positions with zero.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "stable compaction",
+        "implementation-trace"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "arrays-26",
+      "slug": "sorted-pair",
+      "title": "Sorted pair",
+      "topic": "arrays",
+      "subtopic": "two sum sorted",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "In [1, 3, 4, 6, 9], find two different indices whose values sum to 12. Return the zero-based indices in increasing order. This input has one solution.",
+      "examples": [
+        {
+          "input": "[2, 5, 8], target 7",
+          "output": "[0,1]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integers in the requested order."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[1,4]",
+      "options": [],
+      "hints": [
+        "Start with the smallest and largest values."
+      ],
+      "explanation": "The outer pair 1 + 9 is too small. Moving the left pointer once gives 3 + 9 = 12.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "two sum sorted",
+        "implementation-trace"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "arrays-27",
+      "slug": "rotate-array",
+      "title": "Rotate Array",
+      "topic": "arrays",
+      "subtopic": "rotation",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Rotate [1, 2, 3, 4, 5, 6] right by eight positions. Return the final array.",
+      "examples": [
+        {
+          "input": "[3, 4, 5], right by 4",
+          "output": "[5,3,4]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integers in the requested order."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[5,6,1,2,3,4]",
+      "options": [],
+      "hints": [
+        "Move the last two entries to the front in order."
+      ],
+      "explanation": "Eight rotations are equivalent to two because 8 % 6 = 2.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "rotation",
+        "implementation-trace"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "arrays-28",
+      "slug": "compress-sorted-cargo",
+      "title": "Compress sorted cargo",
+      "topic": "arrays",
+      "subtopic": "duplicates",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Remove duplicates from sorted [1, 1, 2, 2, 2, 4, 7, 7]. Return the unique logical prefix only.",
+      "examples": [
+        {
+          "input": "[2, 2, 5]",
+          "output": "[2,5]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integers in the requested order."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[1,2,4,7]",
+      "options": [],
+      "hints": [
+        "A read pointer can scan ahead of a write pointer."
+      ],
+      "explanation": "Keep the first value and each later value that differs from the last kept one.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "duplicates",
+        "implementation-trace"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "arrays-29",
+      "slug": "container-with-most-water",
+      "title": "Container With Most Water",
+      "topic": "arrays",
+      "subtopic": "two pointers",
+      "difficulty": "Hard",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Heights [1, 8, 6, 2, 5, 4, 8, 3, 7] stand at unit-spaced positions. Return the largest area formed by two heights: distance times the shorter height.",
+      "examples": [
+        {
+          "input": "[3, 1, 3]",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "// Return the maximum area.",
+      "expectedAnswer": "49",
+      "options": [],
+      "hints": [
+        "A wider pair can beat a pair of tall nearby walls."
+      ],
+      "explanation": "Indices 1 and 8 give width 7 and limiting height 7, so area 49. Moving the shorter side is the useful search step.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "two pointers",
+        "implementation-trace"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-30",
+      "slug": "three-sum-expedition",
+      "title": "Three-sum expedition",
+      "topic": "arrays",
+      "subtopic": "sorting and two pointers",
+      "difficulty": "Hard",
+      "questionType": "CODING_CHALLENGE",
+      "description": "From [-1, 0, 1, 2, -1, -4], return all distinct value triples summing to zero. Sort each triple and list triples lexicographically as a JSON matrix.",
+      "examples": [
+        {
+          "input": "[-2, 0, 2, 3]",
+          "output": "[[-2,0,2]]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integer arrays in the requested order."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[[-1,-1,2],[-1,0,1]]",
+      "options": [],
+      "hints": [
+        "The two copies of -1 can both be used because they occupy different positions."
+      ],
+      "explanation": "Fix one sorted value, scan the remaining range with two pointers, and skip repeated values to avoid duplicate triples.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "sorting and two pointers",
+        "implementation-trace"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "INT_MATRIX"
+    },
+    {
+      "id": "arrays-31",
+      "slug": "contiguous-or-scattered",
+      "title": "Contiguous or scattered",
+      "topic": "arrays",
+      "subtopic": "subarrays",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which selection is a contiguous subarray of [4, 8, 1, 6]?",
+      "examples": [
+        {
+          "input": "[2, 3, 5]",
+          "output": "[3,5] is contiguous"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "[4, 1]"
+        },
+        {
+          "id": "b",
+          "text": "[8, 6]"
+        },
+        {
+          "id": "c",
+          "text": "[8, 1]"
+        },
+        {
+          "id": "d",
+          "text": "[6, 4]"
+        }
+      ],
+      "hints": [
+        "Compare positions rather than values alone."
+      ],
+      "explanation": "A subarray occupies consecutive positions without skipping any entries.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "subarrays",
+        "concept"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "OPTION"
+    },
+    {
+      "id": "arrays-32",
+      "slug": "count-the-windows",
+      "title": "Count the windows",
+      "topic": "arrays",
+      "subtopic": "sliding window",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many contiguous windows of length three fit inside an array of length seven?",
+      "examples": [
+        {
+          "input": "length 5, window 2",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "The last window must end at index 6."
+      ],
+      "explanation": "Their starting indices are 0 through 4, giving 7 - 3 + 1 windows.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "sliding window",
+        "concept"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-33",
+      "slug": "one-window-sum",
+      "title": "One window sum",
+      "topic": "arrays",
+      "subtopic": "sliding window",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Find the sum of the first three entries of [2, 5, 1, 8, 4].",
+      "examples": [
+        {
+          "input": "[4, 3, 2], window 2",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Only the first window is requested."
+      ],
+      "explanation": "The initial window contains 2, 5 and 1.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "sliding window",
+        "concept"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-34",
+      "slug": "slide-the-total",
+      "title": "Slide the total",
+      "topic": "arrays",
+      "subtopic": "sliding window",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "sum currently covers a[i..i+k-1]. Fill the next-window total using sum, a, i and k. Subtract the outgoing entry before adding the incoming entry; include spaces around operators.",
+      "examples": [
+        {
+          "input": "[2, 3, 7], old window [2,3]",
+          "output": "next sum: 10"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "int next = ____;",
+      "expectedAnswer": "sum - a[i] + a[i + k]",
+      "options": [],
+      "hints": [
+        "The other k-1 entries remain in the window."
+      ],
+      "explanation": "Remove the outgoing left entry and add the newly included right entry.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "sliding window",
+        "concept"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "arrays-35",
+      "slug": "best-three-day-haul",
+      "title": "Best three-day haul",
+      "topic": "arrays",
+      "subtopic": "fixed window",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Return the maximum sum of a length-three window in [2, 1, 5, 1, 3, 2].",
+      "examples": [
+        {
+          "input": "[1, 4, 2], window 2",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "9",
+      "options": [],
+      "hints": [
+        "Reuse the previous sum when shifting the window."
+      ],
+      "explanation": "The four window sums are 8, 7, 9 and 6. The third is largest.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "fixed window",
+        "implementation-trace"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-36",
+      "slug": "best-time-to-buy-and-sell-stock",
+      "title": "Best Time to Buy and Sell Stock",
+      "topic": "arrays",
+      "subtopic": "running minimum",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Prices are [7, 1, 5, 3, 6, 4]. Buy once and sell on a later day, or make no trade. Return the largest profit.",
+      "examples": [
+        {
+          "input": "[5, 2, 4]",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "A sale must come after its purchase."
+      ],
+      "explanation": "Buy at 1 and sell later at 6. Track the lowest earlier price while scanning.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "running minimum",
+        "implementation-trace"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-37",
+      "slug": "shortest-supply-run",
+      "title": "Shortest supply run",
+      "topic": "arrays",
+      "subtopic": "variable window",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "For positive values [2, 3, 1, 2, 4, 3], return the shortest contiguous length with sum at least 7.",
+      "examples": [
+        {
+          "input": "[1, 5, 2], target 6",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Positivity lets you shrink a qualifying window safely."
+      ],
+      "explanation": "The final pair [4,3] reaches 7. No single value reaches 7.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "variable window",
+        "implementation-trace"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-38",
+      "slug": "count-target-sums",
+      "title": "Count target sums",
+      "topic": "arrays",
+      "subtopic": "prefix frequency",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Count contiguous nonempty subarrays summing to 2 in [1, 1, 1].",
+      "examples": [
+        {
+          "input": "[2, 0], target 2",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Count ranges, not distinct value sequences."
+      ],
+      "explanation": "Positions 0..1 and 1..2 qualify. Their values match, but their positions define different subarrays.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "prefix frequency",
+        "implementation-trace"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-39",
+      "slug": "maximum-subarray",
+      "title": "Maximum Subarray",
+      "topic": "arrays",
+      "subtopic": "Kadane pattern",
+      "difficulty": "Hard",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Find the largest sum of a nonempty contiguous subarray of [-2, 1, -3, 4, -1, 2, 1, -5, 4].",
+      "examples": [
+        {
+          "input": "[-4, -1, -3]",
+          "output": "-1"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Keep both the best ending-here sum and the best overall sum."
+      ],
+      "explanation": "The range [4,-1,2,1] totals 6. At each position choose between extending the old range and starting a new one.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "Kadane pattern",
+        "implementation-trace"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-40",
+      "slug": "negative-currents",
+      "title": "Negative currents",
+      "topic": "arrays",
+      "subtopic": "prefix frequency",
+      "difficulty": "Hard",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Count nonempty contiguous subarrays with sum 3 in [3, -1, 1, 2, -2, 3].",
+      "examples": [
+        {
+          "input": "[1, -1, 1], target 1",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Do not use a positive-only sliding window when negative values occur."
+      ],
+      "explanation": "Prefix totals including zero are 0,3,2,3,5,3,6. Count earlier totals equal to current minus 3: contributions are 1,0,1,1,1,3, totaling seven.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "prefix frequency",
+        "implementation-trace"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-41",
+      "slug": "count-matching-shells",
+      "title": "Count matching shells",
+      "topic": "arrays",
+      "subtopic": "frequency",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many entries equal 4 in [4, 2, 4, 4, 1]?",
+      "examples": [
+        {
+          "input": "[2, 1, 2], target 2",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Increase the count only on a match."
+      ],
+      "explanation": "The matches occur at indices 0, 2 and 3.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "frequency",
+        "concept"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-42",
+      "slug": "find-the-repeated-rune",
+      "title": "Find the repeated rune",
+      "topic": "arrays",
+      "subtopic": "duplicates",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which value appears more than once in [6, 2, 9, 2, 5]?",
+      "examples": [
+        {
+          "input": "[3, 7, 3]",
+          "output": "3 repeats"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "6"
+        },
+        {
+          "id": "b",
+          "text": "2"
+        },
+        {
+          "id": "c",
+          "text": "9"
+        },
+        {
+          "id": "d",
+          "text": "5"
+        }
+      ],
+      "hints": [
+        "Record values as you scan."
+      ],
+      "explanation": "The value 2 appears at two different positions; all other values occur once.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "duplicates",
+        "concept"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "OPTION"
+    },
+    {
+      "id": "arrays-43",
+      "slug": "matrix-coordinate",
+      "title": "Matrix coordinate",
+      "topic": "arrays",
+      "subtopic": "2D arrays",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "What does this row-major array access print?",
+      "examples": [
+        {
+          "input": "{{8,9},{2,3}}, [0][1]",
+          "output": "9"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "int[][] grid = {{1, 2, 3}, {4, 5, 6}};\nSystem.out.println(grid[1][2]);",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Both coordinates are zero-based."
+      ],
+      "explanation": "The first index selects row 1, and the second selects column 2.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "2D arrays",
+        "concept"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-44",
+      "slug": "binary-search",
+      "title": "Binary Search",
+      "topic": "arrays",
+      "subtopic": "searching",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Binary search for 7 in sorted [1, 3, 5, 7, 9]. Return its zero-based index.",
+      "examples": [
+        {
+          "input": "[2, 4, 8], target 4",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Return the index, not the target value."
+      ],
+      "explanation": "The target is at position 3. Sorted order allows half of the remaining search range to be discarded.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "searching",
+        "concept"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-45",
+      "slug": "two-sum",
+      "title": "Two Sum",
+      "topic": "arrays",
+      "subtopic": "hashing",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "For [3, 2, 4], return the two different zero-based indices whose values sum to 6, in increasing order. There is one solution.",
+      "examples": [
+        {
+          "input": "[5, 1, 9], target 10",
+          "output": "[1,2]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integers in the requested order."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[1,2]",
+      "options": [],
+      "hints": [
+        "Store earlier values with their indices."
+      ],
+      "explanation": "The complement of 4 is 2, already seen at index 1. A single 3 cannot be reused as two entries.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "hashing",
+        "implementation-trace"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "arrays-46",
+      "slug": "majority-element",
+      "title": "Majority Element",
+      "topic": "arrays",
+      "subtopic": "voting",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Find the value occurring more than floor(n/2) times in [2, 2, 1, 1, 1, 2, 2]. A majority is guaranteed.",
+      "examples": [
+        {
+          "input": "[3, 3, 1]",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "A majority must survive cancellations with other values."
+      ],
+      "explanation": "Four of seven entries are 2, exceeding the threshold of three. Candidate cancellation can find it with constant extra space.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "voting",
+        "implementation-trace"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-47",
+      "slug": "merge-intervals",
+      "title": "Merge Intervals",
+      "topic": "arrays",
+      "subtopic": "intervals",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Merge overlapping closed intervals [[1,3],[2,6],[8,10],[10,12]]. Touching endpoints overlap. Return intervals sorted by start.",
+      "examples": [
+        {
+          "input": "[[2,4],[4,5],[8,9]]",
+          "output": "[[2,5],[8,9]]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integer arrays in the requested order."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[[1,6],[8,12]]",
+      "options": [],
+      "hints": [
+        "Compare the next start with the current merged end."
+      ],
+      "explanation": "The first pair overlaps, and the last pair touches at 10. Each merged end is the larger end.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "intervals",
+        "implementation-trace"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "INT_MATRIX"
+    },
+    {
+      "id": "arrays-48",
+      "slug": "transpose-the-chart",
+      "title": "Transpose the chart",
+      "topic": "arrays",
+      "subtopic": "matrix",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Transpose [[1,2,3],[4,5,6]] by exchanging row and column positions. Return the new matrix.",
+      "examples": [
+        {
+          "input": "[[7,8]]",
+          "output": "[[7],[8]]"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Return a JSON array of integer arrays in the requested order."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[[1,4],[2,5],[3,6]]",
+      "options": [],
+      "hints": [
+        "The output at [c][r] takes the input at [r][c]."
+      ],
+      "explanation": "Each original column becomes a row; the 2-by-3 matrix becomes 3-by-2.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "matrix",
+        "implementation-trace"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "INT_MATRIX"
+    },
+    {
+      "id": "arrays-49",
+      "slug": "longest-consecutive-sequence",
+      "title": "Longest Consecutive Sequence",
+      "topic": "arrays",
+      "subtopic": "hash set",
+      "difficulty": "Hard",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Find the length of the longest run of consecutive integer values in [100, 4, 200, 1, 3, 2, 2]. Input order does not matter and duplicates do not extend a run.",
+      "examples": [
+        {
+          "input": "[9, 7, 8, 8]",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "The repeated 2 contributes no extra length."
+      ],
+      "explanation": "The set contains the run 1,2,3,4. Begin counting only at values whose predecessor is absent.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "hash set",
+        "implementation-trace"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "arrays-50",
+      "slug": "rainwater-terraces",
+      "title": "Rainwater terraces",
+      "topic": "arrays",
+      "subtopic": "prefix suffix extrema",
+      "difficulty": "Hard",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Unit-width heights [3, 0, 2, 0, 4] form terraces. Return the total trapped water after rain.",
+      "examples": [
+        {
+          "input": "[2, 0, 2]",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use zero-based indices unless stated otherwise.",
+        "Answer the fixed scenario in the task; examples illustrate the format.",
+        "Use the specified answer format."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Water needs a boundary on both sides."
+      ],
+      "explanation": "At the interior positions the water depths are 3,1,3. Each depth uses the smaller of the highest walls on either side, minus the local height.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "prefix suffix extrema",
+        "implementation-trace"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "INTEGER"
+    }
+  ]
+}

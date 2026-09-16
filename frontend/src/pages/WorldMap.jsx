@@ -123,6 +123,7 @@ export function WorldMap({ user, setUser, preview = false }) {
             World map
           </a>
           <a href="#travel-guide">Field guide</a>
+          {!preview && <Link to="/dsa">DSA crossing</Link>}
         </nav>
         <div className="account">
           {user ? (
