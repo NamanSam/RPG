@@ -2,7 +2,13 @@
 
 A Java-learning adventure across a single vertically scrollable pixel-art world. Built independently in `D:\rpg game`; no StylePin files or services are required.
 
-## Milestone 1
+## Current status — Milestone 3 complete
+
+Beginner Beach and Loop Village each have three playable quests, protected server-side grading, sequential unlocks, persistent XP, and completion badges. A fresh explorer earns 175 XP on the beach and 300 XP in the village (475 total). Replays award no additional XP. Loop Village completion unlocks Array Forest on the map; its quests are not implemented.
+
+See [Milestone 3 verification and manual testing](docs/milestone3-verification.md). Run `./scripts/smoke-village.ps1` against the local API for the full progression and concurrency checks.
+
+## Milestone 1 foundation (historical)
 
 Implemented:
 
@@ -12,7 +18,7 @@ Implemented:
 - MySQL migrations for accounts, initial XP, and the five worlds.
 - Backend integration tests and a real-HTTP authentication smoke test.
 
-Not implemented yet: playable quests, grading, XP awards, badges, progress updates, and functional area unlocks. The map currently uses preview geography and preview locks. No pretend completions or localStorage rewards are used.
+Milestone 1 provided preview geography and preview locks. Milestones 2 and 3 added playable quests, grading, XP awards, badges, progress persistence, and functional area unlocks for Beginner Beach and Loop Village.
 
 The planned content is **12 quests**, distributed 3 / 3 / 2 / 2 / 2 across the five worlds. See [milestones](docs/milestones.md) for the Day 4 end-to-end target.
 
