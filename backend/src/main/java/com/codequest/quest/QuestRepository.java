@@ -14,7 +14,7 @@ public class QuestRepository {
     private final JdbcTemplate db;
     public QuestRepository(JdbcTemplate db) { this.db = db; }
     public List<Definition> allQuests() {
-        return db.query("SELECT q.*, w.name AS world_name, w.slug AS world_slug FROM quests q JOIN worlds w ON q.world_id = w.id WHERE q.world_id IN (1, 2) ORDER BY q.world_id, q.sort_order", (rs, row) ->
+        return db.query("SELECT q.*, w.name AS world_name, w.slug AS world_slug FROM quests q JOIN worlds w ON q.world_id = w.id ORDER BY q.world_id, q.sort_order", (rs, row) ->
             new Definition(rs.getString("id"), rs.getLong("world_id"), rs.getInt("sort_order"),
                 rs.getString("title"), rs.getString("topic"), rs.getString("difficulty"), rs.getInt("reward"),
                 rs.getString("story"), rs.getString("lesson"), rs.getString("task_text"), rs.getString("starter_code"),

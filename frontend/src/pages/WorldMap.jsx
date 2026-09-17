@@ -16,6 +16,8 @@ import {
   MillSprite,
 } from "../features/quests/VillageQuestNodes";
 import { VillageCelebration } from "../features/quests/VillageCelebration";
+import {CampaignQuestNodes,campaignPreview} from "../features/quests/CampaignQuestNodes";
+import {CampaignCelebration} from "../features/quests/CampaignCelebration";
 
 export function WorldMap({ user, setUser, preview = false }) {
   const [selected, setSelected] = useState(null);
@@ -86,8 +88,9 @@ export function WorldMap({ user, setUser, preview = false }) {
     }
   }
   function finishCelebration() {
-    const nextWorld =
-      celebrating === "loop-village" ? "array-forest" : "loop-village";
+    const index = worlds.findIndex(w=>w.slug===celebrating);
+    if(index===4) { setCelebrating(false); navigate('/dsa'); return; }
+    const nextWorld = worlds[index+1].slug;
     setCelebrating(false);
     setUnlockAnimating(nextWorld);
     requestAnimationFrame(() => {
@@ -210,6 +213,8 @@ export function WorldMap({ user, setUser, preview = false }) {
                     Loop Village · {progress.villageCompleted} / 3 complete
                   </span>
                 )}
+                {progress && worlds.slice(2).map(w=><span className="java-journey-line" key={w.slug}>{w.name} · {progress.regionQuests?.[w.slug]?.filter(q=>q.status==='COMPLETED').length||0} / {w.quests} complete</span>)}
+                {progress?.javaCompleted && <strong>✓ Java campaign complete · DSA Realm unlocked</strong>}
                 {progress?.badges.map((badge) => (
                   <span className="earned-badge" key={badge.id}>
                     {badge.id === "loop-village" ? <MillSprite badge /> : "⚑"}{" "}
@@ -231,7 +236,7 @@ export function WorldMap({ user, setUser, preview = false }) {
             <h2>A world of possibilities</h2>
           </div>
           <span className="map-meta">
-            5 regions <i /> 6 playable quests
+            5 regions <i /> 16 playable quests
           </span>
         </div>
         <div className="map-layout">
@@ -265,11 +270,9 @@ export function WorldMap({ user, setUser, preview = false }) {
               <p className="milestone-note">
                 {preview
                   ? "Sign in to begin"
-                  : progress?.beachCompleted === 3
-                    ? "Loop Village"
-                    : "Beginner Beach"}
+                  : progress?.javaCompleted ? "DSA Realm unlocked" : worlds.find(w=>progress?.regionQuests?.[w.slug]?.some(q=>q.status==='AVAILABLE'))?.name || "Beginner Beach"}
                 <br />
-                Three quests. One new horizon.
+                Follow the markers to your next horizon.
               </p>
             </div>
           </aside>
@@ -311,38 +314,7 @@ export function WorldMap({ user, setUser, preview = false }) {
                     onSelect={setQuestId}
                   />
                 ) : (
-                  <button
-                    className="npc-node"
-                    style={{ left: `${world.x}%`, top: `${world.y}%` }}
-                    onClick={() =>
-                      setSelected({
-                        ...world,
-                        dialogMessage:
-                          world.slug === "array-forest" && isUnlocked(world)
-                            ? "Array Forest is unlocked! Your village training is saved. Forest quests are not playable in this milestone."
-                            : undefined,
-                      })
-                    }
-                    aria-label={`Meet ${world.npc} in ${world.name}${!isUnlocked(world) ? ", locked region preview" : ", unlocked"}`}
-                  >
-                    <span
-                      className={`quest-marker ${!isUnlocked(world) ? "locked-marker" : ""}`}
-                      aria-hidden="true"
-                    >
-                      {isUnlocked(world) ? "!" : "◆"}
-                    </span>
-                    <Npc
-                      color={
-                        ["#cd6945", "#698494", "#759554", "#a66a64", "#8c7298"][
-                          i
-                        ]
-                      }
-                    />
-                    <span className="npc-name">{world.npc}</span>
-                    <span className="npc-action">
-                      {isUnlocked(world) ? "AREA UNLOCKED" : "LOCKED REGION"}
-                    </span>
-                  </button>
+                  <CampaignQuestNodes world={world} quests={(!preview && progress?.regionQuests?.[world.slug])||campaignPreview[world.slug]} busy={!preview&&(loadingProgress||!progress)} onSelect={setQuestId}/>
                 )}
                 {!isUnlocked(world) && i > 0 && (
                   <div className="zone-status">
@@ -353,7 +325,7 @@ export function WorldMap({ user, setUser, preview = false }) {
                 <div className="world-footer">
                   <span>{world.topics}</span>
                   <span>
-                    {i === 0
+                    {i>1 && !preview && progress?.regionQuests?.[world.slug]?.every(q=>q.status==='COMPLETED') ? "✓ AREA COMPLETE" : i === 0
                       ? !preview && progress?.beachCompleted === 3
                         ? "✓ BEACH COMPLETE"
                         : "✦ START HERE"
@@ -367,6 +339,7 @@ export function WorldMap({ user, setUser, preview = false }) {
               </section>
             ))}
             <div className="map-end">
+              {!preview && <div className="dsa-portal"><p>{progress?.javaCompleted ? "JAVA CAMPAIGN COMPLETE · THE CROSSING IS OPEN" : "Complete all five Java regions to cross the sea."}</p><Link to="/dsa">{progress?.javaCompleted ? "Enter the DSA Realm / Array Isles →" : "View the DSA crossing ◇"}</Link></div>}
               <span aria-hidden="true">✦</span>
               <p>Every expert was once a beginner.</p>
               <span>YOUR ADVENTURE IS JUST GETTING STARTED</span>
@@ -377,7 +350,7 @@ export function WorldMap({ user, setUser, preview = false }) {
       <footer className="site-footer">
         <span>CODEQUEST RPG</span>
         <span>Made for curious minds. Built one quest at a time.</span>
-        <span>MILESTONE 03</span>
+        <span>THE JAVA CAMPAIGN</span>
       </footer>
       {selected && (
         <GuideDialog
@@ -396,7 +369,7 @@ export function WorldMap({ user, setUser, preview = false }) {
         />
       )}
       {celebrating &&
-        (celebrating === "loop-village" ? (
+        (worlds.findIndex(w=>w.slug===celebrating)>1 ? <CampaignCelebration world={worlds.find(w=>w.slug===celebrating)} next={worlds[worlds.findIndex(w=>w.slug===celebrating)+1]} totalXp={progress.totalXp} badge={progress.badges.find(b=>b.id===celebrating)?.name} onClose={finishCelebration}/> : celebrating === "loop-village" ? (
           <VillageCelebration
             totalXp={progress.totalXp}
             onClose={finishCelebration}

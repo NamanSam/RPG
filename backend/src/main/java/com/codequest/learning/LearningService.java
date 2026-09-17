@@ -31,7 +31,7 @@ public class LearningService {
     @Transactional(readOnly=true)
     public Map<String,Object> map(long user) {
         boolean open=campaignOpen(user,"dsa");
-        return Map.of("unlocked",open,"message",open?"Follow the island trails.":"Complete the Java campaign to cross this sea. Java regions beyond Loop Village are not playable yet.","regions",db.queryForList("SELECT r.slug,r.name,t.slug AS topic FROM campaign_regions r JOIN topics t ON t.region_slug=r.slug WHERE r.campaign_slug='dsa' ORDER BY r.sort_order"));
+        return Map.of("unlocked",open,"message",open?"Follow the island trails.":"Complete all five Java regions to cross this sea.","regions",db.queryForList("SELECT r.slug,r.name,t.slug AS topic FROM campaign_regions r JOIN topics t ON t.region_slug=r.slug WHERE r.campaign_slug='dsa' ORDER BY r.sort_order"));
     }
     private void playerLock(long user) {
         if(db.queryForList("SELECT total_xp FROM player_stats WHERE user_id=? FOR UPDATE",user).isEmpty()) throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,"Please sign in again.");

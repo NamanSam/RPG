@@ -16,7 +16,8 @@ public class QuestService {
     public record BadgeView(String id, String name) {}
     // Preserve the original beach fields and add separate village fields.
     public record Progress(int totalXp, int level, int beachCompleted, List<QuestSummary> quests,
-        List<WorldView> worlds, List<BadgeView> badges, int villageCompleted, List<QuestSummary> villageQuests) {}
+        List<WorldView> worlds, List<BadgeView> badges, int villageCompleted, List<QuestSummary> villageQuests,
+        Map<String,List<QuestSummary>> regionQuests, boolean javaCompleted) {}
     public record Submission(boolean correct, boolean firstCompletion, int awardedXp, String feedback,
         boolean beachCompletedNow, Progress progress, String completedWorld) {}
 
@@ -62,9 +63,14 @@ public class QuestService {
         if (areaCompletedNow) {
             String badgeId = db.queryForObject("SELECT id FROM badges WHERE world_id = ?", String.class, quest.worldId());
             db.update("INSERT INTO user_badges (user_id, badge_id, earned_at) VALUES (?, ?, CURRENT_TIMESTAMP)", userId, badgeId);
-            // Only Beach and Village have quests. This unlocks geography only.
-            long nextWorld = quest.worldId() == 1 ? 2 : 3;
-            db.update("INSERT INTO user_world_unlocks (user_id, world_id, unlocked_at) VALUES (?, ?, CURRENT_TIMESTAMP)", userId, nextWorld);
+            if (quest.worldId() < 5) {
+                db.update("INSERT INTO user_world_unlocks (user_id, world_id, unlocked_at) VALUES (?, ?, CURRENT_TIMESTAMP)", userId, quest.worldId()+1);
+            } else {
+                int updated = db.update("UPDATE user_campaign_progress SET completed_at=CURRENT_TIMESTAMP WHERE user_id=? AND campaign_slug='java'",userId);
+                if(updated==0) db.update("INSERT INTO user_campaign_progress VALUES (?,'java',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)",userId);
+                if(db.queryForObject("SELECT COUNT(*) FROM user_campaign_progress WHERE user_id=? AND campaign_slug='dsa'",Integer.class,userId)==0)
+                    db.update("INSERT INTO user_campaign_progress(user_id,campaign_slug,unlocked_at) VALUES (?,'dsa',CURRENT_TIMESTAMP)",userId);
+            }
         }
         String feedback = correct ? quest.successFeedback() : quest.incorrectFeedback();
         if (correct && !first) feedback += " You already earned this quest's XP; practice does not award it again.";
@@ -87,7 +93,7 @@ public class QuestService {
         return !region.isEmpty() && region.stream().allMatch(q -> done.contains(q.id()));
     }
     private String status(QuestRepository.Definition q, Set<String> done, List<QuestRepository.Definition> all, Set<Long> unlocked) {
-        if (!unlocked.contains(q.worldId()) || (q.worldId() == 2 && !worldComplete(1, done, all))) return "LOCKED";
+        if (!unlocked.contains(q.worldId()) || (q.worldId() > 1 && java.util.stream.LongStream.range(1,q.worldId()).anyMatch(w -> !worldComplete(w,done,all)))) return "LOCKED";
         if (done.contains(q.id())) return "COMPLETED";
         boolean priorDone = all.stream().filter(p -> p.worldId() == q.worldId() && p.order() < q.order()).allMatch(p -> done.contains(p.id()));
         return priorDone ? "AVAILABLE" : "LOCKED";
@@ -112,7 +118,10 @@ public class QuestService {
             (rs, row) -> new BadgeView(rs.getString("id"), rs.getString("name")), userId);
         var beach = all.stream().filter(q -> q.worldId() == 1).map(q -> summary(q, done, all, unlocked)).toList();
         var village = all.stream().filter(q -> q.worldId() == 2).map(q -> summary(q, done, all, unlocked)).toList();
+        Map<String,List<QuestSummary>> regions = new LinkedHashMap<>();
+        for(var world:worldViews) regions.put(world.slug(), all.stream().filter(q->q.worldSlug().equals(world.slug())).map(q->summary(q,done,all,unlocked)).toList());
+        boolean javaComplete=all.size()==16 && all.stream().allMatch(q->done.contains(q.id()));
         return new Progress(xp, 1 + xp / 300, (int) beach.stream().filter(q -> q.status().equals("COMPLETED")).count(), beach, worldViews, badges,
-            (int) village.stream().filter(q -> q.status().equals("COMPLETED")).count(), village);
+            (int) village.stream().filter(q -> q.status().equals("COMPLETED")).count(), village, regions, javaComplete);
     }
 }
