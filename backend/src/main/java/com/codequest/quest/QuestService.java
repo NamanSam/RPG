@@ -17,7 +17,7 @@ public class QuestService {
     // Preserve the original beach fields and add separate village fields.
     public record Progress(int totalXp, int level, int beachCompleted, List<QuestSummary> quests,
         List<WorldView> worlds, List<BadgeView> badges, int villageCompleted, List<QuestSummary> villageQuests,
-        Map<String,List<QuestSummary>> regionQuests, boolean javaCompleted) {}
+        int forestCompleted, List<QuestSummary> forestQuests) {}
     public record Submission(boolean correct, boolean firstCompletion, int awardedXp, String feedback,
         boolean beachCompletedNow, Progress progress, String completedWorld) {}
 
@@ -63,14 +63,7 @@ public class QuestService {
         if (areaCompletedNow) {
             String badgeId = db.queryForObject("SELECT id FROM badges WHERE world_id = ?", String.class, quest.worldId());
             db.update("INSERT INTO user_badges (user_id, badge_id, earned_at) VALUES (?, ?, CURRENT_TIMESTAMP)", userId, badgeId);
-            if (quest.worldId() < 5) {
-                db.update("INSERT INTO user_world_unlocks (user_id, world_id, unlocked_at) VALUES (?, ?, CURRENT_TIMESTAMP)", userId, quest.worldId()+1);
-            } else {
-                int updated = db.update("UPDATE user_campaign_progress SET completed_at=CURRENT_TIMESTAMP WHERE user_id=? AND campaign_slug='java'",userId);
-                if(updated==0) db.update("INSERT INTO user_campaign_progress VALUES (?,'java',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)",userId);
-                if(db.queryForObject("SELECT COUNT(*) FROM user_campaign_progress WHERE user_id=? AND campaign_slug='dsa'",Integer.class,userId)==0)
-                    db.update("INSERT INTO user_campaign_progress(user_id,campaign_slug,unlocked_at) VALUES (?,'dsa',CURRENT_TIMESTAMP)",userId);
-            }
+            db.update("INSERT INTO user_world_unlocks (user_id, world_id, unlocked_at) VALUES (?, ?, CURRENT_TIMESTAMP)", userId, quest.worldId()+1);
         }
         String feedback = correct ? quest.successFeedback() : quest.incorrectFeedback();
         if (correct && !first) feedback += " You already earned this quest's XP; practice does not award it again.";
@@ -118,10 +111,9 @@ public class QuestService {
             (rs, row) -> new BadgeView(rs.getString("id"), rs.getString("name")), userId);
         var beach = all.stream().filter(q -> q.worldId() == 1).map(q -> summary(q, done, all, unlocked)).toList();
         var village = all.stream().filter(q -> q.worldId() == 2).map(q -> summary(q, done, all, unlocked)).toList();
-        Map<String,List<QuestSummary>> regions = new LinkedHashMap<>();
-        for(var world:worldViews) regions.put(world.slug(), all.stream().filter(q->q.worldSlug().equals(world.slug())).map(q->summary(q,done,all,unlocked)).toList());
-        boolean javaComplete=all.size()==16 && all.stream().allMatch(q->done.contains(q.id()));
+        var forest = all.stream().filter(q -> q.worldId() == 3).map(q -> summary(q, done, all, unlocked)).toList();
         return new Progress(xp, 1 + xp / 300, (int) beach.stream().filter(q -> q.status().equals("COMPLETED")).count(), beach, worldViews, badges,
-            (int) village.stream().filter(q -> q.status().equals("COMPLETED")).count(), village, regions, javaComplete);
+            (int) village.stream().filter(q -> q.status().equals("COMPLETED")).count(), village,
+            (int) forest.stream().filter(q -> q.status().equals("COMPLETED")).count(), forest);
     }
 }
