@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { api } from "../../services/api";
 import "../quests/quests.css";
+import "../array-isles/isles.css";
 
 export function QuestionPanel({ id, onClose, onResult }) {
   const dialog = useRef(null);
@@ -28,9 +29,9 @@ export function QuestionPanel({ id, onClose, onResult }) {
     <button className="dialog-close" aria-label="Close question" disabled={busy} onClick={onClose}>×</button>
     {error && <p role="alert">{error}</p>}
     {!q ? <p id="island-question-title">Opening the explorer's journal…</p> : <>
-      <p className="eyebrow">ARRAY ISLES · TRAIL {q.trail} · {q.difficulty}</p>
+      <p className="eyebrow">{q.regionName || "Array Isles"} · {q.practice ? "PRACTICE" : "TRAIL"} {q.trail} · {q.difficulty}</p>
       <h2 id="island-question-title">{q.title}</h2>
-      <p>{q.subtopic} · {q.xpReward} XP{q.isClassic ? " · Classic pattern" : ""}</p>
+      <p>{q.subtopic} · {q.xpReward} {q.practice ? "practice XP" : "XP"}{q.isClassic ? " · Classic pattern" : ""}</p>
       <p>{q.description}</p>
       {q.starterCode && <pre><code>{q.starterCode}</code></pre>}
       <details><summary>Examples & answer format</summary>
@@ -42,14 +43,14 @@ export function QuestionPanel({ id, onClose, onResult }) {
           mode === "PREDICT_OUTPUT" ? <PredictOutputInput answer={answer} setAnswer={setAnswer} disabled={busy}/> :
           mode === "CODE_BLANK" ? <CodeBlankInput answer={answer} setAnswer={setAnswer} disabled={busy}/> :
           <StructuredAnswerInput answer={answer} setAnswer={setAnswer} disabled={busy} coding={mode === "CODING_CHALLENGE"}/>}
-        <details><summary>Ask the island guide</summary>{q.hints.map(h=><p key={h}>{h}</p>)}</details>
+        <details><summary>{q.practice ? "Ask your training guide" : "Ask the island guide"}</summary>{q.hints.map(h=><p key={h}>{h}</p>)}</details>
         <button className="primary-button" disabled={busy || !answer.trim()}>{busy ? "Checking…" : result?.correct ? "Practice again →" : "Submit answer →"}</button>
       </form>
       {result && <div ref={feedback} tabIndex={-1} className={`quest-feedback ${result.correct ? "correct" : "incorrect"}`} role="status">
         <strong>{result.feedback}</strong><p>{result.explanation}</p>
-        <span key={`${result.progress.totalXp}-${result.awardedXp}`} className={result.awardedXp ? "xp-gain" : ""}>+{result.awardedXp} XP</span>
-        <p>Total XP: {result.progress.totalXp}</p>
-        <button className="primary-button" onClick={onClose}>Return to the island →</button>
+        <span key={`${result.progress.totalXp}-${result.awardedXp}`} className={result.awardedXp ? "xp-gain" : ""}>+{result.awardedXp} {result.progress.practice ? "practice XP" : "XP"}</span>
+        {result.progress.practice ? <p>Practice XP: {result.progress.practiceXp} · Story/account XP: {result.progress.totalXp}</p> : <p>Total XP: {result.progress.totalXp}</p>}
+        <button className="primary-button" onClick={onClose}>{result.progress.practice ? "Return to the training trail →" : "Return to the island →"}</button>
       </div>}
     </>}
   </dialog>;

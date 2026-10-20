@@ -21,8 +21,10 @@ public class ContentLoader implements ApplicationRunner {
             System.out.println("Question pack validation/import succeeded.");
             context.close();
         } else {
-            try(var input=new ClassPathResource("content/dsa/arrays/v1.json").getInputStream()) {
-                packs.publish(new String(input.readAllBytes(),StandardCharsets.UTF_8));
+            for (String resource : java.util.List.of("content/dsa/arrays/v1.json", "content/java/beginner-beach/v1.json")) {
+                try(var input=new ClassPathResource(resource).getInputStream()) {
+                    packs.publish(new String(input.readAllBytes(),StandardCharsets.UTF_8));
+                }
             }
         }
     }

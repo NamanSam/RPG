@@ -1,8 +1,9 @@
+import { BeachPractice } from "../features/practice/BeachPractice";
 import { KingdomQuestNodes, kingdomPreview, KingdomScene } from "../features/quests/KingdomQuestNodes";
 import { KingdomCelebration } from "../features/quests/KingdomCelebration";
 import { CanyonQuestNodes, canyonPreview, CanyonScene } from "../features/quests/CanyonQuestNodes";
 import { CanyonCelebration } from "../features/quests/CanyonCelebration";
-import { useCallback, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../services/api";
 import { worlds } from "../features/world-map/worlds";
@@ -239,7 +240,7 @@ export function WorldMap({ user, setUser, preview = false }) {
             <h2>A world of possibilities</h2>
           </div>
           <span className="map-meta">
-            5 regions <i /> 16 playable quests
+            5 regions <i /> 16 story quests · 50 optional practice questions
           </span>
         </div>
         <div className="map-layout">
@@ -281,7 +282,7 @@ export function WorldMap({ user, setUser, preview = false }) {
           </aside>
           <div className="world-scroll">
             {worlds.map((world, i) => (
-              <section
+              <Fragment key={world.slug}><section
                 className={`world-section ${world.theme} ${!isUnlocked(world) ? "zone-locked" : ""} ${world.slug === unlockAnimating ? "area-unlocking" : ""}`}
                 id={world.slug}
                 key={world.slug}
@@ -291,7 +292,7 @@ export function WorldMap({ user, setUser, preview = false }) {
                 {i === 4 ? <KingdomScene /> : i === 3 ? <CanyonScene /> : <PixelScene theme={world.theme} />}
                 <div className="world-caption">
                   <span className="world-kicker">
-                    REGION {world.region} <span> / </span> {world.quests} QUESTS
+                    REGION {world.region} <span> / </span> {world.quests} {i === 0 ? "STORY QUESTS" : "QUESTS"}
                   </span>
                   <h2>{world.name}</h2>
                   <p>{world.subtitle}</p>
@@ -340,6 +341,8 @@ export function WorldMap({ user, setUser, preview = false }) {
                   </span>
                 </div>
               </section>
+              {i === 0 && <BeachPractice storyCompleted={progress?.beachCompleted} preview={preview} />}
+              </Fragment>
             ))}
             <div className="map-end">
               {!preview && <div className="dsa-portal"><p>{progress?.dsaUnlocked ? "Java campaign complete. Array Isles awaits." : "Complete the Java campaign to cross the sea."}</p><Link to="/dsa">{progress?.dsaUnlocked ? "Enter DSA Realm · Array Isles →" : "View the DSA crossing ◇"}</Link></div>}

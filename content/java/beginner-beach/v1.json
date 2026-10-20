@@ -1,0 +1,2038 @@
+{
+  "topic": "beach-practice",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Variables Trail"
+    },
+    {
+      "number": 2,
+      "name": "Data Types Trail"
+    },
+    {
+      "number": 3,
+      "name": "Operators Trail"
+    },
+    {
+      "number": 4,
+      "name": "Input / Output Trail"
+    },
+    {
+      "number": 5,
+      "name": "Final Beginner Trial"
+    }
+  ],
+  "questions": [
+    {
+      "id": "beach-practice-01",
+      "slug": "name-a-supply-counter",
+      "title": "Name a supply counter",
+      "topic": "beach-practice",
+      "subtopic": "variables",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "The quartermaster needs a whole-number variable named supplies, starting at 6. Which declaration compiles?",
+      "examples": [
+        {
+          "input": "whole-number counter named tents, starting at 2",
+          "output": "int tents = 2;"
+        }
+      ],
+      "constraints": [
+        "Choose one option.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "supplies int = 6;"
+        },
+        {
+          "id": "b",
+          "text": "int supplies = 6;"
+        },
+        {
+          "id": "c",
+          "text": "int supplies == 6;"
+        }
+      ],
+      "hints": [
+        "Java places the type before the variable name."
+      ],
+      "explanation": "int supplies = 6; declares an int, names it supplies, and initializes it to six.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "variables",
+        "multiple_choice",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "OPTION"
+    },
+    {
+      "id": "beach-practice-02",
+      "slug": "replace-the-lantern-count",
+      "title": "Replace the lantern count",
+      "topic": "beach-practice",
+      "subtopic": "variables",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "An assignment replaces the value stored in a variable. What is printed?",
+      "examples": [
+        {
+          "input": "int x = 2; x = 5; println(x);",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int lanterns = 4;\nlanterns = 11;\nSystem.out.println(lanterns);",
+      "expectedAnswer": "11",
+      "options": [],
+      "hints": [
+        "Read assignments from top to bottom."
+      ],
+      "explanation": "The second assignment overwrites 4 with 11; the variable does not remember a history of values.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "variables",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-03",
+      "slug": "choose-a-legal-identifier",
+      "title": "Choose a legal identifier",
+      "topic": "beach-practice",
+      "subtopic": "variables",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which name can be used as a Java local variable?",
+      "examples": [
+        {
+          "input": "A descriptive legal name for a boat count",
+          "output": "boatCount"
+        }
+      ],
+      "constraints": [
+        "Choose one option.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "2camps"
+        },
+        {
+          "id": "b",
+          "text": "camp-count"
+        },
+        {
+          "id": "c",
+          "text": "campCount"
+        },
+        {
+          "id": "d",
+          "text": "class"
+        }
+      ],
+      "hints": [
+        "An identifier cannot start with a digit, contain a hyphen, or be a keyword."
+      ],
+      "explanation": "campCount begins with a letter and contains only valid identifier characters. The other choices violate Java naming rules.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "variables",
+        "multiple_choice",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "OPTION"
+    },
+    {
+      "id": "beach-practice-04",
+      "slug": "fill-the-assignment-gap",
+      "title": "Fill the assignment gap",
+      "topic": "beach-practice",
+      "subtopic": "variables",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Store 9 in an already declared variable. Fill the blank with the assignment operator.",
+      "examples": [
+        {
+          "input": "int fuel; fuel ____ 3;",
+          "output": "="
+        }
+      ],
+      "constraints": [
+        "Submit only the missing token, preserving Java capitalization.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int rope;\nrope ____ 9;",
+      "expectedAnswer": "=",
+      "options": [],
+      "hints": [
+        "Assignment uses one equals sign."
+      ],
+      "explanation": "The = operator stores the right-hand value in the variable on the left. == compares values instead.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "variables",
+        "code_blank",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "beach-practice-05",
+      "slug": "copies-travel-separately",
+      "title": "Copies travel separately",
+      "topic": "beach-practice",
+      "subtopic": "variables",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Primitive assignment copies a value. Print both counters in the order shown.",
+      "examples": [
+        {
+          "input": "int a=2; int b=a; a=7; print(b+\" \"+a);",
+          "output": "2 7"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int crates = 9;\nint backup = crates;\ncrates = 4;\nSystem.out.println(backup + \" \" + crates);",
+      "expectedAnswer": "9 4",
+      "options": [],
+      "hints": [
+        "Changing crates later does not change backup."
+      ],
+      "explanation": "backup received the value 9. Reassigning crates changes only crates, so the output is 9 4.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "variables",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-06",
+      "slug": "add-to-existing-supplies",
+      "title": "Add to existing supplies",
+      "topic": "beach-practice",
+      "subtopic": "variables",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Trace the compound assignment before the later reassignment.",
+      "examples": [
+        {
+          "input": "int n=3; n+=4; n=n-1; print(n);",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int supplies = 8;\nsupplies += 12;\nsupplies = supplies - 3;\nSystem.out.println(supplies);",
+      "expectedAnswer": "17",
+      "options": [],
+      "hints": [
+        "+= adds to the existing value."
+      ],
+      "explanation": "8 plus 12 becomes 20, then subtracting 3 leaves 17.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "variables",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-07",
+      "slug": "leave-a-block-safely",
+      "title": "Leave a block safely",
+      "topic": "beach-practice",
+      "subtopic": "variables",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A scout declares a local variable inside a block. What happens at the final line?",
+      "examples": [
+        {
+          "input": "{ int x=1; } print(x);",
+          "output": "Compilation fails: x is out of scope."
+        }
+      ],
+      "constraints": [
+        "Choose one option.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "{ int signal = 5; }\nSystem.out.println(signal);",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Compilation fails because signal is out of scope"
+        },
+        {
+          "id": "b",
+          "text": "It prints 5"
+        },
+        {
+          "id": "c",
+          "text": "It prints 0"
+        }
+      ],
+      "hints": [
+        "A local variable exists only within its declaring block."
+      ],
+      "explanation": "signal is out of scope after the closing brace. Compilation fails; this is not a runtime default-value issue.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "variables",
+        "multiple_choice",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "OPTION"
+    },
+    {
+      "id": "beach-practice-08",
+      "slug": "freeze-a-camp-capacity",
+      "title": "Freeze a camp capacity",
+      "topic": "beach-practice",
+      "subtopic": "variables",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which declaration prevents a later reassignment of capacity?",
+      "examples": [
+        {
+          "input": "A constant integer limit of 7",
+          "output": "final int limit = 7;"
+        }
+      ],
+      "constraints": [
+        "Choose one option.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "constant int capacity = 20;"
+        },
+        {
+          "id": "b",
+          "text": "int final = 20;"
+        },
+        {
+          "id": "c",
+          "text": "final int capacity = 20;"
+        }
+      ],
+      "hints": [
+        "Use the modifier for a variable that is assigned only once."
+      ],
+      "explanation": "final int capacity = 20; prevents reassignment after initialization. Naming a variable with capitals alone would not enforce this.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "variables",
+        "multiple_choice",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "OPTION"
+    },
+    {
+      "id": "beach-practice-09",
+      "slug": "swap-the-two-cargo-labels",
+      "title": "Swap the two cargo labels",
+      "topic": "beach-practice",
+      "subtopic": "variables",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Trace the temporary-variable swap. Submit [left, right] after all statements.",
+      "examples": [
+        {
+          "input": "left=8, right=2; use the same swap",
+          "output": "[2,8]"
+        }
+      ],
+      "constraints": [
+        "Submit a JSON array of integers in the requested order.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int left = 11, right = 3;\nint temporary = left;\nleft = right;\nright = temporary;",
+      "expectedAnswer": "[3,11]",
+      "options": [],
+      "hints": [
+        "temporary preserves the original left value before left changes."
+      ],
+      "explanation": "temporary holds 11, left becomes 3, and right becomes 11. A temporary variable prevents losing the original value.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "variables",
+        "logic_answer",
+        "classic-pattern"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "beach-practice-10",
+      "slug": "recover-a-changed-ledger",
+      "title": "Recover a changed ledger",
+      "topic": "beach-practice",
+      "subtopic": "variables",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Track two independent variables through all four updates.",
+      "examples": [
+        {
+          "input": "a=5,b=a; a=a+2; b=a-b; a=b*3; print(a+\" \"+b);",
+          "output": "6 2"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int coins = 6;\nint saved = coins;\ncoins = coins + 4;\nsaved = coins - saved;\ncoins = saved * 2;\nSystem.out.println(coins + \" \" + saved);",
+      "expectedAnswer": "8 4",
+      "options": [],
+      "hints": [
+        "Write down both values after each assignment."
+      ],
+      "explanation": "After the first update coins is 10 and saved is 6. saved then becomes 4, so coins finally becomes 8.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "variables",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-11",
+      "slug": "store-a-yes-or-no-flag",
+      "title": "Store a yes-or-no flag",
+      "topic": "beach-practice",
+      "subtopic": "data-types",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which primitive type represents whether the beach gate is open?",
+      "examples": [
+        {
+          "input": "A flag for whether a torch is lit",
+          "output": "boolean"
+        }
+      ],
+      "constraints": [
+        "Choose one option.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "boolean"
+        },
+        {
+          "id": "b",
+          "text": "int"
+        },
+        {
+          "id": "c",
+          "text": "char"
+        }
+      ],
+      "hints": [
+        "A yes-or-no value is true or false."
+      ],
+      "explanation": "boolean holds true or false. int and char do not implicitly convert into Java boolean values.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "data-types",
+        "multiple_choice",
+        "fundamentals"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "OPTION"
+    },
+    {
+      "id": "beach-practice-12",
+      "slug": "keep-a-fractional-depth",
+      "title": "Keep a fractional depth",
+      "topic": "beach-practice",
+      "subtopic": "data-types",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Read the literal assigned to this floating-point variable. What is printed?",
+      "examples": [
+        {
+          "input": "double depth=2.5; print(depth);",
+          "output": "2.5"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "double depth = 7.5;\nSystem.out.println(depth);",
+      "expectedAnswer": "7.5",
+      "options": [],
+      "hints": [
+        "A decimal literal without a suffix is a double."
+      ],
+      "explanation": "7.5 is directly representable here and is printed as 7.5. It is not truncated to an integer.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "data-types",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-13",
+      "slug": "mark-a-single-compass-letter",
+      "title": "Mark a single compass letter",
+      "topic": "beach-practice",
+      "subtopic": "data-types",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which initialization assigns one character to direction?",
+      "examples": [
+        {
+          "input": "A char holding S",
+          "output": "char direction = 'S';"
+        }
+      ],
+      "constraints": [
+        "Choose one option.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "char direction = \"N\";"
+        },
+        {
+          "id": "b",
+          "text": "char direction = 'N';"
+        },
+        {
+          "id": "c",
+          "text": "char direction = N;"
+        }
+      ],
+      "hints": [
+        "A char literal uses single quotes."
+      ],
+      "explanation": "char direction = 'N'; uses a one-character literal. Double quotes produce a String, not a char.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "data-types",
+        "multiple_choice",
+        "fundamentals"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "OPTION"
+    },
+    {
+      "id": "beach-practice-14",
+      "slug": "finish-a-float-literal",
+      "title": "Finish a float literal",
+      "topic": "beach-practice",
+      "subtopic": "data-types",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the blank with the lowercase suffix that makes the decimal literal a float.",
+      "examples": [
+        {
+          "input": "float distance = 1.5____;",
+          "output": "f"
+        }
+      ],
+      "constraints": [
+        "Submit only the missing token, preserving Java capitalization.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "float weight = 2.5____;",
+      "expectedAnswer": "f",
+      "options": [],
+      "hints": [
+        "The suffix is the first letter of float."
+      ],
+      "explanation": "f makes 2.5f a float literal. Without it, 2.5 is a double and cannot be assigned to float without conversion.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "data-types",
+        "code_blank",
+        "fundamentals"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "beach-practice-15",
+      "slug": "divide-after-widening",
+      "title": "Divide after widening",
+      "topic": "beach-practice",
+      "subtopic": "data-types",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "One operand is converted before division. Predict the printed result.",
+      "examples": [
+        {
+          "input": "(double) 7 / 2",
+          "output": "3.5"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int shells = 5;\ndouble share = (double) shells / 2;\nSystem.out.println(share);",
+      "expectedAnswer": "2.5",
+      "options": [],
+      "hints": [
+        "The cast happens before division, so this is floating-point division."
+      ],
+      "explanation": "Casting shells produces 5.0. Dividing 5.0 by 2 yields 2.5, preserving the fraction.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "data-types",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-16",
+      "slug": "trim-a-decimal-value",
+      "title": "Trim a decimal value",
+      "topic": "beach-practice",
+      "subtopic": "data-types",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A positive floating-point value is narrowed to int. What is printed?",
+      "examples": [
+        {
+          "input": "(int) 3.8",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "double distance = 7.9;\nint whole = (int) distance;\nSystem.out.println(whole);",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "A cast to int truncates toward zero rather than rounding."
+      ],
+      "explanation": "The fractional .9 is discarded by the cast, leaving 7. This is not rounding to the nearest integer.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "data-types",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-17",
+      "slug": "a-character-joins-arithmetic",
+      "title": "A character joins arithmetic",
+      "topic": "beach-practice",
+      "subtopic": "data-types",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A char participates in arithmetic with an int. Predict the output.",
+      "examples": [
+        {
+          "input": "char c='C'; print(c+1);",
+          "output": "68"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "char marker = 'A';\nint next = marker + 1;\nSystem.out.println(next);",
+      "expectedAnswer": "66",
+      "options": [],
+      "hints": [
+        "The code unit for A is 65; arithmetic promotes char to int."
+      ],
+      "explanation": "A has value 65. Adding one uses int arithmetic and produces 66 rather than the character B.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "data-types",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-18",
+      "slug": "make-room-for-a-large-literal",
+      "title": "Make room for a large literal",
+      "topic": "beach-practice",
+      "subtopic": "data-types",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which initialization compiles and stores three billion as a long?",
+      "examples": [
+        {
+          "input": "Store four billion as a long",
+          "output": "long n = 4000000000L;"
+        }
+      ],
+      "constraints": [
+        "Choose one option.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "long stars = 3000000000;"
+        },
+        {
+          "id": "b",
+          "text": "int stars = 3000000000L;"
+        },
+        {
+          "id": "c",
+          "text": "long stars = 3000000000L;"
+        }
+      ],
+      "hints": [
+        "The literal itself must have long type, before assignment."
+      ],
+      "explanation": "The L suffix makes 3000000000L a long literal. An unsuffixed decimal integer literal this large does not fit int.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "data-types",
+        "multiple_choice",
+        "fundamentals"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "OPTION"
+    },
+    {
+      "id": "beach-practice-19",
+      "slug": "byte-boundary-rollover",
+      "title": "Byte boundary rollover",
+      "topic": "beach-practice",
+      "subtopic": "data-types",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A byte ranges from -128 to 127. Trace the explicit narrowing conversion.",
+      "examples": [
+        {
+          "input": "(byte) 129",
+          "output": "-127"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int count = 128;\nbyte small = (byte) count;\nSystem.out.println(small);",
+      "expectedAnswer": "-128",
+      "options": [],
+      "hints": [
+        "An eight-bit signed value retains the low eight bits."
+      ],
+      "explanation": "128 has bit pattern 10000000 in eight bits, which represents -128 as a Java byte. The cast does not clamp to 127.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "data-types",
+        "predict_output",
+        "classic-pattern"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-20",
+      "slug": "widen-before-multiplying",
+      "title": "Widen before multiplying",
+      "topic": "beach-practice",
+      "subtopic": "data-types",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "The operands are int even though the destination is long. What is printed?",
+      "examples": [
+        {
+          "input": "long n = 1000000L * 3000; print(n);",
+          "output": "3000000000"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "long area = 1000000 * 3000;\nSystem.out.println(area);",
+      "expectedAnswer": "-1294967296",
+      "options": [],
+      "hints": [
+        "The int multiplication overflows before its result is widened to long."
+      ],
+      "explanation": "The mathematical product is 3000000000, outside the int range. Int overflow wraps to -1294967296; assigning that result to long preserves the negative value. A long operand such as 1000000L would avoid this overflow.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "data-types",
+        "predict_output",
+        "classic-pattern"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-21",
+      "slug": "multiply-before-adding",
+      "title": "Multiply before adding",
+      "topic": "beach-practice",
+      "subtopic": "operators",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict the arithmetic result using Java operator precedence.",
+      "examples": [
+        {
+          "input": "1 + 2 * 3",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "System.out.println(2 + 3 * 4);",
+      "expectedAnswer": "14",
+      "options": [],
+      "hints": [
+        "Multiplication binds more tightly than addition."
+      ],
+      "explanation": "3 * 4 is 12, then 2 + 12 gives 14. Parentheses would be needed to add first.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "operators",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-22",
+      "slug": "count-leftover-shells",
+      "title": "Count leftover shells",
+      "topic": "beach-practice",
+      "subtopic": "operators",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A bundle holds five shells. What remainder is printed?",
+      "examples": [
+        {
+          "input": "14 % 4",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "System.out.println(17 % 5);",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Remove as many full groups of five as possible."
+      ],
+      "explanation": "Three groups use 15 shells. The remainder of 17 divided by 5 is 2.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "operators",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-23",
+      "slug": "compare-two-counters",
+      "title": "Compare two counters",
+      "topic": "beach-practice",
+      "subtopic": "operators",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the blank with the equality operator for int values.",
+      "examples": [
+        {
+          "input": "boolean equal = 4 ____ 4;",
+          "output": "=="
+        }
+      ],
+      "constraints": [
+        "Submit only the missing token, preserving Java capitalization.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int a = 3, b = 3;\nboolean same = a ____ b;",
+      "expectedAnswer": "==",
+      "options": [],
+      "hints": [
+        "Comparison for equality uses two equals signs."
+      ],
+      "explanation": "== compares the primitive integer values. = would be assignment rather than an equality test.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "operators",
+        "code_blank",
+        "fundamentals"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "beach-practice-24",
+      "slug": "combine-two-gate-conditions",
+      "title": "Combine two gate conditions",
+      "topic": "beach-practice",
+      "subtopic": "operators",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Both comparisons must be true. Predict the boolean output.",
+      "examples": [
+        {
+          "input": "7 > 2 && 7 < 5",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int coins = 12;\nSystem.out.println(coins >= 10 && coins < 20);",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Evaluate each comparison, then combine with &&."
+      ],
+      "explanation": "12 is at least 10 and less than 20, so true && true is true.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "operators",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-25",
+      "slug": "group-an-integer-division",
+      "title": "Group an integer division",
+      "topic": "beach-practice",
+      "subtopic": "operators",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Integer division discards its fraction before multiplication. What is printed?",
+      "examples": [
+        {
+          "input": "11 / 4 * 3",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "System.out.println(17 / 5 * 2);",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Division and multiplication have equal precedence and run left to right."
+      ],
+      "explanation": "17 / 5 gives integer 3. Multiplying by 2 then produces 6, rather than using 3.4.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "operators",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-26",
+      "slug": "stop-a-needless-increment",
+      "title": "Stop a needless increment",
+      "topic": "beach-practice",
+      "subtopic": "operators",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Trace the short-circuit OR and then print the unchanged counter.",
+      "examples": [
+        {
+          "input": "int n=0; boolean b=false && ++n>0; print(b+\" \"+n);",
+          "output": "false 0"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int visits = 0;\nboolean open = true || ++visits > 0;\nSystem.out.println(open + \" \" + visits);",
+      "expectedAnswer": "true 0",
+      "options": [],
+      "hints": [
+        "The right side of || is skipped when the left side is true."
+      ],
+      "explanation": "The left operand is already true, so ++visits is never evaluated. open is true and visits stays zero.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "operators",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-27",
+      "slug": "read-old-and-new-counter-values",
+      "title": "Read old and new counter values",
+      "topic": "beach-practice",
+      "subtopic": "operators",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Prefix and postfix increments return different values. Predict a and b.",
+      "examples": [
+        {
+          "input": "int a=1; int b=a++ + ++a; print(a+\" \"+b);",
+          "output": "3 4"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int a = 2;\nint b = a++ + ++a;\nSystem.out.println(a + \" \" + b);",
+      "expectedAnswer": "4 6",
+      "options": [],
+      "hints": [
+        "Java evaluates the left operand first."
+      ],
+      "explanation": "a++ contributes 2 and then makes a 3. ++a makes it 4 and contributes 4. b is 6, while a ends at 4.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "operators",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-28",
+      "slug": "select-a-fare",
+      "title": "Select a fare",
+      "topic": "beach-practice",
+      "subtopic": "operators",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Use the conditional operator to choose a discount.",
+      "examples": [
+        {
+          "input": "int age=20; int fare=age<18?5:9; print(fare);",
+          "output": "9"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int age = 16;\nint fare = age < 18 ? 5 : 9;\nSystem.out.println(fare);",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Only the branch selected by the condition supplies the result."
+      ],
+      "explanation": "16 < 18 is true, so the expression selects 5. The colon separates the true and false branches.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "operators",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-29",
+      "slug": "find-the-tens-and-units",
+      "title": "Find the tens and units",
+      "topic": "beach-practice",
+      "subtopic": "operators",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Split the positive two-digit number into its digits. Submit [tens, units].",
+      "examples": [
+        {
+          "input": "number = 63",
+          "output": "[6,3]"
+        }
+      ],
+      "constraints": [
+        "Submit a JSON array of integers in the requested order.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int number = 47;\nint tens = number / 10;\nint units = number % 10;",
+      "expectedAnswer": "[4,7]",
+      "options": [],
+      "hints": [
+        "Integer division removes the units; remainder isolates them."
+      ],
+      "explanation": "47 / 10 is 4 and 47 % 10 is 7. This division/remainder pattern is the basis of digit-processing problems.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "operators",
+        "logic_answer",
+        "classic-pattern"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "beach-practice-30",
+      "slug": "distinguish-eager-boolean-and",
+      "title": "Distinguish eager boolean AND",
+      "topic": "beach-practice",
+      "subtopic": "operators",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Single & evaluates both boolean operands. Predict allowed and checks.",
+      "examples": [
+        {
+          "input": "int n=0; boolean b=true | (++n>0); print(b+\" \"+n);",
+          "output": "true 1"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int checks = 0;\nboolean allowed = false & (++checks > 0);\nSystem.out.println(allowed + \" \" + checks);",
+      "expectedAnswer": "false 1",
+      "options": [],
+      "hints": [
+        "Do not confuse boolean & with short-circuit &&."
+      ],
+      "explanation": "++checks runs even though the left operand is false. checks becomes 1, but false & true remains false.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "operators",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-31",
+      "slug": "print-a-greeting-line",
+      "title": "Print a greeting line",
+      "topic": "beach-practice",
+      "subtopic": "input-output",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the method name that prints text and then ends the line.",
+      "examples": [
+        {
+          "input": "System.out.____(\"Hi\");",
+          "output": "println"
+        }
+      ],
+      "constraints": [
+        "Submit only the missing token, preserving Java capitalization.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "System.out.____(\"Welcome\");",
+      "expectedAnswer": "println",
+      "options": [],
+      "hints": [
+        "The method name ends with ln."
+      ],
+      "explanation": "println writes the supplied text and a line separator. print writes text without ending the line.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "input-output",
+        "code_blank",
+        "fundamentals"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "beach-practice-32",
+      "slug": "join-two-short-prints",
+      "title": "Join two short prints",
+      "topic": "beach-practice",
+      "subtopic": "input-output",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "print does not insert a space or newline. Predict the visible text.",
+      "examples": [
+        {
+          "input": "print(\"Sea\"); print(\"Gate\");",
+          "output": "SeaGate"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "System.out.print(\"Code\");\nSystem.out.print(\"Quest\");",
+      "expectedAnswer": "CodeQuest",
+      "options": [],
+      "hints": [
+        "The second text starts immediately after the first."
+      ],
+      "explanation": "The two print calls produce CodeQuest on one line, with no automatic separator.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "input-output",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-33",
+      "slug": "read-an-integer-token",
+      "title": "Read an integer token",
+      "topic": "beach-practice",
+      "subtopic": "input-output",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Scanner input is already constructed. Which call reads the next integer token?",
+      "examples": [
+        {
+          "input": "Reading a double with Scanner",
+          "output": "input.nextDouble()"
+        }
+      ],
+      "constraints": [
+        "Choose one option.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "Scanner input = new Scanner(System.in);",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "input.readInt()"
+        },
+        {
+          "id": "b",
+          "text": "input.nextInt()"
+        },
+        {
+          "id": "c",
+          "text": "input.nextLine()"
+        }
+      ],
+      "hints": [
+        "The Scanner method includes the name of the target numeric type."
+      ],
+      "explanation": "nextInt() parses the next token as an int. nextLine() returns text, while readInt() is not a Scanner method.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "input-output",
+        "multiple_choice",
+        "fundamentals"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "OPTION"
+    },
+    {
+      "id": "beach-practice-34",
+      "slug": "preserve-an-intended-space",
+      "title": "Preserve an intended space",
+      "topic": "beach-practice",
+      "subtopic": "input-output",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict the exact greeting, including its single space.",
+      "examples": [
+        {
+          "input": "String name=\"Sol\"; print(\"Hi \"+name);",
+          "output": "Hi Sol"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "String name = \"Mira\";\nSystem.out.println(\"Hello \" + name);",
+      "expectedAnswer": "Hello Mira",
+      "options": [],
+      "hints": [
+        "The trailing space belongs to the string literal."
+      ],
+      "explanation": "Concatenation combines Hello followed by one space with Mira, resulting in Hello Mira.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "input-output",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-35",
+      "slug": "add-two-input-tokens",
+      "title": "Add two input tokens",
+      "topic": "beach-practice",
+      "subtopic": "input-output",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Assume Scanner reads the input tokens 7 8. Predict the output.",
+      "examples": [
+        {
+          "input": "Input: 2 6; same two-read sum",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int a = input.nextInt();\nint b = input.nextInt();\nSystem.out.println(a + b);",
+      "expectedAnswer": "15",
+      "options": [],
+      "hints": [
+        "Both values are ints, so + performs addition."
+      ],
+      "explanation": "The two tokens become integers 7 and 8; integer addition produces 15.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "input-output",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-36",
+      "slug": "read-a-whole-message",
+      "title": "Read a whole message",
+      "topic": "beach-practice",
+      "subtopic": "input-output",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "The next untouched input line is north camp. Which call reads the entire line including its internal space?",
+      "examples": [
+        {
+          "input": "Input line: blue lantern",
+          "output": "nextLine() returns blue lantern"
+        }
+      ],
+      "constraints": [
+        "Choose one option.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "Scanner input = new Scanner(System.in);",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "input.nextLine()"
+        },
+        {
+          "id": "b",
+          "text": "input.next()"
+        },
+        {
+          "id": "c",
+          "text": "input.nextInt()"
+        }
+      ],
+      "hints": [
+        "The line-reading method continues through spaces."
+      ],
+      "explanation": "nextLine() reads the remaining line. next() would read only north; nextInt() cannot parse these words.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "input-output",
+        "multiple_choice",
+        "fundamentals"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "OPTION"
+    },
+    {
+      "id": "beach-practice-37",
+      "slug": "a-newline-inside-a-literal",
+      "title": "A newline inside a literal",
+      "topic": "beach-practice",
+      "subtopic": "input-output",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict the two output lines. Submit an actual newline between them.",
+      "examples": [
+        {
+          "input": "print(\"A\\nB\");",
+          "output": "A\nB"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "System.out.print(\"North\\nSouth\");",
+      "expectedAnswer": "North\nSouth",
+      "options": [],
+      "hints": [
+        "The escape sequence \\n is a newline character."
+      ],
+      "explanation": "The string contains a newline between North and South, so they appear on separate lines. The two characters backslash and n are not printed literally.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "input-output",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-38",
+      "slug": "numbers-meet-a-string",
+      "title": "Numbers meet a string",
+      "topic": "beach-practice",
+      "subtopic": "input-output",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Java evaluates + from left to right. Predict the single output line.",
+      "examples": [
+        {
+          "input": "print(1+2+\"x\"+3+4);",
+          "output": "3x34"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "System.out.println(2 + 3 + \" boats \" + 4 + 5);",
+      "expectedAnswer": "5 boats 45",
+      "options": [],
+      "hints": [
+        "Before a String appears, + can add numbers. Afterward it concatenates."
+      ],
+      "explanation": "2 + 3 gives 5, then adding the string switches to concatenation. The final 4 and 5 append separately, producing 5 boats 45.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "input-output",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-39",
+      "slug": "consume-the-rest-of-a-numeric-line",
+      "title": "Consume the rest of a numeric line",
+      "topic": "beach-practice",
+      "subtopic": "input-output",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "The input is 12 followed immediately by a newline, then Mira on the next line. What does name contain after these calls?",
+      "examples": [
+        {
+          "input": "Input: 9\\nSol\\n; nextInt(); nextLine();",
+          "output": "The returned line is empty."
+        }
+      ],
+      "constraints": [
+        "Choose one option.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int age = input.nextInt();\nString name = input.nextLine();",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mira"
+        },
+        {
+          "id": "b",
+          "text": "12"
+        },
+        {
+          "id": "c",
+          "text": "An empty string"
+        }
+      ],
+      "hints": [
+        "nextInt consumes the token but leaves the line separator."
+      ],
+      "explanation": "nextLine reads the empty remainder of the numeric line, so name is an empty string. Call nextLine once to consume that remainder before reading the actual name.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "input-output",
+        "multiple_choice",
+        "classic-pattern"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "OPTION"
+    },
+    {
+      "id": "beach-practice-40",
+      "slug": "recover-a-two-word-destination",
+      "title": "Recover a two-word destination",
+      "topic": "beach-practice",
+      "subtopic": "input-output",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "The input is 3 then a newline, followed by blue harbor then a newline. The middle call deliberately consumes the remainder. Predict the output.",
+      "examples": [
+        {
+          "input": "Input: 2\\nred cove\\n; same calls",
+          "output": "2:red cove"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int passengers = input.nextInt();\ninput.nextLine();\nString port = input.nextLine();\nSystem.out.println(passengers + \":\" + port);",
+      "expectedAnswer": "3:blue harbor",
+      "options": [],
+      "hints": [
+        "After consuming the first line remainder, the nextLine call reads the destination."
+      ],
+      "explanation": "nextInt reads 3; the discarded nextLine consumes its empty remainder. The next nextLine reads blue harbor, preserving the internal space.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "input-output",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-41",
+      "slug": "choose-a-whole-number-counter",
+      "title": "Choose a whole-number counter",
+      "topic": "beach-practice",
+      "subtopic": "mixed-beginner",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A camp counts 14 tents. Which initialization uses the appropriate primitive whole-number type?",
+      "examples": [
+        {
+          "input": "A count of six ropes",
+          "output": "int ropes = 6;"
+        }
+      ],
+      "constraints": [
+        "Choose one option.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "int tents = 14;"
+        },
+        {
+          "id": "b",
+          "text": "boolean tents = 14;"
+        },
+        {
+          "id": "c",
+          "text": "int tents = \"14\";"
+        }
+      ],
+      "hints": [
+        "The count has no fractional or yes/no component."
+      ],
+      "explanation": "int tents = 14; represents this small whole-number count directly. Quotes would turn 14 into text.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "mixed-beginner",
+        "multiple_choice",
+        "fundamentals"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "OPTION"
+    },
+    {
+      "id": "beach-practice-42",
+      "slug": "track-a-shared-bill",
+      "title": "Track a shared bill",
+      "topic": "beach-practice",
+      "subtopic": "mixed-beginner",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Calculate the camp bill before printing it.",
+      "examples": [
+        {
+          "input": "2 meals at 5 coins",
+          "output": "10"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int meals = 3;\nint price = 4;\nSystem.out.println(meals * price);",
+      "expectedAnswer": "12",
+      "options": [],
+      "hints": [
+        "Multiply count by per-item cost."
+      ],
+      "explanation": "Three meals at four coins each cost 12 coins. Both operands are ints.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "mixed-beginner",
+        "predict_output",
+        "fundamentals"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-43",
+      "slug": "compare-without-assigning",
+      "title": "Compare without assigning",
+      "topic": "beach-practice",
+      "subtopic": "mixed-beginner",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Complete the comparison that checks whether two integer counters differ.",
+      "examples": [
+        {
+          "input": "boolean different = 2 ____ 3;",
+          "output": "!="
+        }
+      ],
+      "constraints": [
+        "Submit only the missing token, preserving Java capitalization.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "boolean changed = oldCount ____ newCount;",
+      "expectedAnswer": "!=",
+      "options": [],
+      "hints": [
+        "Java places ! before = for not equal."
+      ],
+      "explanation": "!= compares inequality. It returns true when the two integer values differ and does not change either variable.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "mixed-beginner",
+        "code_blank",
+        "fundamentals"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "beach-practice-44",
+      "slug": "choose-text-output-syntax",
+      "title": "Choose text output syntax",
+      "topic": "beach-practice",
+      "subtopic": "mixed-beginner",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which statement prints the word Ready as a line of text?",
+      "examples": [
+        {
+          "input": "Print the word Go on its own line",
+          "output": "System.out.println(\"Go\");"
+        }
+      ],
+      "constraints": [
+        "Choose one option.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "System.out.println(Ready);"
+        },
+        {
+          "id": "b",
+          "text": "System.out.println('Ready');"
+        },
+        {
+          "id": "c",
+          "text": "System.out.println(\"Ready\");"
+        }
+      ],
+      "hints": [
+        "String literals need double quotes and the statement ends with a semicolon."
+      ],
+      "explanation": "System.out.println(\"Ready\"); correctly names the output method and passes a String literal.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "mixed-beginner",
+        "multiple_choice",
+        "fundamentals"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "OPTION"
+    },
+    {
+      "id": "beach-practice-45",
+      "slug": "compute-a-fair-average",
+      "title": "Compute a fair average",
+      "topic": "beach-practice",
+      "subtopic": "mixed-beginner",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "The cast preserves a fractional average. Predict the output.",
+      "examples": [
+        {
+          "input": "Scores 6 and 7 with the same formula",
+          "output": "6.5"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int first = 8, second = 9;\ndouble average = (double) (first + second) / 2;\nSystem.out.println(average);",
+      "expectedAnswer": "8.5",
+      "options": [],
+      "hints": [
+        "Add first, cast the sum, then divide."
+      ],
+      "explanation": "The sum is 17, converted to 17.0 before division by 2, yielding 8.5.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "mixed-beginner",
+        "predict_output",
+        "classic-pattern"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-46",
+      "slug": "test-an-even-cargo-count",
+      "title": "Test an even cargo count",
+      "topic": "beach-practice",
+      "subtopic": "mixed-beginner",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A count is even when dividing it by two leaves no remainder. What is printed?",
+      "examples": [
+        {
+          "input": "count = 11",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int count = 18;\nSystem.out.println(count % 2 == 0);",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Find the remainder of 18 divided by 2."
+      ],
+      "explanation": "18 % 2 is zero, so the equality test is true. This check works for negative even integers too.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "mixed-beginner",
+        "predict_output",
+        "classic-pattern"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-47",
+      "slug": "convert-a-temperature-reading",
+      "title": "Convert a temperature reading",
+      "topic": "beach-practice",
+      "subtopic": "mixed-beginner",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Trace this integer Celsius-to-Fahrenheit expression. The multiplication happens before division.",
+      "examples": [
+        {
+          "input": "celsius = 10; same formula",
+          "output": "50"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int celsius = 25;\nint fahrenheit = celsius * 9 / 5 + 32;\nSystem.out.println(fahrenheit);",
+      "expectedAnswer": "77",
+      "options": [],
+      "hints": [
+        "225 / 5 is exact for this scenario."
+      ],
+      "explanation": "25 * 9 is 225; dividing by 5 gives 45, and adding 32 gives 77. Writing 9 / 5 first would lose its fraction.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "mixed-beginner",
+        "predict_output",
+        "classic-pattern"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-48",
+      "slug": "choose-the-larger-signal",
+      "title": "Choose the larger signal",
+      "topic": "beach-practice",
+      "subtopic": "mixed-beginner",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Use a conditional expression to find the larger of two negative values.",
+      "examples": [
+        {
+          "input": "a = -7, b = -2",
+          "output": "-2"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int a = -4, b = -9;\nint stronger = a > b ? a : b;\nSystem.out.println(stronger);",
+      "expectedAnswer": "-4",
+      "options": [],
+      "hints": [
+        "Among negative numbers, the value closer to zero is greater."
+      ],
+      "explanation": "-4 > -9 is true, so stronger receives -4. Starting from zero would be wrong for two negative inputs.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "mixed-beginner",
+        "predict_output",
+        "classic-pattern"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "beach-practice-49",
+      "slug": "reverse-a-three-digit-marker",
+      "title": "Reverse a three-digit marker",
+      "topic": "beach-practice",
+      "subtopic": "mixed-beginner",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Reverse the digits of positive marker 406 using the shown expression. Submit the resulting integer without a leading zero.",
+      "examples": [
+        {
+          "input": "marker = 120",
+          "output": "21"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int marker = 406;\nint reversed = (marker % 10) * 100\n    + ((marker / 10) % 10) * 10\n    + marker / 100;",
+      "expectedAnswer": "604",
+      "options": [],
+      "hints": [
+        "Extract units, tens and hundreds separately."
+      ],
+      "explanation": "Units are 6, tens are 0 and hundreds are 4. Repositioning them produces 600 + 0 + 4 = 604.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "mixed-beginner",
+        "integer_answer",
+        "classic-pattern"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "beach-practice-50",
+      "slug": "round-up-the-required-boats",
+      "title": "Round up the required boats",
+      "topic": "beach-practice",
+      "subtopic": "mixed-beginner",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "There are 23 passengers and each boat holds 6. Trace the integer formula for the minimum number of boats; no fractional boat can be hired.",
+      "examples": [
+        {
+          "input": "passengers = 12, capacity = 5",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Predict the fixed scenario exactly; use a space between values on the same line and a newline between printed lines.",
+        "Assume snippets appear inside a valid Java method with any stated imports. No code is executed."
+      ],
+      "starterCode": "int passengers = 23, capacity = 6;\nint boats = (passengers + capacity - 1) / capacity;",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Adding capacity minus one rounds a positive quotient upward."
+      ],
+      "explanation": "(23 + 6 - 1) / 6 is 28 / 6, which is 4 in integer arithmetic. Three boats hold only 18 passengers. The formula assumes a positive capacity and a sum that fits int.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "mixed-beginner",
+        "integer_answer",
+        "classic-pattern"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "INTEGER"
+    }
+  ]
+}

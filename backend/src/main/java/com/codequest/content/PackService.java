@@ -17,12 +17,12 @@ public class PackService {
     public QuestionPack validate(String source) {
         var p = JSON.readValue(source, QuestionPack.class);
         check(p.topic() != null && p.topic().matches("[a-z][a-z0-9-]{1,59}") && p.version() > 0, "Invalid topic/version");
-        check(p.trails() != null && p.trails().size() == 5 && p.questions() != null && p.questions().size() == 50, "A published topic requires 5 trails and 50 questions");
+        check(p.trails() != null && !p.trails().isEmpty() && p.questions() != null && p.questions().size() == p.trails().size()*10, "A published topic requires ten questions per trail");
         Set<String> ids = new HashSet<>(), slugs = new HashSet<>(); Set<Integer> orders = new HashSet<>(), trails = new HashSet<>();
-        for (var t : p.trails()) check(t.number() >= 1 && t.number() <= 5 && trails.add(t.number()) && t.name() != null && !t.name().isBlank(), "Invalid/duplicate trail");
+        for (var t : p.trails()) check(t.number() >= 1 && t.number() <= p.trails().size() && trails.add(t.number()) && t.name() != null && !t.name().isBlank(), "Invalid/duplicate trail");
         for (var q : p.questions()) {
             check(q.id() != null && q.id().matches("[a-z0-9-]{1,100}") && ids.add(q.id()) && q.slug() != null && q.slug().matches("[a-z0-9-]{1,100}") && slugs.add(q.slug()), "Invalid/duplicate question identity");
-            check(p.topic().equals(q.topic()) && q.order() >= 1 && q.order() <= 50 && orders.add(q.order()) && q.trail() == (q.order()-1)/10+1, "Invalid question order/trail/topic");
+            check(p.topic().equals(q.topic()) && q.order() >= 1 && q.order() <= p.questions().size() && orders.add(q.order()) && q.trail() == (q.order()-1)/10+1, "Invalid question order/trail/topic");
             check(Set.of("Easy","Medium","Hard").contains(q.difficulty()), "Invalid difficulty");
             check(q.xpReward() == switch(q.difficulty()) { case "Easy" -> 10; case "Medium" -> 20; default -> 30; }, "Unexpected XP reward");
             check(q.title() != null && !q.title().isBlank() && q.description() != null && !q.description().isBlank() && q.subtopic() != null && !q.subtopic().isBlank(), "Missing question text");
@@ -43,7 +43,7 @@ public class PackService {
                 check(optionIds.contains(q.expectedAnswer()), "Answer is not an option ID");
             }
         }
-        for (int t=1;t<=5;t++) { final int n=t; var qs=p.questions().stream().filter(q->q.trail()==n).toList();
+        for (int t=1;t<=p.trails().size();t++) { final int n=t; var qs=p.questions().stream().filter(q->q.trail()==n).toList();
             check(qs.size()==10 && qs.stream().filter(q->q.difficulty().equals("Easy")).count()==4 && qs.stream().filter(q->q.difficulty().equals("Medium")).count()==4 && qs.stream().filter(q->q.difficulty().equals("Hard")).count()==2, "Each trail requires 4 Easy, 4 Medium, 2 Hard"); }
         return p;
     }
@@ -58,7 +58,7 @@ public class PackService {
         var existing=db.queryForList("SELECT checksum FROM question_packs WHERE id=?",String.class,id);
         if (!existing.isEmpty()) { check(existing.getFirst().equals(checksum),"Published versions are immutable; increase version"); return id; }
         var prior=db.queryForList("SELECT question_id FROM question_versions WHERE pack_id=(SELECT active_pack FROM topics WHERE slug=?)",String.class,p.topic());
-        // Keep the same 50 identities in revisions so completion/XP cannot reset.
+        // Keep the same question identities in revisions so completion/XP cannot reset.
         if(!prior.isEmpty()) check(new HashSet<>(prior).equals(new HashSet<>(p.questions().stream().map(QuestionPack.Question::id).toList())),"Revisions must preserve question identities");
         db.update("INSERT INTO question_packs VALUES (?,?,?,?,?)",id,p.topic(),p.version(),checksum,"PUBLISHED");
         for(var t:p.trails()) db.update("INSERT INTO question_trails VALUES (?,?,?)",id,t.number(),t.name());

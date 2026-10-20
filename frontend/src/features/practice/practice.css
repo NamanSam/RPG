@@ -1,0 +1,164 @@
+.beach-training {
+  background: #dcc38c;
+  border-top: 4px solid #967b4e;
+  color: #314d43;
+}
+.practice-caption {
+  padding: 24px 28px 12px;
+  background: #ecd7a5;
+}
+.practice-caption h2 {
+  margin: 8px 0;
+  font-size: 27px;
+}
+.practice-caption p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+.practice-caption .eyebrow {
+  color: #536954;
+}
+.mastery-progress {
+  font-weight: 700;
+}
+.mastery-progress span {
+  white-space: nowrap;
+}
+.practice-badge {
+  padding: 8px;
+  background: #345b4a;
+  color: #ffe5a1;
+  display: inline-block;
+}
+.training-sands {
+  position: relative;
+  aspect-ratio: 800/520;
+  min-height: 480px;
+  isolation: isolate;
+  overflow: hidden;
+}
+.training-geography {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.training-location {
+  position: absolute;
+  transform: translate(-50%, -35%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0;
+  background: none;
+  width: 28%;
+  padding: 0;
+  cursor: pointer;
+  color: #263e35;
+}
+.training-location .npc-sprite {
+  width: 36px;
+  height: 50px;
+}
+.training-location > strong,
+.training-location > span:not(.quest-marker),
+.training-location > small {
+  background: #f2dfb0;
+  padding: 3px 7px;
+  font-size: 11px;
+  line-height: 1.4;
+  max-width: 100%;
+}
+.training-location > strong {
+  font-size: 13px;
+  border-top: 2px solid #9a885e;
+}
+.training-location .quest-marker {
+  position: relative;
+  left: auto;
+  top: auto;
+  margin-bottom: 4px;
+}
+.training-location.locked {
+  cursor: default;
+  filter: saturate(0.45);
+}
+.training-location:focus-visible {
+  outline: 3px solid #244a3d;
+  outline-offset: 6px;
+}
+.training-route {
+  list-style: none;
+  padding: 0 0 0 18px;
+  margin: 22px 0;
+  border-left: 3px dashed #bba56b;
+}
+.training-route li {
+  margin: 12px 0 12px 5px;
+}
+.training-route button {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 4px 10px;
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #b3a16d;
+  background: #f5e7c3;
+  color: #304e41;
+  cursor: pointer;
+}
+.training-route button > span {
+  grid-row: span 2;
+  align-self: center;
+  text-align: center;
+  font-size: 20px;
+}
+.training-route button small {
+  grid-column: 2;
+}
+.training-route button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.training-route .completed button {
+  border-color: #608568;
+}
+.practice-emblem {
+  font-size: 64px;
+  color: #97702e;
+  text-align: center;
+}
+.practice-rune {
+  animation: practice-glow 3s ease-in-out infinite alternate;
+}
+@keyframes practice-glow {
+  to {
+    opacity: 0.3;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .practice-rune {
+    animation: none;
+  }
+}
+@media (max-width: 600px) {
+  .practice-caption {
+    padding: 20px 16px;
+  }
+  .training-location > strong {
+    font-size: 11px;
+  }
+  .training-location > span:not(.quest-marker),
+  .training-location > small {
+    font-size: 9px;
+  }
+  .training-sands {
+    min-height: 520px;
+  }
+  .training-location .npc-sprite {
+    width: 28px;
+    height: 40px;
+  }
+}
