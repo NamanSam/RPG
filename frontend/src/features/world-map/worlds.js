@@ -59,7 +59,7 @@ export const worlds = [
     theme: "kingdom",
     subtitle: "Bring your knowledge together. Claim your crown.",
     topics: "ArrayList · HashMap · Set",
-    quests: 2,
+    quests: 3,
     npc: "The Archivist",
     role: "Keeper of collections",
     x: 48,

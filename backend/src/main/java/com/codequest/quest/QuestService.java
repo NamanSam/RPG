@@ -18,7 +18,8 @@ public class QuestService {
     public record Progress(int totalXp, int level, int beachCompleted, List<QuestSummary> quests,
         List<WorldView> worlds, List<BadgeView> badges, int villageCompleted, List<QuestSummary> villageQuests,
         int forestCompleted, List<QuestSummary> forestQuests,
-        int canyonCompleted, List<QuestSummary> canyonQuests) {}
+        int canyonCompleted, List<QuestSummary> canyonQuests,
+        int kingdomCompleted, List<QuestSummary> kingdomQuests, boolean javaCampaignComplete, boolean dsaUnlocked, int javaXp) {}
     public record Submission(boolean correct, boolean firstCompletion, int awardedXp, String feedback,
         boolean beachCompletedNow, Progress progress, String completedWorld) {}
 
@@ -64,7 +65,16 @@ public class QuestService {
         if (areaCompletedNow) {
             String badgeId = db.queryForObject("SELECT id FROM badges WHERE world_id = ?", String.class, quest.worldId());
             db.update("INSERT INTO user_badges (user_id, badge_id, earned_at) VALUES (?, ?, CURRENT_TIMESTAMP)", userId, badgeId);
-            db.update("INSERT INTO user_world_unlocks (user_id, world_id, unlocked_at) VALUES (?, ?, CURRENT_TIMESTAMP)", userId, quest.worldId()+1);
+            if (quest.worldId() < 5) {
+                db.update("INSERT INTO user_world_unlocks (user_id, world_id, unlocked_at) VALUES (?, ?, CURRENT_TIMESTAMP)", userId, quest.worldId()+1);
+            } else {
+                if (db.update("UPDATE user_campaign_progress SET completed_at=CURRENT_TIMESTAMP WHERE user_id=? AND campaign_slug='java' AND completed_at IS NULL", userId) == 0
+                    && db.queryForObject("SELECT COUNT(*) FROM user_campaign_progress WHERE user_id=? AND campaign_slug='java'", Integer.class, userId) == 0) {
+                    db.update("INSERT INTO user_campaign_progress(user_id,campaign_slug,unlocked_at,completed_at) VALUES (?,'java',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)", userId);
+                }
+                if (db.queryForObject("SELECT COUNT(*) FROM user_campaign_progress WHERE user_id=? AND campaign_slug='dsa'", Integer.class, userId) == 0)
+                    db.update("INSERT INTO user_campaign_progress(user_id,campaign_slug,unlocked_at) VALUES (?,'dsa',CURRENT_TIMESTAMP)", userId);
+            }
         }
         String feedback = correct ? quest.successFeedback() : quest.incorrectFeedback();
         if (correct && !first) feedback += " You already earned this quest's XP; practice does not award it again.";
@@ -114,9 +124,13 @@ public class QuestService {
         var village = all.stream().filter(q -> q.worldId() == 2).map(q -> summary(q, done, all, unlocked)).toList();
         var forest = all.stream().filter(q -> q.worldId() == 3).map(q -> summary(q, done, all, unlocked)).toList();
         var canyon = all.stream().filter(q -> q.worldId() == 4).map(q -> summary(q, done, all, unlocked)).toList();
+        var kingdom = all.stream().filter(q -> q.worldId() == 5).map(q -> summary(q, done, all, unlocked)).toList();
+        boolean campaignComplete = db.queryForObject("SELECT COUNT(*) FROM user_campaign_progress WHERE user_id=? AND campaign_slug='java' AND completed_at IS NOT NULL", Integer.class, userId) > 0;
+        int javaXp = all.stream().filter(q -> done.contains(q.id())).mapToInt(QuestRepository.Definition::reward).sum();
         return new Progress(xp, 1 + xp / 300, (int) beach.stream().filter(q -> q.status().equals("COMPLETED")).count(), beach, worldViews, badges,
             (int) village.stream().filter(q -> q.status().equals("COMPLETED")).count(), village,
             (int) forest.stream().filter(q -> q.status().equals("COMPLETED")).count(), forest,
-            (int) canyon.stream().filter(q -> q.status().equals("COMPLETED")).count(), canyon);
+            (int) canyon.stream().filter(q -> q.status().equals("COMPLETED")).count(), canyon,
+            (int) kingdom.stream().filter(q -> q.status().equals("COMPLETED")).count(), kingdom, campaignComplete, campaignComplete, javaXp);
     }
 }

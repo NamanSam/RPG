@@ -1,3 +1,5 @@
+import { KingdomQuestNodes, kingdomPreview, KingdomScene } from "../features/quests/KingdomQuestNodes";
+import { KingdomCelebration } from "../features/quests/KingdomCelebration";
 import { CanyonQuestNodes, canyonPreview, CanyonScene } from "../features/quests/CanyonQuestNodes";
 import { CanyonCelebration } from "../features/quests/CanyonCelebration";
 import { useCallback, useEffect, useState } from "react";
@@ -90,6 +92,7 @@ export function WorldMap({ user, setUser, preview = false }) {
     }
   }
   function finishCelebration() {
+    if (celebrating === "collection-kingdom") { setCelebrating(false); navigate("/dsa"); return; }
     const index = worlds.findIndex(w=>w.slug===celebrating);
     const nextWorld = worlds[index+1].slug;
     setCelebrating(false);
@@ -215,7 +218,7 @@ export function WorldMap({ user, setUser, preview = false }) {
                   </span>
                 )}
                 {progress && <span className="forest-progress-line">Array Forest · {progress.forestCompleted} / 3 complete</span>}
-                {progress && <span>OOP Canyon · {progress.canyonCompleted} / 4 complete</span>}{progress?.badges.map((badge) => (
+                {progress && <span>OOP Canyon · {progress.canyonCompleted} / 4 complete</span>}{progress && <span>Collection Kingdom · {progress.kingdomCompleted} / 3 complete</span>}{progress?.javaCampaignComplete && <span>JAVA CAMPAIGN COMPLETE · {progress.javaXp} Java XP</span>}{progress?.badges.map((badge) => (
                   <span className="earned-badge" key={badge.id}>
                     {badge.id === "loop-village" ? <MillSprite badge /> : "⚑"}{" "}
                     {badge.name}
@@ -236,7 +239,7 @@ export function WorldMap({ user, setUser, preview = false }) {
             <h2>A world of possibilities</h2>
           </div>
           <span className="map-meta">
-            5 regions <i /> 13 playable quests
+            5 regions <i /> 16 playable quests
           </span>
         </div>
         <div className="map-layout">
@@ -270,7 +273,7 @@ export function WorldMap({ user, setUser, preview = false }) {
               <p className="milestone-note">
                 {preview
                   ? "Sign in to begin"
-                  : progress?.canyonQuests?.some(q=>q.status==='AVAILABLE') ? "OOP Canyon" : progress?.forestQuests?.some(q=>q.status==='AVAILABLE') ? "Array Forest" : progress?.villageQuests?.some(q=>q.status==='AVAILABLE') ? "Loop Village" : "Beginner Beach"}
+                  : progress?.javaCampaignComplete ? "Java campaign complete · Array Isles awaits" : progress?.kingdomQuests?.some(q=>q.status==='AVAILABLE') ? "Collection Kingdom" : progress?.canyonQuests?.some(q=>q.status==='AVAILABLE') ? "OOP Canyon" : progress?.forestQuests?.some(q=>q.status==='AVAILABLE') ? "Array Forest" : progress?.villageQuests?.some(q=>q.status==='AVAILABLE') ? "Loop Village" : "Beginner Beach"}
                 <br />
                 Follow the markers to your next horizon.
               </p>
@@ -285,7 +288,7 @@ export function WorldMap({ user, setUser, preview = false }) {
                 aria-label={world.name}
                 tabIndex={-1}
               >
-                {i === 3 ? <CanyonScene /> : <PixelScene theme={world.theme} />}
+                {i === 4 ? <KingdomScene /> : i === 3 ? <CanyonScene /> : <PixelScene theme={world.theme} />}
                 <div className="world-caption">
                   <span className="world-kicker">
                     REGION {world.region} <span> / </span> {world.quests} QUESTS
@@ -315,7 +318,7 @@ export function WorldMap({ user, setUser, preview = false }) {
                   />
                 ) : i === 2 ? (
                   <ForestQuestNodes quests={(!preview && progress?.forestQuests) || forestPreview} busy={!preview && (loadingProgress || !progress)} onSelect={setQuestId} />
-                ) : i === 3 ? (<CanyonQuestNodes quests={(!preview && progress?.canyonQuests) || canyonPreview} busy={!preview && (loadingProgress || !progress)} onSelect={setQuestId} />) : null}
+                ) : i === 3 ? (<CanyonQuestNodes quests={(!preview && progress?.canyonQuests) || canyonPreview} busy={!preview && (loadingProgress || !progress)} onSelect={setQuestId} />) : i === 4 ? (<KingdomQuestNodes quests={(!preview && progress?.kingdomQuests) || kingdomPreview} busy={!preview && (loadingProgress || !progress)} onSelect={setQuestId} />) : null}
                 {!isUnlocked(world) && i > 0 && (
                   <div className="zone-status">
                     <span aria-hidden="true">◇</span> Complete{" "}
@@ -325,7 +328,7 @@ export function WorldMap({ user, setUser, preview = false }) {
                 <div className="world-footer">
                   <span>{world.topics}</span>
                   <span>
-                    {i===3 && !preview && progress?.canyonCompleted === 4 ? "✓ CANYON COMPLETE" : i===2 && !preview && progress?.forestCompleted === 3 ? "✓ FOREST COMPLETE" : i === 0
+                    {i===4 && !preview && progress?.kingdomCompleted === 3 ? "✓ KINGDOM COMPLETE" : i===3 && !preview && progress?.canyonCompleted === 4 ? "✓ CANYON COMPLETE" : i===2 && !preview && progress?.forestCompleted === 3 ? "✓ FOREST COMPLETE" : i === 0
                       ? !preview && progress?.beachCompleted === 3
                         ? "✓ BEACH COMPLETE"
                         : "✦ START HERE"
@@ -339,7 +342,7 @@ export function WorldMap({ user, setUser, preview = false }) {
               </section>
             ))}
             <div className="map-end">
-              {!preview && <div className="dsa-portal"><p>Complete the Java campaign to cross the sea.</p><Link to="/dsa">View the DSA crossing ◇</Link></div>}
+              {!preview && <div className="dsa-portal"><p>{progress?.dsaUnlocked ? "Java campaign complete. Array Isles awaits." : "Complete the Java campaign to cross the sea."}</p><Link to="/dsa">{progress?.dsaUnlocked ? "Enter DSA Realm · Array Isles →" : "View the DSA crossing ◇"}</Link></div>}
               <span aria-hidden="true">✦</span>
               <p>Every expert was once a beginner.</p>
               <span>YOUR ADVENTURE IS JUST GETTING STARTED</span>
@@ -369,7 +372,7 @@ export function WorldMap({ user, setUser, preview = false }) {
         />
       )}
       {celebrating &&
-        (celebrating === "oop-canyon" ? <CanyonCelebration totalXp={progress.totalXp} onClose={finishCelebration} /> : celebrating === "array-forest" ? <ForestCelebration totalXp={progress.totalXp} badge={progress.badges.find(b=>b.id===celebrating)?.name} onClose={finishCelebration}/> : celebrating === "loop-village" ? (
+        (celebrating === "collection-kingdom" ? <KingdomCelebration progress={progress} onClose={finishCelebration} /> : celebrating === "oop-canyon" ? <CanyonCelebration totalXp={progress.totalXp} onClose={finishCelebration} /> : celebrating === "array-forest" ? <ForestCelebration totalXp={progress.totalXp} badge={progress.badges.find(b=>b.id===celebrating)?.name} onClose={finishCelebration}/> : celebrating === "loop-village" ? (
           <VillageCelebration
             totalXp={progress.totalXp}
             onClose={finishCelebration}

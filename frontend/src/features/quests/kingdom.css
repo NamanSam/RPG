@@ -1,0 +1,76 @@
+.kingdom-node {
+  z-index: 3;
+}
+.kingdom-node .npc-name,
+.kingdom-node .npc-action {
+  background: #354d57;
+  color: #fff0be;
+}
+.kingdom-location {
+  display: block;
+  background: #354d57;
+  color: #fff0be;
+  font-size: 10px;
+  padding: 3px 5px;
+}
+.kingdom-node .npc-action {
+  line-height: 1.5;
+}
+.kingdom-node.locked {
+  filter: grayscale(0.7);
+}
+.world-section.kingdom .zone-status {
+  bottom: auto;
+  top: 20px;
+  right: 16px;
+  left: auto;
+  transform: none;
+}
+.royal-banners {
+  animation: royal-wave 4s ease-in-out infinite alternate;
+  transform-origin: 50% 20%;
+}
+.kingdom-glints {
+  animation: kingdom-glow 3s ease-in-out infinite alternate;
+}
+.kingdom-crown {
+  font-size: 64px;
+  color: #eac96e;
+}
+.campaign-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 18px 0;
+}
+.campaign-badges .earned-badge {
+  margin: 0;
+  font-size: 11px;
+}
+@keyframes royal-wave {
+  to {
+    transform: skewX(2deg);
+  }
+}
+@keyframes kingdom-glow {
+  to {
+    opacity: 0.2;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .royal-banners,
+  .kingdom-glints {
+    animation: none;
+  }
+}
+@media (max-width: 600px) {
+  .kingdom-node .npc-name {
+    font-size: 9px;
+  }
+  .kingdom-location,
+  .kingdom-node .npc-action {
+    font-size: 8px;
+  }
+}
+.campaign-badges .earned-badge { color:#294b3f; background:#e0d5ae; border:1px solid #a89b72; padding:5px 8px; }

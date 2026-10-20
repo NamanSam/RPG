@@ -23,8 +23,9 @@ class AuthIntegrationTest {
     @Autowired PasswordEncoder encoder;
 
     @Test void registerLoginRestoreAndLogout() throws Exception {
+        String email = "knight-" + java.util.UUID.randomUUID() + "@example.com";
         var registration = mvc.perform(post("/api/auth/register").with(csrf()).contentType("application/json")
-            .content("{\"email\":\"Knight@Example.com\",\"password\":\"test-password-123\",\"displayName\":\"Byte Knight\"}"))
+            .content("{\"email\":\"" + email.toUpperCase(java.util.Locale.ROOT) + "\",\"password\":\"test-password-123\",\"displayName\":\"Byte Knight\"}"))
             .andExpect(status().isCreated()).andExpect(jsonPath("$.level").value(1)).andExpect(jsonPath("$.totalXp").value(0))
             .andExpect(jsonPath("$.passwordHash").doesNotExist()).andReturn();
         Cookie cookie = registration.getResponse().getCookie(JwtCookieFilter.COOKIE);
@@ -32,17 +33,17 @@ class AuthIntegrationTest {
         assertThat(cookie.isHttpOnly()).isTrue();
         assertThat(cookie.getMaxAge()).isEqualTo(7200);
         assertThat(registration.getResponse().getHeader("Set-Cookie")).contains("SameSite=Lax");
-        var player = players.findByEmail("knight@example.com").orElseThrow();
+        var player = players.findByEmail(email).orElseThrow();
         assertThat(encoder.matches("test-password-123", player.getPasswordHash())).isTrue();
         assertThat(stats.findById(player.getId()).orElseThrow().getTotalXp()).isZero();
         mvc.perform(get("/api/auth/me").cookie(cookie)).andExpect(status().isOk()).andExpect(jsonPath("$.displayName").value("Byte Knight"));
         mvc.perform(post("/api/auth/login").with(csrf()).contentType("application/json")
-            .content("{\"email\":\"KNIGHT@example.com\",\"password\":\"test-password-123\"}"))
+            .content("{\"email\":\"" + email.toUpperCase(java.util.Locale.ROOT) + "\",\"password\":\"test-password-123\"}"))
             .andExpect(status().isOk()).andExpect(cookie().exists(JwtCookieFilter.COOKIE));
         mvc.perform(post("/api/auth/logout").with(csrf()).cookie(cookie)).andExpect(status().isNoContent()).andExpect(cookie().maxAge(JwtCookieFilter.COOKIE, 0));
         mvc.perform(get("/api/auth/me")).andExpect(status().isUnauthorized());
         mvc.perform(post("/api/auth/register").with(csrf()).contentType("application/json")
-            .content("{\"email\":\"knight@example.com\",\"password\":\"test-password-123\",\"displayName\":\"Other Knight\"}"))
+            .content("{\"email\":\"" + email + "\",\"password\":\"test-password-123\",\"displayName\":\"Other Knight\"}"))
             .andExpect(status().isConflict());
     }
 
