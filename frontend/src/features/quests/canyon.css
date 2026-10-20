@@ -1,0 +1,13 @@
+.canyon-node { z-index: 3; }
+.canyon-node .npc-name { background:#493c3a; color:#ffe2ae; }
+.canyon-location { display:block; font-size:10px; color:#fff0d0; background:#493c3a; padding:3px 5px; }
+.canyon-node .npc-action { background:#513d37; color:#fff0d0; line-height:1.5; }
+.canyon-node.locked { filter:grayscale(.7); }
+.canyon-rune { animation:canyon-glow 3s ease-in-out infinite alternate; }
+.canyon-dust { animation:canyon-drift 7s ease-in-out infinite alternate; }
+.canyon-badge { color:#e9b66f; font-size:64px; }
+@keyframes canyon-glow { from {opacity:.4} to {opacity:1} }
+@keyframes canyon-drift { to {transform:translate(12px,-8px);opacity:.3} }
+@media(prefers-reduced-motion:reduce){ .canyon-rune,.canyon-dust {animation:none} }
+@media(max-width:600px){ .canyon-node .npc-name {font-size:9px} .canyon-location {font-size:8px} .canyon-node .npc-action {font-size:8px} }
+.world-section.canyon .zone-status { bottom:auto; top:20px; right:16px; left:auto; transform:none; }

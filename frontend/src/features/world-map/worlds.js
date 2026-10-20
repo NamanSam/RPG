@@ -46,7 +46,7 @@ export const worlds = [
     theme: "canyon",
     subtitle: "Build something greater than its parts.",
     topics: "Classes · Objects · OOP principles",
-    quests: 2,
+    quests: 4,
     npc: "The Architect",
     role: "Shaper of blueprints",
     x: 55,

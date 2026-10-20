@@ -1,3 +1,5 @@
+import { CanyonQuestNodes, canyonPreview, CanyonScene } from "../features/quests/CanyonQuestNodes";
+import { CanyonCelebration } from "../features/quests/CanyonCelebration";
 import { useCallback, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../services/api";
@@ -213,7 +215,7 @@ export function WorldMap({ user, setUser, preview = false }) {
                   </span>
                 )}
                 {progress && <span className="forest-progress-line">Array Forest · {progress.forestCompleted} / 3 complete</span>}
-                {progress?.badges.map((badge) => (
+                {progress && <span>OOP Canyon · {progress.canyonCompleted} / 4 complete</span>}{progress?.badges.map((badge) => (
                   <span className="earned-badge" key={badge.id}>
                     {badge.id === "loop-village" ? <MillSprite badge /> : "⚑"}{" "}
                     {badge.name}
@@ -234,7 +236,7 @@ export function WorldMap({ user, setUser, preview = false }) {
             <h2>A world of possibilities</h2>
           </div>
           <span className="map-meta">
-            5 regions <i /> 9 playable quests
+            5 regions <i /> 13 playable quests
           </span>
         </div>
         <div className="map-layout">
@@ -268,7 +270,7 @@ export function WorldMap({ user, setUser, preview = false }) {
               <p className="milestone-note">
                 {preview
                   ? "Sign in to begin"
-                  : progress?.forestQuests?.some(q=>q.status==='AVAILABLE') ? "Array Forest" : progress?.villageQuests?.some(q=>q.status==='AVAILABLE') ? "Loop Village" : "Beginner Beach"}
+                  : progress?.canyonQuests?.some(q=>q.status==='AVAILABLE') ? "OOP Canyon" : progress?.forestQuests?.some(q=>q.status==='AVAILABLE') ? "Array Forest" : progress?.villageQuests?.some(q=>q.status==='AVAILABLE') ? "Loop Village" : "Beginner Beach"}
                 <br />
                 Follow the markers to your next horizon.
               </p>
@@ -283,7 +285,7 @@ export function WorldMap({ user, setUser, preview = false }) {
                 aria-label={world.name}
                 tabIndex={-1}
               >
-                <PixelScene theme={world.theme} />
+                {i === 3 ? <CanyonScene /> : <PixelScene theme={world.theme} />}
                 <div className="world-caption">
                   <span className="world-kicker">
                     REGION {world.region} <span> / </span> {world.quests} QUESTS
@@ -313,7 +315,7 @@ export function WorldMap({ user, setUser, preview = false }) {
                   />
                 ) : i === 2 ? (
                   <ForestQuestNodes quests={(!preview && progress?.forestQuests) || forestPreview} busy={!preview && (loadingProgress || !progress)} onSelect={setQuestId} />
-                ) : null}
+                ) : i === 3 ? (<CanyonQuestNodes quests={(!preview && progress?.canyonQuests) || canyonPreview} busy={!preview && (loadingProgress || !progress)} onSelect={setQuestId} />) : null}
                 {!isUnlocked(world) && i > 0 && (
                   <div className="zone-status">
                     <span aria-hidden="true">◇</span> Complete{" "}
@@ -323,7 +325,7 @@ export function WorldMap({ user, setUser, preview = false }) {
                 <div className="world-footer">
                   <span>{world.topics}</span>
                   <span>
-                    {i===2 && !preview && progress?.forestCompleted === 3 ? "✓ FOREST COMPLETE" : i === 0
+                    {i===3 && !preview && progress?.canyonCompleted === 4 ? "✓ CANYON COMPLETE" : i===2 && !preview && progress?.forestCompleted === 3 ? "✓ FOREST COMPLETE" : i === 0
                       ? !preview && progress?.beachCompleted === 3
                         ? "✓ BEACH COMPLETE"
                         : "✦ START HERE"
@@ -367,7 +369,7 @@ export function WorldMap({ user, setUser, preview = false }) {
         />
       )}
       {celebrating &&
-        (celebrating === "array-forest" ? <ForestCelebration totalXp={progress.totalXp} badge={progress.badges.find(b=>b.id===celebrating)?.name} onClose={finishCelebration}/> : celebrating === "loop-village" ? (
+        (celebrating === "oop-canyon" ? <CanyonCelebration totalXp={progress.totalXp} onClose={finishCelebration} /> : celebrating === "array-forest" ? <ForestCelebration totalXp={progress.totalXp} badge={progress.badges.find(b=>b.id===celebrating)?.name} onClose={finishCelebration}/> : celebrating === "loop-village" ? (
           <VillageCelebration
             totalXp={progress.totalXp}
             onClose={finishCelebration}

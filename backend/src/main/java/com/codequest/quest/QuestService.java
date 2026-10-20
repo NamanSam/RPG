@@ -17,7 +17,8 @@ public class QuestService {
     // Preserve the original beach fields and add separate village fields.
     public record Progress(int totalXp, int level, int beachCompleted, List<QuestSummary> quests,
         List<WorldView> worlds, List<BadgeView> badges, int villageCompleted, List<QuestSummary> villageQuests,
-        int forestCompleted, List<QuestSummary> forestQuests) {}
+        int forestCompleted, List<QuestSummary> forestQuests,
+        int canyonCompleted, List<QuestSummary> canyonQuests) {}
     public record Submission(boolean correct, boolean firstCompletion, int awardedXp, String feedback,
         boolean beachCompletedNow, Progress progress, String completedWorld) {}
 
@@ -112,8 +113,10 @@ public class QuestService {
         var beach = all.stream().filter(q -> q.worldId() == 1).map(q -> summary(q, done, all, unlocked)).toList();
         var village = all.stream().filter(q -> q.worldId() == 2).map(q -> summary(q, done, all, unlocked)).toList();
         var forest = all.stream().filter(q -> q.worldId() == 3).map(q -> summary(q, done, all, unlocked)).toList();
+        var canyon = all.stream().filter(q -> q.worldId() == 4).map(q -> summary(q, done, all, unlocked)).toList();
         return new Progress(xp, 1 + xp / 300, (int) beach.stream().filter(q -> q.status().equals("COMPLETED")).count(), beach, worldViews, badges,
             (int) village.stream().filter(q -> q.status().equals("COMPLETED")).count(), village,
-            (int) forest.stream().filter(q -> q.status().equals("COMPLETED")).count(), forest);
+            (int) forest.stream().filter(q -> q.status().equals("COMPLETED")).count(), forest,
+            (int) canyon.stream().filter(q -> q.status().equals("COMPLETED")).count(), canyon);
     }
 }
