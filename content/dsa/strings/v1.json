@@ -1,0 +1,2008 @@
+{
+  "topic": "strings",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "String Basics"
+    },
+    {
+      "number": 2,
+      "name": "Traversal and Character Logic"
+    },
+    {
+      "number": 3,
+      "name": "Palindromes and Frequency"
+    },
+    {
+      "number": 4,
+      "name": "String Patterns"
+    },
+    {
+      "number": 5,
+      "name": "String Master Trial"
+    }
+  ],
+  "questions": [
+    {
+      "id": "strings-01",
+      "slug": "create-a-string",
+      "title": "Create a string",
+      "topic": "strings",
+      "subtopic": "string-basics",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which Java expression creates the String harbor?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "\"harbor\""
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "\"harbor\""
+        },
+        {
+          "id": "b",
+          "text": "The source String changes automatically"
+        },
+        {
+          "id": "c",
+          "text": "The operation always throws an exception"
+        }
+      ],
+      "hints": [
+        "Focus on string basics and trace indexes and characters carefully."
+      ],
+      "explanation": "\"harbor\" is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "string-basics",
+        "multiple_choice",
+        "java-strings"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "OPTION"
+    },
+    {
+      "id": "strings-02",
+      "slug": "string-length",
+      "title": "String length",
+      "topic": "strings",
+      "subtopic": "string-basics",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "What does \"anchor\".length() return?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "What does \"anchor\".length() return?",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Focus on string basics and trace indexes and characters carefully."
+      ],
+      "explanation": "6 is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "string-basics",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-03",
+      "slug": "character-access",
+      "title": "Character access",
+      "topic": "strings",
+      "subtopic": "string-basics",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "What does \"dock\".charAt(1) return?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "o"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "What does \"dock\".charAt(1) return?",
+      "expectedAnswer": "o",
+      "options": [],
+      "hints": [
+        "Focus on string basics and trace indexes and characters carefully."
+      ],
+      "explanation": "o is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "string-basics",
+        "code_blank",
+        "java-strings"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-04",
+      "slug": "content-equality",
+      "title": "Content equality",
+      "topic": "strings",
+      "subtopic": "string-basics",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which method compares String contents with case sensitivity?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "equals"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "equals",
+      "options": [],
+      "hints": [
+        "Focus on string basics and trace indexes and characters carefully."
+      ],
+      "explanation": "equals is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "string-basics",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-05",
+      "slug": "ignore-case",
+      "title": "Ignore case",
+      "topic": "strings",
+      "subtopic": "string-basics",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "What does \"JAVA\".equalsIgnoreCase(\"java\") return?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "true"
+        },
+        {
+          "id": "b",
+          "text": "The source String changes automatically"
+        },
+        {
+          "id": "c",
+          "text": "The operation always throws an exception"
+        }
+      ],
+      "hints": [
+        "Focus on string basics and trace indexes and characters carefully."
+      ],
+      "explanation": "true is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "string-basics",
+        "multiple_choice",
+        "java-strings"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "OPTION"
+    },
+    {
+      "id": "strings-06",
+      "slug": "substring-range",
+      "title": "Substring range",
+      "topic": "strings",
+      "subtopic": "string-basics",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "What does \"lighthouse\".substring(0,5) return?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "light"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "What does \"lighthouse\".substring(0,5) return?",
+      "expectedAnswer": "light",
+      "options": [],
+      "hints": [
+        "Focus on string basics and trace indexes and characters carefully."
+      ],
+      "explanation": "light is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "string-basics",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-07",
+      "slug": "concatenation",
+      "title": "Concatenation",
+      "topic": "strings",
+      "subtopic": "string-basics",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "What is \"sea\" + \"port\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "seaport"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "What is \"sea\" + \"port\"?",
+      "expectedAnswer": "seaport",
+      "options": [],
+      "hints": [
+        "Focus on string basics and trace indexes and characters carefully."
+      ],
+      "explanation": "seaport is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "string-basics",
+        "code_blank",
+        "java-strings"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-08",
+      "slug": "immutability",
+      "title": "Immutability",
+      "topic": "strings",
+      "subtopic": "string-basics",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "String s=\"bay\"; s.concat(\"side\"); without assignment, what is s?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "bay"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "bay",
+      "options": [],
+      "hints": [
+        "Focus on string basics and trace indexes and characters carefully."
+      ],
+      "explanation": "bay is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "string-basics",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-09",
+      "slug": "string-or-char",
+      "title": "String or char",
+      "topic": "strings",
+      "subtopic": "string-basics",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Which literal is a char rather than a String?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "'A'"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Which literal is a char rather than a String?",
+      "expectedAnswer": "'A'",
+      "options": [],
+      "hints": [
+        "Focus on string basics and trace indexes and characters carefully."
+      ],
+      "explanation": "'A' is the result after applying the String operation exactly as described.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "string-basics",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-10",
+      "slug": "substring-boundary",
+      "title": "Substring boundary",
+      "topic": "strings",
+      "subtopic": "string-basics",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What does \"island\".substring(2,6) return?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "land"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "land",
+      "options": [],
+      "hints": [
+        "Focus on string basics and trace indexes and characters carefully."
+      ],
+      "explanation": "land is the result after applying the String operation exactly as described.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "string-basics",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-11",
+      "slug": "visit-every-character",
+      "title": "Visit every character",
+      "topic": "strings",
+      "subtopic": "character-logic",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Complete the loop bound for String s: i < s.____().",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "length"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "length"
+        },
+        {
+          "id": "b",
+          "text": "The source String changes automatically"
+        },
+        {
+          "id": "c",
+          "text": "The operation always throws an exception"
+        }
+      ],
+      "hints": [
+        "Focus on traversal and character logic and trace indexes and characters carefully."
+      ],
+      "explanation": "length is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "character-logic",
+        "multiple_choice",
+        "java-strings"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "OPTION"
+    },
+    {
+      "id": "strings-12",
+      "slug": "count-vowels",
+      "title": "Count vowels",
+      "topic": "strings",
+      "subtopic": "character-logic",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "How many vowels are in \"ocean\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "How many vowels are in \"ocean\"?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Focus on traversal and character logic and trace indexes and characters carefully."
+      ],
+      "explanation": "3 is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "character-logic",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-13",
+      "slug": "count-digits",
+      "title": "Count digits",
+      "topic": "strings",
+      "subtopic": "character-logic",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "How many digit characters are in \"dock42b\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "How many digit characters are in \"dock42b\"?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Focus on traversal and character logic and trace indexes and characters carefully."
+      ],
+      "explanation": "2 is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "character-logic",
+        "code_blank",
+        "java-strings"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-14",
+      "slug": "count-spaces",
+      "title": "Count spaces",
+      "topic": "strings",
+      "subtopic": "character-logic",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many spaces are in \"red blue boat\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Focus on traversal and character logic and trace indexes and characters carefully."
+      ],
+      "explanation": "2 is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "character-logic",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-15",
+      "slug": "uppercase-result",
+      "title": "Uppercase result",
+      "topic": "strings",
+      "subtopic": "character-logic",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "What is \"Harbor\".toUpperCase()?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "HARBOR"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "HARBOR"
+        },
+        {
+          "id": "b",
+          "text": "The source String changes automatically"
+        },
+        {
+          "id": "c",
+          "text": "The operation always throws an exception"
+        }
+      ],
+      "hints": [
+        "Focus on traversal and character logic and trace indexes and characters carefully."
+      ],
+      "explanation": "HARBOR is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "character-logic",
+        "multiple_choice",
+        "java-strings"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "OPTION"
+    },
+    {
+      "id": "strings-16",
+      "slug": "reverse-text",
+      "title": "Reverse text",
+      "topic": "strings",
+      "subtopic": "character-logic",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Reverse the characters in \"sail\".",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "lias"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Reverse the characters in \"sail\".",
+      "expectedAnswer": "lias",
+      "options": [],
+      "hints": [
+        "Focus on traversal and character logic and trace indexes and characters carefully."
+      ],
+      "explanation": "lias is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "character-logic",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-17",
+      "slug": "replace-characters",
+      "title": "Replace characters",
+      "topic": "strings",
+      "subtopic": "character-logic",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "What is \"banana\".replace('a','o')?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "bonono"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "What is \"banana\".replace('a','o')?",
+      "expectedAnswer": "bonono",
+      "options": [],
+      "hints": [
+        "Focus on traversal and character logic and trace indexes and characters carefully."
+      ],
+      "explanation": "bonono is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "character-logic",
+        "code_blank",
+        "java-strings"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-18",
+      "slug": "stringbuilder-append",
+      "title": "StringBuilder append",
+      "topic": "strings",
+      "subtopic": "character-logic",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A StringBuilder starts \"sea\" and appends \"weed\". What is its text?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "seaweed"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "seaweed",
+      "options": [],
+      "hints": [
+        "Focus on traversal and character logic and trace indexes and characters carefully."
+      ],
+      "explanation": "seaweed is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "character-logic",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-19",
+      "slug": "traversal-count",
+      "title": "Traversal count",
+      "topic": "strings",
+      "subtopic": "character-logic",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Count lowercase r characters in \"harbor radar\".",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Count lowercase r characters in \"harbor radar\".",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Focus on traversal and character logic and trace indexes and characters carefully."
+      ],
+      "explanation": "4 is the result after applying the String operation exactly as described.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "character-logic",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-20",
+      "slug": "filtered-reverse",
+      "title": "Filtered reverse",
+      "topic": "strings",
+      "subtopic": "character-logic",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Remove spaces from \"a b c\" and reverse the result.",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "cba"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "cba",
+      "options": [],
+      "hints": [
+        "Focus on traversal and character logic and trace indexes and characters carefully."
+      ],
+      "explanation": "cba is the result after applying the String operation exactly as described.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "character-logic",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-21",
+      "slug": "simple-palindrome",
+      "title": "Simple palindrome",
+      "topic": "strings",
+      "subtopic": "palindrome-frequency",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Is \"level\" a palindrome?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "true"
+        },
+        {
+          "id": "b",
+          "text": "The source String changes automatically"
+        },
+        {
+          "id": "c",
+          "text": "The operation always throws an exception"
+        }
+      ],
+      "hints": [
+        "Focus on palindromes and frequency and trace indexes and characters carefully."
+      ],
+      "explanation": "true is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "palindrome-frequency",
+        "multiple_choice",
+        "java-strings"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "OPTION"
+    },
+    {
+      "id": "strings-22",
+      "slug": "not-a-palindrome",
+      "title": "Not a palindrome",
+      "topic": "strings",
+      "subtopic": "palindrome-frequency",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Is \"harbor\" a palindrome?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Is \"harbor\" a palindrome?",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "Focus on palindromes and frequency and trace indexes and characters carefully."
+      ],
+      "explanation": "false is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "palindrome-frequency",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-23",
+      "slug": "character-frequency",
+      "title": "Character frequency",
+      "topic": "strings",
+      "subtopic": "palindrome-frequency",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "How many times does a occur in \"anaconda\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "How many times does a occur in \"anaconda\"?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Focus on palindromes and frequency and trace indexes and characters carefully."
+      ],
+      "explanation": "3 is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "palindrome-frequency",
+        "code_blank",
+        "java-strings"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-24",
+      "slug": "duplicate-character",
+      "title": "Duplicate character",
+      "topic": "strings",
+      "subtopic": "palindrome-frequency",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which character repeats in \"letter\" before any other repeat is found scanning left to right?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "t"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "t",
+      "options": [],
+      "hints": [
+        "Focus on palindromes and frequency and trace indexes and characters carefully."
+      ],
+      "explanation": "t is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "palindrome-frequency",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-25",
+      "slug": "first-unique-character",
+      "title": "First unique character",
+      "topic": "strings",
+      "subtopic": "palindrome-frequency",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "What is the first non-repeating character in \"swiss\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "w"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "w"
+        },
+        {
+          "id": "b",
+          "text": "The source String changes automatically"
+        },
+        {
+          "id": "c",
+          "text": "The operation always throws an exception"
+        }
+      ],
+      "hints": [
+        "Focus on palindromes and frequency and trace indexes and characters carefully."
+      ],
+      "explanation": "w is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "palindrome-frequency",
+        "multiple_choice",
+        "java-strings"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "OPTION"
+    },
+    {
+      "id": "strings-26",
+      "slug": "valid-anagram",
+      "title": "Valid anagram",
+      "topic": "strings",
+      "subtopic": "palindrome-frequency",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Are \"listen\" and \"silent\" anagrams?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Are \"listen\" and \"silent\" anagrams?",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Focus on palindromes and frequency and trace indexes and characters carefully."
+      ],
+      "explanation": "true is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "palindrome-frequency",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-27",
+      "slug": "remove-duplicates",
+      "title": "Remove duplicates",
+      "topic": "strings",
+      "subtopic": "palindrome-frequency",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Keep first occurrences in \"banana\". What text remains?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "ban"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Keep first occurrences in \"banana\". What text remains?",
+      "expectedAnswer": "ban",
+      "options": [],
+      "hints": [
+        "Focus on palindromes and frequency and trace indexes and characters carefully."
+      ],
+      "explanation": "ban is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "palindrome-frequency",
+        "code_blank",
+        "java-strings"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-28",
+      "slug": "frequency-map",
+      "title": "Frequency map",
+      "topic": "strings",
+      "subtopic": "palindrome-frequency",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In \"mississippi\", what is the frequency of s?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Focus on palindromes and frequency and trace indexes and characters carefully."
+      ],
+      "explanation": "4 is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "palindrome-frequency",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-29",
+      "slug": "normalized-palindrome",
+      "title": "Normalized palindrome",
+      "topic": "strings",
+      "subtopic": "palindrome-frequency",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Ignoring case and punctuation, is \"A man, a plan, a canal: Panama\" a palindrome?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Ignoring case and punctuation, is \"A man, a plan, a canal: Panama\" a palindrome?",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Focus on palindromes and frequency and trace indexes and characters carefully."
+      ],
+      "explanation": "true is the result after applying the String operation exactly as described.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "palindrome-frequency",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-30",
+      "slug": "anagram-difference",
+      "title": "Anagram difference",
+      "topic": "strings",
+      "subtopic": "palindrome-frequency",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Can \"triangle\" be rearranged into \"integral\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Focus on palindromes and frequency and trace indexes and characters carefully."
+      ],
+      "explanation": "true is the result after applying the String operation exactly as described.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "palindrome-frequency",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-31",
+      "slug": "common-prefix",
+      "title": "Common prefix",
+      "topic": "strings",
+      "subtopic": "string-patterns",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Longest common prefix of flower, flow, flight?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "fl"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "fl"
+        },
+        {
+          "id": "b",
+          "text": "The source String changes automatically"
+        },
+        {
+          "id": "c",
+          "text": "The operation always throws an exception"
+        }
+      ],
+      "hints": [
+        "Focus on string patterns and trace indexes and characters carefully."
+      ],
+      "explanation": "fl is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "string-patterns",
+        "multiple_choice",
+        "java-strings"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "OPTION"
+    },
+    {
+      "id": "strings-32",
+      "slug": "find-substring",
+      "title": "Find substring",
+      "topic": "strings",
+      "subtopic": "string-patterns",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "At what index does \"harbor\" occur in \"blue harbor light\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "At what index does \"harbor\" occur in \"blue harbor light\"?",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Focus on string patterns and trace indexes and characters carefully."
+      ],
+      "explanation": "5 is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "string-patterns",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-33",
+      "slug": "repeated-run",
+      "title": "Repeated run",
+      "topic": "strings",
+      "subtopic": "string-patterns",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Longest consecutive run length in \"aaabbccccd\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Longest consecutive run length in \"aaabbccccd\"?",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Focus on string patterns and trace indexes and characters carefully."
+      ],
+      "explanation": "4 is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "string-patterns",
+        "code_blank",
+        "java-strings"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-34",
+      "slug": "rotation-check",
+      "title": "Rotation check",
+      "topic": "strings",
+      "subtopic": "string-patterns",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Is \"erbottlewat\" a rotation of \"waterbottle\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Focus on string patterns and trace indexes and characters carefully."
+      ],
+      "explanation": "true is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "string-patterns",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-35",
+      "slug": "two-pointer-ends",
+      "title": "Two-pointer ends",
+      "topic": "strings",
+      "subtopic": "string-patterns",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "After swapping inward pairs, what is the reverse of \"rope\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "epor"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "epor"
+        },
+        {
+          "id": "b",
+          "text": "The source String changes automatically"
+        },
+        {
+          "id": "c",
+          "text": "The operation always throws an exception"
+        }
+      ],
+      "hints": [
+        "Focus on string patterns and trace indexes and characters carefully."
+      ],
+      "explanation": "epor is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "string-patterns",
+        "multiple_choice",
+        "java-strings"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "OPTION"
+    },
+    {
+      "id": "strings-36",
+      "slug": "unique-window",
+      "title": "Unique window",
+      "topic": "strings",
+      "subtopic": "string-patterns",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Length of longest substring without repeats in \"abcabcbb\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Length of longest substring without repeats in \"abcabcbb\"?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Focus on string patterns and trace indexes and characters carefully."
+      ],
+      "explanation": "3 is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "string-patterns",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-37",
+      "slug": "compression-basics",
+      "title": "Compression basics",
+      "topic": "strings",
+      "subtopic": "string-patterns",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Compress consecutive runs in \"aaabbc\" as character then count.",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "a3b2c1"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Compress consecutive runs in \"aaabbc\" as character then count.",
+      "expectedAnswer": "a3b2c1",
+      "options": [],
+      "hints": [
+        "Focus on string patterns and trace indexes and characters carefully."
+      ],
+      "explanation": "a3b2c1 is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "string-patterns",
+        "code_blank",
+        "java-strings"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-38",
+      "slug": "pattern-occurrence",
+      "title": "Pattern occurrence",
+      "topic": "strings",
+      "subtopic": "string-patterns",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many non-overlapping occurrences of \"aba\" are in \"abaaba\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Focus on string patterns and trace indexes and characters carefully."
+      ],
+      "explanation": "2 is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "string-patterns",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-39",
+      "slug": "sliding-window",
+      "title": "Sliding window",
+      "topic": "strings",
+      "subtopic": "string-patterns",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Length of longest substring with at most two distinct characters in \"eceba\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Length of longest substring with at most two distinct characters in \"eceba\"?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Focus on string patterns and trace indexes and characters carefully."
+      ],
+      "explanation": "3 is the result after applying the String operation exactly as described.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "string-patterns",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-40",
+      "slug": "prefix-across-set",
+      "title": "Prefix across set",
+      "topic": "strings",
+      "subtopic": "string-patterns",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Longest common prefix of interstellar, internet, internal?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "inter"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "inter",
+      "options": [],
+      "hints": [
+        "Focus on string patterns and trace indexes and characters carefully."
+      ],
+      "explanation": "inter is the result after applying the String operation exactly as described.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "string-patterns",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-41",
+      "slug": "reverse-string",
+      "title": "Reverse string",
+      "topic": "strings",
+      "subtopic": "string-master",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Reverse \"compass\" character by character.",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "ssapmoc"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "ssapmoc"
+        },
+        {
+          "id": "b",
+          "text": "The source String changes automatically"
+        },
+        {
+          "id": "c",
+          "text": "The operation always throws an exception"
+        }
+      ],
+      "hints": [
+        "Focus on string master trial and trace indexes and characters carefully."
+      ],
+      "explanation": "ssapmoc is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "string-master",
+        "multiple_choice",
+        "java-strings"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "OPTION"
+    },
+    {
+      "id": "strings-42",
+      "slug": "reverse-words",
+      "title": "Reverse words",
+      "topic": "strings",
+      "subtopic": "string-master",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Reverse word order in \"code quest harbor\".",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "harbor quest code"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Reverse word order in \"code quest harbor\".",
+      "expectedAnswer": "harbor quest code",
+      "options": [],
+      "hints": [
+        "Focus on string master trial and trace indexes and characters carefully."
+      ],
+      "explanation": "harbor quest code is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "string-master",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-43",
+      "slug": "valid-palindrome-trial",
+      "title": "Valid palindrome trial",
+      "topic": "strings",
+      "subtopic": "string-master",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Ignoring spaces and case, is \"Never odd or even\" a palindrome?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Ignoring spaces and case, is \"Never odd or even\" a palindrome?",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Focus on string master trial and trace indexes and characters carefully."
+      ],
+      "explanation": "true is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "string-master",
+        "code_blank",
+        "java-strings"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-44",
+      "slug": "valid-anagram-trial",
+      "title": "Valid anagram trial",
+      "topic": "strings",
+      "subtopic": "string-master",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Are \"schoolmaster\" and \"theclassroom\" anagrams?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Focus on string master trial and trace indexes and characters carefully."
+      ],
+      "explanation": "true is the result after applying the String operation exactly as described.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "string-master",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-45",
+      "slug": "first-unique-trial",
+      "title": "First unique trial",
+      "topic": "strings",
+      "subtopic": "string-master",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "First unique character in \"aabbcddee\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "c"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "c"
+        },
+        {
+          "id": "b",
+          "text": "The source String changes automatically"
+        },
+        {
+          "id": "c",
+          "text": "The operation always throws an exception"
+        }
+      ],
+      "hints": [
+        "Focus on string master trial and trace indexes and characters carefully."
+      ],
+      "explanation": "c is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "string-master",
+        "multiple_choice",
+        "java-strings"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "OPTION"
+    },
+    {
+      "id": "strings-46",
+      "slug": "isomorphic-strings",
+      "title": "Isomorphic strings",
+      "topic": "strings",
+      "subtopic": "string-master",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Are \"egg\" and \"add\" isomorphic?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Are \"egg\" and \"add\" isomorphic?",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Focus on string master trial and trace indexes and characters carefully."
+      ],
+      "explanation": "true is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "string-master",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-47",
+      "slug": "rotate-string-trial",
+      "title": "Rotate string trial",
+      "topic": "strings",
+      "subtopic": "string-master",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Can repeated left rotations turn \"abcde\" into \"cdeab\"?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Can repeated left rotations turn \"abcde\" into \"cdeab\"?",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Focus on string master trial and trace indexes and characters carefully."
+      ],
+      "explanation": "true is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "string-master",
+        "code_blank",
+        "java-strings"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-48",
+      "slug": "longest-unique-trial",
+      "title": "Longest unique trial",
+      "topic": "strings",
+      "subtopic": "string-master",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Longest substring without repeating characters in \"pwwkew\" has what length?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Focus on string master trial and trace indexes and characters carefully."
+      ],
+      "explanation": "3 is the result after applying the String operation exactly as described.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "string-master",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "strings-49",
+      "slug": "compression-trial",
+      "title": "Compression trial",
+      "topic": "strings",
+      "subtopic": "string-master",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Compress \"aabcccccaaa\" using character counts.",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "a2b1c5a3"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "Compress \"aabcccccaaa\" using character counts.",
+      "expectedAnswer": "a2b1c5a3",
+      "options": [],
+      "hints": [
+        "Focus on string master trial and trace indexes and characters carefully."
+      ],
+      "explanation": "a2b1c5a3 is the result after applying the String operation exactly as described.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "string-master",
+        "predict_output",
+        "java-strings"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "strings-50",
+      "slug": "multi-step-harbor-cipher",
+      "title": "Multi-step harbor cipher",
+      "topic": "strings",
+      "subtopic": "string-master",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Remove spaces from \"taco cat\", lowercase it, then test palindrome. Result?",
+      "examples": [
+        {
+          "input": "Trace the stated String scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use Java String semantics.",
+        "Submit only the requested option, token, value, Boolean, or text."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Focus on string master trial and trace indexes and characters carefully."
+      ],
+      "explanation": "true is the result after applying the String operation exactly as described.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "string-master",
+        "logic_answer",
+        "java-strings"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "TOKEN"
+    }
+  ]
+}

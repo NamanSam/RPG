@@ -42,6 +42,9 @@ public class LearningService {
         if(rows.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Topic not found.");
         String campaign=(String)rows.getFirst().get("campaign_slug");
         if(!campaignOpen(user,campaign)) throw new ResponseStatusException(HttpStatus.FORBIDDEN,"Complete the prerequisite campaign first.");
+        var prerequisite=db.queryForList("SELECT prerequisite_topic_slug FROM topic_prerequisites WHERE topic_slug=?",String.class,topic);
+        if(!prerequisite.isEmpty() && db.queryForObject("SELECT COUNT(*) FROM user_topic_progress WHERE user_id=? AND topic_slug=? AND completed_at IS NOT NULL",Integer.class,user,prerequisite.getFirst())==0)
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN,"Complete the previous DSA region first.");
         if(db.queryForObject("SELECT COUNT(*) FROM user_campaign_progress WHERE user_id=? AND campaign_slug=?",Integer.class,user,campaign)==0)
             db.update("INSERT INTO user_campaign_progress(user_id,campaign_slug,unlocked_at) VALUES (?,?,CURRENT_TIMESTAMP)",user,campaign);
         var assigned=db.queryForList("SELECT pack_id FROM user_topic_progress WHERE user_id=? AND topic_slug=?",String.class,user,topic);
