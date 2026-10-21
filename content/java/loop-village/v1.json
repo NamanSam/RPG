@@ -1,0 +1,2008 @@
+{
+  "topic": "loop-village-practice",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Conditions Trail"
+    },
+    {
+      "number": 2,
+      "name": "For Loops Trail"
+    },
+    {
+      "number": 3,
+      "name": "While Loops Trail"
+    },
+    {
+      "number": 4,
+      "name": "Do-While Trail"
+    },
+    {
+      "number": 5,
+      "name": "Village Loop Trial"
+    }
+  ],
+  "questions": [
+    {
+      "id": "loop-practice-01",
+      "slug": "gate-boundary",
+      "title": "Gate boundary",
+      "topic": "loop-village-practice",
+      "subtopic": "conditions",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose a condition that accepts coins equal to or above 10.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "coins >= 10"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int coins=10;",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "coins >= 10"
+        },
+        {
+          "id": "b",
+          "text": "none of these conditions"
+        },
+        {
+          "id": "c",
+          "text": "the loop never starts"
+        }
+      ],
+      "hints": [
+        "Trace the conditions rules one step at a time."
+      ],
+      "explanation": "The correct result is coins >= 10. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "conditions",
+        "multiple_choice",
+        "java-control-flow"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "OPTION"
+    },
+    {
+      "id": "loop-practice-02",
+      "slug": "evening-branch",
+      "title": "Evening branch",
+      "topic": "loop-village-practice",
+      "subtopic": "conditions",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict the branch for hour 19 in if(hour<18) Day else Night.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "Night"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int hour=19;",
+      "expectedAnswer": "Night",
+      "options": [],
+      "hints": [
+        "Trace the conditions rules one step at a time."
+      ],
+      "explanation": "The correct result is Night. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "conditions",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "loop-practice-03",
+      "slug": "equality-rune",
+      "title": "Equality rune",
+      "topic": "loop-village-practice",
+      "subtopic": "conditions",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the primitive equality operator.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "=="
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "if (score __ target)",
+      "expectedAnswer": "==",
+      "options": [],
+      "hints": [
+        "Trace the conditions rules one step at a time."
+      ],
+      "explanation": "The correct result is ==. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "conditions",
+        "code_blank",
+        "java-control-flow"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-04",
+      "slug": "teen-range",
+      "title": "Teen range",
+      "topic": "loop-village-practice",
+      "subtopic": "conditions",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "State whether age 15 satisfies age>=13 && age<=19.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int age=15;",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Trace the conditions rules one step at a time."
+      ],
+      "explanation": "The correct result is true. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "conditions",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-05",
+      "slug": "rank-ladder",
+      "title": "Rank ladder",
+      "topic": "loop-village-practice",
+      "subtopic": "conditions",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict Gold/Silver/Bronze for 72 using thresholds 90 and 70.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "Silver"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int points=72;",
+      "expectedAnswer": "Silver",
+      "options": [],
+      "hints": [
+        "Trace the conditions rules one step at a time."
+      ],
+      "explanation": "The correct result is Silver. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "conditions",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "loop-practice-06",
+      "slug": "nested-key-test",
+      "title": "Nested key test",
+      "topic": "loop-village-practice",
+      "subtopic": "conditions",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "State whether hasKey=true and guards=2 opens a gate requiring key && guards==0.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "Trace the conditions rules one step at a time."
+      ],
+      "explanation": "The correct result is false. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "conditions",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-07",
+      "slug": "negate-rain",
+      "title": "Negate rain",
+      "topic": "loop-village-practice",
+      "subtopic": "conditions",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the operator before raining so false rain permits travel.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "!"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "if (__raining)",
+      "expectedAnswer": "!",
+      "options": [],
+      "hints": [
+        "Trace the conditions rules one step at a time."
+      ],
+      "explanation": "The correct result is !. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "conditions",
+        "code_blank",
+        "java-control-flow"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-08",
+      "slug": "nested-gate-output",
+      "title": "Nested gate output",
+      "topic": "loop-village-practice",
+      "subtopic": "conditions",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict output when level>=3 and keys>0 prints 7.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int level=4,keys=1;",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Trace the conditions rules one step at a time."
+      ],
+      "explanation": "The correct result is 7. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "conditions",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-09",
+      "slug": "invalid-range",
+      "title": "Invalid range",
+      "topic": "loop-village-practice",
+      "subtopic": "conditions",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the condition detecting values below 0 or above 100.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "value < 0 || value > 100"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "value < 0 || value > 100"
+        },
+        {
+          "id": "b",
+          "text": "none of these conditions"
+        },
+        {
+          "id": "c",
+          "text": "the loop never starts"
+        }
+      ],
+      "hints": [
+        "Trace the conditions rules one step at a time."
+      ],
+      "explanation": "The correct result is value < 0 || value > 100. Following the condition and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "conditions",
+        "multiple_choice",
+        "java-control-flow"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "OPTION"
+    },
+    {
+      "id": "loop-practice-10",
+      "slug": "zero-classification",
+      "title": "Zero classification",
+      "topic": "loop-village-practice",
+      "subtopic": "conditions",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Classify n=0 using negative, zero, positive branches.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "zero"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int n=0;",
+      "expectedAnswer": "zero",
+      "options": [],
+      "hints": [
+        "Trace the conditions rules one step at a time."
+      ],
+      "explanation": "The correct result is zero. Following the condition and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "conditions",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-11",
+      "slug": "four-mill-turns",
+      "title": "Four mill turns",
+      "topic": "loop-village-practice",
+      "subtopic": "for-loops",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the loop header that runs for i=0,1,2,3.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "for (int i=0; i<4; i++)"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "for (int i=0; i<4; i++)"
+        },
+        {
+          "id": "b",
+          "text": "none of these conditions"
+        },
+        {
+          "id": "c",
+          "text": "the loop never starts"
+        }
+      ],
+      "hints": [
+        "Trace the for loops rules one step at a time."
+      ],
+      "explanation": "The correct result is for (int i=0; i<4; i++). Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "for-loops",
+        "multiple_choice",
+        "java-control-flow"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "OPTION"
+    },
+    {
+      "id": "loop-practice-12",
+      "slug": "counter-output",
+      "title": "Counter output",
+      "topic": "loop-village-practice",
+      "subtopic": "for-loops",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict the final counter after four iterations.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int c=0; for(int i=0;i<4;i++) c++;",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Trace the for loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 4. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "for-loops",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-13",
+      "slug": "increment-slot",
+      "title": "Increment slot",
+      "topic": "loop-village-practice",
+      "subtopic": "for-loops",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the update that adds one to i.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "i++"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "for(int i=0;i<5;__)",
+      "expectedAnswer": "i++",
+      "options": [],
+      "hints": [
+        "Trace the for loops rules one step at a time."
+      ],
+      "explanation": "The correct result is i++. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "for-loops",
+        "code_blank",
+        "java-control-flow"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-14",
+      "slug": "first-three-sum",
+      "title": "First three sum",
+      "topic": "loop-village-practice",
+      "subtopic": "for-loops",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the sum produced for i from 1 through 3.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int sum=0; for(int i=1;i<=3;i++) sum+=i;",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Trace the for loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 6. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "for-loops",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-15",
+      "slug": "even-posts",
+      "title": "Even posts",
+      "topic": "loop-village-practice",
+      "subtopic": "for-loops",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict the space-separated values from zero through six stepping by two.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "0 2 4 6"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "for(int i=0;i<=6;i+=2) print(i);",
+      "expectedAnswer": "0 2 4 6",
+      "options": [],
+      "hints": [
+        "Trace the for loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 0 2 4 6. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "for-loops",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "loop-practice-16",
+      "slug": "counter-after-loop",
+      "title": "Counter after loop",
+      "topic": "loop-village-practice",
+      "subtopic": "for-loops",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give i after for(i=2;i<7;i++) finishes.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int i; for(i=2;i<7;i++){}",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Trace the for loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 7. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "for-loops",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-17",
+      "slug": "countdown-update",
+      "title": "Countdown update",
+      "topic": "loop-village-practice",
+      "subtopic": "for-loops",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the update for a counter moving from 3 toward 1.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "i--"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "for(int i=3;i>=1;__)",
+      "expectedAnswer": "i--",
+      "options": [],
+      "hints": [
+        "Trace the for loops rules one step at a time."
+      ],
+      "explanation": "The correct result is i--. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "for-loops",
+        "code_blank",
+        "java-control-flow"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-18",
+      "slug": "break-before-four",
+      "title": "Break before four",
+      "topic": "loop-village-practice",
+      "subtopic": "for-loops",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict the sum when 1,2,3 are added and the loop breaks at 4.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int sum=0;",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Trace the for loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 6. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "for-loops",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-19",
+      "slug": "nested-courtyard",
+      "title": "Nested courtyard",
+      "topic": "loop-village-practice",
+      "subtopic": "for-loops",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the visit count for 3 rows and 4 columns.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "12"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "none of these conditions"
+        },
+        {
+          "id": "c",
+          "text": "the loop never starts"
+        }
+      ],
+      "hints": [
+        "Trace the for loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 12. Following the condition and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "for-loops",
+        "multiple_choice",
+        "java-control-flow"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "OPTION"
+    },
+    {
+      "id": "loop-practice-20",
+      "slug": "frozen-mill",
+      "title": "Frozen mill",
+      "topic": "loop-village-practice",
+      "subtopic": "for-loops",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Explain with one token which direction i moves in for i--.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "down"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "for(int i=0;i<5;i--){}",
+      "expectedAnswer": "down",
+      "options": [],
+      "hints": [
+        "Trace the for loops rules one step at a time."
+      ],
+      "explanation": "The correct result is down. Following the condition and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "for-loops",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-21",
+      "slug": "well-condition",
+      "title": "Well condition",
+      "topic": "loop-village-practice",
+      "subtopic": "while-loops",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the condition that repeats while water is below 3.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "water < 3"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "water < 3"
+        },
+        {
+          "id": "b",
+          "text": "none of these conditions"
+        },
+        {
+          "id": "c",
+          "text": "the loop never starts"
+        }
+      ],
+      "hints": [
+        "Trace the while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is water < 3. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "while-loops",
+        "multiple_choice",
+        "java-control-flow"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "OPTION"
+    },
+    {
+      "id": "loop-practice-22",
+      "slug": "three-echoes",
+      "title": "Three echoes",
+      "topic": "loop-village-practice",
+      "subtopic": "while-loops",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict iterations when n starts at 3 and decrements while positive.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int n=3,hits=0;",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Trace the while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 3. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "while-loops",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-23",
+      "slug": "while-keyword-blank",
+      "title": "While keyword blank",
+      "topic": "loop-village-practice",
+      "subtopic": "while-loops",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the loop keyword before a parenthesized condition.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "while"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "__ (i<5) { i++; }",
+      "expectedAnswer": "while",
+      "options": [],
+      "hints": [
+        "Trace the while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is while. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "while-loops",
+        "code_blank",
+        "java-control-flow"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-24",
+      "slug": "doubling-signal",
+      "title": "Doubling signal",
+      "topic": "loop-village-practice",
+      "subtopic": "while-loops",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the final signal when 1 doubles while below 10.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "16"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int signal=1;",
+      "expectedAnswer": "16",
+      "options": [],
+      "hints": [
+        "Trace the while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 16. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "while-loops",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-25",
+      "slug": "four-number-accumulation",
+      "title": "Four-number accumulation",
+      "topic": "loop-village-practice",
+      "subtopic": "while-loops",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict 1+2+3+4 accumulated by a while loop.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "10"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "10",
+      "options": [],
+      "hints": [
+        "Trace the while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 10. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "while-loops",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-26",
+      "slug": "sentinel-sum",
+      "title": "Sentinel sum",
+      "topic": "loop-village-practice",
+      "subtopic": "while-loops",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Sum 5 and 3 before sentinel -1 stops input.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "5,3,-1,8",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Trace the while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 8. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "while-loops",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-27",
+      "slug": "counter-update",
+      "title": "Counter update",
+      "topic": "loop-village-practice",
+      "subtopic": "while-loops",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the statement moving count toward five.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "count++"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "while(count<5){ __ }",
+      "expectedAnswer": "count++",
+      "options": [],
+      "hints": [
+        "Trace the while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is count++. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "while-loops",
+        "code_blank",
+        "java-control-flow"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-28",
+      "slug": "shrinking-output",
+      "title": "Shrinking output",
+      "topic": "loop-village-practice",
+      "subtopic": "while-loops",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict values from 10 subtracting 3 while above 3.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "10 7 4"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int n=10;",
+      "expectedAnswer": "10 7 4",
+      "options": [],
+      "hints": [
+        "Trace the while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 10 7 4. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "while-loops",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "loop-practice-29",
+      "slug": "infinite-loop-repair",
+      "title": "Infinite-loop repair",
+      "topic": "loop-village-practice",
+      "subtopic": "while-loops",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the missing action needed to end while(count<5).",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "count++"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "count++"
+        },
+        {
+          "id": "b",
+          "text": "none of these conditions"
+        },
+        {
+          "id": "c",
+          "text": "the loop never starts"
+        }
+      ],
+      "hints": [
+        "Trace the while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is count++. Following the condition and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "while-loops",
+        "multiple_choice",
+        "java-control-flow"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "OPTION"
+    },
+    {
+      "id": "loop-practice-30",
+      "slug": "euclid-well",
+      "title": "Euclid well",
+      "topic": "loop-village-practice",
+      "subtopic": "while-loops",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the GCD from repeated remainders for 48 and 18.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int a=48,b=18;",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Trace the while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 6. Following the condition and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "while-loops",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-31",
+      "slug": "post-test-guarantee",
+      "title": "Post-test guarantee",
+      "topic": "loop-village-practice",
+      "subtopic": "do-while-loops",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose which loop executes its body at least once.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "do-while"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "do-while"
+        },
+        {
+          "id": "b",
+          "text": "none of these conditions"
+        },
+        {
+          "id": "c",
+          "text": "the loop never starts"
+        }
+      ],
+      "hints": [
+        "Trace the do while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is do-while. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "do-while-loops",
+        "multiple_choice",
+        "java-control-flow"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "OPTION"
+    },
+    {
+      "id": "loop-practice-32",
+      "slug": "one-ring",
+      "title": "One ring",
+      "topic": "loop-village-practice",
+      "subtopic": "do-while-loops",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict body executions when n=5 and condition n<0 is checked afterward.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int n=5,hits=0;",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Trace the do while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 1. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "do-while-loops",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-33",
+      "slug": "post-test-keyword",
+      "title": "Post-test keyword",
+      "topic": "loop-village-practice",
+      "subtopic": "do-while-loops",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the keyword after the do block.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "while"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "do { read(); } __ (choice!=0);",
+      "expectedAnswer": "while",
+      "options": [],
+      "hints": [
+        "Trace the do while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is while. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "do-while-loops",
+        "code_blank",
+        "java-control-flow"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-34",
+      "slug": "menu-displays",
+      "title": "Menu displays",
+      "topic": "loop-village-practice",
+      "subtopic": "do-while-loops",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give displays when choice starts 2 and decrements until zero.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int choice=2;",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Trace the do while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 2. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "do-while-loops",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-35",
+      "slug": "three-ticks",
+      "title": "Three ticks",
+      "topic": "loop-village-practice",
+      "subtopic": "do-while-loops",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict values after incrementing tick, while tick<3.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "1 2 3"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int tick=0;",
+      "expectedAnswer": "1 2 3",
+      "options": [],
+      "hints": [
+        "Trace the do while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 1 2 3. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "do-while-loops",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "loop-practice-36",
+      "slug": "choice-validation",
+      "title": "Choice validation",
+      "topic": "loop-village-practice",
+      "subtopic": "do-while-loops",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "State whether choice=5 repeats while choice<1 || choice>4.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Trace the do while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is true. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "do-while-loops",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-37",
+      "slug": "final-semicolon",
+      "title": "Final semicolon",
+      "topic": "loop-village-practice",
+      "subtopic": "do-while-loops",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the punctuation ending while(condition) in a do-while.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": ";"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "do {} while(ok)__",
+      "expectedAnswer": ";",
+      "options": [],
+      "hints": [
+        "Trace the do while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is ;. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "do-while-loops",
+        "code_blank",
+        "java-control-flow"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-38",
+      "slug": "overshoot-sum",
+      "title": "Overshoot sum",
+      "topic": "loop-village-practice",
+      "subtopic": "do-while-loops",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Give total adding 1,2,3,4 until post-test total<7 fails.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "10"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "10",
+      "options": [],
+      "hints": [
+        "Trace the do while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 10. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "do-while-loops",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-39",
+      "slug": "loop-comparison",
+      "title": "Loop comparison",
+      "topic": "loop-village-practice",
+      "subtopic": "do-while-loops",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the loop suited to a menu that must display once.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "do-while"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "do-while"
+        },
+        {
+          "id": "b",
+          "text": "none of these conditions"
+        },
+        {
+          "id": "c",
+          "text": "the loop never starts"
+        }
+      ],
+      "hints": [
+        "Trace the do while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is do-while. Following the condition and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "do-while-loops",
+        "multiple_choice",
+        "java-control-flow"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "OPTION"
+    },
+    {
+      "id": "loop-practice-40",
+      "slug": "nested-post-tests",
+      "title": "Nested post-tests",
+      "topic": "loop-village-practice",
+      "subtopic": "do-while-loops",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give visits for two outer passes and three inner passes each.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Trace the do while loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 6. Following the condition and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "do-while-loops",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-41",
+      "slug": "fizz-count",
+      "title": "Fizz count",
+      "topic": "loop-village-practice",
+      "subtopic": "mixed-loops",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose how many values 1..6 are divisible by 2 or 3.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "4"
+        },
+        {
+          "id": "b",
+          "text": "none of these conditions"
+        },
+        {
+          "id": "c",
+          "text": "the loop never starts"
+        }
+      ],
+      "hints": [
+        "Trace the mixed loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 4. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "mixed-loops",
+        "multiple_choice",
+        "java-control-flow"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "OPTION"
+    },
+    {
+      "id": "loop-practice-42",
+      "slug": "positive-supplies",
+      "title": "Positive supplies",
+      "topic": "loop-village-practice",
+      "subtopic": "mixed-loops",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Count positives in -2,4,0,7,-1.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Trace the mixed loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 2. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "mixed-loops",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-43",
+      "slug": "known-repetition",
+      "title": "Known repetition",
+      "topic": "loop-village-practice",
+      "subtopic": "mixed-loops",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the clearest loop keyword for exactly eight repetitions.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "for"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "__ (int i=0;i<8;i++)",
+      "expectedAnswer": "for",
+      "options": [],
+      "hints": [
+        "Trace the mixed loops rules one step at a time."
+      ],
+      "explanation": "The correct result is for. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "mixed-loops",
+        "code_blank",
+        "java-control-flow"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-44",
+      "slug": "first-divisor",
+      "title": "First divisor",
+      "topic": "loop-village-practice",
+      "subtopic": "mixed-loops",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the first divisor of 15 found starting at 2.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Trace the mixed loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 3. Following the condition and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "mixed-loops",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-45",
+      "slug": "even-sum",
+      "title": "Even sum",
+      "topic": "loop-village-practice",
+      "subtopic": "mixed-loops",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Sum even values from 1 through 8.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "20"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "20",
+      "options": [],
+      "hints": [
+        "Trace the mixed loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 20. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "mixed-loops",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-46",
+      "slug": "triangle-marks",
+      "title": "Triangle marks",
+      "topic": "loop-village-practice",
+      "subtopic": "mixed-loops",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give marks in rows of 1,2,3,4.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "10"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "10",
+      "options": [],
+      "hints": [
+        "Trace the mixed loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 10. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "mixed-loops",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-47",
+      "slug": "odd-and-large",
+      "title": "Odd and large",
+      "topic": "loop-village-practice",
+      "subtopic": "mixed-loops",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the logical operator joining odd and greater-than-five requirements.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "&&"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "odd __ large",
+      "expectedAnswer": "&&",
+      "options": [],
+      "hints": [
+        "Trace the mixed loops rules one step at a time."
+      ],
+      "explanation": "The correct result is &&. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "mixed-loops",
+        "code_blank",
+        "java-control-flow"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "loop-practice-48",
+      "slug": "stopping-attempt",
+      "title": "Stopping attempt",
+      "topic": "loop-village-practice",
+      "subtopic": "mixed-loops",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Count processed values including first above five in 2,5,1,7.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Trace the mixed loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 4. Following the condition and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "mixed-loops",
+        "predict_output",
+        "java-control-flow"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "loop-practice-49",
+      "slug": "reverse-406",
+      "title": "Reverse 406",
+      "topic": "loop-village-practice",
+      "subtopic": "mixed-loops",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the reversed integer produced by a digit loop.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "604"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "604"
+        },
+        {
+          "id": "b",
+          "text": "none of these conditions"
+        },
+        {
+          "id": "c",
+          "text": "the loop never starts"
+        }
+      ],
+      "hints": [
+        "Trace the mixed loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 604. Following the condition and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "mixed-loops",
+        "multiple_choice",
+        "java-control-flow"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "OPTION"
+    },
+    {
+      "id": "loop-practice-50",
+      "slug": "boat-trips",
+      "title": "Boat trips",
+      "topic": "loop-village-practice",
+      "subtopic": "mixed-loops",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give trips for 23 villagers at capacity 6, including a partial trip.",
+      "examples": [
+        {
+          "input": "Trace the stated village scenario.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value or option.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Trace the mixed loops rules one step at a time."
+      ],
+      "explanation": "The correct result is 4. Following the condition and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "mixed-loops",
+        "logic_answer",
+        "java-control-flow"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "INTEGER"
+    }
+  ]
+}

@@ -3,6 +3,19 @@
   border-top: 4px solid #967b4e;
   color: #314d43;
 }
+.loop-training {
+  background: #78906d;
+  border-top-color: #513f31;
+}
+.loop-training .practice-caption {
+  background: #d5c28f;
+}
+.loop-training .training-location > strong,
+.loop-training .training-location > span:not(.quest-marker),
+.loop-training .training-location > small {
+  background: #ead7a3;
+  color: #2d4035;
+}
 .practice-caption {
   padding: 24px 28px 12px;
   background: #ecd7a5;
