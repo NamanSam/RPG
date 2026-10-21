@@ -1,0 +1,2008 @@
+{
+  "topic": "collection-kingdom-practice",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "ArrayList"
+    },
+    {
+      "number": 2,
+      "name": "HashMap"
+    },
+    {
+      "number": 3,
+      "name": "Set and HashSet"
+    },
+    {
+      "number": 4,
+      "name": "Collections Logic"
+    },
+    {
+      "number": 5,
+      "name": "Mixed Collections Challenge"
+    }
+  ],
+  "questions": [
+    {
+      "id": "collection-practice-01",
+      "slug": "create-a-list",
+      "title": "Create a list",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "arraylist",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which expression creates an empty ArrayList of String?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "new ArrayList<String>()"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "new ArrayList<String>()"
+        },
+        {
+          "id": "b",
+          "text": "A fixed-size primitive array"
+        },
+        {
+          "id": "c",
+          "text": "No Java collection supports this"
+        }
+      ],
+      "hints": [
+        "Focus on ArrayList operations and update the collection one step at a time."
+      ],
+      "explanation": "new ArrayList<String>() is correct after applying the ArrayList operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "arraylist",
+        "multiple_choice",
+        "java-collections"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "OPTION"
+    },
+    {
+      "id": "collection-practice-02",
+      "slug": "append-an-item",
+      "title": "Append an item",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "arraylist",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Complete the call that appends \"map\" to list: list.____(\"map\");",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "add"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Complete the call that appends \"map\" to list: list.____(\"map\");",
+      "expectedAnswer": "add",
+      "options": [],
+      "hints": [
+        "Focus on ArrayList operations and update the collection one step at a time."
+      ],
+      "explanation": "add is correct after applying the ArrayList operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "arraylist",
+        "code_blank",
+        "java-collections"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-03",
+      "slug": "read-by-index",
+      "title": "Read by index",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "arraylist",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "List contains [oak, pine]. What does list.get(1) return?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "pine"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "List contains [oak, pine]. What does list.get(1) return?",
+      "expectedAnswer": "pine",
+      "options": [],
+      "hints": [
+        "Focus on ArrayList operations and update the collection one step at a time."
+      ],
+      "explanation": "pine is correct after applying the ArrayList operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "arraylist",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-04",
+      "slug": "list-size",
+      "title": "List size",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "arraylist",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Three values are added to an empty list. What does size() return?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Focus on ArrayList operations and update the collection one step at a time."
+      ],
+      "explanation": "3 is correct after applying the ArrayList operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "arraylist",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-05",
+      "slug": "replace-an-item",
+      "title": "Replace an item",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "arraylist",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "List is [red, blue]. After list.set(0, \"gold\"), what is list.get(0)?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "gold"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "gold"
+        },
+        {
+          "id": "b",
+          "text": "A fixed-size primitive array"
+        },
+        {
+          "id": "c",
+          "text": "No Java collection supports this"
+        }
+      ],
+      "hints": [
+        "Focus on ArrayList operations and update the collection one step at a time."
+      ],
+      "explanation": "gold is correct after applying the ArrayList operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "arraylist",
+        "multiple_choice",
+        "java-collections"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "OPTION"
+    },
+    {
+      "id": "collection-practice-06",
+      "slug": "remove-by-index",
+      "title": "Remove by index",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "arraylist",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "List is [a, b, c]. After remove(1), what sequence remains?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "a c"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "List is [a, b, c]. After remove(1), what sequence remains?",
+      "expectedAnswer": "a c",
+      "options": [],
+      "hints": [
+        "Focus on ArrayList operations and update the collection one step at a time."
+      ],
+      "explanation": "a c is correct after applying the ArrayList operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "arraylist",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-07",
+      "slug": "contains-check",
+      "title": "Contains check",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "arraylist",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "List is [2, 4, 6]. What does contains(4) return?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "List is [2, 4, 6]. What does contains(4) return?",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Focus on ArrayList operations and update the collection one step at a time."
+      ],
+      "explanation": "true is correct after applying the ArrayList operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "arraylist",
+        "code_blank",
+        "java-collections"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-08",
+      "slug": "duplicate-values",
+      "title": "Duplicate values",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "arraylist",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "An empty list receives 5, 5, 7. What is its size?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Focus on ArrayList operations and update the collection one step at a time."
+      ],
+      "explanation": "3 is correct after applying the ArrayList operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "arraylist",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-09",
+      "slug": "iteration-sum",
+      "title": "Iteration sum",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "arraylist",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A loop adds every value in [3, 1, 4]. What sum is produced?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "A loop adds every value in [3, 1, 4]. What sum is produced?",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Focus on ArrayList operations and update the collection one step at a time."
+      ],
+      "explanation": "8 is correct after applying the ArrayList operations in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "arraylist",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-10",
+      "slug": "removal-shift",
+      "title": "Removal shift",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "arraylist",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "List is [10,20,30,40]. remove(1), then get(1). What value is read?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "30"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "30",
+      "options": [],
+      "hints": [
+        "Focus on ArrayList operations and update the collection one step at a time."
+      ],
+      "explanation": "30 is correct after applying the ArrayList operations in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "arraylist",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-11",
+      "slug": "create-a-map",
+      "title": "Create a map",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "hashmap",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which expression creates an empty HashMap from String to Integer?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "new HashMap<String, Integer>()"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "new HashMap<String, Integer>()"
+        },
+        {
+          "id": "b",
+          "text": "A fixed-size primitive array"
+        },
+        {
+          "id": "c",
+          "text": "No Java collection supports this"
+        }
+      ],
+      "hints": [
+        "Focus on HashMap operations and update the collection one step at a time."
+      ],
+      "explanation": "new HashMap<String, Integer>() is correct after applying the HashMap operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "hashmap",
+        "multiple_choice",
+        "java-collections"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "OPTION"
+    },
+    {
+      "id": "collection-practice-12",
+      "slug": "store-a-pair",
+      "title": "Store a pair",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "hashmap",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Complete: scores.____(\"Ada\", 9);",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "put"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Complete: scores.____(\"Ada\", 9);",
+      "expectedAnswer": "put",
+      "options": [],
+      "hints": [
+        "Focus on HashMap operations and update the collection one step at a time."
+      ],
+      "explanation": "put is correct after applying the HashMap operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "hashmap",
+        "code_blank",
+        "java-collections"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-13",
+      "slug": "read-a-value",
+      "title": "Read a value",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "hashmap",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Map stores gate -> 4. What does map.get(\"gate\") return?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Map stores gate -> 4. What does map.get(\"gate\") return?",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Focus on HashMap operations and update the collection one step at a time."
+      ],
+      "explanation": "4 is correct after applying the HashMap operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "hashmap",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-14",
+      "slug": "check-a-key",
+      "title": "Check a key",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "hashmap",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Map contains key \"north\". What does containsKey(\"north\") return?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Focus on HashMap operations and update the collection one step at a time."
+      ],
+      "explanation": "true is correct after applying the HashMap operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "hashmap",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-15",
+      "slug": "update-a-key",
+      "title": "Update a key",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "hashmap",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "put(\"tower\",2), then put(\"tower\",7). What does get(\"tower\") return?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "A fixed-size primitive array"
+        },
+        {
+          "id": "c",
+          "text": "No Java collection supports this"
+        }
+      ],
+      "hints": [
+        "Focus on HashMap operations and update the collection one step at a time."
+      ],
+      "explanation": "7 is correct after applying the HashMap operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "hashmap",
+        "multiple_choice",
+        "java-collections"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "OPTION"
+    },
+    {
+      "id": "collection-practice-16",
+      "slug": "remove-a-key",
+      "title": "Remove a key",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "hashmap",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Map has a=1 and b=2. remove(\"a\"). How many entries remain?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Map has a=1 and b=2. remove(\"a\"). How many entries remain?",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Focus on HashMap operations and update the collection one step at a time."
+      ],
+      "explanation": "1 is correct after applying the HashMap operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "hashmap",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-17",
+      "slug": "check-a-value",
+      "title": "Check a value",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "hashmap",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Map values are 3 and 8. What does containsValue(8) return?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Map values are 3 and 8. What does containsValue(8) return?",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Focus on HashMap operations and update the collection one step at a time."
+      ],
+      "explanation": "true is correct after applying the HashMap operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "hashmap",
+        "code_blank",
+        "java-collections"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-18",
+      "slug": "duplicate-key-size",
+      "title": "Duplicate key size",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "hashmap",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "put x=1, y=2, x=5. What is map.size()?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Focus on HashMap operations and update the collection one step at a time."
+      ],
+      "explanation": "2 is correct after applying the HashMap operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "hashmap",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-19",
+      "slug": "frequency-update",
+      "title": "Frequency update",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "hashmap",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Counts starts empty. Process cat, dog, cat by incrementing each key. What is counts.get(\"cat\")?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Counts starts empty. Process cat, dog, cat by incrementing each key. What is counts.get(\"cat\")?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Focus on HashMap operations and update the collection one step at a time."
+      ],
+      "explanation": "2 is correct after applying the HashMap operations in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "hashmap",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-20",
+      "slug": "map-traversal-total",
+      "title": "Map traversal total",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "hashmap",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A map has values 4, 6, 9. A loop sums values(). What total results?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "19"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "19",
+      "options": [],
+      "hints": [
+        "Focus on HashMap operations and update the collection one step at a time."
+      ],
+      "explanation": "19 is correct after applying the HashMap operations in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "hashmap",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-21",
+      "slug": "create-a-set",
+      "title": "Create a set",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "set-hashset",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which expression creates an empty HashSet of String?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "new HashSet<String>()"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "new HashSet<String>()"
+        },
+        {
+          "id": "b",
+          "text": "A fixed-size primitive array"
+        },
+        {
+          "id": "c",
+          "text": "No Java collection supports this"
+        }
+      ],
+      "hints": [
+        "Focus on Set and HashSet operations and update the collection one step at a time."
+      ],
+      "explanation": "new HashSet<String>() is correct after applying the Set and HashSet operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "set-hashset",
+        "multiple_choice",
+        "java-collections"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "OPTION"
+    },
+    {
+      "id": "collection-practice-22",
+      "slug": "add-an-element",
+      "title": "Add an element",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "set-hashset",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Complete the insertion: set.____(\"sun\");",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "add"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Complete the insertion: set.____(\"sun\");",
+      "expectedAnswer": "add",
+      "options": [],
+      "hints": [
+        "Focus on Set and HashSet operations and update the collection one step at a time."
+      ],
+      "explanation": "add is correct after applying the Set and HashSet operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "set-hashset",
+        "code_blank",
+        "java-collections"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-23",
+      "slug": "unique-size",
+      "title": "Unique size",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "set-hashset",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Add 2, 2, 5 to an empty HashSet. What is size()?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Add 2, 2, 5 to an empty HashSet. What is size()?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Focus on Set and HashSet operations and update the collection one step at a time."
+      ],
+      "explanation": "2 is correct after applying the Set and HashSet operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "set-hashset",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-24",
+      "slug": "membership-test",
+      "title": "Membership test",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "set-hashset",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Set contains oak. What does contains(\"oak\") return?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Focus on Set and HashSet operations and update the collection one step at a time."
+      ],
+      "explanation": "true is correct after applying the Set and HashSet operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "set-hashset",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-25",
+      "slug": "remove-a-value",
+      "title": "Remove a value",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "set-hashset",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Set is {a,b,c}. Remove b. How many elements remain?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "2"
+        },
+        {
+          "id": "b",
+          "text": "A fixed-size primitive array"
+        },
+        {
+          "id": "c",
+          "text": "No Java collection supports this"
+        }
+      ],
+      "hints": [
+        "Focus on Set and HashSet operations and update the collection one step at a time."
+      ],
+      "explanation": "2 is correct after applying the Set and HashSet operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "set-hashset",
+        "multiple_choice",
+        "java-collections"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "OPTION"
+    },
+    {
+      "id": "collection-practice-26",
+      "slug": "duplicate-add-result",
+      "title": "Duplicate add result",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "set-hashset",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A set already contains 7. What does add(7) return?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "A set already contains 7. What does add(7) return?",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "Focus on Set and HashSet operations and update the collection one step at a time."
+      ],
+      "explanation": "false is correct after applying the Set and HashSet operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "set-hashset",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-27",
+      "slug": "set-versus-list",
+      "title": "Set versus list",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "set-hashset",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Which collection type is intended when only unique values matter?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "Set"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Which collection type is intended when only unique values matter?",
+      "expectedAnswer": "Set",
+      "options": [],
+      "hints": [
+        "Focus on Set and HashSet operations and update the collection one step at a time."
+      ],
+      "explanation": "Set is correct after applying the Set and HashSet operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "set-hashset",
+        "code_blank",
+        "java-collections"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-28",
+      "slug": "order-guarantee",
+      "title": "Order guarantee",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "set-hashset",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Does HashSet guarantee insertion order?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "Focus on Set and HashSet operations and update the collection one step at a time."
+      ],
+      "explanation": "false is correct after applying the Set and HashSet operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "set-hashset",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-29",
+      "slug": "distinct-count",
+      "title": "Distinct count",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "set-hashset",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Insert fox, owl, fox, deer, owl into a HashSet. What is its final size?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Insert fox, owl, fox, deer, owl into a HashSet. What is its final size?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Focus on Set and HashSet operations and update the collection one step at a time."
+      ],
+      "explanation": "3 is correct after applying the Set and HashSet operations in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "set-hashset",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-30",
+      "slug": "set-operation-trace",
+      "title": "Set operation trace",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "set-hashset",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Set starts {1,2,3}; remove 2, add 3, add 4. What sorted values remain?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "1 3 4"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1 3 4",
+      "options": [],
+      "hints": [
+        "Focus on Set and HashSet operations and update the collection one step at a time."
+      ],
+      "explanation": "1 3 4 is correct after applying the Set and HashSet operations in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "set-hashset",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-31",
+      "slug": "choose-ordered-duplicates",
+      "title": "Choose ordered duplicates",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "collections-logic",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which interface fits an ordered collection that may contain duplicates?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "List"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "List"
+        },
+        {
+          "id": "b",
+          "text": "A fixed-size primitive array"
+        },
+        {
+          "id": "c",
+          "text": "No Java collection supports this"
+        }
+      ],
+      "hints": [
+        "Focus on Collections Logic operations and update the collection one step at a time."
+      ],
+      "explanation": "List is correct after applying the Collections Logic operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "collections-logic",
+        "multiple_choice",
+        "java-collections"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "OPTION"
+    },
+    {
+      "id": "collection-practice-32",
+      "slug": "choose-key-lookup",
+      "title": "Choose key lookup",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "collections-logic",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Which interface fits looking up a phone number by a unique name?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "Map"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Which interface fits looking up a phone number by a unique name?",
+      "expectedAnswer": "Map",
+      "options": [],
+      "hints": [
+        "Focus on Collections Logic operations and update the collection one step at a time."
+      ],
+      "explanation": "Map is correct after applying the Collections Logic operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "collections-logic",
+        "code_blank",
+        "java-collections"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-33",
+      "slug": "choose-uniqueness",
+      "title": "Choose uniqueness",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "collections-logic",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Which interface fits tracking unique visited room IDs?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "Set"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Which interface fits tracking unique visited room IDs?",
+      "expectedAnswer": "Set",
+      "options": [],
+      "hints": [
+        "Focus on Collections Logic operations and update the collection one step at a time."
+      ],
+      "explanation": "Set is correct after applying the Collections Logic operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "collections-logic",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-34",
+      "slug": "fast-membership-idea",
+      "title": "Fast membership idea",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "collections-logic",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For repeated membership checks without ordering, which common collection is appropriate?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "HashSet"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "HashSet",
+      "options": [],
+      "hints": [
+        "Focus on Collections Logic operations and update the collection one step at a time."
+      ],
+      "explanation": "HashSet is correct after applying the Collections Logic operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "collections-logic",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-35",
+      "slug": "remove-duplicates",
+      "title": "Remove duplicates",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "collections-logic",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Values are [3,3,1,2,1]. How many unique values remain after placing them in a Set?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "3"
+        },
+        {
+          "id": "b",
+          "text": "A fixed-size primitive array"
+        },
+        {
+          "id": "c",
+          "text": "No Java collection supports this"
+        }
+      ],
+      "hints": [
+        "Focus on Collections Logic operations and update the collection one step at a time."
+      ],
+      "explanation": "3 is correct after applying the Collections Logic operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "collections-logic",
+        "multiple_choice",
+        "java-collections"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "OPTION"
+    },
+    {
+      "id": "collection-practice-36",
+      "slug": "count-frequencies",
+      "title": "Count frequencies",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "collections-logic",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "For counting each word, which collection maps a word to its count?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "HashMap"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "For counting each word, which collection maps a word to its count?",
+      "expectedAnswer": "HashMap",
+      "options": [],
+      "hints": [
+        "Focus on Collections Logic operations and update the collection one step at a time."
+      ],
+      "explanation": "HashMap is correct after applying the Collections Logic operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "collections-logic",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-37",
+      "slug": "group-records",
+      "title": "Group records",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "collections-logic",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "To store multiple scores for each player name, which combination fits?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "HashMap of ArrayList"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "To store multiple scores for each player name, which combination fits?",
+      "expectedAnswer": "HashMap of ArrayList",
+      "options": [],
+      "hints": [
+        "Focus on Collections Logic operations and update the collection one step at a time."
+      ],
+      "explanation": "HashMap of ArrayList is correct after applying the Collections Logic operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "collections-logic",
+        "code_blank",
+        "java-collections"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-38",
+      "slug": "lookup-versus-scan",
+      "title": "Lookup versus scan",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "collections-logic",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which is the better direct lookup structure for finding a value by a known key?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "HashMap"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "HashMap",
+      "options": [],
+      "hints": [
+        "Focus on Collections Logic operations and update the collection one step at a time."
+      ],
+      "explanation": "HashMap is correct after applying the Collections Logic operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "collections-logic",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-39",
+      "slug": "first-repeated-value",
+      "title": "First repeated value",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "collections-logic",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Scan [4,7,2,7,4] while storing seen values in a Set. What is the first repeated value?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Scan [4,7,2,7,4] while storing seen values in a Set. What is the first repeated value?",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Focus on Collections Logic operations and update the collection one step at a time."
+      ],
+      "explanation": "7 is correct after applying the Collections Logic operations in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "collections-logic",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-40",
+      "slug": "frequency-winner",
+      "title": "Frequency winner",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "collections-logic",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Counts for [a,b,a,c,a,b] are built in a map. Which value has the highest count?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "a"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [],
+      "hints": [
+        "Focus on Collections Logic operations and update the collection one step at a time."
+      ],
+      "explanation": "a is correct after applying the Collections Logic operations in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "collections-logic",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-41",
+      "slug": "archive-choice",
+      "title": "Archive choice",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "mixed-collections",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "The royal archive needs ordered pages and permits duplicates. Which collection?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "ArrayList"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "ArrayList"
+        },
+        {
+          "id": "b",
+          "text": "A fixed-size primitive array"
+        },
+        {
+          "id": "c",
+          "text": "No Java collection supports this"
+        }
+      ],
+      "hints": [
+        "Focus on Mixed Collections Challenge operations and update the collection one step at a time."
+      ],
+      "explanation": "ArrayList is correct after applying the Mixed Collections Challenge operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "mixed-collections",
+        "multiple_choice",
+        "java-collections"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "OPTION"
+    },
+    {
+      "id": "collection-practice-42",
+      "slug": "registry-choice",
+      "title": "Registry choice",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "mixed-collections",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "The registry maps each key name to one door number. Which collection?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "HashMap"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "The registry maps each key name to one door number. Which collection?",
+      "expectedAnswer": "HashMap",
+      "options": [],
+      "hints": [
+        "Focus on Mixed Collections Challenge operations and update the collection one step at a time."
+      ],
+      "explanation": "HashMap is correct after applying the Mixed Collections Challenge operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "mixed-collections",
+        "code_blank",
+        "java-collections"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-43",
+      "slug": "unique-seals",
+      "title": "Unique seals",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "mixed-collections",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "The hall keeps each seal only once. Which collection?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "HashSet"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "The hall keeps each seal only once. Which collection?",
+      "expectedAnswer": "HashSet",
+      "options": [],
+      "hints": [
+        "Focus on Mixed Collections Challenge operations and update the collection one step at a time."
+      ],
+      "explanation": "HashSet is correct after applying the Mixed Collections Challenge operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "mixed-collections",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-44",
+      "slug": "list-update-trace",
+      "title": "List update trace",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "mixed-collections",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "List [1,2,3]; set(1,5); add(2). What sequence results?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "1 5 3 2"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1 5 3 2",
+      "options": [],
+      "hints": [
+        "Focus on Mixed Collections Challenge operations and update the collection one step at a time."
+      ],
+      "explanation": "1 5 3 2 is correct after applying the Mixed Collections Challenge operations in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "mixed-collections",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-45",
+      "slug": "map-overwrite-trace",
+      "title": "Map overwrite trace",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "mixed-collections",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Map put crown=1, crown=4, ring=2. What are size and crown value?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "2 4"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "2 4"
+        },
+        {
+          "id": "b",
+          "text": "A fixed-size primitive array"
+        },
+        {
+          "id": "c",
+          "text": "No Java collection supports this"
+        }
+      ],
+      "hints": [
+        "Focus on Mixed Collections Challenge operations and update the collection one step at a time."
+      ],
+      "explanation": "2 4 is correct after applying the Mixed Collections Challenge operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "mixed-collections",
+        "multiple_choice",
+        "java-collections"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "OPTION"
+    },
+    {
+      "id": "collection-practice-46",
+      "slug": "set-and-list-count",
+      "title": "Set and list count",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "mixed-collections",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "List [a,a,b] is copied into a HashSet. What are list size and set size?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "3 2"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "List [a,a,b] is copied into a HashSet. What are list size and set size?",
+      "expectedAnswer": "3 2",
+      "options": [],
+      "hints": [
+        "Focus on Mixed Collections Challenge operations and update the collection one step at a time."
+      ],
+      "explanation": "3 2 is correct after applying the Mixed Collections Challenge operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "mixed-collections",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-47",
+      "slug": "complete-frequency-code",
+      "title": "Complete frequency code",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "mixed-collections",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Complete a map frequency update: counts.put(word, counts.getOrDefault(word, 0) + ____);",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "Complete a map frequency update: counts.put(word, counts.getOrDefault(word, 0) + ____);",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Focus on Mixed Collections Challenge operations and update the collection one step at a time."
+      ],
+      "explanation": "1 is correct after applying the Mixed Collections Challenge operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "mixed-collections",
+        "code_blank",
+        "java-collections"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-48",
+      "slug": "find-missing-key-safely",
+      "title": "Find missing key safely",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "mixed-collections",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which Map method checks whether a key exists before relying on get?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "containsKey"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "containsKey",
+      "options": [],
+      "hints": [
+        "Focus on Mixed Collections Challenge operations and update the collection one step at a time."
+      ],
+      "explanation": "containsKey is correct after applying the Mixed Collections Challenge operations in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "mixed-collections",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "collection-practice-49",
+      "slug": "mixed-inventory-total",
+      "title": "Mixed inventory total",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "mixed-collections",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A map stores bag->[2,2,3]. A Set is built from the list. What are list size and distinct count?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "3 2"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "A map stores bag->[2,2,3]. A Set is built from the list. What are list size and distinct count?",
+      "expectedAnswer": "3 2",
+      "options": [],
+      "hints": [
+        "Focus on Mixed Collections Challenge operations and update the collection one step at a time."
+      ],
+      "explanation": "3 2 is correct after applying the Mixed Collections Challenge operations in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "mixed-collections",
+        "predict_output",
+        "java-collections"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "collection-practice-50",
+      "slug": "crown-trial",
+      "title": "Crown trial",
+      "topic": "collection-kingdom-practice",
+      "subtopic": "mixed-collections",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Process [2,1,2,3,1,2] into a frequency map, then store keys with count at least 2 in a Set. What sorted keys remain?",
+      "examples": [
+        {
+          "input": "Trace the stated Java Collections scenario.",
+          "output": "1 2"
+        }
+      ],
+      "constraints": [
+        "Assume java.util collection types are imported.",
+        "Submit only the requested option, token, phrase, value, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1 2",
+      "options": [],
+      "hints": [
+        "Focus on Mixed Collections Challenge operations and update the collection one step at a time."
+      ],
+      "explanation": "1 2 is correct after applying the Mixed Collections Challenge operations in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "mixed-collections",
+        "logic_answer",
+        "java-collections"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "TOKEN"
+    }
+  ]
+}

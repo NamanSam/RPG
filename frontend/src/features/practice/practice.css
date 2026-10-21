@@ -42,6 +42,19 @@
   background: #e2bb83;
   color: #3c282b;
 }
+.collection-training {
+  background: #6b668c;
+  border-top-color: #302c50;
+}
+.collection-training .practice-caption {
+  background: #c5b6d8;
+}
+.collection-training .training-location > strong,
+.collection-training .training-location > span:not(.quest-marker),
+.collection-training .training-location > small {
+  background: #eee0ad;
+  color: #302c50;
+}
 .practice-caption {
   padding: 24px 28px 12px;
   background: #ecd7a5;
