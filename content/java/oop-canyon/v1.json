@@ -1,0 +1,2008 @@
+{
+  "topic": "oop-canyon-practice",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Classes and Objects"
+    },
+    {
+      "number": 2,
+      "name": "Encapsulation"
+    },
+    {
+      "number": 3,
+      "name": "Inheritance"
+    },
+    {
+      "number": 4,
+      "name": "Polymorphism"
+    },
+    {
+      "number": 5,
+      "name": "Mixed OOP Challenge"
+    }
+  ],
+  "questions": [
+    {
+      "id": "oop-practice-01",
+      "slug": "class-declaration",
+      "title": "Class declaration",
+      "topic": "oop-canyon-practice",
+      "subtopic": "classes-objects",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which declaration defines a Java class named Beacon?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "class Beacon { }"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "class Beacon { }"
+        },
+        {
+          "id": "b",
+          "text": "The opposite behavior is required"
+        },
+        {
+          "id": "c",
+          "text": "Java cannot express this relationship"
+        }
+      ],
+      "hints": [
+        "Focus on classes and objects and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "class Beacon { } is correct because Java applies the classes and objects rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "classes-objects",
+        "multiple_choice",
+        "java-oop"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "OPTION"
+    },
+    {
+      "id": "oop-practice-02",
+      "slug": "object-creation",
+      "title": "Object creation",
+      "topic": "oop-canyon-practice",
+      "subtopic": "classes-objects",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Complete: Beacon b = ____ Beacon();",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "new"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Complete: Beacon b = ____ Beacon();",
+      "expectedAnswer": "new",
+      "options": [],
+      "hints": [
+        "Focus on classes and objects and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "new is correct because Java applies the classes and objects rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "classes-objects",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-03",
+      "slug": "instance-field",
+      "title": "Instance field",
+      "topic": "oop-canyon-practice",
+      "subtopic": "classes-objects",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Beacon b has int height = 7. What is b.height?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Beacon b has int height = 7. What is b.height?",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Focus on classes and objects and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "7 is correct because Java applies the classes and objects rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "classes-objects",
+        "code_blank",
+        "java-oop"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-04",
+      "slug": "instance-method",
+      "title": "Instance method",
+      "topic": "oop-canyon-practice",
+      "subtopic": "classes-objects",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Complete the call to method shine: b.____();",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "shine"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "shine",
+      "options": [],
+      "hints": [
+        "Focus on classes and objects and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "shine is correct because Java applies the classes and objects rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "classes-objects",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-05",
+      "slug": "constructor-purpose",
+      "title": "Constructor purpose",
+      "topic": "oop-canyon-practice",
+      "subtopic": "classes-objects",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "What is the main purpose of a constructor?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "initialize a new object"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "initialize a new object"
+        },
+        {
+          "id": "b",
+          "text": "The opposite behavior is required"
+        },
+        {
+          "id": "c",
+          "text": "Java cannot express this relationship"
+        }
+      ],
+      "hints": [
+        "Focus on classes and objects and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "initialize a new object is correct because Java applies the classes and objects rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "classes-objects",
+        "multiple_choice",
+        "java-oop"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "OPTION"
+    },
+    {
+      "id": "oop-practice-06",
+      "slug": "the-this-keyword",
+      "title": "The this keyword",
+      "topic": "oop-canyon-practice",
+      "subtopic": "classes-objects",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Complete a constructor assignment: this.name = ____;",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "name"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Complete a constructor assignment: this.name = ____;",
+      "expectedAnswer": "name",
+      "options": [],
+      "hints": [
+        "Focus on classes and objects and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "name is correct because Java applies the classes and objects rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "classes-objects",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-07",
+      "slug": "separate-objects",
+      "title": "Separate objects",
+      "topic": "oop-canyon-practice",
+      "subtopic": "classes-objects",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Two Counter objects start at zero. Only first.value becomes 4. What is second.value?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Two Counter objects start at zero. Only first.value becomes 4. What is second.value?",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "Focus on classes and objects and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "0 is correct because Java applies the classes and objects rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "classes-objects",
+        "code_blank",
+        "java-oop"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-08",
+      "slug": "reference-alias",
+      "title": "Reference alias",
+      "topic": "oop-canyon-practice",
+      "subtopic": "classes-objects",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Box b = a; then b.size = 9. What is a.size?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "9"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "9",
+      "options": [],
+      "hints": [
+        "Focus on classes and objects and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "9 is correct because Java applies the classes and objects rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "classes-objects",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-09",
+      "slug": "constructor-calculation",
+      "title": "Constructor calculation",
+      "topic": "oop-canyon-practice",
+      "subtopic": "classes-objects",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Meter(int start) stores start * 2. What does new Meter(6) store?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "12"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Meter(int start) stores start * 2. What does new Meter(6) store?",
+      "expectedAnswer": "12",
+      "options": [],
+      "hints": [
+        "Focus on classes and objects and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "12 is correct because Java applies the classes and objects rule described in the scenario.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "classes-objects",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-10",
+      "slug": "shared-map-object",
+      "title": "Shared map object",
+      "topic": "oop-canyon-practice",
+      "subtopic": "classes-objects",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Two variables reference one Map. One sets zone to 3. What does the other observe?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Focus on classes and objects and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "3 is correct because Java applies the classes and objects rule described in the scenario.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "classes-objects",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-11",
+      "slug": "hide-a-field",
+      "title": "Hide a field",
+      "topic": "oop-canyon-practice",
+      "subtopic": "encapsulation",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which modifier restricts balance to its declaring class?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "private"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "private"
+        },
+        {
+          "id": "b",
+          "text": "The opposite behavior is required"
+        },
+        {
+          "id": "c",
+          "text": "Java cannot express this relationship"
+        }
+      ],
+      "hints": [
+        "Focus on encapsulation and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "private is correct because Java applies the encapsulation rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "encapsulation",
+        "multiple_choice",
+        "java-oop"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "OPTION"
+    },
+    {
+      "id": "oop-practice-12",
+      "slug": "getter-shape",
+      "title": "Getter shape",
+      "topic": "oop-canyon-practice",
+      "subtopic": "encapsulation",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Which method reads a private int score field?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "int getScore() { return score; }"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Which method reads a private int score field?",
+      "expectedAnswer": "int getScore() { return score; }",
+      "options": [],
+      "hints": [
+        "Focus on encapsulation and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "int getScore() { return score; } is correct because Java applies the encapsulation rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "encapsulation",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-13",
+      "slug": "setter-name",
+      "title": "Setter name",
+      "topic": "oop-canyon-practice",
+      "subtopic": "encapsulation",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Complete the conventional updater for level: public void ____(int value).",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "setLevel"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Complete the conventional updater for level: public void ____(int value).",
+      "expectedAnswer": "setLevel",
+      "options": [],
+      "hints": [
+        "Focus on encapsulation and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "setLevel is correct because Java applies the encapsulation rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "encapsulation",
+        "code_blank",
+        "java-oop"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-14",
+      "slug": "public-method",
+      "title": "Public method",
+      "topic": "oop-canyon-practice",
+      "subtopic": "encapsulation",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which modifier lets a method be called from any package?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "public"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "public",
+      "options": [],
+      "hints": [
+        "Focus on encapsulation and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "public is correct because Java applies the encapsulation rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "encapsulation",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-15",
+      "slug": "reject-invalid-age",
+      "title": "Reject invalid age",
+      "topic": "oop-canyon-practice",
+      "subtopic": "encapsulation",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Age is 8 and setAge accepts only nonnegative values. What remains after setAge(-2)?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "8"
+        },
+        {
+          "id": "b",
+          "text": "The opposite behavior is required"
+        },
+        {
+          "id": "c",
+          "text": "Java cannot express this relationship"
+        }
+      ],
+      "hints": [
+        "Focus on encapsulation and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "8 is correct because Java applies the encapsulation rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "encapsulation",
+        "multiple_choice",
+        "java-oop"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "OPTION"
+    },
+    {
+      "id": "oop-practice-16",
+      "slug": "controlled-deposit",
+      "title": "Controlled deposit",
+      "topic": "oop-canyon-practice",
+      "subtopic": "encapsulation",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Balance is 10; deposit ignores -4 then accepts 6. What is the balance?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "16"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Balance is 10; deposit ignores -4 then accepts 6. What is the balance?",
+      "expectedAnswer": "16",
+      "options": [],
+      "hints": [
+        "Focus on encapsulation and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "16 is correct because Java applies the encapsulation rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "encapsulation",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-17",
+      "slug": "data-hiding-design",
+      "title": "Data hiding design",
+      "topic": "oop-canyon-practice",
+      "subtopic": "encapsulation",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "What design best encapsulates temperature?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "private field with validated public methods"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "What design best encapsulates temperature?",
+      "expectedAnswer": "private field with validated public methods",
+      "options": [],
+      "hints": [
+        "Focus on encapsulation and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "private field with validated public methods is correct because Java applies the encapsulation rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "encapsulation",
+        "code_blank",
+        "java-oop"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-18",
+      "slug": "private-access",
+      "title": "Private access",
+      "topic": "oop-canyon-practice",
+      "subtopic": "encapsulation",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Complete the safe read when vault.coins is private: ____.",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "vault.getCoins()"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "vault.getCoins()",
+      "options": [],
+      "hints": [
+        "Focus on encapsulation and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "vault.getCoins() is correct because Java applies the encapsulation rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "encapsulation",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-19",
+      "slug": "range-invariant",
+      "title": "Range invariant",
+      "topic": "oop-canyon-practice",
+      "subtopic": "encapsulation",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Volume starts 40; setter receives 120, 0, 75 and accepts 0..100. Final volume?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "75"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Volume starts 40; setter receives 120, 0, 75 and accepts 0..100. Final volume?",
+      "expectedAnswer": "75",
+      "options": [],
+      "hints": [
+        "Focus on encapsulation and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "75 is correct because Java applies the encapsulation rule described in the scenario.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "encapsulation",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-20",
+      "slug": "read-only-state",
+      "title": "Read-only state",
+      "topic": "oop-canyon-practice",
+      "subtopic": "encapsulation",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A private count has a getter and no mutator. How many direct changes may callers legally make?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "Focus on encapsulation and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "0 is correct because Java applies the encapsulation rule described in the scenario.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "encapsulation",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-21",
+      "slug": "extend-a-parent",
+      "title": "Extend a parent",
+      "topic": "oop-canyon-practice",
+      "subtopic": "inheritance",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Complete: class Scout ____ Ranger { }",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "extends"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "extends"
+        },
+        {
+          "id": "b",
+          "text": "The opposite behavior is required"
+        },
+        {
+          "id": "c",
+          "text": "Java cannot express this relationship"
+        }
+      ],
+      "hints": [
+        "Focus on inheritance and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "extends is correct because Java applies the inheritance rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "inheritance",
+        "multiple_choice",
+        "java-oop"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "OPTION"
+    },
+    {
+      "id": "oop-practice-22",
+      "slug": "inherited-method",
+      "title": "Inherited method",
+      "topic": "oop-canyon-practice",
+      "subtopic": "inheritance",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Ranger defines track(). Complete the valid Scout call: s.____();",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "track"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Ranger defines track(). Complete the valid Scout call: s.____();",
+      "expectedAnswer": "track",
+      "options": [],
+      "hints": [
+        "Focus on inheritance and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "track is correct because Java applies the inheritance rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "inheritance",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-23",
+      "slug": "inherited-field",
+      "title": "Inherited field",
+      "topic": "oop-canyon-practice",
+      "subtopic": "inheritance",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Parent has public rank=2. What is new Child().rank when Child extends Parent?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Parent has public rank=2. What is new Child().rank when Child extends Parent?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Focus on inheritance and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "2 is correct because Java applies the inheritance rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "inheritance",
+        "code_blank",
+        "java-oop"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-24",
+      "slug": "single-parent",
+      "title": "Single parent",
+      "topic": "oop-canyon-practice",
+      "subtopic": "inheritance",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many direct classes can one Java class extend?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Focus on inheritance and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "1 is correct because Java applies the inheritance rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "inheritance",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-25",
+      "slug": "parent-constructor",
+      "title": "Parent constructor",
+      "topic": "oop-canyon-practice",
+      "subtopic": "inheritance",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Complete the call to a no-argument parent constructor.",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "super()"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "super()"
+        },
+        {
+          "id": "b",
+          "text": "The opposite behavior is required"
+        },
+        {
+          "id": "c",
+          "text": "Java cannot express this relationship"
+        }
+      ],
+      "hints": [
+        "Focus on inheritance and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "super() is correct because Java applies the inheritance rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "inheritance",
+        "multiple_choice",
+        "java-oop"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "OPTION"
+    },
+    {
+      "id": "oop-practice-26",
+      "slug": "reuse-behavior",
+      "title": "Reuse behavior",
+      "topic": "oop-canyon-practice",
+      "subtopic": "inheritance",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Parent power() returns 4; Child boost() returns power()+3. Result?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Parent power() returns 4; Child boost() returns power()+3. Result?",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Focus on inheritance and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "7 is correct because Java applies the inheritance rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "inheritance",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-27",
+      "slug": "multilevel-chain",
+      "title": "Multilevel chain",
+      "topic": "oop-canyon-practice",
+      "subtopic": "inheritance",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Base id() returns 1; Mid extends Base; Leaf extends Mid. new Leaf().id()?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Base id() returns 1; Mid extends Base; Leaf extends Mid. new Leaf().id()?",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Focus on inheritance and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "1 is correct because Java applies the inheritance rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "inheritance",
+        "code_blank",
+        "java-oop"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-28",
+      "slug": "parent-method-call",
+      "title": "Parent method call",
+      "topic": "oop-canyon-practice",
+      "subtopic": "inheritance",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Complete the expression that invokes the parent implementation of speak.",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "super.speak()"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "super.speak()",
+      "options": [],
+      "hints": [
+        "Focus on inheritance and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "super.speak() is correct because Java applies the inheritance rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "inheritance",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-29",
+      "slug": "constructor-order",
+      "title": "Constructor order",
+      "topic": "oop-canyon-practice",
+      "subtopic": "inheritance",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Root, Branch, Leaf constructors print their names in a three-level hierarchy. Order for new Leaf()?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "Root Branch Leaf"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Root, Branch, Leaf constructors print their names in a three-level hierarchy. Order for new Leaf()?",
+      "expectedAnswer": "Root Branch Leaf",
+      "options": [],
+      "hints": [
+        "Focus on inheritance and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "Root Branch Leaf is correct because Java applies the inheritance rule described in the scenario.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "inheritance",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-30",
+      "slug": "override-with-super",
+      "title": "Override with super",
+      "topic": "oop-canyon-practice",
+      "subtopic": "inheritance",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Parent score() returns 10; Child returns super.score()+5. Result?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "15"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "15",
+      "options": [],
+      "hints": [
+        "Focus on inheritance and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "15 is correct because Java applies the inheritance rule described in the scenario.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "inheritance",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-31",
+      "slug": "runtime-override",
+      "title": "Runtime override",
+      "topic": "oop-canyon-practice",
+      "subtopic": "polymorphism",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Animal a = new Fox(); Fox sound() returns 3, Animal sound() returns 1. Result?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "3"
+        },
+        {
+          "id": "b",
+          "text": "The opposite behavior is required"
+        },
+        {
+          "id": "c",
+          "text": "Java cannot express this relationship"
+        }
+      ],
+      "hints": [
+        "Focus on polymorphism and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "3 is correct because Java applies the polymorphism rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "polymorphism",
+        "multiple_choice",
+        "java-oop"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "OPTION"
+    },
+    {
+      "id": "oop-practice-32",
+      "slug": "parent-reference",
+      "title": "Parent reference",
+      "topic": "oop-canyon-practice",
+      "subtopic": "polymorphism",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Which assignment stores a child object in a parent reference?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "Shape s = new Circle();"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Which assignment stores a child object in a parent reference?",
+      "expectedAnswer": "Shape s = new Circle();",
+      "options": [],
+      "hints": [
+        "Focus on polymorphism and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "Shape s = new Circle(); is correct because Java applies the polymorphism rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "polymorphism",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-33",
+      "slug": "override-annotation",
+      "title": "Override annotation",
+      "topic": "oop-canyon-practice",
+      "subtopic": "polymorphism",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Which annotation asks Java to verify an override?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "@Override"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Which annotation asks Java to verify an override?",
+      "expectedAnswer": "@Override",
+      "options": [],
+      "hints": [
+        "Focus on polymorphism and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "@Override is correct because Java applies the polymorphism rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "polymorphism",
+        "code_blank",
+        "java-oop"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-34",
+      "slug": "overload-name",
+      "title": "Overload name",
+      "topic": "oop-canyon-practice",
+      "subtopic": "polymorphism",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "print(int) and print(String) share a name but differ in parameters. Feature?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "overloading"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "overloading",
+      "options": [],
+      "hints": [
+        "Focus on polymorphism and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "overloading is correct because Java applies the polymorphism rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "polymorphism",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-35",
+      "slug": "dynamic-dispatch",
+      "title": "Dynamic dispatch",
+      "topic": "oop-canyon-practice",
+      "subtopic": "polymorphism",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Guide g = new EliteGuide(); rank returns 2 in Guide and 5 in EliteGuide. Result?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "5"
+        },
+        {
+          "id": "b",
+          "text": "The opposite behavior is required"
+        },
+        {
+          "id": "c",
+          "text": "Java cannot express this relationship"
+        }
+      ],
+      "hints": [
+        "Focus on polymorphism and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "5 is correct because Java applies the polymorphism rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "polymorphism",
+        "multiple_choice",
+        "java-oop"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "OPTION"
+    },
+    {
+      "id": "oop-practice-36",
+      "slug": "field-versus-method",
+      "title": "Field versus method",
+      "topic": "oop-canyon-practice",
+      "subtopic": "polymorphism",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Parent p = new Child(); both declare label but Child overrides show(). Which member dispatches at runtime?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "show()"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Parent p = new Child(); both declare label but Child overrides show(). Which member dispatches at runtime?",
+      "expectedAnswer": "show()",
+      "options": [],
+      "hints": [
+        "Focus on polymorphism and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "show() is correct because Java applies the polymorphism rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "polymorphism",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-37",
+      "slug": "safe-cast-check",
+      "title": "Safe cast check",
+      "topic": "oop-canyon-practice",
+      "subtopic": "polymorphism",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Which operator checks a runtime type before downcasting?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "instanceof"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Which operator checks a runtime type before downcasting?",
+      "expectedAnswer": "instanceof",
+      "options": [],
+      "hints": [
+        "Focus on polymorphism and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "instanceof is correct because Java applies the polymorphism rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "polymorphism",
+        "code_blank",
+        "java-oop"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-38",
+      "slug": "overload-selection",
+      "title": "Overload selection",
+      "topic": "oop-canyon-practice",
+      "subtopic": "polymorphism",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "pick(int) returns 1 and pick(double) returns 2. What does pick(4) return?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Focus on polymorphism and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "1 is correct because Java applies the polymorphism rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "polymorphism",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-39",
+      "slug": "dispatch-chain",
+      "title": "Dispatch chain",
+      "topic": "oop-canyon-practice",
+      "subtopic": "polymorphism",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Base act=1, Mid act=2, Leaf act=4. Base x=new Leaf(); x.act()?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Base act=1, Mid act=2, Leaf act=4. Base x=new Leaf(); x.act()?",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Focus on polymorphism and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "4 is correct because Java applies the polymorphism rule described in the scenario.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "polymorphism",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-40",
+      "slug": "overload-and-override",
+      "title": "Overload and override",
+      "topic": "oop-canyon-practice",
+      "subtopic": "polymorphism",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Parent run(Number)=1; Child overrides it as 2 and overloads run(Integer)=3. Parent p=new Child(); p.run(Integer.valueOf(7))?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Focus on polymorphism and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "2 is correct because Java applies the polymorphism rule described in the scenario.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "polymorphism",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-41",
+      "slug": "blueprint-and-instance",
+      "title": "Blueprint and instance",
+      "topic": "oop-canyon-practice",
+      "subtopic": "mixed-oop",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which pair describes a class and an object?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "blueprint and instance"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "blueprint and instance"
+        },
+        {
+          "id": "b",
+          "text": "The opposite behavior is required"
+        },
+        {
+          "id": "c",
+          "text": "Java cannot express this relationship"
+        }
+      ],
+      "hints": [
+        "Focus on mixed oop challenge and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "blueprint and instance is correct because Java applies the mixed oop challenge rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "mixed-oop",
+        "multiple_choice",
+        "java-oop"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "OPTION"
+    },
+    {
+      "id": "oop-practice-42",
+      "slug": "sealed-counter",
+      "title": "Sealed counter",
+      "topic": "oop-canyon-practice",
+      "subtopic": "mixed-oop",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Private count starts 1; increment runs twice. getCount()?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Private count starts 1; increment runs twice. getCount()?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Focus on mixed oop challenge and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "3 is correct because Java applies the mixed oop challenge rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "mixed-oop",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-43",
+      "slug": "complete-child-class",
+      "title": "Complete child class",
+      "topic": "oop-canyon-practice",
+      "subtopic": "mixed-oop",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Complete: class Eagle ____ Bird.",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "extends"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Complete: class Eagle ____ Bird.",
+      "expectedAnswer": "extends",
+      "options": [],
+      "hints": [
+        "Focus on mixed oop challenge and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "extends is correct because Java applies the mixed oop challenge rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "mixed-oop",
+        "code_blank",
+        "java-oop"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-44",
+      "slug": "vehicle-dispatch",
+      "title": "Vehicle dispatch",
+      "topic": "oop-canyon-practice",
+      "subtopic": "mixed-oop",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Vehicle v=new Boat(); Boat move() returns 6. v.move()?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Focus on mixed oop challenge and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "6 is correct because Java applies the mixed oop challenge rule described in the scenario.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "mixed-oop",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-45",
+      "slug": "protect-score",
+      "title": "Protect score",
+      "topic": "oop-canyon-practice",
+      "subtopic": "mixed-oop",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which design prevents callers from storing a negative score?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "private score with a validating setter"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "private score with a validating setter"
+        },
+        {
+          "id": "b",
+          "text": "The opposite behavior is required"
+        },
+        {
+          "id": "c",
+          "text": "Java cannot express this relationship"
+        }
+      ],
+      "hints": [
+        "Focus on mixed oop challenge and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "private score with a validating setter is correct because Java applies the mixed oop challenge rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "mixed-oop",
+        "multiple_choice",
+        "java-oop"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "OPTION"
+    },
+    {
+      "id": "oop-practice-46",
+      "slug": "alias-puzzle",
+      "title": "Alias puzzle",
+      "topic": "oop-canyon-practice",
+      "subtopic": "mixed-oop",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Chest b=a; a.gold=4; b.gold+=3. What is a.gold?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Chest b=a; a.gold=4; b.gold+=3. What is a.gold?",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Focus on mixed oop challenge and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "7 is correct because Java applies the mixed oop challenge rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "mixed-oop",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-47",
+      "slug": "forward-constructor-value",
+      "title": "Forward constructor value",
+      "topic": "oop-canyon-practice",
+      "subtopic": "mixed-oop",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Child receives name and Parent requires Parent(String). First statement?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "super(name)"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Child receives name and Parent requires Parent(String). First statement?",
+      "expectedAnswer": "super(name)",
+      "options": [],
+      "hints": [
+        "Focus on mixed oop challenge and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "super(name) is correct because Java applies the mixed oop challenge rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "mixed-oop",
+        "code_blank",
+        "java-oop"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-48",
+      "slug": "same-signature-new-body",
+      "title": "Same signature new body",
+      "topic": "oop-canyon-practice",
+      "subtopic": "mixed-oop",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A child supplies the same method signature with a new body. Feature?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "overriding"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "overriding",
+      "options": [],
+      "hints": [
+        "Focus on mixed oop challenge and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "overriding is correct because Java applies the mixed oop challenge rule described in the scenario.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "mixed-oop",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "oop-practice-49",
+      "slug": "hierarchy-trace",
+      "title": "Hierarchy trace",
+      "topic": "oop-canyon-practice",
+      "subtopic": "mixed-oop",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Entity value=1, Hero overrides to 5, Mage extends Hero. Entity e=new Mage(); value()?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "Entity value=1, Hero overrides to 5, Mage extends Hero. Entity e=new Mage(); value()?",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Focus on mixed oop challenge and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "5 is correct because Java applies the mixed oop challenge rule described in the scenario.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "mixed-oop",
+        "predict_output",
+        "java-oop"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "oop-practice-50",
+      "slug": "master-design",
+      "title": "Master design",
+      "topic": "oop-canyon-practice",
+      "subtopic": "mixed-oop",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "PremiumAccount overrides fee from 5 to 2. Account a=new PremiumAccount(); method subtracts fee from 20. Balance?",
+      "examples": [
+        {
+          "input": "Trace the stated Java OOP scenario.",
+          "output": "18"
+        }
+      ],
+      "constraints": [
+        "Assume snippets appear inside valid surrounding Java code.",
+        "Submit only the requested option, token, phrase, or output."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "18",
+      "options": [],
+      "hints": [
+        "Focus on mixed oop challenge and trace declared types, objects, and state carefully."
+      ],
+      "explanation": "18 is correct because Java applies the mixed oop challenge rule described in the scenario.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "mixed-oop",
+        "logic_answer",
+        "java-oop"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "TOKEN"
+    }
+  ]
+}

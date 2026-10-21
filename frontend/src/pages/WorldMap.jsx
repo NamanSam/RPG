@@ -1,6 +1,7 @@
 import { BeachPractice } from "../features/practice/BeachPractice";
 import { LoopPractice } from "../features/practice/LoopPractice";
 import { ForestPractice } from "../features/practice/ForestPractice";
+import { OopPractice } from "../features/practice/OopPractice";
 import { KingdomQuestNodes, kingdomPreview, KingdomScene } from "../features/quests/KingdomQuestNodes";
 import { KingdomCelebration } from "../features/quests/KingdomCelebration";
 import { CanyonQuestNodes, canyonPreview, CanyonScene } from "../features/quests/CanyonQuestNodes";
@@ -346,6 +347,7 @@ export function WorldMap({ user, setUser, preview = false }) {
               {i === 0 && <BeachPractice storyCompleted={progress?.beachCompleted} preview={preview} />}
               {i === 1 && <LoopPractice storyCompleted={progress?.villageCompleted} preview={preview} />}
               {i === 2 && <ForestPractice storyCompleted={progress?.forestCompleted} preview={preview} />}
+              {i === 3 && <OopPractice storyCompleted={progress?.canyonCompleted} preview={preview} />}
               </Fragment>
             ))}
             <div className="map-end">

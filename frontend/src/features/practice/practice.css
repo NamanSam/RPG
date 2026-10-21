@@ -29,6 +29,19 @@
   background: #d7d29c;
   color: #243d2f;
 }
+.oop-training {
+  background: #754b3d;
+  border-top-color: #3c282b;
+}
+.oop-training .practice-caption {
+  background: #c49368;
+}
+.oop-training .training-location > strong,
+.oop-training .training-location > span:not(.quest-marker),
+.oop-training .training-location > small {
+  background: #e2bb83;
+  color: #3c282b;
+}
 .practice-caption {
   padding: 24px 28px 12px;
   background: #ecd7a5;
