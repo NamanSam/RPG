@@ -1,0 +1,2008 @@
+{
+  "topic": "array-forest-practice",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Array Basics Trail"
+    },
+    {
+      "number": 2,
+      "name": "Array Traversal Trail"
+    },
+    {
+      "number": 3,
+      "name": "Search and Min-Max Trail"
+    },
+    {
+      "number": 4,
+      "name": "Array Logic Trail"
+    },
+    {
+      "number": 5,
+      "name": "Forest Array Trial"
+    }
+  ],
+  "questions": [
+    {
+      "id": "forest-practice-01",
+      "slug": "declare-three-stones",
+      "title": "Declare three stones",
+      "topic": "array-forest-practice",
+      "subtopic": "array-basics",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose a valid declaration for an int array holding 2, 4, 6.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "int[] stones = {2, 4, 6};"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "int[] stones = {2, 4, 6};"
+        },
+        {
+          "id": "b",
+          "text": "array.length + 1"
+        },
+        {
+          "id": "c",
+          "text": "the result cannot be determined"
+        }
+      ],
+      "hints": [
+        "Track the array basics operation one step at a time."
+      ],
+      "explanation": "The correct result is int[] stones = {2, 4, 6};. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "array-basics",
+        "multiple_choice",
+        "java-arrays"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "OPTION"
+    },
+    {
+      "id": "forest-practice-02",
+      "slug": "first-index",
+      "title": "First index",
+      "topic": "array-forest-practice",
+      "subtopic": "array-basics",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict the value at stones[0].",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int[] stones={8,3,5};",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Track the array basics operation one step at a time."
+      ],
+      "explanation": "The correct result is 8. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "array-basics",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-03",
+      "slug": "length-property",
+      "title": "Length property",
+      "topic": "array-forest-practice",
+      "subtopic": "array-basics",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the array property that reports element count.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "length"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int size=stones.__;",
+      "expectedAnswer": "length",
+      "options": [],
+      "hints": [
+        "Track the array basics operation one step at a time."
+      ],
+      "explanation": "The correct result is length. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "array-basics",
+        "code_blank",
+        "java-arrays"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "forest-practice-04",
+      "slug": "modify-a-slot",
+      "title": "Modify a slot",
+      "topic": "array-forest-practice",
+      "subtopic": "array-basics",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give stones[1] after assigning it 9.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "9"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int[] stones={4,5,6}; stones[1]=9;",
+      "expectedAnswer": "9",
+      "options": [],
+      "hints": [
+        "Track the array basics operation one step at a time."
+      ],
+      "explanation": "The correct result is 9. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "array-basics",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-05",
+      "slug": "last-valid-index",
+      "title": "Last valid index",
+      "topic": "array-forest-practice",
+      "subtopic": "array-basics",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Give the last valid index of an array whose length is 7.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Track the array basics operation one step at a time."
+      ],
+      "explanation": "The correct result is 6. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "array-basics",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-06",
+      "slug": "default-integer-value",
+      "title": "Default integer value",
+      "topic": "array-forest-practice",
+      "subtopic": "array-basics",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the value in a newly created int array slot.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int[] marks=new int[3];",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "Track the array basics operation one step at a time."
+      ],
+      "explanation": "The correct result is 0. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "array-basics",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-07",
+      "slug": "default-boolean-value",
+      "title": "Default boolean value",
+      "topic": "array-forest-practice",
+      "subtopic": "array-basics",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the default value in new boolean[2].",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "boolean[] flags=new boolean[2];",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "Track the array basics operation one step at a time."
+      ],
+      "explanation": "The correct result is false. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "array-basics",
+        "code_blank",
+        "java-arrays"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "forest-practice-08",
+      "slug": "access-the-final-leaf",
+      "title": "Access the final leaf",
+      "topic": "array-forest-practice",
+      "subtopic": "array-basics",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict leaves[leaves.length-1].",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "15"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int[] leaves={3,7,11,15};",
+      "expectedAnswer": "15",
+      "options": [],
+      "hints": [
+        "Track the array basics operation one step at a time."
+      ],
+      "explanation": "The correct result is 15. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "array-basics",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-09",
+      "slug": "out-of-bounds-index",
+      "title": "Out-of-bounds index",
+      "topic": "array-forest-practice",
+      "subtopic": "array-basics",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the first invalid index for new int[4].",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "4"
+        },
+        {
+          "id": "b",
+          "text": "array.length + 1"
+        },
+        {
+          "id": "c",
+          "text": "the result cannot be determined"
+        }
+      ],
+      "hints": [
+        "Track the array basics operation one step at a time."
+      ],
+      "explanation": "The correct result is 4. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "array-basics",
+        "multiple_choice",
+        "java-arrays"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "OPTION"
+    },
+    {
+      "id": "forest-practice-10",
+      "slug": "repair-declaration",
+      "title": "Repair declaration",
+      "topic": "array-forest-practice",
+      "subtopic": "array-basics",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Supply the missing brackets in an array declaration.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "[]"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int__ scores={1,2};",
+      "expectedAnswer": "[]",
+      "options": [],
+      "hints": [
+        "Track the array basics operation one step at a time."
+      ],
+      "explanation": "The correct result is []. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "array-basics",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "forest-practice-11",
+      "slug": "forward-visit-count",
+      "title": "Forward visit count",
+      "topic": "array-forest-practice",
+      "subtopic": "array-traversal",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose how many elements a length-5 indexed loop visits.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "5"
+        },
+        {
+          "id": "b",
+          "text": "array.length + 1"
+        },
+        {
+          "id": "c",
+          "text": "the result cannot be determined"
+        }
+      ],
+      "hints": [
+        "Track the array traversal operation one step at a time."
+      ],
+      "explanation": "The correct result is 5. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "array-traversal",
+        "multiple_choice",
+        "java-arrays"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "OPTION"
+    },
+    {
+      "id": "forest-practice-12",
+      "slug": "enhanced-sum",
+      "title": "Enhanced sum",
+      "topic": "array-forest-practice",
+      "subtopic": "array-traversal",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict the sum produced by visiting 2,3,4.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "9"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int[] a={2,3,4};",
+      "expectedAnswer": "9",
+      "options": [],
+      "hints": [
+        "Track the array traversal operation one step at a time."
+      ],
+      "explanation": "The correct result is 9. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "array-traversal",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-13",
+      "slug": "traversal-condition",
+      "title": "Traversal condition",
+      "topic": "array-forest-practice",
+      "subtopic": "array-traversal",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the comparison in i __ a.length for forward traversal.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "<"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "for(int i=0;i __ a.length;i++)",
+      "expectedAnswer": "<",
+      "options": [],
+      "hints": [
+        "Track the array traversal operation one step at a time."
+      ],
+      "explanation": "The correct result is <. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "array-traversal",
+        "code_blank",
+        "java-arrays"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "forest-practice-14",
+      "slug": "reverse-starting-index",
+      "title": "Reverse starting index",
+      "topic": "array-forest-practice",
+      "subtopic": "array-traversal",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the starting index for reverse traversal of length 6.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Track the array traversal operation one step at a time."
+      ],
+      "explanation": "The correct result is 5. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "array-traversal",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-15",
+      "slug": "count-positives",
+      "title": "Count positives",
+      "topic": "array-forest-practice",
+      "subtopic": "array-traversal",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Count positive values in -1,3,0,5.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Track the array traversal operation one step at a time."
+      ],
+      "explanation": "The correct result is 2. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "array-traversal",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-16",
+      "slug": "accumulate-squares",
+      "title": "Accumulate squares",
+      "topic": "array-forest-practice",
+      "subtopic": "array-traversal",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Predict the sum of squares for 1,2,3.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "14"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "14",
+      "options": [],
+      "hints": [
+        "Track the array traversal operation one step at a time."
+      ],
+      "explanation": "The correct result is 14. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "array-traversal",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-17",
+      "slug": "reverse-update",
+      "title": "Reverse update",
+      "topic": "array-forest-practice",
+      "subtopic": "array-traversal",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the update for walking indexes backward.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "i--"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "for(int i=a.length-1;i>=0;__)",
+      "expectedAnswer": "i--",
+      "options": [],
+      "hints": [
+        "Track the array traversal operation one step at a time."
+      ],
+      "explanation": "The correct result is i--. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "array-traversal",
+        "code_blank",
+        "java-arrays"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "forest-practice-18",
+      "slug": "print-alternate-slots",
+      "title": "Print alternate slots",
+      "topic": "array-forest-practice",
+      "subtopic": "array-traversal",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict values at indexes 0,2,4 in 5,6,7,8,9.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "5 7 9"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5 7 9",
+      "options": [],
+      "hints": [
+        "Track the array traversal operation one step at a time."
+      ],
+      "explanation": "The correct result is 5 7 9. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "array-traversal",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "forest-practice-19",
+      "slug": "enhanced-loop-limitation",
+      "title": "Enhanced-loop limitation",
+      "topic": "array-forest-practice",
+      "subtopic": "array-traversal",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose what an enhanced loop does not directly provide.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "current index"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "current index"
+        },
+        {
+          "id": "b",
+          "text": "array.length + 1"
+        },
+        {
+          "id": "c",
+          "text": "the result cannot be determined"
+        }
+      ],
+      "hints": [
+        "Track the array traversal operation one step at a time."
+      ],
+      "explanation": "The correct result is current index. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "array-traversal",
+        "multiple_choice",
+        "java-arrays"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "OPTION"
+    },
+    {
+      "id": "forest-practice-20",
+      "slug": "nested-matrix-visits",
+      "title": "Nested matrix visits",
+      "topic": "array-forest-practice",
+      "subtopic": "array-traversal",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give visits for a 2 by 3 matrix traversal.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Track the array traversal operation one step at a time."
+      ],
+      "explanation": "The correct result is 6. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "array-traversal",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-21",
+      "slug": "find-maximum",
+      "title": "Find maximum",
+      "topic": "array-forest-practice",
+      "subtopic": "search-min-max",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the maximum in -8,-2,-11,-5.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "-2"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "-2"
+        },
+        {
+          "id": "b",
+          "text": "array.length + 1"
+        },
+        {
+          "id": "c",
+          "text": "the result cannot be determined"
+        }
+      ],
+      "hints": [
+        "Track the search min max operation one step at a time."
+      ],
+      "explanation": "The correct result is -2. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "search-min-max",
+        "multiple_choice",
+        "java-arrays"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "OPTION"
+    },
+    {
+      "id": "forest-practice-22",
+      "slug": "find-minimum",
+      "title": "Find minimum",
+      "topic": "array-forest-practice",
+      "subtopic": "search-min-max",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Predict the minimum in 7,4,9,1.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Track the search min max operation one step at a time."
+      ],
+      "explanation": "The correct result is 1. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "search-min-max",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-23",
+      "slug": "linear-search-result",
+      "title": "Linear search result",
+      "topic": "array-forest-practice",
+      "subtopic": "search-min-max",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Supply true or false when searching 3,6,9 for 6.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Track the search min max operation one step at a time."
+      ],
+      "explanation": "The correct result is true. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "search-min-max",
+        "code_blank",
+        "java-arrays"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "forest-practice-24",
+      "slug": "occurrence-count",
+      "title": "Occurrence count",
+      "topic": "array-forest-practice",
+      "subtopic": "search-min-max",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Count occurrences of 2 in 2,5,2,2,7.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Track the search min max operation one step at a time."
+      ],
+      "explanation": "The correct result is 3. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "search-min-max",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-25",
+      "slug": "first-match-index",
+      "title": "First match index",
+      "topic": "array-forest-practice",
+      "subtopic": "search-min-max",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Give the first index of 4 in 8,4,1,4.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Track the search min max operation one step at a time."
+      ],
+      "explanation": "The correct result is 1. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "search-min-max",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-26",
+      "slug": "last-match-index",
+      "title": "Last match index",
+      "topic": "array-forest-practice",
+      "subtopic": "search-min-max",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the last index of 4 in 8,4,1,4.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Track the search min max operation one step at a time."
+      ],
+      "explanation": "The correct result is 3. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "search-min-max",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-27",
+      "slug": "missing-target-sentinel",
+      "title": "Missing target sentinel",
+      "topic": "array-forest-practice",
+      "subtopic": "search-min-max",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the conventional index returned when a search finds nothing.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "-1"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "-1",
+      "options": [],
+      "hints": [
+        "Track the search min max operation one step at a time."
+      ],
+      "explanation": "The correct result is -1. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "search-min-max",
+        "code_blank",
+        "java-arrays"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "forest-practice-28",
+      "slug": "count-values-above-limit",
+      "title": "Count values above limit",
+      "topic": "array-forest-practice",
+      "subtopic": "search-min-max",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Count values above 5 in 2,8,6,5,9.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Track the search min max operation one step at a time."
+      ],
+      "explanation": "The correct result is 3. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "search-min-max",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-29",
+      "slug": "initialize-a-negative-maximum",
+      "title": "Initialize a negative maximum",
+      "topic": "array-forest-practice",
+      "subtopic": "search-min-max",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the safe initial maximum for a nonempty array.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "a[0]"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "a[0]"
+        },
+        {
+          "id": "b",
+          "text": "array.length + 1"
+        },
+        {
+          "id": "c",
+          "text": "the result cannot be determined"
+        }
+      ],
+      "hints": [
+        "Track the search min max operation one step at a time."
+      ],
+      "explanation": "The correct result is a[0]. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "search-min-max",
+        "multiple_choice",
+        "java-arrays"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "OPTION"
+    },
+    {
+      "id": "forest-practice-30",
+      "slug": "most-frequent-scout-mark",
+      "title": "Most frequent scout mark",
+      "topic": "array-forest-practice",
+      "subtopic": "search-min-max",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the most frequent value in 1,3,3,2,3,2.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Track the search min max operation one step at a time."
+      ],
+      "explanation": "The correct result is 3. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "search-min-max",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-31",
+      "slug": "count-even-runes",
+      "title": "Count even runes",
+      "topic": "array-forest-practice",
+      "subtopic": "array-logic",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the even-value count in 1,2,4,7,8.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "3"
+        },
+        {
+          "id": "b",
+          "text": "array.length + 1"
+        },
+        {
+          "id": "c",
+          "text": "the result cannot be determined"
+        }
+      ],
+      "hints": [
+        "Track the array logic operation one step at a time."
+      ],
+      "explanation": "The correct result is 3. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "array-logic",
+        "multiple_choice",
+        "java-arrays"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "OPTION"
+    },
+    {
+      "id": "forest-practice-32",
+      "slug": "spot-a-duplicate",
+      "title": "Spot a duplicate",
+      "topic": "array-forest-practice",
+      "subtopic": "array-logic",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "State true or false: 5,1,5 contains a duplicate.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Track the array logic operation one step at a time."
+      ],
+      "explanation": "The correct result is true. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "array-logic",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "forest-practice-33",
+      "slug": "swap-result",
+      "title": "Swap result",
+      "topic": "array-forest-practice",
+      "subtopic": "array-logic",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Supply a[0] after swapping 3 and 9.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "9"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "int[] a={3,9};",
+      "expectedAnswer": "9",
+      "options": [],
+      "hints": [
+        "Track the array logic operation one step at a time."
+      ],
+      "explanation": "The correct result is 9. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "array-logic",
+        "code_blank",
+        "java-arrays"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "forest-practice-34",
+      "slug": "reverse-endpoints",
+      "title": "Reverse endpoints",
+      "topic": "array-forest-practice",
+      "subtopic": "array-logic",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the reversed list for 1,2,3,4.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "[4,3,2,1]"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[4,3,2,1]",
+      "options": [],
+      "hints": [
+        "Track the array logic operation one step at a time."
+      ],
+      "explanation": "The correct result is [4,3,2,1]. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "array-logic",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "forest-practice-35",
+      "slug": "second-largest",
+      "title": "Second largest",
+      "topic": "array-forest-practice",
+      "subtopic": "array-logic",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Give the distinct second-largest value in 4,9,2,7.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Track the array logic operation one step at a time."
+      ],
+      "explanation": "The correct result is 7. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "array-logic",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-36",
+      "slug": "rotate-right-once",
+      "title": "Rotate right once",
+      "topic": "array-forest-practice",
+      "subtopic": "array-logic",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give 1,2,3,4 after one right rotation.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "[4,1,2,3]"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[4,1,2,3]",
+      "options": [],
+      "hints": [
+        "Track the array logic operation one step at a time."
+      ],
+      "explanation": "The correct result is [4,1,2,3]. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "array-logic",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "forest-practice-37",
+      "slug": "prefix-at-index-two",
+      "title": "Prefix at index two",
+      "topic": "array-forest-practice",
+      "subtopic": "array-logic",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Supply prefix[2] for values 2,5,3.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "10"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "10",
+      "options": [],
+      "hints": [
+        "Track the array logic operation one step at a time."
+      ],
+      "explanation": "The correct result is 10. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "array-logic",
+        "code_blank",
+        "java-arrays"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "forest-practice-38",
+      "slug": "two-pointer-pair-sum",
+      "title": "Two-pointer pair sum",
+      "topic": "array-forest-practice",
+      "subtopic": "array-logic",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "State true or false: sorted 1,3,5,8 has a pair totaling 9.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Track the array logic operation one step at a time."
+      ],
+      "explanation": "The correct result is true. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "array-logic",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "forest-practice-39",
+      "slug": "move-zeroes-order",
+      "title": "Move zeroes order",
+      "topic": "array-forest-practice",
+      "subtopic": "array-logic",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Give stable move-zeroes result for 0,1,0,3.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "[1,3,0,0]"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "[1,3,0,0]"
+        },
+        {
+          "id": "b",
+          "text": "array.length + 1"
+        },
+        {
+          "id": "c",
+          "text": "the result cannot be determined"
+        }
+      ],
+      "hints": [
+        "Track the array logic operation one step at a time."
+      ],
+      "explanation": "The correct result is [1,3,0,0]. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "array-logic",
+        "multiple_choice",
+        "java-arrays"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "OPTION"
+    },
+    {
+      "id": "forest-practice-40",
+      "slug": "majority-candidate",
+      "title": "Majority candidate",
+      "topic": "array-forest-practice",
+      "subtopic": "array-logic",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the value appearing more than half the time in 2,2,1,2,3,2,2.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Track the array logic operation one step at a time."
+      ],
+      "explanation": "The correct result is 2. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "array-logic",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-41",
+      "slug": "mixed-indexed-output",
+      "title": "Mixed indexed output",
+      "topic": "array-forest-practice",
+      "subtopic": "mixed-arrays",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose a[1]+a[3] for 2,4,6,8.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "12"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "array.length + 1"
+        },
+        {
+          "id": "c",
+          "text": "the result cannot be determined"
+        }
+      ],
+      "hints": [
+        "Track the mixed arrays operation one step at a time."
+      ],
+      "explanation": "The correct result is 12. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "mixed-arrays",
+        "multiple_choice",
+        "java-arrays"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "OPTION"
+    },
+    {
+      "id": "forest-practice-42",
+      "slug": "traversal-bug",
+      "title": "Traversal bug",
+      "topic": "array-forest-practice",
+      "subtopic": "mixed-arrays",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Give the invalid index reached by i<=a.length for length 3.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Track the mixed arrays operation one step at a time."
+      ],
+      "explanation": "The correct result is 3. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "mixed-arrays",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-43",
+      "slug": "fill-maximum-update",
+      "title": "Fill maximum update",
+      "topic": "array-forest-practice",
+      "subtopic": "mixed-arrays",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Supply the comparison operator in if(value __ max).",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": ">"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "if(value __ max) max=value;",
+      "expectedAnswer": ">",
+      "options": [],
+      "hints": [
+        "Track the mixed arrays operation one step at a time."
+      ],
+      "explanation": "The correct result is >. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "mixed-arrays",
+        "code_blank",
+        "java-arrays"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "forest-practice-44",
+      "slug": "search-then-modify",
+      "title": "Search then modify",
+      "topic": "array-forest-practice",
+      "subtopic": "mixed-arrays",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the final list after replacing first 4 with 9 in 4,4,2.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "[9,4,2]"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[9,4,2]",
+      "options": [],
+      "hints": [
+        "Track the mixed arrays operation one step at a time."
+      ],
+      "explanation": "The correct result is [9,4,2]. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "mixed-arrays",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "forest-practice-45",
+      "slug": "range-sum-prefix",
+      "title": "Range sum prefix",
+      "topic": "array-forest-practice",
+      "subtopic": "mixed-arrays",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Give sum from indexes 1 through 3 in 2,4,6,8,10.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "18"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "18",
+      "options": [],
+      "hints": [
+        "Track the mixed arrays operation one step at a time."
+      ],
+      "explanation": "The correct result is 18. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "mixed-arrays",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-46",
+      "slug": "reverse-then-maximum",
+      "title": "Reverse then maximum",
+      "topic": "array-forest-practice",
+      "subtopic": "mixed-arrays",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the maximum after reversing -3,7,2.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Track the mixed arrays operation one step at a time."
+      ],
+      "explanation": "The correct result is 7. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "mixed-arrays",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-47",
+      "slug": "duplicate-frequency",
+      "title": "Duplicate frequency",
+      "topic": "array-forest-practice",
+      "subtopic": "mixed-arrays",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Give the count of the most frequent value in 6,1,6,2,6.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Track the mixed arrays operation one step at a time."
+      ],
+      "explanation": "The correct result is 3. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "mixed-arrays",
+        "code_blank",
+        "java-arrays"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "forest-practice-48",
+      "slug": "two-pointer-comparison-count",
+      "title": "Two-pointer comparison count",
+      "topic": "array-forest-practice",
+      "subtopic": "mixed-arrays",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Give comparisons when endpoints of 1,2,7,9 immediately total 10.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Track the mixed arrays operation one step at a time."
+      ],
+      "explanation": "The correct result is 1. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "mixed-arrays",
+        "predict_output",
+        "java-arrays"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "forest-practice-49",
+      "slug": "single-missing-value",
+      "title": "Single missing value",
+      "topic": "array-forest-practice",
+      "subtopic": "mixed-arrays",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the missing value from 1,2,4,5.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "3"
+        },
+        {
+          "id": "b",
+          "text": "array.length + 1"
+        },
+        {
+          "id": "c",
+          "text": "the result cannot be determined"
+        }
+      ],
+      "hints": [
+        "Track the mixed arrays operation one step at a time."
+      ],
+      "explanation": "The correct result is 3. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "mixed-arrays",
+        "multiple_choice",
+        "java-arrays"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "OPTION"
+    },
+    {
+      "id": "forest-practice-50",
+      "slug": "best-one-pass-profit",
+      "title": "Best one-pass profit",
+      "topic": "array-forest-practice",
+      "subtopic": "mixed-arrays",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the maximum later-minus-earlier gain for prices 7,1,5,3,6,4.",
+      "examples": [
+        {
+          "input": "Trace the stated forest array scenario.",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Use the exact requested value, option, or integer list.",
+        "Assume snippets are inside a valid Java method. No code is executed."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Track the mixed arrays operation one step at a time."
+      ],
+      "explanation": "The correct result is 5. Following the indexes, comparisons, and updates in order produces this result.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "mixed-arrays",
+        "logic_answer",
+        "java-arrays"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "INTEGER"
+    }
+  ]
+}

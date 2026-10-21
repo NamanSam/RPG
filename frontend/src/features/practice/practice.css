@@ -16,6 +16,19 @@
   background: #ead7a3;
   color: #2d4035;
 }
+.forest-training {
+  background: #496b4e;
+  border-top-color: #263f31;
+}
+.forest-training .practice-caption {
+  background: #a9bd88;
+}
+.forest-training .training-location > strong,
+.forest-training .training-location > span:not(.quest-marker),
+.forest-training .training-location > small {
+  background: #d7d29c;
+  color: #243d2f;
+}
 .practice-caption {
   padding: 24px 28px 12px;
   background: #ecd7a5;

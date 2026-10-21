@@ -1,5 +1,6 @@
 import { BeachPractice } from "../features/practice/BeachPractice";
 import { LoopPractice } from "../features/practice/LoopPractice";
+import { ForestPractice } from "../features/practice/ForestPractice";
 import { KingdomQuestNodes, kingdomPreview, KingdomScene } from "../features/quests/KingdomQuestNodes";
 import { KingdomCelebration } from "../features/quests/KingdomCelebration";
 import { CanyonQuestNodes, canyonPreview, CanyonScene } from "../features/quests/CanyonQuestNodes";
@@ -241,7 +242,7 @@ export function WorldMap({ user, setUser, preview = false }) {
             <h2>A world of possibilities</h2>
           </div>
           <span className="map-meta">
-            5 regions <i /> 16 story quests · 100 optional practice questions
+            5 regions <i /> 16 story quests · 150 optional practice questions
           </span>
         </div>
         <div className="map-layout">
@@ -344,6 +345,7 @@ export function WorldMap({ user, setUser, preview = false }) {
               </section>
               {i === 0 && <BeachPractice storyCompleted={progress?.beachCompleted} preview={preview} />}
               {i === 1 && <LoopPractice storyCompleted={progress?.villageCompleted} preview={preview} />}
+              {i === 2 && <ForestPractice storyCompleted={progress?.forestCompleted} preview={preview} />}
               </Fragment>
             ))}
             <div className="map-end">
