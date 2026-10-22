@@ -1,0 +1,1929 @@
+{
+  "topic": "dynamic-programming",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "DP Foundations"
+    },
+    {
+      "number": 2,
+      "name": "1D Dynamic Programming"
+    },
+    {
+      "number": 3,
+      "name": "Knapsack & Subset Patterns"
+    },
+    {
+      "number": 4,
+      "name": "Sequence & Grid DP"
+    },
+    {
+      "number": 5,
+      "name": "DP Master Trial"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dp-01",
+      "slug": "overlapping-footprints",
+      "title": "Overlapping Footprints",
+      "topic": "dynamic-programming",
+      "subtopic": "foundations",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which property appears when a recursive solution solves the same input state more than once?",
+      "examples": [
+        {
+          "input": "Solve the Overlapping Footprints temple challenge.",
+          "output": "overlapping subproblems"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "overlapping subproblems",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind overlapping footprints before calculating."
+      ],
+      "explanation": "Repeated states are overlapping subproblems; caching them avoids duplicated work.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "foundations",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-02",
+      "slug": "optimal-temple-stones",
+      "title": "Optimal Temple Stones",
+      "topic": "dynamic-programming",
+      "subtopic": "foundations",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What DP property says an optimal solution can be assembled from optimal solutions to smaller states?",
+      "examples": [
+        {
+          "input": "Solve the Optimal Temple Stones temple challenge.",
+          "output": "optimal substructure"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "optimal substructure",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind optimal temple stones before calculating."
+      ],
+      "explanation": "Optimal substructure is the condition that connects smaller optimal answers to the full optimum.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "foundations",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-03",
+      "slug": "memo-scroll",
+      "title": "Memo Scroll",
+      "topic": "dynamic-programming",
+      "subtopic": "foundations",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Which approach starts with recursion and stores results only when states are requested?",
+      "examples": [
+        {
+          "input": "Solve the Memo Scroll temple challenge.",
+          "output": "memoization"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "memoization",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind memo scroll before calculating."
+      ],
+      "explanation": "Memoization is top-down: recursion asks for a state and a cache preserves its result.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "foundations",
+        "code_blank",
+        "dynamic-programming"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-04",
+      "slug": "tablet-grid",
+      "title": "Tablet Grid",
+      "topic": "dynamic-programming",
+      "subtopic": "foundations",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Which approach normally fills a table from base states toward the requested state?",
+      "examples": [
+        {
+          "input": "Solve the Tablet Grid temple challenge.",
+          "output": "tabulation"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "tabulation",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind tablet grid before calculating."
+      ],
+      "explanation": "Tabulation is bottom-up and orders table entries so dependencies are ready first.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "foundations",
+        "code_blank",
+        "dynamic-programming"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-05",
+      "slug": "state-meaning",
+      "title": "State Meaning",
+      "topic": "dynamic-programming",
+      "subtopic": "foundations",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For ways[i], where i is a stair number, what should ways[i] represent?",
+      "examples": [
+        {
+          "input": "Solve the State Meaning temple challenge.",
+          "output": "ways to reach stair i"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "ways to reach stair i",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind state meaning before calculating."
+      ],
+      "explanation": "A precise state meaning is the contract for every transition and base case.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "foundations",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-06",
+      "slug": "base-rune",
+      "title": "Base Rune",
+      "topic": "dynamic-programming",
+      "subtopic": "foundations",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For Fibonacci with F(0)=0 and F(1)=1, what is F(1)?",
+      "examples": [
+        {
+          "input": "Solve the Base Rune temple challenge.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind base rune before calculating."
+      ],
+      "explanation": "The base cases terminate the recurrence and anchor all later values.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "foundations",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-07",
+      "slug": "cache-size",
+      "title": "Cache Size",
+      "topic": "dynamic-programming",
+      "subtopic": "foundations",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "A DP indexed from 0 through n inclusive needs how many entries?",
+      "examples": [
+        {
+          "input": "Solve the Cache Size temple challenge.",
+          "output": "n + 1"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "n + 1",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind cache size before calculating."
+      ],
+      "explanation": "Both endpoints are represented, so indices 0..n require n+1 cells.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "foundations",
+        "code_blank",
+        "dynamic-programming"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-08",
+      "slug": "recursion-cost",
+      "title": "Recursion Cost",
+      "topic": "dynamic-programming",
+      "subtopic": "foundations",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Naive Fibonacci branches twice per non-base call. Which broad time class describes it?",
+      "examples": [
+        {
+          "input": "Solve the Recursion Cost temple challenge.",
+          "output": "exponential"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "linear"
+        },
+        {
+          "id": "b",
+          "text": "quadratic"
+        },
+        {
+          "id": "c",
+          "text": "exponential"
+        },
+        {
+          "id": "d",
+          "text": "constant"
+        }
+      ],
+      "hints": [
+        "Identify the smaller state or invariant behind recursion cost before calculating."
+      ],
+      "explanation": "The recursion tree repeats states and grows exponentially before memoization.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "foundations",
+        "multiple_choice",
+        "dynamic-programming"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "OPTION"
+    },
+    {
+      "id": "dp-09",
+      "slug": "dependency-order",
+      "title": "Dependency Order",
+      "topic": "dynamic-programming",
+      "subtopic": "foundations",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A state dp[i] needs dp[i-1] and dp[i-2]. Which fill direction is safe?",
+      "examples": [
+        {
+          "input": "Solve the Dependency Order temple challenge.",
+          "output": "left to right"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "left to right",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind dependency order before calculating."
+      ],
+      "explanation": "Left-to-right evaluation prepares both smaller indices before dp[i].",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "foundations",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-10",
+      "slug": "false-dp-idol",
+      "title": "False DP Idol",
+      "topic": "dynamic-programming",
+      "subtopic": "foundations",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A problem has optimal substructure but no repeated states. Is DP automatically the best choice?",
+      "examples": [
+        {
+          "input": "Solve the False DP Idol temple challenge.",
+          "output": "no"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "no",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind false dp idol before calculating."
+      ],
+      "explanation": "Optimal substructure alone does not guarantee useful reuse; without repeated states caching may add overhead.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "foundations",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-11",
+      "slug": "fibonacci-crystal",
+      "title": "Fibonacci Crystal",
+      "topic": "dynamic-programming",
+      "subtopic": "one-dimensional-dp",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Using F(0)=0, F(1)=1, find F(7).",
+      "examples": [
+        {
+          "input": "Solve the Fibonacci Crystal temple challenge.",
+          "output": "13"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "13",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind fibonacci crystal before calculating."
+      ],
+      "explanation": "The sequence reaches 0,1,1,2,3,5,8,13.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "1d-dp",
+        "predict_output",
+        "dynamic-programming"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-12",
+      "slug": "two-step-stair",
+      "title": "Two-Step Stair",
+      "topic": "dynamic-programming",
+      "subtopic": "one-dimensional-dp",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "You may climb 1 or 2 steps. How many distinct ways reach step 4?",
+      "examples": [
+        {
+          "input": "Solve the Two-Step Stair temple challenge.",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind two-step stair before calculating."
+      ],
+      "explanation": "The counts are 1,1,2,3,5 when the ground is the single empty way.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "1d-dp",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-13",
+      "slug": "robbers-first-choice",
+      "title": "Robber's First Choice",
+      "topic": "dynamic-programming",
+      "subtopic": "one-dimensional-dp",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For house values [2,1,4], what maximum can be taken without adjacent houses?",
+      "examples": [
+        {
+          "input": "Solve the Robber's First Choice temple challenge.",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind robber's first choice before calculating."
+      ],
+      "explanation": "Taking the first and third houses gives 2+4=6.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "1d-dp",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-14",
+      "slug": "rolling-memory",
+      "title": "Rolling Memory",
+      "topic": "dynamic-programming",
+      "subtopic": "one-dimensional-dp",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A recurrence needs only the previous two values. What asymptotic extra space is sufficient?",
+      "examples": [
+        {
+          "input": "Solve the Rolling Memory temple challenge.",
+          "output": "O(1)"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "O(1)"
+        },
+        {
+          "id": "b",
+          "text": "O(n)"
+        },
+        {
+          "id": "c",
+          "text": "O(n²)"
+        },
+        {
+          "id": "d",
+          "text": "O(2ⁿ)"
+        }
+      ],
+      "hints": [
+        "Identify the smaller state or invariant behind rolling memory before calculating."
+      ],
+      "explanation": "Two rolling variables replace the full table, so extra space stays constant.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "1d-dp",
+        "multiple_choice",
+        "dynamic-programming"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "OPTION"
+    },
+    {
+      "id": "dp-15",
+      "slug": "min-cost-landing",
+      "title": "Min-Cost Landing",
+      "topic": "dynamic-programming",
+      "subtopic": "one-dimensional-dp",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Costs are [10,15,20]; start before index 0 and move 1 or 2 steps. What minimum cost reaches beyond the array?",
+      "examples": [
+        {
+          "input": "Solve the Min-Cost Landing temple challenge.",
+          "output": "15"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "15",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind min-cost landing before calculating."
+      ],
+      "explanation": "Paying cost 15 at index 1 and jumping out is cheapest.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "1d-dp",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-16",
+      "slug": "decode-pair",
+      "title": "Decode Pair",
+      "topic": "dynamic-programming",
+      "subtopic": "one-dimensional-dp",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "With A=1 through Z=26, how many decodings does \"12\" have?",
+      "examples": [
+        {
+          "input": "Solve the Decode Pair temple challenge.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind decode pair before calculating."
+      ],
+      "explanation": "The string can be split as 1|2 or 12.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "1d-dp",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-17",
+      "slug": "house-robber-transition",
+      "title": "House Robber Transition",
+      "topic": "dynamic-programming",
+      "subtopic": "one-dimensional-dp",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the choice recurrence: dp[i] = max(dp[i-1], value[i] + ____).",
+      "examples": [
+        {
+          "input": "Solve the House Robber Transition temple challenge.",
+          "output": "dp[i-2]"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "dp[i-2]",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind house robber transition before calculating."
+      ],
+      "explanation": "Taking house i excludes i-1, so it combines with the best through i-2.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "1d-dp",
+        "code_blank",
+        "dynamic-programming"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-18",
+      "slug": "circular-houses",
+      "title": "Circular Houses",
+      "topic": "dynamic-programming",
+      "subtopic": "one-dimensional-dp",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Why are first and last houses handled in separate cases in circular House Robber?",
+      "examples": [
+        {
+          "input": "Solve the Circular Houses temple challenge.",
+          "output": "they are adjacent"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "they are adjacent",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind circular houses before calculating."
+      ],
+      "explanation": "The circle makes the two endpoints neighbors, so a valid plan cannot take both.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "1d-dp",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-19",
+      "slug": "broken-stair-rune",
+      "title": "Broken Stair Rune",
+      "topic": "dynamic-programming",
+      "subtopic": "one-dimensional-dp",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A stair recurrence uses ways[i]=ways[i-1]+ways[i-2] but sets ways[0]=0. What base value supports one empty way?",
+      "examples": [
+        {
+          "input": "Solve the Broken Stair Rune temple challenge.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind broken stair rune before calculating."
+      ],
+      "explanation": "ways[0]=1 represents the single way to make no moves and supports the recurrence.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "1d-dp",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-20",
+      "slug": "jumping-three-ways",
+      "title": "Jumping Three Ways",
+      "topic": "dynamic-programming",
+      "subtopic": "one-dimensional-dp",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Steps of 1, 2, or 3 are allowed. How many ordered ways reach step 5?",
+      "examples": [
+        {
+          "input": "Solve the Jumping Three Ways temple challenge.",
+          "output": "13"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "13",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind jumping three ways before calculating."
+      ],
+      "explanation": "Using ways[n]=ways[n-1]+ways[n-2]+ways[n-3] yields 13 at n=5.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "1d-dp",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-21",
+      "slug": "pack-capacity",
+      "title": "Pack Capacity",
+      "topic": "dynamic-programming",
+      "subtopic": "knapsack-subsets",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In 0/1 knapsack, how many times may each item be selected?",
+      "examples": [
+        {
+          "input": "Solve the Pack Capacity temple challenge.",
+          "output": "once"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "once",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind pack capacity before calculating."
+      ],
+      "explanation": "The 0/1 label means an item is either excluded or included once.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "knapsack",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-22",
+      "slug": "subset-ten",
+      "title": "Subset Ten",
+      "topic": "dynamic-programming",
+      "subtopic": "knapsack-subsets",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Does [3,7,9] contain a subset summing to 10?",
+      "examples": [
+        {
+          "input": "Solve the Subset Ten temple challenge.",
+          "output": "yes"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "yes",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind subset ten before calculating."
+      ],
+      "explanation": "Selecting 3 and 7 reaches 10.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "knapsack",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-23",
+      "slug": "coin-supply",
+      "title": "Coin Supply",
+      "topic": "dynamic-programming",
+      "subtopic": "knapsack-subsets",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In the standard unbounded coin-change problem, may a denomination be reused?",
+      "examples": [
+        {
+          "input": "Solve the Coin Supply temple challenge.",
+          "output": "yes"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "yes",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind coin supply before calculating."
+      ],
+      "explanation": "Unbounded coin change permits any coin denomination to be chosen repeatedly.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "knapsack",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-24",
+      "slug": "knapsack-state",
+      "title": "Knapsack State",
+      "topic": "dynamic-programming",
+      "subtopic": "knapsack-subsets",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "For dp[i][c], what does c conventionally represent?",
+      "examples": [
+        {
+          "input": "Solve the Knapsack State temple challenge.",
+          "output": "capacity"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "capacity",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind knapsack state before calculating."
+      ],
+      "explanation": "The second dimension records the remaining or available capacity.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "knapsack",
+        "code_blank",
+        "dynamic-programming"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-25",
+      "slug": "exact-change",
+      "title": "Exact Change",
+      "topic": "dynamic-programming",
+      "subtopic": "knapsack-subsets",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "With coins [1,3,4], what is the minimum number of coins totaling 6?",
+      "examples": [
+        {
+          "input": "Solve the Exact Change temple challenge.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind exact change before calculating."
+      ],
+      "explanation": "Two coins of value 3 beat 4+1+1.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "knapsack",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-26",
+      "slug": "equal-partition",
+      "title": "Equal Partition",
+      "topic": "dynamic-programming",
+      "subtopic": "knapsack-subsets",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Can [1,5,11,5] be divided into two subsets with equal sum?",
+      "examples": [
+        {
+          "input": "Solve the Equal Partition temple challenge.",
+          "output": "yes"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "yes",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind equal partition before calculating."
+      ],
+      "explanation": "The total is 22 and subset [11] matches the other subset's sum of 11.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "knapsack",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-27",
+      "slug": "descending-capacity",
+      "title": "Descending Capacity",
+      "topic": "dynamic-programming",
+      "subtopic": "knapsack-subsets",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Why does 1D 0/1 knapsack iterate capacity downward?",
+      "examples": [
+        {
+          "input": "Solve the Descending Capacity temple challenge.",
+          "output": "prevent item reuse"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "prevent item reuse",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind descending capacity before calculating."
+      ],
+      "explanation": "Descending updates read the prior item layer, preventing the current item from being counted repeatedly.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "knapsack",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-28",
+      "slug": "target-sum-count",
+      "title": "Target Sum Count",
+      "topic": "dynamic-programming",
+      "subtopic": "knapsack-subsets",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Assign + or - to [1,1,1] to total 1. How many assignments work?",
+      "examples": [
+        {
+          "input": "Solve the Target Sum Count temple challenge.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind target sum count before calculating."
+      ],
+      "explanation": "Exactly one of the three ones can receive a minus sign.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "knapsack",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-29",
+      "slug": "knapsack-choice",
+      "title": "Knapsack Choice",
+      "topic": "dynamic-programming",
+      "subtopic": "knapsack-subsets",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Capacity is 5; items (weight,value) are (2,6),(3,10),(4,12). What maximum value fits?",
+      "examples": [
+        {
+          "input": "Solve the Knapsack Choice temple challenge.",
+          "output": "16"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "16",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind knapsack choice before calculating."
+      ],
+      "explanation": "The weight-2 and weight-3 items exactly fill capacity and yield value 16.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "knapsack",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-30",
+      "slug": "fewest-coins-impossible",
+      "title": "Fewest Coins Impossible",
+      "topic": "dynamic-programming",
+      "subtopic": "knapsack-subsets",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "With coins [2,4], what conventional numeric result signals amount 7 is unreachable?",
+      "examples": [
+        {
+          "input": "Solve the Fewest Coins Impossible temple challenge.",
+          "output": "-1"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "-1",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind fewest coins impossible before calculating."
+      ],
+      "explanation": "No sum of even coins forms 7, so the public result is -1.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "knapsack",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-31",
+      "slug": "grid-corner",
+      "title": "Grid Corner",
+      "topic": "dynamic-programming",
+      "subtopic": "sequence-grid-dp",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "With moves only right or down, how many paths cross a 2x2 grid from top-left to bottom-right?",
+      "examples": [
+        {
+          "input": "Solve the Grid Corner temple challenge.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind grid corner before calculating."
+      ],
+      "explanation": "The two move sequences are right-down and down-right.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "sequence-grid",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-32",
+      "slug": "lcs-pair",
+      "title": "LCS Pair",
+      "topic": "dynamic-programming",
+      "subtopic": "sequence-grid-dp",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What is the LCS length of \"abc\" and \"ac\"?",
+      "examples": [
+        {
+          "input": "Solve the LCS Pair temple challenge.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind lcs pair before calculating."
+      ],
+      "explanation": "Characters a and c appear in order in both strings.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "sequence-grid",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-33",
+      "slug": "increasing-trail",
+      "title": "Increasing Trail",
+      "topic": "dynamic-programming",
+      "subtopic": "sequence-grid-dp",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What is the LIS length of [3,1,2,5]?",
+      "examples": [
+        {
+          "input": "Solve the Increasing Trail temple challenge.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind increasing trail before calculating."
+      ],
+      "explanation": "The subsequence 1,2,5 is strictly increasing.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "sequence-grid",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-34",
+      "slug": "grid-base",
+      "title": "Grid Base",
+      "topic": "dynamic-programming",
+      "subtopic": "sequence-grid-dp",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For path counting without obstacles, how many ways reach the starting cell?",
+      "examples": [
+        {
+          "input": "Solve the Grid Base temple challenge.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind grid base before calculating."
+      ],
+      "explanation": "There is one empty path already at the starting cell.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "sequence-grid",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-35",
+      "slug": "edit-one-rune",
+      "title": "Edit One Rune",
+      "topic": "dynamic-programming",
+      "subtopic": "sequence-grid-dp",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What is the edit distance between \"cat\" and \"cut\" using insert, delete, and replace?",
+      "examples": [
+        {
+          "input": "Solve the Edit One Rune temple challenge.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind edit one rune before calculating."
+      ],
+      "explanation": "Replacing a with u performs the transformation in one edit.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "sequence-grid",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-36",
+      "slug": "palindrome-subsequence",
+      "title": "Palindrome Subsequence",
+      "topic": "dynamic-programming",
+      "subtopic": "sequence-grid-dp",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What is the longest palindromic subsequence length in \"bbab\"?",
+      "examples": [
+        {
+          "input": "Solve the Palindrome Subsequence temple challenge.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind palindrome subsequence before calculating."
+      ],
+      "explanation": "Either bab or bbb is a length-three palindromic subsequence.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "sequence-grid",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-37",
+      "slug": "lcs-match-transition",
+      "title": "LCS Match Transition",
+      "topic": "dynamic-programming",
+      "subtopic": "sequence-grid-dp",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "When a[i-1] equals b[j-1], fill: dp[i][j] = 1 + ____.",
+      "examples": [
+        {
+          "input": "Solve the LCS Match Transition temple challenge.",
+          "output": "dp[i-1][j-1]"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "dp[i-1][j-1]",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind lcs match transition before calculating."
+      ],
+      "explanation": "A matched pair extends the best subsequence before both characters.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "sequence-grid",
+        "code_blank",
+        "dynamic-programming"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-38",
+      "slug": "obstacle-grid",
+      "title": "Obstacle Grid",
+      "topic": "dynamic-programming",
+      "subtopic": "sequence-grid-dp",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A 2x3 grid has its center cell blocked. Moving right/down, how many start-to-finish paths remain?",
+      "examples": [
+        {
+          "input": "Solve the Obstacle Grid temple challenge.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind obstacle grid before calculating."
+      ],
+      "explanation": "Only the route down then across the bottom row avoids the blocked center.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "sequence-grid",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-39",
+      "slug": "lis-quadratic-check",
+      "title": "LIS Quadratic Check",
+      "topic": "dynamic-programming",
+      "subtopic": "sequence-grid-dp",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For [10,9,2,5,3,7,101,18], what LIS length is produced?",
+      "examples": [
+        {
+          "input": "Solve the LIS Quadratic Check temple challenge.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind lis quadratic check before calculating."
+      ],
+      "explanation": "Examples include 2,3,7,18 and 2,5,7,101.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "sequence-grid",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-40",
+      "slug": "edit-distance-choice",
+      "title": "Edit Distance Choice",
+      "topic": "dynamic-programming",
+      "subtopic": "sequence-grid-dp",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "When two current characters differ, which three predecessor operations are compared?",
+      "examples": [
+        {
+          "input": "Solve the Edit Distance Choice temple challenge.",
+          "output": "insert delete replace"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "insert delete replace",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind edit distance choice before calculating."
+      ],
+      "explanation": "The edit recurrence takes one plus the minimum of insertion, deletion, and replacement states.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "sequence-grid",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-41",
+      "slug": "choose-the-dp-signal",
+      "title": "Choose the DP Signal",
+      "topic": "dynamic-programming",
+      "subtopic": "master-trial",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which pair most strongly suggests dynamic programming?",
+      "examples": [
+        {
+          "input": "Solve the Choose the DP Signal temple challenge.",
+          "output": "overlap and optimal substructure"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "overlap and optimal substructure"
+        },
+        {
+          "id": "b",
+          "text": "sorting and hashing"
+        },
+        {
+          "id": "c",
+          "text": "random choice and recursion"
+        },
+        {
+          "id": "d",
+          "text": "only a large input"
+        }
+      ],
+      "hints": [
+        "Identify the smaller state or invariant behind choose the dp signal before calculating."
+      ],
+      "explanation": "Repeated states enable reuse while optimal substructure supports combining their answers.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "master",
+        "multiple_choice",
+        "dynamic-programming"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "OPTION"
+    },
+    {
+      "id": "dp-42",
+      "slug": "memo-sentinel",
+      "title": "Memo Sentinel",
+      "topic": "dynamic-programming",
+      "subtopic": "master-trial",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Why must an uncomputed cache marker differ from every valid answer?",
+      "examples": [
+        {
+          "input": "Solve the Memo Sentinel temple challenge.",
+          "output": "avoid false cache hits"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "avoid false cache hits",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind memo sentinel before calculating."
+      ],
+      "explanation": "A valid value mistaken for a marker, or vice versa, breaks cache correctness.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "master",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-43",
+      "slug": "robber-output",
+      "title": "Robber Output",
+      "topic": "dynamic-programming",
+      "subtopic": "master-trial",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "For houses [1,2,3,1], what maximum non-adjacent sum is returned?",
+      "examples": [
+        {
+          "input": "Solve the Robber Output temple challenge.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind robber output before calculating."
+      ],
+      "explanation": "Taking values 1 and 3 gives the best legal total of 4.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "master",
+        "predict_output",
+        "dynamic-programming"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-44",
+      "slug": "grid-sum",
+      "title": "Grid Sum",
+      "topic": "dynamic-programming",
+      "subtopic": "master-trial",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Find the minimum path sum in [[1,3,1],[1,5,1],[4,2,1]] with right/down moves.",
+      "examples": [
+        {
+          "input": "Solve the Grid Sum temple challenge.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind grid sum before calculating."
+      ],
+      "explanation": "The path 1→3→1→1→1 has sum 7.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "master",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-45",
+      "slug": "subset-bug",
+      "title": "Subset Bug",
+      "topic": "dynamic-programming",
+      "subtopic": "master-trial",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A 0/1 subset-sum loop scans targets upward and accidentally reuses items. Which direction fixes it?",
+      "examples": [
+        {
+          "input": "Solve the Subset Bug temple challenge.",
+          "output": "downward"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "downward",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind subset bug before calculating."
+      ],
+      "explanation": "Descending targets ensure each item contributes at most once during its iteration.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "master",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-46",
+      "slug": "coin-ways",
+      "title": "Coin Ways",
+      "topic": "dynamic-programming",
+      "subtopic": "master-trial",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Using unlimited coins [1,2], how many combinations make amount 4 when order does not matter?",
+      "examples": [
+        {
+          "input": "Solve the Coin Ways temple challenge.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind coin ways before calculating."
+      ],
+      "explanation": "The combinations are four ones, two ones plus a two, and two twos.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "master",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-47",
+      "slug": "lcs-reconstruction",
+      "title": "LCS Reconstruction",
+      "topic": "dynamic-programming",
+      "subtopic": "master-trial",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "After filling an LCS table, which corner usually holds the full length for strings of lengths m and n?",
+      "examples": [
+        {
+          "input": "Solve the LCS Reconstruction temple challenge.",
+          "output": "dp[m][n]"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "dp[m][n]",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind lcs reconstruction before calculating."
+      ],
+      "explanation": "That cell summarizes both complete prefixes.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "master",
+        "code_blank",
+        "dynamic-programming"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-48",
+      "slug": "state-compression-risk",
+      "title": "State Compression Risk",
+      "topic": "dynamic-programming",
+      "subtopic": "master-trial",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "When can a 2D DP table safely become one row?",
+      "examples": [
+        {
+          "input": "Solve the State Compression Risk temple challenge.",
+          "output": "dependencies are preserved"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "dependencies are preserved",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind state compression risk before calculating."
+      ],
+      "explanation": "Compression is valid only when the update order retains every predecessor needed by later states.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "master",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "dp-49",
+      "slug": "temple-composite",
+      "title": "Temple Composite",
+      "topic": "dynamic-programming",
+      "subtopic": "master-trial",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A robot crosses a 3x3 empty grid moving right/down, and each move costs 1. How many minimum-length paths exist?",
+      "examples": [
+        {
+          "input": "Solve the Temple Composite temple challenge.",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind temple composite before calculating."
+      ],
+      "explanation": "Every route has two right and two down moves; choosing positions for two rights gives six paths.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "master",
+        "logic_answer",
+        "dynamic-programming"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "dp-50",
+      "slug": "final-recurrence-trial",
+      "title": "Final Recurrence Trial",
+      "topic": "dynamic-programming",
+      "subtopic": "master-trial",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Given dp[0]=0 and dp[i]=min(dp[i-1]+2, dp[i-2]+3) for i>=2 with dp[1]=2, find dp[5].",
+      "examples": [
+        {
+          "input": "Solve the Final Recurrence Trial temple challenge.",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Use the state and recurrence described in the question.",
+        "Submit only the requested option, value, phrase, or code fragment."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Identify the smaller state or invariant behind final recurrence trial before calculating."
+      ],
+      "explanation": "The values progress 0,2,3,5,6,8 by comparing the two predecessor costs.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "master",
+        "predict_output",
+        "dynamic-programming"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "INTEGER"
+    }
+  ]
+}
