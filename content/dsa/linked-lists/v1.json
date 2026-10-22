@@ -1,0 +1,2008 @@
+{
+  "topic": "linked-lists",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Linked List Basics"
+    },
+    {
+      "number": 2,
+      "name": "Traversal and Modification"
+    },
+    {
+      "number": 3,
+      "name": "Fast and Slow Pointer"
+    },
+    {
+      "number": 4,
+      "name": "Advanced Linked List Patterns"
+    },
+    {
+      "number": 5,
+      "name": "Linked List Master Trial"
+    }
+  ],
+  "questions": [
+    {
+      "id": "linked-01",
+      "slug": "node-fields",
+      "title": "Node fields",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-basics",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A singly linked node stores a value and which pointer?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "next"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "next"
+        },
+        {
+          "id": "b",
+          "text": "the previous array index"
+        },
+        {
+          "id": "c",
+          "text": "a random unconnected node"
+        }
+      ],
+      "hints": [
+        "Sketch the references for linked list basics before changing any pointer."
+      ],
+      "explanation": "next is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "linked-list-basics",
+        "multiple_choice",
+        "linked-list"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "OPTION"
+    },
+    {
+      "id": "linked-02",
+      "slug": "head-reference",
+      "title": "Head reference",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-basics",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "What does head reference in a nonempty linked list?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "first node"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "What does head reference in a nonempty linked list?",
+      "expectedAnswer": "first node",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list basics before changing any pointer."
+      ],
+      "explanation": "first node is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "linked-list-basics",
+        "code_blank",
+        "linked-list"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-03",
+      "slug": "tail-next",
+      "title": "Tail next",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-basics",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "What is the next reference of the final node?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "null"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "What is the next reference of the final node?",
+      "expectedAnswer": "null",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list basics before changing any pointer."
+      ],
+      "explanation": "null is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "linked-list-basics",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-04",
+      "slug": "follow-one-link",
+      "title": "Follow one link",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-basics",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Head value is 4 and head.next value is 7. What is head.next.value?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list basics before changing any pointer."
+      ],
+      "explanation": "7 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "linked-list-basics",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-05",
+      "slug": "three-node-length",
+      "title": "Three-node length",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-basics",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "How many nodes are in 2 -> 5 -> 8 -> null?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "3"
+        },
+        {
+          "id": "b",
+          "text": "the previous array index"
+        },
+        {
+          "id": "c",
+          "text": "a random unconnected node"
+        }
+      ],
+      "hints": [
+        "Sketch the references for linked list basics before changing any pointer."
+      ],
+      "explanation": "3 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "linked-list-basics",
+        "multiple_choice",
+        "linked-list"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "OPTION"
+    },
+    {
+      "id": "linked-06",
+      "slug": "empty-list-head",
+      "title": "Empty list head",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-basics",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "What value represents the head of an empty linked list?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "null"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "What value represents the head of an empty linked list?",
+      "expectedAnswer": "null",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list basics before changing any pointer."
+      ],
+      "explanation": "null is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "linked-list-basics",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-07",
+      "slug": "node-constructor",
+      "title": "Node constructor",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-basics",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Complete: this.next = ____; when a constructor receives Node next.",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "next"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Complete: this.next = ____; when a constructor receives Node next.",
+      "expectedAnswer": "next",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list basics before changing any pointer."
+      ],
+      "explanation": "next is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "linked-list-basics",
+        "code_blank",
+        "linked-list"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-08",
+      "slug": "list-versus-array",
+      "title": "List versus array",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-basics",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which structure stores elements in nodes joined by references?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "linked list"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "linked list",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list basics before changing any pointer."
+      ],
+      "explanation": "linked list is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "linked-list-basics",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-09",
+      "slug": "chain-access",
+      "title": "Chain access",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-basics",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "For 1 -> 3 -> 9, what is head.next.next.value?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "9"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "For 1 -> 3 -> 9, what is head.next.next.value?",
+      "expectedAnswer": "9",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list basics before changing any pointer."
+      ],
+      "explanation": "9 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "linked-list-basics",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-10",
+      "slug": "broken-link",
+      "title": "Broken link",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-basics",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In A -> B -> C, setting A.next=C makes which node unreachable from head?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "B"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "B",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list basics before changing any pointer."
+      ],
+      "explanation": "B is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "linked-list-basics",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-11",
+      "slug": "traversal-condition",
+      "title": "Traversal condition",
+      "topic": "linked-lists",
+      "subtopic": "traversal-modification",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Complete a traversal loop: while (current != ____).",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "null"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "null"
+        },
+        {
+          "id": "b",
+          "text": "the previous array index"
+        },
+        {
+          "id": "c",
+          "text": "a random unconnected node"
+        }
+      ],
+      "hints": [
+        "Sketch the references for traversal and modification before changing any pointer."
+      ],
+      "explanation": "null is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "traversal-modification",
+        "multiple_choice",
+        "linked-list"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "OPTION"
+    },
+    {
+      "id": "linked-12",
+      "slug": "advance-pointer",
+      "title": "Advance pointer",
+      "topic": "linked-lists",
+      "subtopic": "traversal-modification",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Complete the traversal update: current = current.____;",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "next"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Complete the traversal update: current = current.____;",
+      "expectedAnswer": "next",
+      "options": [],
+      "hints": [
+        "Sketch the references for traversal and modification before changing any pointer."
+      ],
+      "explanation": "next is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "traversal-modification",
+        "code_blank",
+        "linked-list"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-13",
+      "slug": "search-result",
+      "title": "Search result",
+      "topic": "linked-lists",
+      "subtopic": "traversal-modification",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Searching 3 -> 6 -> 9 for 6 visits how many nodes before finding it?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Searching 3 -> 6 -> 9 for 6 visits how many nodes before finding it?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Sketch the references for traversal and modification before changing any pointer."
+      ],
+      "explanation": "2 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "traversal-modification",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-14",
+      "slug": "count-nodes",
+      "title": "Count nodes",
+      "topic": "linked-lists",
+      "subtopic": "traversal-modification",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Traversing 5 -> 4 -> 3 -> 2 and incrementing once per node gives what count?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Sketch the references for traversal and modification before changing any pointer."
+      ],
+      "explanation": "4 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "traversal-modification",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-15",
+      "slug": "insert-at-head",
+      "title": "Insert at head",
+      "topic": "linked-lists",
+      "subtopic": "traversal-modification",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Insert 2 before head 5 in 5 -> 8. What sequence results?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "2 5 8"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "2 5 8"
+        },
+        {
+          "id": "b",
+          "text": "the previous array index"
+        },
+        {
+          "id": "c",
+          "text": "a random unconnected node"
+        }
+      ],
+      "hints": [
+        "Sketch the references for traversal and modification before changing any pointer."
+      ],
+      "explanation": "2 5 8 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "traversal-modification",
+        "multiple_choice",
+        "linked-list"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "OPTION"
+    },
+    {
+      "id": "linked-16",
+      "slug": "insert-after-node",
+      "title": "Insert after node",
+      "topic": "linked-lists",
+      "subtopic": "traversal-modification",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Insert 6 after 4 in 4 -> 9. What sequence results?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "4 6 9"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Insert 6 after 4 in 4 -> 9. What sequence results?",
+      "expectedAnswer": "4 6 9",
+      "options": [],
+      "hints": [
+        "Sketch the references for traversal and modification before changing any pointer."
+      ],
+      "explanation": "4 6 9 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "traversal-modification",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-17",
+      "slug": "delete-head",
+      "title": "Delete head",
+      "topic": "linked-lists",
+      "subtopic": "traversal-modification",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Remove the head from 3 -> 7 -> 8. What becomes the new head value?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Remove the head from 3 -> 7 -> 8. What becomes the new head value?",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Sketch the references for traversal and modification before changing any pointer."
+      ],
+      "explanation": "7 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "traversal-modification",
+        "code_blank",
+        "linked-list"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-18",
+      "slug": "delete-middle",
+      "title": "Delete middle",
+      "topic": "linked-lists",
+      "subtopic": "traversal-modification",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Remove 5 from 2 -> 5 -> 9 by rewiring links. What sequence remains?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "2 9"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2 9",
+      "options": [],
+      "hints": [
+        "Sketch the references for traversal and modification before changing any pointer."
+      ],
+      "explanation": "2 9 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "traversal-modification",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-19",
+      "slug": "reverse-list",
+      "title": "Reverse list",
+      "topic": "linked-lists",
+      "subtopic": "traversal-modification",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Reverse 1 -> 2 -> 3. Give the resulting values.",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "3 2 1"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Reverse 1 -> 2 -> 3. Give the resulting values.",
+      "expectedAnswer": "3 2 1",
+      "options": [],
+      "hints": [
+        "Sketch the references for traversal and modification before changing any pointer."
+      ],
+      "explanation": "3 2 1 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "traversal-modification",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-20",
+      "slug": "pointer-rewiring",
+      "title": "Pointer rewiring",
+      "topic": "linked-lists",
+      "subtopic": "traversal-modification",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "To remove B from A -> B -> C, which assignment reconnects the chain?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "A.next = C"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A.next = C",
+      "options": [],
+      "hints": [
+        "Sketch the references for traversal and modification before changing any pointer."
+      ],
+      "explanation": "A.next = C is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "traversal-modification",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-21",
+      "slug": "slow-speed",
+      "title": "Slow speed",
+      "topic": "linked-lists",
+      "subtopic": "fast-slow-pointer",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "In the standard middle-node algorithm, how many links does slow move each round?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "1"
+        },
+        {
+          "id": "b",
+          "text": "the previous array index"
+        },
+        {
+          "id": "c",
+          "text": "a random unconnected node"
+        }
+      ],
+      "hints": [
+        "Sketch the references for fast and slow pointer before changing any pointer."
+      ],
+      "explanation": "1 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "fast-slow-pointer",
+        "multiple_choice",
+        "linked-list"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "OPTION"
+    },
+    {
+      "id": "linked-22",
+      "slug": "fast-speed",
+      "title": "Fast speed",
+      "topic": "linked-lists",
+      "subtopic": "fast-slow-pointer",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "In the standard middle-node algorithm, how many links does fast move each round?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "In the standard middle-node algorithm, how many links does fast move each round?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Sketch the references for fast and slow pointer before changing any pointer."
+      ],
+      "explanation": "2 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "fast-slow-pointer",
+        "code_blank",
+        "linked-list"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-23",
+      "slug": "odd-middle",
+      "title": "Odd middle",
+      "topic": "linked-lists",
+      "subtopic": "fast-slow-pointer",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "What is the middle value of 1 -> 2 -> 3 -> 4 -> 5?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "What is the middle value of 1 -> 2 -> 3 -> 4 -> 5?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Sketch the references for fast and slow pointer before changing any pointer."
+      ],
+      "explanation": "3 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "fast-slow-pointer",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-24",
+      "slug": "even-middle",
+      "title": "Even middle",
+      "topic": "linked-lists",
+      "subtopic": "fast-slow-pointer",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Using the second-middle convention, what is the middle of 1 -> 2 -> 3 -> 4?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Sketch the references for fast and slow pointer before changing any pointer."
+      ],
+      "explanation": "3 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "fast-slow-pointer",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-25",
+      "slug": "cycle-signal",
+      "title": "Cycle signal",
+      "topic": "linked-lists",
+      "subtopic": "fast-slow-pointer",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "In Floyd cycle detection, what event proves a cycle exists?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "fast meets slow"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "fast meets slow"
+        },
+        {
+          "id": "b",
+          "text": "the previous array index"
+        },
+        {
+          "id": "c",
+          "text": "a random unconnected node"
+        }
+      ],
+      "hints": [
+        "Sketch the references for fast and slow pointer before changing any pointer."
+      ],
+      "explanation": "fast meets slow is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "fast-slow-pointer",
+        "multiple_choice",
+        "linked-list"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "OPTION"
+    },
+    {
+      "id": "linked-26",
+      "slug": "no-cycle-end",
+      "title": "No cycle end",
+      "topic": "linked-lists",
+      "subtopic": "fast-slow-pointer",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "What does fast eventually reach in an acyclic list?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "null"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "What does fast eventually reach in an acyclic list?",
+      "expectedAnswer": "null",
+      "options": [],
+      "hints": [
+        "Sketch the references for fast and slow pointer before changing any pointer."
+      ],
+      "explanation": "null is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "fast-slow-pointer",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-27",
+      "slug": "cycle-entry-setup",
+      "title": "Cycle entry setup",
+      "topic": "linked-lists",
+      "subtopic": "fast-slow-pointer",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "After fast meets slow, where is one pointer commonly moved before finding cycle entry?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "head"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "After fast meets slow, where is one pointer commonly moved before finding cycle entry?",
+      "expectedAnswer": "head",
+      "options": [],
+      "hints": [
+        "Sketch the references for fast and slow pointer before changing any pointer."
+      ],
+      "explanation": "head is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "fast-slow-pointer",
+        "code_blank",
+        "linked-list"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-28",
+      "slug": "nth-from-end-gap",
+      "title": "Nth from end gap",
+      "topic": "linked-lists",
+      "subtopic": "fast-slow-pointer",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "To find the nth node from the end with two pointers, how many nodes ahead is fast placed?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "n"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "n",
+      "options": [],
+      "hints": [
+        "Sketch the references for fast and slow pointer before changing any pointer."
+      ],
+      "explanation": "n is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "fast-slow-pointer",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-29",
+      "slug": "remove-from-end",
+      "title": "Remove from end",
+      "topic": "linked-lists",
+      "subtopic": "fast-slow-pointer",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Remove the 2nd node from the end of 1 -> 2 -> 3 -> 4 -> 5. Result?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "1 2 3 5"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Remove the 2nd node from the end of 1 -> 2 -> 3 -> 4 -> 5. Result?",
+      "expectedAnswer": "1 2 3 5",
+      "options": [],
+      "hints": [
+        "Sketch the references for fast and slow pointer before changing any pointer."
+      ],
+      "explanation": "1 2 3 5 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "fast-slow-pointer",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-30",
+      "slug": "cycle-trace",
+      "title": "Cycle trace",
+      "topic": "linked-lists",
+      "subtopic": "fast-slow-pointer",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In 1 -> 2 -> 3 -> 4 with 4.next=2, which value is the cycle entry?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Sketch the references for fast and slow pointer before changing any pointer."
+      ],
+      "explanation": "2 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "fast-slow-pointer",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-31",
+      "slug": "merge-first-node",
+      "title": "Merge first node",
+      "topic": "linked-lists",
+      "subtopic": "advanced-linked-list",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "When merging sorted lists 1->4 and 2->3, which value is chosen first?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "1"
+        },
+        {
+          "id": "b",
+          "text": "the previous array index"
+        },
+        {
+          "id": "c",
+          "text": "a random unconnected node"
+        }
+      ],
+      "hints": [
+        "Sketch the references for advanced linked list patterns before changing any pointer."
+      ],
+      "explanation": "1 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "advanced-linked-list",
+        "multiple_choice",
+        "linked-list"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "OPTION"
+    },
+    {
+      "id": "linked-32",
+      "slug": "merge-sorted-lists",
+      "title": "Merge sorted lists",
+      "topic": "linked-lists",
+      "subtopic": "advanced-linked-list",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Merge 1 -> 4 with 2 -> 3. Give the sorted result.",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "1 2 3 4"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Merge 1 -> 4 with 2 -> 3. Give the sorted result.",
+      "expectedAnswer": "1 2 3 4",
+      "options": [],
+      "hints": [
+        "Sketch the references for advanced linked list patterns before changing any pointer."
+      ],
+      "explanation": "1 2 3 4 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "advanced-linked-list",
+        "code_blank",
+        "linked-list"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-33",
+      "slug": "intersection-identity",
+      "title": "Intersection identity",
+      "topic": "linked-lists",
+      "subtopic": "advanced-linked-list",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Two linked lists intersect when they share what?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "same node object"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Two linked lists intersect when they share what?",
+      "expectedAnswer": "same node object",
+      "options": [],
+      "hints": [
+        "Sketch the references for advanced linked list patterns before changing any pointer."
+      ],
+      "explanation": "same node object is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "advanced-linked-list",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-34",
+      "slug": "remove-sorted-duplicates",
+      "title": "Remove sorted duplicates",
+      "topic": "linked-lists",
+      "subtopic": "advanced-linked-list",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Remove duplicates from sorted 1 -> 1 -> 2 -> 3 -> 3. Result?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "1 2 3"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1 2 3",
+      "options": [],
+      "hints": [
+        "Sketch the references for advanced linked list patterns before changing any pointer."
+      ],
+      "explanation": "1 2 3 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "advanced-linked-list",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-35",
+      "slug": "palindrome-list",
+      "title": "Palindrome list",
+      "topic": "linked-lists",
+      "subtopic": "advanced-linked-list",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Is 1 -> 2 -> 2 -> 1 a palindrome?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "true"
+        },
+        {
+          "id": "b",
+          "text": "the previous array index"
+        },
+        {
+          "id": "c",
+          "text": "a random unconnected node"
+        }
+      ],
+      "hints": [
+        "Sketch the references for advanced linked list patterns before changing any pointer."
+      ],
+      "explanation": "true is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "advanced-linked-list",
+        "multiple_choice",
+        "linked-list"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "OPTION"
+    },
+    {
+      "id": "linked-36",
+      "slug": "non-palindrome-list",
+      "title": "Non-palindrome list",
+      "topic": "linked-lists",
+      "subtopic": "advanced-linked-list",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Is 1 -> 2 -> 3 a palindrome?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Is 1 -> 2 -> 3 a palindrome?",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "Sketch the references for advanced linked list patterns before changing any pointer."
+      ],
+      "explanation": "false is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "advanced-linked-list",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-37",
+      "slug": "dummy-node-purpose",
+      "title": "Dummy node purpose",
+      "topic": "linked-lists",
+      "subtopic": "advanced-linked-list",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "What temporary node simplifies insertions and deletions near the head?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "dummy node"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "What temporary node simplifies insertions and deletions near the head?",
+      "expectedAnswer": "dummy node",
+      "options": [],
+      "hints": [
+        "Sketch the references for advanced linked list patterns before changing any pointer."
+      ],
+      "explanation": "dummy node is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "advanced-linked-list",
+        "code_blank",
+        "linked-list"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-38",
+      "slug": "merge-remainder",
+      "title": "Merge remainder",
+      "topic": "linked-lists",
+      "subtopic": "advanced-linked-list",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "During sorted merge, one list becomes empty. What should be attached next?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "remaining list"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "remaining list",
+      "options": [],
+      "hints": [
+        "Sketch the references for advanced linked list patterns before changing any pointer."
+      ],
+      "explanation": "remaining list is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "advanced-linked-list",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-39",
+      "slug": "intersection-pointer-trick",
+      "title": "Intersection pointer trick",
+      "topic": "linked-lists",
+      "subtopic": "advanced-linked-list",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "After switching each pointer to the other list head at null, where do they meet if lists intersect?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "intersection node"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "After switching each pointer to the other list head at null, where do they meet if lists intersect?",
+      "expectedAnswer": "intersection node",
+      "options": [],
+      "hints": [
+        "Sketch the references for advanced linked list patterns before changing any pointer."
+      ],
+      "explanation": "intersection node is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "advanced-linked-list",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-40",
+      "slug": "palindrome-restoration",
+      "title": "Palindrome restoration",
+      "topic": "linked-lists",
+      "subtopic": "advanced-linked-list",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "After comparing halves of a palindrome list, what operation preserves the original structure?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "reverse the second half again"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "reverse the second half again",
+      "options": [],
+      "hints": [
+        "Sketch the references for advanced linked list patterns before changing any pointer."
+      ],
+      "explanation": "reverse the second half again is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "advanced-linked-list",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-41",
+      "slug": "head-insertion-trial",
+      "title": "Head insertion trial",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-master",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Starting 4 -> 6, insert 2 at head then 1 at head. Result?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "1 2 4 6"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 2 4 6"
+        },
+        {
+          "id": "b",
+          "text": "the previous array index"
+        },
+        {
+          "id": "c",
+          "text": "a random unconnected node"
+        }
+      ],
+      "hints": [
+        "Sketch the references for linked list master trial before changing any pointer."
+      ],
+      "explanation": "1 2 4 6 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "linked-list-master",
+        "multiple_choice",
+        "linked-list"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "OPTION"
+    },
+    {
+      "id": "linked-42",
+      "slug": "deletion-trial",
+      "title": "Deletion trial",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-master",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Starting 1 -> 2 -> 3 -> 4, delete values 1 and 3. Result?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "2 4"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Starting 1 -> 2 -> 3 -> 4, delete values 1 and 3. Result?",
+      "expectedAnswer": "2 4",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list master trial before changing any pointer."
+      ],
+      "explanation": "2 4 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "linked-list-master",
+        "code_blank",
+        "linked-list"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-43",
+      "slug": "reverse-classic",
+      "title": "Reverse classic",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-master",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Reverse 8 -> 6 -> 4 -> 2. Result?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "2 4 6 8"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Reverse 8 -> 6 -> 4 -> 2. Result?",
+      "expectedAnswer": "2 4 6 8",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list master trial before changing any pointer."
+      ],
+      "explanation": "2 4 6 8 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "linked-list-master",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-44",
+      "slug": "middle-classic",
+      "title": "Middle classic",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-master",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Using second-middle convention, middle of 2 -> 4 -> 6 -> 8 -> 10 -> 12?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list master trial before changing any pointer."
+      ],
+      "explanation": "8 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "linked-list-master",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-45",
+      "slug": "cycle-classic",
+      "title": "Cycle classic",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-master",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "If tail.next points to head, does Floyd detection report a cycle?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "true"
+        },
+        {
+          "id": "b",
+          "text": "the previous array index"
+        },
+        {
+          "id": "c",
+          "text": "a random unconnected node"
+        }
+      ],
+      "hints": [
+        "Sketch the references for linked list master trial before changing any pointer."
+      ],
+      "explanation": "true is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "linked-list-master",
+        "multiple_choice",
+        "linked-list"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "OPTION"
+    },
+    {
+      "id": "linked-46",
+      "slug": "merge-classic",
+      "title": "Merge classic",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-master",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Merge sorted 1 -> 3 -> 7 and 2 -> 4 -> 6. Result?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "1 2 3 4 6 7"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Merge sorted 1 -> 3 -> 7 and 2 -> 4 -> 6. Result?",
+      "expectedAnswer": "1 2 3 4 6 7",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list master trial before changing any pointer."
+      ],
+      "explanation": "1 2 3 4 6 7 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "linked-list-master",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-47",
+      "slug": "remove-nth-classic",
+      "title": "Remove nth classic",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-master",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Remove 3rd node from end of 5 -> 6 -> 7 -> 8 -> 9. Result?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "5 6 8 9"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Remove 3rd node from end of 5 -> 6 -> 7 -> 8 -> 9. Result?",
+      "expectedAnswer": "5 6 8 9",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list master trial before changing any pointer."
+      ],
+      "explanation": "5 6 8 9 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "linked-list-master",
+        "code_blank",
+        "linked-list"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-48",
+      "slug": "intersection-classic",
+      "title": "Intersection classic",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-master",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Lists share nodes beginning at value 12. What intersection value is returned?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "12"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "12",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list master trial before changing any pointer."
+      ],
+      "explanation": "12 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "linked-list-master",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "linked-49",
+      "slug": "palindrome-classic",
+      "title": "Palindrome classic",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-master",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Is 7 -> 1 -> 4 -> 1 -> 7 a palindrome?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Is 7 -> 1 -> 4 -> 1 -> 7 a palindrome?",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list master trial before changing any pointer."
+      ],
+      "explanation": "true is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "linked-list-master",
+        "predict_output",
+        "linked-list"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "linked-50",
+      "slug": "rewire-master",
+      "title": "Rewire master",
+      "topic": "linked-lists",
+      "subtopic": "linked-list-master",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Reverse nodes in pairs for 1 -> 2 -> 3 -> 4 -> 5. Result?",
+      "examples": [
+        {
+          "input": "Trace the linked-list scenario from head to tail.",
+          "output": "2 1 4 3 5"
+        }
+      ],
+      "constraints": [
+        "Treat each arrow as a next reference.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2 1 4 3 5",
+      "options": [],
+      "hints": [
+        "Sketch the references for linked list master trial before changing any pointer."
+      ],
+      "explanation": "2 1 4 3 5 is correct after following and rewiring the node references in the stated order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "linked-list-master",
+        "logic_answer",
+        "linked-list"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "TOKEN"
+    }
+  ]
+}
