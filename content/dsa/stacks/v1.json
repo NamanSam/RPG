@@ -1,0 +1,2008 @@
+{
+  "topic": "stacks",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Stack Basics"
+    },
+    {
+      "number": 2,
+      "name": "Push Pop Peek"
+    },
+    {
+      "number": 3,
+      "name": "Parentheses and Expressions"
+    },
+    {
+      "number": 4,
+      "name": "Monotonic Stack"
+    },
+    {
+      "number": 5,
+      "name": "Stack Master Trial"
+    }
+  ],
+  "questions": [
+    {
+      "id": "stacks-01",
+      "slug": "lifo-rule",
+      "title": "LIFO rule",
+      "topic": "stacks",
+      "subtopic": "stack-basics",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which order does a stack follow?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "last in first out"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "last in first out"
+        },
+        {
+          "id": "b",
+          "text": "first in first out"
+        },
+        {
+          "id": "c",
+          "text": "random access order"
+        }
+      ],
+      "hints": [
+        "Draw the stack after each stack basics operation."
+      ],
+      "explanation": "last in first out is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "stack-basics",
+        "multiple_choice",
+        "stack"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "OPTION"
+    },
+    {
+      "id": "stacks-02",
+      "slug": "stack-top",
+      "title": "Stack top",
+      "topic": "stacks",
+      "subtopic": "stack-basics",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Which position is removed first from a stack?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "top"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Which position is removed first from a stack?",
+      "expectedAnswer": "top",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack basics operation."
+      ],
+      "explanation": "top is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "stack-basics",
+        "code_blank",
+        "stack"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-03",
+      "slug": "empty-stack-size",
+      "title": "Empty stack size",
+      "topic": "stacks",
+      "subtopic": "stack-basics",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "What is the size of a newly created empty stack?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "What is the size of a newly created empty stack?",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack basics operation."
+      ],
+      "explanation": "0 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "stack-basics",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-04",
+      "slug": "stack-or-queue",
+      "title": "Stack or queue",
+      "topic": "stacks",
+      "subtopic": "stack-basics",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which structure removes the most recently added item first?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "stack"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "stack",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack basics operation."
+      ],
+      "explanation": "stack is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "stack-basics",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-05",
+      "slug": "arraydeque-creation",
+      "title": "ArrayDeque creation",
+      "topic": "stacks",
+      "subtopic": "stack-basics",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which expression creates a Deque of Integer for stack use?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "new ArrayDeque<Integer>()"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "new ArrayDeque<Integer>()"
+        },
+        {
+          "id": "b",
+          "text": "first in first out"
+        },
+        {
+          "id": "c",
+          "text": "random access order"
+        }
+      ],
+      "hints": [
+        "Draw the stack after each stack basics operation."
+      ],
+      "explanation": "new ArrayDeque<Integer>() is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "stack-basics",
+        "multiple_choice",
+        "stack"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "OPTION"
+    },
+    {
+      "id": "stacks-06",
+      "slug": "push-direction",
+      "title": "Push direction",
+      "topic": "stacks",
+      "subtopic": "stack-basics",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Where does push place a new value?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "top"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Where does push place a new value?",
+      "expectedAnswer": "top",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack basics operation."
+      ],
+      "explanation": "top is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "stack-basics",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-07",
+      "slug": "empty-check",
+      "title": "Empty check",
+      "topic": "stacks",
+      "subtopic": "stack-basics",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Which method reports whether a Deque has no elements?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "isEmpty"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Which method reports whether a Deque has no elements?",
+      "expectedAnswer": "isEmpty",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack basics operation."
+      ],
+      "explanation": "isEmpty is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "stack-basics",
+        "code_blank",
+        "stack"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-08",
+      "slug": "stack-size",
+      "title": "Stack size",
+      "topic": "stacks",
+      "subtopic": "stack-basics",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Push 2, 4, 6 onto an empty stack. What is size()?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack basics operation."
+      ],
+      "explanation": "3 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "stack-basics",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-09",
+      "slug": "stack-versus-queue",
+      "title": "Stack versus queue",
+      "topic": "stacks",
+      "subtopic": "stack-basics",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Push A then B. Which value leaves first from a stack?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "B"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Push A then B. Which value leaves first from a stack?",
+      "expectedAnswer": "B",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack basics operation."
+      ],
+      "explanation": "B is correct after applying the stack operations in LIFO order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "stack-basics",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-10",
+      "slug": "unsafe-empty-removal",
+      "title": "Unsafe empty removal",
+      "topic": "stacks",
+      "subtopic": "stack-basics",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What problem occurs when pop is called on an empty stack?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "underflow"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "underflow",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack basics operation."
+      ],
+      "explanation": "underflow is correct after applying the stack operations in LIFO order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "stack-basics",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-11",
+      "slug": "push-method",
+      "title": "Push method",
+      "topic": "stacks",
+      "subtopic": "push-pop-peek",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Complete the insertion: stack.____(7);",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "push"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "push"
+        },
+        {
+          "id": "b",
+          "text": "first in first out"
+        },
+        {
+          "id": "c",
+          "text": "random access order"
+        }
+      ],
+      "hints": [
+        "Draw the stack after each push pop peek operation."
+      ],
+      "explanation": "push is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "push-pop-peek",
+        "multiple_choice",
+        "stack"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "OPTION"
+    },
+    {
+      "id": "stacks-12",
+      "slug": "pop-method",
+      "title": "Pop method",
+      "topic": "stacks",
+      "subtopic": "push-pop-peek",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Which operation removes and returns the top value?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "pop"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Which operation removes and returns the top value?",
+      "expectedAnswer": "pop",
+      "options": [],
+      "hints": [
+        "Draw the stack after each push pop peek operation."
+      ],
+      "explanation": "pop is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "push-pop-peek",
+        "code_blank",
+        "stack"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-13",
+      "slug": "peek-method",
+      "title": "Peek method",
+      "topic": "stacks",
+      "subtopic": "push-pop-peek",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Which operation reads the top without removing it?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "peek"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Which operation reads the top without removing it?",
+      "expectedAnswer": "peek",
+      "options": [],
+      "hints": [
+        "Draw the stack after each push pop peek operation."
+      ],
+      "explanation": "peek is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "push-pop-peek",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-14",
+      "slug": "peek-keeps-size",
+      "title": "Peek keeps size",
+      "topic": "stacks",
+      "subtopic": "push-pop-peek",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A three-item stack is peeked once. What size remains?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Draw the stack after each push pop peek operation."
+      ],
+      "explanation": "3 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "push-pop-peek",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-15",
+      "slug": "operation-trace",
+      "title": "Operation trace",
+      "topic": "stacks",
+      "subtopic": "push-pop-peek",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Push 2, push 5, pop. What value is popped?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "5"
+        },
+        {
+          "id": "b",
+          "text": "first in first out"
+        },
+        {
+          "id": "c",
+          "text": "random access order"
+        }
+      ],
+      "hints": [
+        "Draw the stack after each push pop peek operation."
+      ],
+      "explanation": "5 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "push-pop-peek",
+        "multiple_choice",
+        "stack"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "OPTION"
+    },
+    {
+      "id": "stacks-16",
+      "slug": "top-after-pop",
+      "title": "Top after pop",
+      "topic": "stacks",
+      "subtopic": "push-pop-peek",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Push 1, 3, 8; pop once. What is now on top?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Push 1, 3, 8; pop once. What is now on top?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Draw the stack after each push pop peek operation."
+      ],
+      "explanation": "3 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "push-pop-peek",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-17",
+      "slug": "repeated-removal",
+      "title": "Repeated removal",
+      "topic": "stacks",
+      "subtopic": "push-pop-peek",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Push A, B, C; pop twice. What value remains?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "A"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Push A, B, C; pop twice. What value remains?",
+      "expectedAnswer": "A",
+      "options": [],
+      "hints": [
+        "Draw the stack after each push pop peek operation."
+      ],
+      "explanation": "A is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "push-pop-peek",
+        "code_blank",
+        "stack"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-18",
+      "slug": "guard-underflow",
+      "title": "Guard underflow",
+      "topic": "stacks",
+      "subtopic": "push-pop-peek",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Complete the safe guard before pop: if (!stack.____()).",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "isEmpty"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "isEmpty",
+      "options": [],
+      "hints": [
+        "Draw the stack after each push pop peek operation."
+      ],
+      "explanation": "isEmpty is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "push-pop-peek",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-19",
+      "slug": "state-simulation",
+      "title": "State simulation",
+      "topic": "stacks",
+      "subtopic": "push-pop-peek",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Push 4, push 7, pop, push 9. Give stack bottom to top.",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "4 9"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Push 4, push 7, pop, push 9. Give stack bottom to top.",
+      "expectedAnswer": "4 9",
+      "options": [],
+      "hints": [
+        "Draw the stack after each push pop peek operation."
+      ],
+      "explanation": "4 9 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "push-pop-peek",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-20",
+      "slug": "long-operation-trace",
+      "title": "Long operation trace",
+      "topic": "stacks",
+      "subtopic": "push-pop-peek",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Push 1,2,3; pop; push 4,5; pop. Give bottom-to-top state.",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "1 2 4"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1 2 4",
+      "options": [],
+      "hints": [
+        "Draw the stack after each push pop peek operation."
+      ],
+      "explanation": "1 2 4 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "push-pop-peek",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-21",
+      "slug": "balanced-pair",
+      "title": "Balanced pair",
+      "topic": "stacks",
+      "subtopic": "parentheses-expressions",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Is ()[]{} balanced?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "true"
+        },
+        {
+          "id": "b",
+          "text": "first in first out"
+        },
+        {
+          "id": "c",
+          "text": "random access order"
+        }
+      ],
+      "hints": [
+        "Draw the stack after each parentheses and expressions operation."
+      ],
+      "explanation": "true is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "parentheses-expressions",
+        "multiple_choice",
+        "stack"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "OPTION"
+    },
+    {
+      "id": "stacks-22",
+      "slug": "unbalanced-nesting",
+      "title": "Unbalanced nesting",
+      "topic": "stacks",
+      "subtopic": "parentheses-expressions",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Is ([)] balanced?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Is ([)] balanced?",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "Draw the stack after each parentheses and expressions operation."
+      ],
+      "explanation": "false is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "parentheses-expressions",
+        "code_blank",
+        "stack"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-23",
+      "slug": "opening-bracket-action",
+      "title": "Opening bracket action",
+      "topic": "stacks",
+      "subtopic": "parentheses-expressions",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "What stack operation handles an opening bracket?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "push"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "What stack operation handles an opening bracket?",
+      "expectedAnswer": "push",
+      "options": [],
+      "hints": [
+        "Draw the stack after each parentheses and expressions operation."
+      ],
+      "explanation": "push is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "parentheses-expressions",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-24",
+      "slug": "closing-bracket-action",
+      "title": "Closing bracket action",
+      "topic": "stacks",
+      "subtopic": "parentheses-expressions",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What operation retrieves the latest unmatched opening bracket?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "pop"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "pop",
+      "options": [],
+      "hints": [
+        "Draw the stack after each parentheses and expressions operation."
+      ],
+      "explanation": "pop is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "parentheses-expressions",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-25",
+      "slug": "valid-parentheses",
+      "title": "Valid parentheses",
+      "topic": "stacks",
+      "subtopic": "parentheses-expressions",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Is {[(a+b)*c]} balanced when letters are ignored?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "true"
+        },
+        {
+          "id": "b",
+          "text": "first in first out"
+        },
+        {
+          "id": "c",
+          "text": "random access order"
+        }
+      ],
+      "hints": [
+        "Draw the stack after each parentheses and expressions operation."
+      ],
+      "explanation": "true is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "parentheses-expressions",
+        "multiple_choice",
+        "stack"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "OPTION"
+    },
+    {
+      "id": "stacks-26",
+      "slug": "missing-closer",
+      "title": "Missing closer",
+      "topic": "stacks",
+      "subtopic": "parentheses-expressions",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Is ((a+b) balanced?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Is ((a+b) balanced?",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "Draw the stack after each parentheses and expressions operation."
+      ],
+      "explanation": "false is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "parentheses-expressions",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-27",
+      "slug": "postfix-addition",
+      "title": "Postfix addition",
+      "topic": "stacks",
+      "subtopic": "parentheses-expressions",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Evaluate postfix expression 3 4 +.",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Evaluate postfix expression 3 4 +.",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Draw the stack after each parentheses and expressions operation."
+      ],
+      "explanation": "7 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "parentheses-expressions",
+        "code_blank",
+        "stack"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-28",
+      "slug": "postfix-mixed",
+      "title": "Postfix mixed",
+      "topic": "stacks",
+      "subtopic": "parentheses-expressions",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Evaluate postfix 2 3 * 4 +.",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "10"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "10",
+      "options": [],
+      "hints": [
+        "Draw the stack after each parentheses and expressions operation."
+      ],
+      "explanation": "10 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "parentheses-expressions",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-29",
+      "slug": "infix-to-postfix-idea",
+      "title": "Infix to postfix idea",
+      "topic": "stacks",
+      "subtopic": "parentheses-expressions",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Which operator is applied first in 2 + 3 * 4?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "*"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Which operator is applied first in 2 + 3 * 4?",
+      "expectedAnswer": "*",
+      "options": [],
+      "hints": [
+        "Draw the stack after each parentheses and expressions operation."
+      ],
+      "explanation": "* is correct after applying the stack operations in LIFO order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "parentheses-expressions",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-30",
+      "slug": "postfix-trial",
+      "title": "Postfix trial",
+      "topic": "stacks",
+      "subtopic": "parentheses-expressions",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Evaluate postfix 5 1 2 + 4 * + 3 -.",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "14"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "14",
+      "options": [],
+      "hints": [
+        "Draw the stack after each parentheses and expressions operation."
+      ],
+      "explanation": "14 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "parentheses-expressions",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-31",
+      "slug": "next-greater",
+      "title": "Next greater",
+      "topic": "stacks",
+      "subtopic": "monotonic-stack",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Next greater value after 2 in [2,5,3]?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "5"
+        },
+        {
+          "id": "b",
+          "text": "first in first out"
+        },
+        {
+          "id": "c",
+          "text": "random access order"
+        }
+      ],
+      "hints": [
+        "Draw the stack after each monotonic stack operation."
+      ],
+      "explanation": "5 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "monotonic-stack",
+        "multiple_choice",
+        "stack"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "OPTION"
+    },
+    {
+      "id": "stacks-32",
+      "slug": "next-smaller",
+      "title": "Next smaller",
+      "topic": "stacks",
+      "subtopic": "monotonic-stack",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Next smaller value after 5 in [5,3,4]?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Next smaller value after 5 in [5,3,4]?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Draw the stack after each monotonic stack operation."
+      ],
+      "explanation": "3 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "monotonic-stack",
+        "code_blank",
+        "stack"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-33",
+      "slug": "previous-greater",
+      "title": "Previous greater",
+      "topic": "stacks",
+      "subtopic": "monotonic-stack",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Previous greater value for 2 in [4,1,2]?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Previous greater value for 2 in [4,1,2]?",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Draw the stack after each monotonic stack operation."
+      ],
+      "explanation": "4 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "monotonic-stack",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-34",
+      "slug": "previous-smaller",
+      "title": "Previous smaller",
+      "topic": "stacks",
+      "subtopic": "monotonic-stack",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Previous smaller value for 6 in [2,6,3]?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Draw the stack after each monotonic stack operation."
+      ],
+      "explanation": "2 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "monotonic-stack",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-35",
+      "slug": "increasing-stack",
+      "title": "Increasing stack",
+      "topic": "stacks",
+      "subtopic": "monotonic-stack",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A monotonic increasing stack keeps values in which order from bottom to top?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "increasing"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "increasing"
+        },
+        {
+          "id": "b",
+          "text": "first in first out"
+        },
+        {
+          "id": "c",
+          "text": "random access order"
+        }
+      ],
+      "hints": [
+        "Draw the stack after each monotonic stack operation."
+      ],
+      "explanation": "increasing is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "monotonic-stack",
+        "multiple_choice",
+        "stack"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "OPTION"
+    },
+    {
+      "id": "stacks-36",
+      "slug": "daily-temperatures",
+      "title": "Daily temperatures",
+      "topic": "stacks",
+      "subtopic": "monotonic-stack",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "For temperatures [70,71], how many days must day 1 wait for warmer weather?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "For temperatures [70,71], how many days must day 1 wait for warmer weather?",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Draw the stack after each monotonic stack operation."
+      ],
+      "explanation": "1 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "monotonic-stack",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-37",
+      "slug": "stock-span",
+      "title": "Stock span",
+      "topic": "stacks",
+      "subtopic": "monotonic-stack",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Prices are [100,80,60,70]. What is the span of 70?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Prices are [100,80,60,70]. What is the span of 70?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Draw the stack after each monotonic stack operation."
+      ],
+      "explanation": "2 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "monotonic-stack",
+        "code_blank",
+        "stack"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-38",
+      "slug": "next-greater-list",
+      "title": "Next greater list",
+      "topic": "stacks",
+      "subtopic": "monotonic-stack",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give next greater values for [2,1,3], using -1 when absent.",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "3 3 -1"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3 3 -1",
+      "options": [],
+      "hints": [
+        "Draw the stack after each monotonic stack operation."
+      ],
+      "explanation": "3 3 -1 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "monotonic-stack",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-39",
+      "slug": "histogram-concept",
+      "title": "Histogram concept",
+      "topic": "stacks",
+      "subtopic": "monotonic-stack",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "For histogram [2,2], what is the largest rectangle area?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "For histogram [2,2], what is the largest rectangle area?",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Draw the stack after each monotonic stack operation."
+      ],
+      "explanation": "4 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "monotonic-stack",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-40",
+      "slug": "daily-temperatures-trial",
+      "title": "Daily temperatures trial",
+      "topic": "stacks",
+      "subtopic": "monotonic-stack",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For [73,74,75,71,69,72,76,73], how long does the 75 day wait?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Draw the stack after each monotonic stack operation."
+      ],
+      "explanation": "4 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "monotonic-stack",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-41",
+      "slug": "basic-tower-state",
+      "title": "Basic tower state",
+      "topic": "stacks",
+      "subtopic": "stack-master",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Push 1, push 2, peek, pop. What value did peek return?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "2"
+        },
+        {
+          "id": "b",
+          "text": "first in first out"
+        },
+        {
+          "id": "c",
+          "text": "random access order"
+        }
+      ],
+      "hints": [
+        "Draw the stack after each stack master trial operation."
+      ],
+      "explanation": "2 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "stack-master",
+        "multiple_choice",
+        "stack"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "OPTION"
+    },
+    {
+      "id": "stacks-42",
+      "slug": "empty-after-operations",
+      "title": "Empty after operations",
+      "topic": "stacks",
+      "subtopic": "stack-master",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Push A then pop once. Is the stack empty?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Push A then pop once. Is the stack empty?",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack master trial operation."
+      ],
+      "explanation": "true is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "stack-master",
+        "code_blank",
+        "stack"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-43",
+      "slug": "bracket-trial",
+      "title": "Bracket trial",
+      "topic": "stacks",
+      "subtopic": "stack-master",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Is {[()()]()} balanced?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Is {[()()]()} balanced?",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack master trial operation."
+      ],
+      "explanation": "true is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "stack-master",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-44",
+      "slug": "postfix-trial-two",
+      "title": "Postfix trial two",
+      "topic": "stacks",
+      "subtopic": "stack-master",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Evaluate postfix 8 2 / 3 +.",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack master trial operation."
+      ],
+      "explanation": "7 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "stack-master",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-45",
+      "slug": "correct-undo-structure",
+      "title": "Correct undo structure",
+      "topic": "stacks",
+      "subtopic": "stack-master",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which structure best stores actions for undo?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "stack"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "stack"
+        },
+        {
+          "id": "b",
+          "text": "first in first out"
+        },
+        {
+          "id": "c",
+          "text": "random access order"
+        }
+      ],
+      "hints": [
+        "Draw the stack after each stack master trial operation."
+      ],
+      "explanation": "stack is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "stack-master",
+        "multiple_choice",
+        "stack"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "OPTION"
+    },
+    {
+      "id": "stacks-46",
+      "slug": "min-stack-state",
+      "title": "Min stack state",
+      "topic": "stacks",
+      "subtopic": "stack-master",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Push 5,3,7,2. What minimum is tracked at the top state?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Push 5,3,7,2. What minimum is tracked at the top state?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack master trial operation."
+      ],
+      "explanation": "2 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "stack-master",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-47",
+      "slug": "reverse-with-stack",
+      "title": "Reverse with stack",
+      "topic": "stacks",
+      "subtopic": "stack-master",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Push characters c,o,d,e then pop all. What text appears?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "edoc"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Push characters c,o,d,e then pop all. What text appears?",
+      "expectedAnswer": "edoc",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack master trial operation."
+      ],
+      "explanation": "edoc is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "stack-master",
+        "code_blank",
+        "stack"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-48",
+      "slug": "next-greater-trial",
+      "title": "Next greater trial",
+      "topic": "stacks",
+      "subtopic": "stack-master",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give next greater values for [4,5,2,10], using -1 when absent.",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "5 10 10 -1"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5 10 10 -1",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack master trial operation."
+      ],
+      "explanation": "5 10 10 -1 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "stack-master",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "stacks-49",
+      "slug": "stock-span-trial",
+      "title": "Stock span trial",
+      "topic": "stacks",
+      "subtopic": "stack-master",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Give stock spans for prices [100,80,60,70,60,75,85].",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "1 1 1 2 1 4 6"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "Give stock spans for prices [100,80,60,70,60,75,85].",
+      "expectedAnswer": "1 1 1 2 1 4 6",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack master trial operation."
+      ],
+      "explanation": "1 1 1 2 1 4 6 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "stack-master",
+        "predict_output",
+        "stack"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "stacks-50",
+      "slug": "histogram-master",
+      "title": "Histogram master",
+      "topic": "stacks",
+      "subtopic": "stack-master",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Largest rectangle area for heights [2,1,5,6,2,3]?",
+      "examples": [
+        {
+          "input": "Trace the stack from bottom to top.",
+          "output": "10"
+        }
+      ],
+      "constraints": [
+        "Treat the rightmost listed stack value as the top unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or space-separated sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "10",
+      "options": [],
+      "hints": [
+        "Draw the stack after each stack master trial operation."
+      ],
+      "explanation": "10 is correct after applying the stack operations in LIFO order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "stack-master",
+        "logic_answer",
+        "stack"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "TOKEN"
+    }
+  ]
+}
