@@ -1,0 +1,2086 @@
+{
+  "topic": "queues",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Queue Basics"
+    },
+    {
+      "number": 2,
+      "name": "Enqueue / Dequeue / Front"
+    },
+    {
+      "number": 3,
+      "name": "Circular Queue & Deque"
+    },
+    {
+      "number": 4,
+      "name": "BFS & Queue Patterns"
+    },
+    {
+      "number": 5,
+      "name": "Queue Master Trial"
+    }
+  ],
+  "questions": [
+    {
+      "id": "queues-01",
+      "slug": "fifo-dispatch",
+      "title": "FIFO Dispatch",
+      "topic": "queues",
+      "subtopic": "queue-basics",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which rule describes a queue?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "First in, first out"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "First in, first out"
+        },
+        {
+          "id": "b",
+          "text": "Last in, first out"
+        },
+        {
+          "id": "c",
+          "text": "Smallest value first"
+        }
+      ],
+      "hints": [
+        "Track the queue basics state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "First in, first out is correct. Which rule describes a queue? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "queue-basics",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-02",
+      "slug": "front-position",
+      "title": "Front Position",
+      "topic": "queues",
+      "subtopic": "queue-basics",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Name the end from which the next queue item is removed.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "front"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Name the end from which the next queue item is removed.",
+      "expectedAnswer": "front",
+      "options": [],
+      "hints": [
+        "Track the queue basics state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "front is correct. Name the end from which the next queue item is removed. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "queue-basics",
+        "code_blank",
+        "queue"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-03",
+      "slug": "fresh-queue",
+      "title": "Fresh Queue",
+      "topic": "queues",
+      "subtopic": "queue-basics",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "What is the size of a newly created empty queue?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "What is the size of a newly created empty queue?",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "Track the queue basics state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "0 is correct. What is the size of a newly created empty queue? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "queue-basics",
+        "predict_output",
+        "queue"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "queues-04",
+      "slug": "stack-or-queue",
+      "title": "Stack or Queue",
+      "topic": "queues",
+      "subtopic": "queue-basics",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which structure serves waiting customers in arrival order?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "queue"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "queue",
+      "options": [],
+      "hints": [
+        "Track the queue basics state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "queue is correct. Which structure serves waiting customers in arrival order? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "queue-basics",
+        "logic_answer",
+        "queue"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-05",
+      "slug": "java-queue-contract",
+      "title": "Java Queue Contract",
+      "topic": "queues",
+      "subtopic": "queue-basics",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which Java type is normally used as the interface for FIFO operations?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "Queue"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Queue"
+        },
+        {
+          "id": "b",
+          "text": "Stack"
+        },
+        {
+          "id": "c",
+          "text": "TreeSet"
+        }
+      ],
+      "hints": [
+        "Track the queue basics state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "Queue is correct. Which Java type is normally used as the interface for FIFO operations? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "queue-basics",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-06",
+      "slug": "linkedlist-queue",
+      "title": "LinkedList Queue",
+      "topic": "queues",
+      "subtopic": "queue-basics",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the interface type: ___<Integer> line = new LinkedList<>();",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "Queue"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Fill the interface type: ___<Integer> line = new LinkedList<>();",
+      "expectedAnswer": "Queue",
+      "options": [],
+      "hints": [
+        "Track the queue basics state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "Queue is correct. Fill the interface type: ___<Integer> line = new LinkedList<>(); The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "queue-basics",
+        "code_blank",
+        "queue"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-07",
+      "slug": "arraydeque-choice",
+      "title": "ArrayDeque Choice",
+      "topic": "queues",
+      "subtopic": "queue-basics",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which implementation is usually a strong general-purpose queue when null values are unnecessary?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "ArrayDeque"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "ArrayDeque"
+        },
+        {
+          "id": "b",
+          "text": "HashMap"
+        },
+        {
+          "id": "c",
+          "text": "TreeMap"
+        }
+      ],
+      "hints": [
+        "Track the queue basics state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "ArrayDeque is correct. Which implementation is usually a strong general-purpose queue when null values are unnecessary? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "queue-basics",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-08",
+      "slug": "rear-arrival",
+      "title": "Rear Arrival",
+      "topic": "queues",
+      "subtopic": "queue-basics",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Passengers A, B, C arrive in that order. Write the queue from front to rear.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "A B C"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Passengers A, B, C arrive in that order. Write the queue from front to rear.",
+      "expectedAnswer": "A B C",
+      "options": [],
+      "hints": [
+        "Track the queue basics state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "A B C is correct. Passengers A, B, C arrive in that order. Write the queue from front to rear. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "queue-basics",
+        "predict_output",
+        "queue"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "queues-09",
+      "slug": "queue-versus-stack",
+      "title": "Queue Versus Stack",
+      "topic": "queues",
+      "subtopic": "queue-basics",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A queue and stack both receive 2, 4, 6. Which value does the queue remove first?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Track the queue basics state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "2 is correct. A queue and stack both receive 2, 4, 6. Which value does the queue remove first? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "queue-basics",
+        "logic_answer",
+        "queue"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "queues-10",
+      "slug": "null-cargo-mistake",
+      "title": "Null Cargo Mistake",
+      "topic": "queues",
+      "subtopic": "queue-basics",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why should null not be used as an ArrayDeque queue item? Choose the best answer.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "ArrayDeque rejects null and null would blur empty-result meaning"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "ArrayDeque rejects null and null would blur empty-result meaning"
+        },
+        {
+          "id": "b",
+          "text": "Null always moves to the rear"
+        },
+        {
+          "id": "c",
+          "text": "Null changes FIFO into LIFO"
+        }
+      ],
+      "hints": [
+        "Track the queue basics state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "ArrayDeque rejects null and null would blur empty-result meaning is correct. Why should null not be used as an ArrayDeque queue item? Choose the best answer. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "queue-basics",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-11",
+      "slug": "offer-ticket",
+      "title": "Offer a Ticket",
+      "topic": "queues",
+      "subtopic": "queue-operations",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the method that safely attempts to add ticket 7: queue.___(7);",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "offer"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Fill the method that safely attempts to add ticket 7: queue.___(7);",
+      "expectedAnswer": "offer",
+      "options": [],
+      "hints": [
+        "Track the queue operations state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "offer is correct. Fill the method that safely attempts to add ticket 7: queue.___(7); The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "queue-operations",
+        "code_blank",
+        "queue"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-12",
+      "slug": "poll-platform",
+      "title": "Poll the Platform",
+      "topic": "queues",
+      "subtopic": "queue-operations",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A queue contains 3, 5, 8 from front to rear. What does poll() return?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "A queue contains 3, 5, 8 from front to rear. What does poll() return?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Track the queue operations state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "3 is correct. A queue contains 3, 5, 8 from front to rear. What does poll() return? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "queue-operations",
+        "predict_output",
+        "queue"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "queues-13",
+      "slug": "peek-without-leaving",
+      "title": "Peek Without Leaving",
+      "topic": "queues",
+      "subtopic": "queue-operations",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "A queue contains red, blue. Which method reads red without removing it?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "peek"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "A queue contains red, blue. Which method reads red without removing it?",
+      "expectedAnswer": "peek",
+      "options": [],
+      "hints": [
+        "Track the queue operations state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "peek is correct. A queue contains red, blue. Which method reads red without removing it? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "queue-operations",
+        "code_blank",
+        "queue"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-14",
+      "slug": "empty-check",
+      "title": "Empty Check",
+      "topic": "queues",
+      "subtopic": "queue-operations",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the condition: while (!queue.___()) { queue.poll(); }",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "isEmpty"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Fill the condition: while (!queue.___()) { queue.poll(); }",
+      "expectedAnswer": "isEmpty",
+      "options": [],
+      "hints": [
+        "Track the queue operations state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "isEmpty is correct. Fill the condition: while (!queue.___()) { queue.poll(); } The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "queue-operations",
+        "code_blank",
+        "queue"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-15",
+      "slug": "offer-sequence",
+      "title": "Offer Sequence",
+      "topic": "queues",
+      "subtopic": "queue-operations",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Start empty. offer(4), offer(9), poll(), offer(2). Write the queue front to rear.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "9 2"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Start empty. offer(4), offer(9), poll(), offer(2). Write the queue front to rear.",
+      "expectedAnswer": "9 2",
+      "options": [],
+      "hints": [
+        "Track the queue operations state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "9 2 is correct. Start empty. offer(4), offer(9), poll(), offer(2). Write the queue front to rear. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "queue-operations",
+        "predict_output",
+        "queue"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "queues-16",
+      "slug": "poll-or-remove",
+      "title": "Poll or Remove",
+      "topic": "queues",
+      "subtopic": "queue-operations",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which operation returns null instead of throwing when an empty queue is read and removed?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "poll()"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "poll()"
+        },
+        {
+          "id": "b",
+          "text": "remove()"
+        },
+        {
+          "id": "c",
+          "text": "element()"
+        }
+      ],
+      "hints": [
+        "Track the queue operations state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "poll() is correct. Which operation returns null instead of throwing when an empty queue is read and removed? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "queue-operations",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-17",
+      "slug": "peek-or-element",
+      "title": "Peek or Element",
+      "topic": "queues",
+      "subtopic": "queue-operations",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which operation throws on an empty queue instead of returning null?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "element()"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "element()"
+        },
+        {
+          "id": "b",
+          "text": "peek()"
+        },
+        {
+          "id": "c",
+          "text": "offer()"
+        }
+      ],
+      "hints": [
+        "Track the queue operations state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "element() is correct. Which operation throws on an empty queue instead of returning null? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "queue-operations",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-18",
+      "slug": "count-cargo",
+      "title": "Count the Cargo",
+      "topic": "queues",
+      "subtopic": "queue-operations",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Start empty. add 1, add 2, add 3, remove once. What does size() return?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Track the queue operations state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "2 is correct. Start empty. add 1, add 2, add 3, remove once. What does size() return? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "queue-operations",
+        "logic_answer",
+        "queue"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "queues-19",
+      "slug": "underflow-guard",
+      "title": "Underflow Guard",
+      "topic": "queues",
+      "subtopic": "queue-operations",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which check should guard remove() when an exception is not desired?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "!queue.isEmpty()"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "!queue.isEmpty()"
+        },
+        {
+          "id": "b",
+          "text": "queue.size() < 0"
+        },
+        {
+          "id": "c",
+          "text": "queue.peek() == 1"
+        }
+      ],
+      "hints": [
+        "Track the queue operations state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "!queue.isEmpty() is correct. Which check should guard remove() when an exception is not desired? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "queue-operations",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-20",
+      "slug": "long-dispatch-trace",
+      "title": "Long Dispatch Trace",
+      "topic": "queues",
+      "subtopic": "queue-operations",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Start empty. offer 6, 1, 7; poll twice; offer 4, 5; poll once. Write the remaining queue.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "4 5"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Start empty. offer 6, 1, 7; poll twice; offer 4, 5; poll once. Write the remaining queue.",
+      "expectedAnswer": "4 5",
+      "options": [],
+      "hints": [
+        "Track the queue operations state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "4 5 is correct. Start empty. offer 6, 1, 7; poll twice; offer 4, 5; poll once. Write the remaining queue. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "queue-operations",
+        "predict_output",
+        "queue"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "queues-21",
+      "slug": "circular-purpose",
+      "title": "Circular Purpose",
+      "topic": "queues",
+      "subtopic": "circular-queue-deque",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "What storage benefit does a circular array queue provide?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "It reuses freed slots by wrapping indices"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "It reuses freed slots by wrapping indices"
+        },
+        {
+          "id": "b",
+          "text": "It sorts every item"
+        },
+        {
+          "id": "c",
+          "text": "It removes from both ends automatically"
+        }
+      ],
+      "hints": [
+        "Track the circular queue deque state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "It reuses freed slots by wrapping indices is correct. What storage benefit does a circular array queue provide? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "circular-queue-deque",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-22",
+      "slug": "wrap-rear",
+      "title": "Wrap the Rear",
+      "topic": "queues",
+      "subtopic": "circular-queue-deque",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "For capacity 5, rear is 4. What is (rear + 1) % 5?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "For capacity 5, rear is 4. What is (rear + 1) % 5?",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "Track the circular queue deque state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "0 is correct. For capacity 5, rear is 4. What is (rear + 1) % 5? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "circular-queue-deque",
+        "predict_output",
+        "queue"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "queues-23",
+      "slug": "deque-expansion",
+      "title": "Deque Expansion",
+      "topic": "queues",
+      "subtopic": "circular-queue-deque",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What does deque stand for?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "double ended queue"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "double ended queue",
+      "options": [],
+      "hints": [
+        "Track the circular queue deque state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "double ended queue is correct. What does deque stand for? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "circular-queue-deque",
+        "logic_answer",
+        "queue"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-24",
+      "slug": "add-at-front",
+      "title": "Add at Front",
+      "topic": "queues",
+      "subtopic": "circular-queue-deque",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the method that inserts value x at the front of an ArrayDeque: deque.___(x);",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "addFirst"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Fill the method that inserts value x at the front of an ArrayDeque: deque.___(x);",
+      "expectedAnswer": "addFirst",
+      "options": [],
+      "hints": [
+        "Track the circular queue deque state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "addFirst is correct. Fill the method that inserts value x at the front of an ArrayDeque: deque.___(x); The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "circular-queue-deque",
+        "code_blank",
+        "queue"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-25",
+      "slug": "circular-full-test",
+      "title": "Circular Full Test",
+      "topic": "queues",
+      "subtopic": "circular-queue-deque",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "With one reserved slot, which condition identifies a full circular queue?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "(rear + 1) % capacity == front"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "(rear + 1) % capacity == front"
+        },
+        {
+          "id": "b",
+          "text": "rear == front"
+        },
+        {
+          "id": "c",
+          "text": "front == -2"
+        }
+      ],
+      "hints": [
+        "Track the circular queue deque state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "(rear + 1) % capacity == front is correct. With one reserved slot, which condition identifies a full circular queue? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "circular-queue-deque",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-26",
+      "slug": "deque-end-trace",
+      "title": "Deque End Trace",
+      "topic": "queues",
+      "subtopic": "circular-queue-deque",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Start empty. addLast(2), addFirst(1), addLast(3), removeLast(). Write the deque front to rear.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "1 2"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Start empty. addLast(2), addFirst(1), addLast(3), removeLast(). Write the deque front to rear.",
+      "expectedAnswer": "1 2",
+      "options": [],
+      "hints": [
+        "Track the circular queue deque state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "1 2 is correct. Start empty. addLast(2), addFirst(1), addLast(3), removeLast(). Write the deque front to rear. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "circular-queue-deque",
+        "predict_output",
+        "queue"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "queues-27",
+      "slug": "read-tail",
+      "title": "Read the Tail",
+      "topic": "queues",
+      "subtopic": "circular-queue-deque",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Which ArrayDeque method reads the last item without removing it?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "peekLast"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Which ArrayDeque method reads the last item without removing it?",
+      "expectedAnswer": "peekLast",
+      "options": [],
+      "hints": [
+        "Track the circular queue deque state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "peekLast is correct. Which ArrayDeque method reads the last item without removing it? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "circular-queue-deque",
+        "code_blank",
+        "queue"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-28",
+      "slug": "circular-index-journey",
+      "title": "Circular Index Journey",
+      "topic": "queues",
+      "subtopic": "circular-queue-deque",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Capacity is 6 and front index is 4. Advance front three times using modulo. What index results?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Track the circular queue deque state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "1 is correct. Capacity is 6 and front index is 4. Advance front three times using modulo. What index results? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "circular-queue-deque",
+        "logic_answer",
+        "queue"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "queues-29",
+      "slug": "full-empty-ambiguity",
+      "title": "Full and Empty Ambiguity",
+      "topic": "queues",
+      "subtopic": "circular-queue-deque",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "If front == rear represents empty, name one common technique that distinguishes full from empty.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "size"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "size",
+      "options": [],
+      "hints": [
+        "Track the circular queue deque state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "size is correct. If front == rear represents empty, name one common technique that distinguishes full from empty. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "circular-queue-deque",
+        "logic_answer",
+        "queue"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-30",
+      "slug": "balanced-deque-trace",
+      "title": "Balanced Deque Trace",
+      "topic": "queues",
+      "subtopic": "circular-queue-deque",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Start empty. addFirst(4), addLast(7), addFirst(2), removeLast(), addLast(9), removeFirst(). Write the deque.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "4 9"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Start empty. addFirst(4), addLast(7), addFirst(2), removeLast(), addLast(9), removeFirst(). Write the deque.",
+      "expectedAnswer": "4 9",
+      "options": [],
+      "hints": [
+        "Track the circular queue deque state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "4 9 is correct. Start empty. addFirst(4), addLast(7), addFirst(2), removeLast(), addLast(9), removeFirst(). Write the deque. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "circular-queue-deque",
+        "predict_output",
+        "queue"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "queues-31",
+      "slug": "bfs-frontier",
+      "title": "BFS Frontier",
+      "topic": "queues",
+      "subtopic": "bfs-queue-patterns",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which structure holds nodes waiting to be explored by breadth-first search?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "Queue"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Queue"
+        },
+        {
+          "id": "b",
+          "text": "Stack"
+        },
+        {
+          "id": "c",
+          "text": "Heap only"
+        }
+      ],
+      "hints": [
+        "Track the bfs queue patterns state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "Queue is correct. Which structure holds nodes waiting to be explored by breadth-first search? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bfs-queue-patterns",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-32",
+      "slug": "level-order-tool",
+      "title": "Level Order Tool",
+      "topic": "queues",
+      "subtopic": "bfs-queue-patterns",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Binary-tree level order visits nodes by depth. Name its central data structure.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "queue"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Binary-tree level order visits nodes by depth. Name its central data structure.",
+      "expectedAnswer": "queue",
+      "options": [],
+      "hints": [
+        "Track the bfs queue patterns state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "queue is correct. Binary-tree level order visits nodes by depth. Name its central data structure. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bfs-queue-patterns",
+        "code_blank",
+        "queue"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-33",
+      "slug": "unweighted-shortest-path",
+      "title": "Unweighted Shortest Path",
+      "topic": "queues",
+      "subtopic": "bfs-queue-patterns",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which traversal finds minimum edge-count paths in an unweighted graph?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "BFS"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "BFS",
+      "options": [],
+      "hints": [
+        "Track the bfs queue patterns state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "BFS is correct. Which traversal finds minimum edge-count paths in an unweighted graph? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bfs-queue-patterns",
+        "logic_answer",
+        "queue"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-34",
+      "slug": "mark-before-enqueue",
+      "title": "Mark Before Enqueue",
+      "topic": "queues",
+      "subtopic": "bfs-queue-patterns",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "When should a BFS node normally be marked visited to avoid duplicate enqueues?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "When it is enqueued"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "When it is enqueued"
+        },
+        {
+          "id": "b",
+          "text": "After the whole traversal"
+        },
+        {
+          "id": "c",
+          "text": "Only when it has no neighbors"
+        }
+      ],
+      "hints": [
+        "Track the bfs queue patterns state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "When it is enqueued is correct. When should a BFS node normally be marked visited to avoid duplicate enqueues? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bfs-queue-patterns",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-35",
+      "slug": "level-boundary",
+      "title": "Level Boundary",
+      "topic": "queues",
+      "subtopic": "bfs-queue-patterns",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A BFS queue has 4 nodes at the start of a level. How many removals process exactly that level?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Track the bfs queue patterns state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "4 is correct. A BFS queue has 4 nodes at the start of a level. How many removals process exactly that level? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bfs-queue-patterns",
+        "logic_answer",
+        "queue"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "queues-36",
+      "slug": "rotting-sources",
+      "title": "Rotting Sources",
+      "topic": "queues",
+      "subtopic": "bfs-queue-patterns",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "In the Rotting Oranges pattern, which cells enter the queue before BFS begins?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "All initially rotten oranges"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "All initially rotten oranges"
+        },
+        {
+          "id": "b",
+          "text": "One arbitrary fresh orange"
+        },
+        {
+          "id": "c",
+          "text": "Only empty cells"
+        }
+      ],
+      "hints": [
+        "Track the bfs queue patterns state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "All initially rotten oranges is correct. In the Rotting Oranges pattern, which cells enter the queue before BFS begins? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bfs-queue-patterns",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-37",
+      "slug": "island-bfs-start",
+      "title": "Island BFS Start",
+      "topic": "queues",
+      "subtopic": "bfs-queue-patterns",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "When a new land cell starts a Number of Islands BFS, what state prevents revisiting it?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "visited"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "When a new land cell starts a Number of Islands BFS, what state prevents revisiting it?",
+      "expectedAnswer": "visited",
+      "options": [],
+      "hints": [
+        "Track the bfs queue patterns state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "visited is correct. When a new land cell starts a Number of Islands BFS, what state prevents revisiting it? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bfs-queue-patterns",
+        "code_blank",
+        "queue"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-38",
+      "slug": "producer-consumer-order",
+      "title": "Producer Consumer Order",
+      "topic": "queues",
+      "subtopic": "bfs-queue-patterns",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Jobs 11, 12, 13 are produced in order and consumed by one FIFO worker. Write their consumption order.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "11 12 13"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Jobs 11, 12, 13 are produced in order and consumed by one FIFO worker. Write their consumption order.",
+      "expectedAnswer": "11 12 13",
+      "options": [],
+      "hints": [
+        "Track the bfs queue patterns state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "11 12 13 is correct. Jobs 11, 12, 13 are produced in order and consumed by one FIFO worker. Write their consumption order. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bfs-queue-patterns",
+        "predict_output",
+        "queue"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "queues-39",
+      "slug": "first-negative-window",
+      "title": "First Negative Window",
+      "topic": "queues",
+      "subtopic": "bfs-queue-patterns",
+      "difficulty": "Hard",
+      "questionType": "CODING_CHALLENGE",
+      "description": "For [2,-1,3,-4,5] with window size 3, list the first negative value in each window.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "[-1,-1,-4]"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[-1,-1,-4]",
+      "options": [],
+      "hints": [
+        "Track the bfs queue patterns state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "[-1,-1,-4] is correct. For [2,-1,3,-4,5] with window size 3, list the first negative value in each window. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "bfs-queue-patterns",
+        "coding_challenge",
+        "queue"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "queues-40",
+      "slug": "sliding-maximum-deque",
+      "title": "Sliding Maximum Deque",
+      "topic": "queues",
+      "subtopic": "bfs-queue-patterns",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why does a monotonic deque discard smaller values from its rear before adding a larger value?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "They cannot become a future maximum while the larger value remains"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "They cannot become a future maximum while the larger value remains"
+        },
+        {
+          "id": "b",
+          "text": "They are always outside the current window"
+        },
+        {
+          "id": "c",
+          "text": "Queues require sorted input"
+        }
+      ],
+      "hints": [
+        "Track the bfs queue patterns state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "They cannot become a future maximum while the larger value remains is correct. Why does a monotonic deque discard smaller values from its rear before adding a larger value? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "bfs-queue-patterns",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-41",
+      "slug": "station-master-command",
+      "title": "Station Master Command",
+      "topic": "queues",
+      "subtopic": "queue-master-trial",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Which method both reads and removes the front while safely returning null for an empty queue?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "poll"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Which method both reads and removes the front while safely returning null for an empty queue?",
+      "expectedAnswer": "poll",
+      "options": [],
+      "hints": [
+        "Track the queue master trial state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "poll is correct. Which method both reads and removes the front while safely returning null for an empty queue? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "queue-master-trial",
+        "code_blank",
+        "queue"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-42",
+      "slug": "terminal-trace",
+      "title": "Terminal Trace",
+      "topic": "queues",
+      "subtopic": "queue-master-trial",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Start empty. offer 5, 8; poll; offer 3, 1; peek. Write the queue after all operations.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "8 3 1"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Start empty. offer 5, 8; poll; offer 3, 1; peek. Write the queue after all operations.",
+      "expectedAnswer": "8 3 1",
+      "options": [],
+      "hints": [
+        "Track the queue master trial state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "8 3 1 is correct. Start empty. offer 5, 8; poll; offer 3, 1; peek. Write the queue after all operations. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "queue-master-trial",
+        "predict_output",
+        "queue"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "queues-43",
+      "slug": "deque-as-queue",
+      "title": "Deque as Queue",
+      "topic": "queues",
+      "subtopic": "queue-master-trial",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "To preserve FIFO with an ArrayDeque, add at the rear and remove from which end?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "front"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "front",
+      "options": [],
+      "hints": [
+        "Track the queue master trial state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "front is correct. To preserve FIFO with an ArrayDeque, add at the rear and remove from which end? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "queue-master-trial",
+        "logic_answer",
+        "queue"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-44",
+      "slug": "circular-next-index",
+      "title": "Circular Next Index",
+      "topic": "queues",
+      "subtopic": "queue-master-trial",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the update for an index in a circular array: index = (index + 1) ___ capacity;",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "%"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Fill the update for an index in a circular array: index = (index + 1) ___ capacity;",
+      "expectedAnswer": "%",
+      "options": [],
+      "hints": [
+        "Track the queue master trial state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "% is correct. Fill the update for an index in a circular array: index = (index + 1) ___ capacity; The queue or deque rules preserve the stated processing order.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "queue-master-trial",
+        "code_blank",
+        "queue"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "queues-45",
+      "slug": "queue-bug-hunt",
+      "title": "Queue Bug Hunt",
+      "topic": "queues",
+      "subtopic": "queue-master-trial",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A loop uses while(queue.isEmpty()) to process queued jobs. Which condition is correct?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "while (!queue.isEmpty())"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "while (!queue.isEmpty())"
+        },
+        {
+          "id": "b",
+          "text": "while (queue.size() < 0)"
+        },
+        {
+          "id": "c",
+          "text": "while (queue.peek() == null)"
+        }
+      ],
+      "hints": [
+        "Track the queue master trial state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "while (!queue.isEmpty()) is correct. A loop uses while(queue.isEmpty()) to process queued jobs. Which condition is correct? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "queue-master-trial",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-46",
+      "slug": "bfs-duplicate-defense",
+      "title": "BFS Duplicate Defense",
+      "topic": "queues",
+      "subtopic": "queue-master-trial",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Two frontier nodes share an unvisited neighbor. What action prevents that neighbor entering the queue twice?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "Mark it visited when first enqueued"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mark it visited when first enqueued"
+        },
+        {
+          "id": "b",
+          "text": "Sort the queue"
+        },
+        {
+          "id": "c",
+          "text": "Use remove() instead of poll()"
+        }
+      ],
+      "hints": [
+        "Track the queue master trial state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "Mark it visited when first enqueued is correct. Two frontier nodes share an unvisited neighbor. What action prevents that neighbor entering the queue twice? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "queue-master-trial",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-47",
+      "slug": "circular-occupancy",
+      "title": "Circular Occupancy",
+      "topic": "queues",
+      "subtopic": "queue-master-trial",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A circular queue of capacity 8 currently stores 5 items. After two dequeues and four enqueues, how many items are stored?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Track the queue master trial state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "7 is correct. A circular queue of capacity 8 currently stores 5 items. After two dequeues and four enqueues, how many items are stored? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "queue-master-trial",
+        "logic_answer",
+        "queue"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "queues-48",
+      "slug": "two-ended-schedule",
+      "title": "Two-Ended Schedule",
+      "topic": "queues",
+      "subtopic": "queue-master-trial",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Start [B,C]. addFirst(A), addLast(D), removeFirst(), removeLast(). Write the remaining deque.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "B C"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "Start [B,C]. addFirst(A), addLast(D), removeFirst(), removeLast(). Write the remaining deque.",
+      "expectedAnswer": "B C",
+      "options": [],
+      "hints": [
+        "Track the queue master trial state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "B C is correct. Start [B,C]. addFirst(A), addLast(D), removeFirst(), removeLast(). Write the remaining deque. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "queue-master-trial",
+        "predict_output",
+        "queue"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "queues-49",
+      "slug": "multi-source-distance",
+      "title": "Multi-Source Distance",
+      "topic": "queues",
+      "subtopic": "queue-master-trial",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why does multi-source BFS enqueue every source with distance zero before traversal?",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "The first arrival then gives distance to the nearest source"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "The first arrival then gives distance to the nearest source"
+        },
+        {
+          "id": "b",
+          "text": "It converts the graph to a tree"
+        },
+        {
+          "id": "c",
+          "text": "It makes edge weights negative"
+        }
+      ],
+      "hints": [
+        "Track the queue master trial state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "The first arrival then gives distance to the nearest source is correct. Why does multi-source BFS enqueue every source with distance zero before traversal? The queue or deque rules preserve the stated processing order.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "queue-master-trial",
+        "multiple_choice",
+        "queue"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "OPTION"
+    },
+    {
+      "id": "queues-50",
+      "slug": "grand-terminal-plan",
+      "title": "Grand Terminal Plan",
+      "topic": "queues",
+      "subtopic": "queue-master-trial",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A scheduler must repeatedly serve the oldest job, add new jobs, and never inspect internal positions. Choose the fitting structure.",
+      "examples": [
+        {
+          "input": "Reason through the station state or Java operation described above.",
+          "output": "queue"
+        }
+      ],
+      "constraints": [
+        "Use FIFO order unless the question explicitly names a deque.",
+        "Submit only the requested option, token, value, or ordered sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "queue",
+      "options": [],
+      "hints": [
+        "Track the queue master trial state one operation at a time; mark the front and rear."
+      ],
+      "explanation": "queue is correct. A scheduler must repeatedly serve the oldest job, add new jobs, and never inspect internal positions. Choose the fitting structure. The queue or deque rules preserve the stated processing order.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "queue-master-trial",
+        "logic_answer",
+        "queue"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "TOKEN"
+    }
+  ]
+}
