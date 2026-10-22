@@ -1,0 +1,1956 @@
+{
+  "topic": "graphs",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Graph Basics"
+    },
+    {
+      "number": 2,
+      "name": "BFS and DFS"
+    },
+    {
+      "number": 3,
+      "name": "Components and Grid Graphs"
+    },
+    {
+      "number": 4,
+      "name": "Topological Sort and Shortest Paths"
+    },
+    {
+      "number": 5,
+      "name": "Graph Master Trial"
+    }
+  ],
+  "questions": [
+    {
+      "id": "graphs-01",
+      "slug": "mountain-nodes",
+      "title": "Mountain Nodes",
+      "topic": "graphs",
+      "subtopic": "graph-basics",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "What is another common name for a graph vertex?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "node"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "What is another common name for a graph vertex?",
+      "expectedAnswer": "node",
+      "options": [],
+      "hints": [
+        "Draw the graph basics state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "node follows from the stated graph and the graph basics algorithm.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "graph-basics",
+        "code_blank",
+        "graph"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-02",
+      "slug": "bridge-edge",
+      "title": "Bridge Edge",
+      "topic": "graphs",
+      "subtopic": "graph-basics",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "What graph element connects two vertices?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "edge"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "What graph element connects two vertices?",
+      "expectedAnswer": "edge",
+      "options": [],
+      "hints": [
+        "Draw the graph basics state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "edge follows from the stated graph and the graph basics algorithm.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "graph-basics",
+        "code_blank",
+        "graph"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-03",
+      "slug": "one-way-trail",
+      "title": "One-Way Trail",
+      "topic": "graphs",
+      "subtopic": "graph-basics",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which graph type gives every edge a direction?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "directed"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "directed",
+      "options": [],
+      "hints": [
+        "Draw the graph basics state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "directed follows from the stated graph and the graph basics algorithm.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "graph-basics",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-04",
+      "slug": "weighted-route",
+      "title": "Weighted Route",
+      "topic": "graphs",
+      "subtopic": "graph-basics",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A travel-time number attached to an edge is called its what?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "weight"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "weight",
+      "options": [],
+      "hints": [
+        "Draw the graph basics state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "weight follows from the stated graph and the graph basics algorithm.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "graph-basics",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-05",
+      "slug": "undirected-degree",
+      "title": "Undirected Degree",
+      "topic": "graphs",
+      "subtopic": "graph-basics",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Vertex A touches three undirected edges. What is its degree?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Vertex A touches three undirected edges. What is its degree?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Draw the graph basics state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "3 follows from the stated graph and the graph basics algorithm.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "graph-basics",
+        "predict_output",
+        "graph"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "graphs-06",
+      "slug": "incoming-signals",
+      "title": "Incoming Signals",
+      "topic": "graphs",
+      "subtopic": "graph-basics",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "In a directed graph, what counts edges entering a vertex?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "indegree"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "In a directed graph, what counts edges entering a vertex?",
+      "expectedAnswer": "indegree",
+      "options": [],
+      "hints": [
+        "Draw the graph basics state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "indegree follows from the stated graph and the graph basics algorithm.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "graph-basics",
+        "code_blank",
+        "graph"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-07",
+      "slug": "adjacency-list",
+      "title": "Adjacency List",
+      "topic": "graphs",
+      "subtopic": "graph-basics",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which representation stores a collection of neighbors for each vertex?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "adjacency list"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "adjacency list",
+      "options": [],
+      "hints": [
+        "Draw the graph basics state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "adjacency list follows from the stated graph and the graph basics algorithm.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "graph-basics",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-08",
+      "slug": "matrix-cell",
+      "title": "Matrix Cell",
+      "topic": "graphs",
+      "subtopic": "graph-basics",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In an unweighted adjacency matrix, what commonly marks that edge i\u2192j exists?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Draw the graph basics state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "1 follows from the stated graph and the graph basics algorithm.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "graph-basics",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "graphs-09",
+      "slug": "sparse-choice",
+      "title": "Sparse Choice",
+      "topic": "graphs",
+      "subtopic": "graph-basics",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which representation usually saves space for a sparse graph?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "Adjacency list"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Adjacency list"
+        },
+        {
+          "id": "b",
+          "text": "Adjacency matrix"
+        },
+        {
+          "id": "c",
+          "text": "Full distance table"
+        }
+      ],
+      "hints": [
+        "Draw the graph basics state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "Adjacency list follows from the stated graph and the graph basics algorithm.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "graph-basics",
+        "multiple_choice",
+        "graph"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "OPTION"
+    },
+    {
+      "id": "graphs-10",
+      "slug": "matrix-space",
+      "title": "Matrix Space",
+      "topic": "graphs",
+      "subtopic": "graph-basics",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What space complexity does an adjacency matrix use for V vertices?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "O(V^2)"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "O(V^2)",
+      "options": [],
+      "hints": [
+        "Draw the graph basics state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "O(V^2) follows from the stated graph and the graph basics algorithm.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "graph-basics",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-11",
+      "slug": "bfs-container",
+      "title": "BFS Container",
+      "topic": "graphs",
+      "subtopic": "bfs-dfs",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Which data structure holds the BFS frontier?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "queue"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Which data structure holds the BFS frontier?",
+      "expectedAnswer": "queue",
+      "options": [],
+      "hints": [
+        "Draw the bfs dfs state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "queue follows from the stated graph and the bfs dfs algorithm.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bfs-dfs",
+        "code_blank",
+        "graph"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-12",
+      "slug": "dfs-container",
+      "title": "DFS Container",
+      "topic": "graphs",
+      "subtopic": "bfs-dfs",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Which structure models iterative depth-first traversal?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "stack"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Which structure models iterative depth-first traversal?",
+      "expectedAnswer": "stack",
+      "options": [],
+      "hints": [
+        "Draw the bfs dfs state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "stack follows from the stated graph and the bfs dfs algorithm.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bfs-dfs",
+        "code_blank",
+        "graph"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-13",
+      "slug": "visited-purpose",
+      "title": "Visited Purpose",
+      "topic": "graphs",
+      "subtopic": "bfs-dfs",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why does traversal record visited vertices?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "To avoid processing a vertex repeatedly"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "To avoid processing a vertex repeatedly"
+        },
+        {
+          "id": "b",
+          "text": "To sort edge weights"
+        },
+        {
+          "id": "c",
+          "text": "To count only leaves"
+        }
+      ],
+      "hints": [
+        "Draw the bfs dfs state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "To avoid processing a vertex repeatedly follows from the stated graph and the bfs dfs algorithm.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bfs-dfs",
+        "multiple_choice",
+        "graph"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "OPTION"
+    },
+    {
+      "id": "graphs-14",
+      "slug": "simple-bfs",
+      "title": "Simple BFS",
+      "topic": "graphs",
+      "subtopic": "bfs-dfs",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A connects to B then C in that neighbor order. Starting at A, write BFS order.",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "A B C"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "A connects to B then C in that neighbor order. Starting at A, write BFS order.",
+      "expectedAnswer": "A B C",
+      "options": [],
+      "hints": [
+        "Draw the bfs dfs state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "A B C follows from the stated graph and the bfs dfs algorithm.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bfs-dfs",
+        "predict_output",
+        "graph"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "graphs-15",
+      "slug": "deep-first-route",
+      "title": "Deep First Route",
+      "topic": "graphs",
+      "subtopic": "bfs-dfs",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A connects to B,C; B connects to D. With neighbors in listed order, write recursive DFS from A.",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "A B D C"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "A connects to B,C; B connects to D. With neighbors in listed order, write recursive DFS from A.",
+      "expectedAnswer": "A B D C",
+      "options": [],
+      "hints": [
+        "Draw the bfs dfs state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "A B D C follows from the stated graph and the bfs dfs algorithm.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bfs-dfs",
+        "predict_output",
+        "graph"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "graphs-16",
+      "slug": "mark-timing",
+      "title": "Mark Timing",
+      "topic": "graphs",
+      "subtopic": "bfs-dfs",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "When should BFS usually mark a vertex visited?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "when enqueued"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "when enqueued",
+      "options": [],
+      "hints": [
+        "Draw the bfs dfs state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "when enqueued follows from the stated graph and the bfs dfs algorithm.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bfs-dfs",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-17",
+      "slug": "disconnected-traversal",
+      "title": "Disconnected Traversal",
+      "topic": "graphs",
+      "subtopic": "bfs-dfs",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What must an outer loop do to traverse every component?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "start from each unvisited vertex"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "start from each unvisited vertex",
+      "options": [],
+      "hints": [
+        "Draw the bfs dfs state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "start from each unvisited vertex follows from the stated graph and the bfs dfs algorithm.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bfs-dfs",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-18",
+      "slug": "bfs-distance",
+      "title": "BFS Distance",
+      "topic": "graphs",
+      "subtopic": "bfs-dfs",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which traversal finds minimum edge-count distance in an unweighted graph?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "BFS"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "BFS",
+      "options": [],
+      "hints": [
+        "Draw the bfs dfs state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "BFS follows from the stated graph and the bfs dfs algorithm.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bfs-dfs",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-19",
+      "slug": "traversal-complexity",
+      "title": "Traversal Complexity",
+      "topic": "graphs",
+      "subtopic": "bfs-dfs",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Using adjacency lists, what is BFS or DFS time complexity?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "O(V+E)"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "O(V+E)",
+      "options": [],
+      "hints": [
+        "Draw the bfs dfs state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "O(V+E) follows from the stated graph and the bfs dfs algorithm.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "bfs-dfs",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-20",
+      "slug": "recursive-risk",
+      "title": "Recursive Risk",
+      "topic": "graphs",
+      "subtopic": "bfs-dfs",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What resource may overflow when recursive DFS follows a very deep path?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "call stack"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "call stack",
+      "options": [],
+      "hints": [
+        "Draw the bfs dfs state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "call stack follows from the stated graph and the bfs dfs algorithm.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "bfs-dfs",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-21",
+      "slug": "component-count",
+      "title": "Component Count",
+      "topic": "graphs",
+      "subtopic": "components-grids",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A graph has isolated groups {A,B}, {C}, and {D,E}. How many connected components exist?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "A graph has isolated groups {A,B}, {C}, and {D,E}. How many connected components exist?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Draw the components grids state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "3 follows from the stated graph and the components grids algorithm.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "components-grids",
+        "predict_output",
+        "graph"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "graphs-22",
+      "slug": "grid-neighbors",
+      "title": "Grid Neighbors",
+      "topic": "graphs",
+      "subtopic": "components-grids",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "With four-direction movement, how many possible neighbors can an interior grid cell have?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Draw the components grids state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "4 follows from the stated graph and the components grids algorithm.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "components-grids",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "graphs-23",
+      "slug": "island-start",
+      "title": "Island Start",
+      "topic": "graphs",
+      "subtopic": "components-grids",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In Number of Islands, which cell value normally begins a new land traversal?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Draw the components grids state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "1 follows from the stated graph and the components grids algorithm.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "components-grids",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "graphs-24",
+      "slug": "flood-fill-match",
+      "title": "Flood Fill Match",
+      "topic": "graphs",
+      "subtopic": "components-grids",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Flood fill expands from a cell only into neighbors with which relevant property?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "same original color"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "same original color",
+      "options": [],
+      "hints": [
+        "Draw the components grids state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "same original color follows from the stated graph and the components grids algorithm.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "components-grids",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-25",
+      "slug": "mark-grid-visited",
+      "title": "Mark Grid Visited",
+      "topic": "graphs",
+      "subtopic": "components-grids",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What action prevents the same island cell from being counted twice?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "mark visited"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "mark visited",
+      "options": [],
+      "hints": [
+        "Draw the components grids state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "mark visited follows from the stated graph and the components grids algorithm.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "components-grids",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-26",
+      "slug": "undirected-cycle-parent",
+      "title": "Undirected Cycle Parent",
+      "topic": "graphs",
+      "subtopic": "components-grids",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "In DFS cycle detection for an undirected graph, which visited neighbor should be ignored?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "parent"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "In DFS cycle detection for an undirected graph, which visited neighbor should be ignored?",
+      "expectedAnswer": "parent",
+      "options": [],
+      "hints": [
+        "Draw the components grids state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "parent follows from the stated graph and the components grids algorithm.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "components-grids",
+        "code_blank",
+        "graph"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-27",
+      "slug": "multi-source-start",
+      "title": "Multi-Source Start",
+      "topic": "graphs",
+      "subtopic": "components-grids",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For multi-source traversal, when are all source cells placed in the queue?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "initially"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "initially",
+      "options": [],
+      "hints": [
+        "Draw the components grids state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "initially follows from the stated graph and the components grids algorithm.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "components-grids",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-28",
+      "slug": "rotting-minutes",
+      "title": "Rotting Minutes",
+      "topic": "graphs",
+      "subtopic": "components-grids",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In the Rotting Oranges pattern, what does one BFS level represent?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "one minute"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "one minute",
+      "options": [],
+      "hints": [
+        "Draw the components grids state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "one minute follows from the stated graph and the components grids algorithm.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "components-grids",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-29",
+      "slug": "diagonal-island-rule",
+      "title": "Diagonal Island Rule",
+      "topic": "graphs",
+      "subtopic": "components-grids",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "If only four directions connect land, do diagonally touching cells form one island?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "no"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "no",
+      "options": [],
+      "hints": [
+        "Draw the components grids state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "no follows from the stated graph and the components grids algorithm.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "components-grids",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-30",
+      "slug": "component-algorithm",
+      "title": "Component Algorithm",
+      "topic": "graphs",
+      "subtopic": "components-grids",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "To count components, what is increased whenever traversal starts from a new unvisited vertex?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "component count"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "component count",
+      "options": [],
+      "hints": [
+        "Draw the components grids state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "component count follows from the stated graph and the components grids algorithm.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "components-grids",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-31",
+      "slug": "dag-meaning",
+      "title": "DAG Meaning",
+      "topic": "graphs",
+      "subtopic": "topological-shortest",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Expand the acronym DAG.",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "directed acyclic graph"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "directed acyclic graph",
+      "options": [],
+      "hints": [
+        "Draw the topological shortest state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "directed acyclic graph follows from the stated graph and the topological shortest algorithm.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "topological-shortest",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-32",
+      "slug": "kahn-start",
+      "title": "Kahn Start",
+      "topic": "graphs",
+      "subtopic": "topological-shortest",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Kahn's algorithm initially enqueues vertices with what indegree?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "Draw the topological shortest state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "0 follows from the stated graph and the topological shortest algorithm.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "topological-shortest",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "graphs-33",
+      "slug": "course-cycle",
+      "title": "Course Cycle",
+      "topic": "graphs",
+      "subtopic": "topological-shortest",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "If prerequisite edges contain a directed cycle, can every course be completed?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "no"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "no",
+      "options": [],
+      "hints": [
+        "Draw the topological shortest state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "no follows from the stated graph and the topological shortest algorithm.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "topological-shortest",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-34",
+      "slug": "relaxation-check",
+      "title": "Relaxation Check",
+      "topic": "graphs",
+      "subtopic": "topological-shortest",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the comparison: update v when dist[u] + weight < dist[___].",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "v"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Fill the comparison: update v when dist[u] + weight < dist[___].",
+      "expectedAnswer": "v",
+      "options": [],
+      "hints": [
+        "Draw the topological shortest state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "v follows from the stated graph and the topological shortest algorithm.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "topological-shortest",
+        "code_blank",
+        "graph"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-35",
+      "slug": "topo-availability",
+      "title": "Topo Availability",
+      "topic": "graphs",
+      "subtopic": "topological-shortest",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A topological order exists only for which kind of directed graph?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "DAG"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "DAG",
+      "options": [],
+      "hints": [
+        "Draw the topological shortest state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "DAG follows from the stated graph and the topological shortest algorithm.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "topological-shortest",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-36",
+      "slug": "kahn-cycle-signal",
+      "title": "Kahn Cycle Signal",
+      "topic": "graphs",
+      "subtopic": "topological-shortest",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "If Kahn processes fewer than V vertices, what exists?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "cycle"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "cycle",
+      "options": [],
+      "hints": [
+        "Draw the topological shortest state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "cycle follows from the stated graph and the topological shortest algorithm.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "topological-shortest",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-37",
+      "slug": "unweighted-path-tool",
+      "title": "Unweighted Path Tool",
+      "topic": "graphs",
+      "subtopic": "topological-shortest",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the standard shortest-path method for equal-weight edges.",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "BFS"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "BFS"
+        },
+        {
+          "id": "b",
+          "text": "DFS preorder"
+        },
+        {
+          "id": "c",
+          "text": "Inorder traversal"
+        }
+      ],
+      "hints": [
+        "Draw the topological shortest state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "BFS follows from the stated graph and the topological shortest algorithm.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "topological-shortest",
+        "multiple_choice",
+        "graph"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "OPTION"
+    },
+    {
+      "id": "graphs-38",
+      "slug": "dijkstra-frontier",
+      "title": "Dijkstra Frontier",
+      "topic": "graphs",
+      "subtopic": "topological-shortest",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which structure efficiently selects the unsettled vertex with smallest tentative distance?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "priority queue"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "priority queue",
+      "options": [],
+      "hints": [
+        "Draw the topological shortest state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "priority queue follows from the stated graph and the topological shortest algorithm.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "topological-shortest",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-39",
+      "slug": "negative-edge-limit",
+      "title": "Negative Edge Limit",
+      "topic": "graphs",
+      "subtopic": "topological-shortest",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why is ordinary Dijkstra unsafe with negative edge weights?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "A settled distance may later become smaller"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "A settled distance may later become smaller"
+        },
+        {
+          "id": "b",
+          "text": "It cannot store vertices"
+        },
+        {
+          "id": "c",
+          "text": "Negative edges create undirected graphs"
+        }
+      ],
+      "hints": [
+        "Draw the topological shortest state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "A settled distance may later become smaller follows from the stated graph and the topological shortest algorithm.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "topological-shortest",
+        "multiple_choice",
+        "graph"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "OPTION"
+    },
+    {
+      "id": "graphs-40",
+      "slug": "network-delay-result",
+      "title": "Network Delay Result",
+      "topic": "graphs",
+      "subtopic": "topological-shortest",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Network delays from source are 0,2,5,3. What time reaches every node?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Network delays from source are 0,2,5,3. What time reaches every node?",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Draw the topological shortest state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "5 follows from the stated graph and the topological shortest algorithm.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "topological-shortest",
+        "predict_output",
+        "graph"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "graphs-41",
+      "slug": "representation-trial",
+      "title": "Representation Trial",
+      "topic": "graphs",
+      "subtopic": "graph-master-trial",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For a graph with millions of vertices and few edges, choose the memory-efficient representation.",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "adjacency list"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "adjacency list",
+      "options": [],
+      "hints": [
+        "Draw the graph master trial state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "adjacency list follows from the stated graph and the graph master trial algorithm.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "graph-master-trial",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-42",
+      "slug": "bfs-trial",
+      "title": "BFS Trial",
+      "topic": "graphs",
+      "subtopic": "graph-master-trial",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A connects to B,C; B to D; C to E. Write BFS from A using listed order.",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "A B C D E"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "A connects to B,C; B to D; C to E. Write BFS from A using listed order.",
+      "expectedAnswer": "A B C D E",
+      "options": [],
+      "hints": [
+        "Draw the graph master trial state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "A B C D E follows from the stated graph and the graph master trial algorithm.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "graph-master-trial",
+        "predict_output",
+        "graph"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "graphs-43",
+      "slug": "dfs-fill",
+      "title": "DFS Fill",
+      "topic": "graphs",
+      "subtopic": "graph-master-trial",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Complete the recursive guard: if (visited[node]) ___;",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "return"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Complete the recursive guard: if (visited[node]) ___;",
+      "expectedAnswer": "return",
+      "options": [],
+      "hints": [
+        "Draw the graph master trial state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "return follows from the stated graph and the graph master trial algorithm.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "graph-master-trial",
+        "code_blank",
+        "graph"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-44",
+      "slug": "directed-degree",
+      "title": "Directed Degree",
+      "topic": "graphs",
+      "subtopic": "graph-master-trial",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Edges A\u2192B, C\u2192B, B\u2192D. What is B's indegree?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Edges A\u2192B, C\u2192B, B\u2192D. What is B's indegree?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Draw the graph master trial state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "2 follows from the stated graph and the graph master trial algorithm.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "graph-master-trial",
+        "predict_output",
+        "graph"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "graphs-45",
+      "slug": "island-trial",
+      "title": "Island Trial",
+      "topic": "graphs",
+      "subtopic": "graph-master-trial",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Rows 110,010,001 use four-direction adjacency. How many islands exist?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Draw the graph master trial state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "2 follows from the stated graph and the graph master trial algorithm.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "graph-master-trial",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "graphs-46",
+      "slug": "topo-choice",
+      "title": "Topo Choice",
+      "topic": "graphs",
+      "subtopic": "graph-master-trial",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Dependencies A\u2192C and B\u2192C allow which valid order?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "A B C"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "A B C"
+        },
+        {
+          "id": "b",
+          "text": "C A B"
+        },
+        {
+          "id": "c",
+          "text": "A C B"
+        }
+      ],
+      "hints": [
+        "Draw the graph master trial state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "A B C follows from the stated graph and the graph master trial algorithm.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "graph-master-trial",
+        "multiple_choice",
+        "graph"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "OPTION"
+    },
+    {
+      "id": "graphs-47",
+      "slug": "visited-bug",
+      "title": "Visited Bug",
+      "topic": "graphs",
+      "subtopic": "graph-master-trial",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "BFS marks nodes only when dequeued. What problem can shared neighbors cause?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "duplicate enqueues"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "duplicate enqueues",
+      "options": [],
+      "hints": [
+        "Draw the graph master trial state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "duplicate enqueues follows from the stated graph and the graph master trial algorithm.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "graph-master-trial",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-48",
+      "slug": "relaxation-trial",
+      "title": "Relaxation Trial",
+      "topic": "graphs",
+      "subtopic": "graph-master-trial",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "dist[A]=3, edge A\u2192B weighs 4, dist[B]=10. What becomes dist[B] after relaxation?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "dist[A]=3, edge A\u2192B weighs 4, dist[B]=10. What becomes dist[B] after relaxation?",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Draw the graph master trial state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "7 follows from the stated graph and the graph master trial algorithm.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "graph-master-trial",
+        "predict_output",
+        "graph"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "graphs-49",
+      "slug": "cycle-trial",
+      "title": "Cycle Trial",
+      "topic": "graphs",
+      "subtopic": "graph-master-trial",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Directed edges A\u2192B, B\u2192C, C\u2192A have what property?",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "cycle"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "cycle",
+      "options": [],
+      "hints": [
+        "Draw the graph master trial state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "cycle follows from the stated graph and the graph master trial algorithm.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "graph-master-trial",
+        "logic_answer",
+        "graph"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "graphs-50",
+      "slug": "algorithm-summit",
+      "title": "Algorithm Summit",
+      "topic": "graphs",
+      "subtopic": "graph-master-trial",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Choose the method for nonnegative weighted shortest paths from one source.",
+      "examples": [
+        {
+          "input": "Use the vertices, edges, and neighbor order stated in the challenge.",
+          "output": "Dijkstra's algorithm"
+        }
+      ],
+      "constraints": [
+        "Process neighbors in the listed order when an output order is requested.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Dijkstra's algorithm"
+        },
+        {
+          "id": "b",
+          "text": "Kahn's algorithm"
+        },
+        {
+          "id": "c",
+          "text": "Flood fill"
+        }
+      ],
+      "hints": [
+        "Draw the graph master trial state and mark each vertex when it first enters the traversal."
+      ],
+      "explanation": "Dijkstra's algorithm follows from the stated graph and the graph master trial algorithm.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "graph-master-trial",
+        "multiple_choice",
+        "graph"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "OPTION"
+    }
+  ]
+}
