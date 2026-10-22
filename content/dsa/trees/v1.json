@@ -1,0 +1,1969 @@
+{
+  "topic": "trees",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Tree Basics"
+    },
+    {
+      "number": 2,
+      "name": "Tree Traversals"
+    },
+    {
+      "number": 3,
+      "name": "Height / Depth / Diameter"
+    },
+    {
+      "number": 4,
+      "name": "Tree Patterns & Views"
+    },
+    {
+      "number": 5,
+      "name": "Tree Master Trial"
+    }
+  ],
+  "questions": [
+    {
+      "id": "trees-01",
+      "slug": "root-crown",
+      "title": "The Root Crown",
+      "topic": "trees",
+      "subtopic": "tree-basics",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "What is the topmost node of a tree called?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "root"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "What is the topmost node of a tree called?",
+      "expectedAnswer": "root",
+      "options": [],
+      "hints": [
+        "Sketch the tree basics relationship and solve one branch or level at a time."
+      ],
+      "explanation": "root follows from the stated tree structure and the tree basics rule.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "tree-basics",
+        "code_blank",
+        "tree"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-02",
+      "slug": "parent-child",
+      "title": "Parent and Child",
+      "topic": "trees",
+      "subtopic": "tree-basics",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Node A connects directly downward to B. What is A relative to B?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "parent"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "parent",
+      "options": [],
+      "hints": [
+        "Sketch the tree basics relationship and solve one branch or level at a time."
+      ],
+      "explanation": "parent follows from the stated tree structure and the tree basics rule.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "tree-basics",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-03",
+      "slug": "leaf-lantern",
+      "title": "Leaf Lantern",
+      "topic": "trees",
+      "subtopic": "tree-basics",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "What kind of node has no children?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "leaf"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "What kind of node has no children?",
+      "expectedAnswer": "leaf",
+      "options": [],
+      "hints": [
+        "Sketch the tree basics relationship and solve one branch or level at a time."
+      ],
+      "explanation": "leaf follows from the stated tree structure and the tree basics rule.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "tree-basics",
+        "code_blank",
+        "tree"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-04",
+      "slug": "count-edges",
+      "title": "Count the Edges",
+      "topic": "trees",
+      "subtopic": "tree-basics",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A path contains root A, then B, then C. How many edges are on the path?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "A path contains root A, then B, then C. How many edges are on the path?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Sketch the tree basics relationship and solve one branch or level at a time."
+      ],
+      "explanation": "2 follows from the stated tree structure and the tree basics rule.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "tree-basics",
+        "predict_output",
+        "tree"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "trees-05",
+      "slug": "internal-guardian",
+      "title": "Internal Guardian",
+      "topic": "trees",
+      "subtopic": "tree-basics",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which description identifies an internal node?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "A node with at least one child"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "A node with at least one child"
+        },
+        {
+          "id": "b",
+          "text": "A node with no parent"
+        },
+        {
+          "id": "c",
+          "text": "A node with no children"
+        }
+      ],
+      "hints": [
+        "Sketch the tree basics relationship and solve one branch or level at a time."
+      ],
+      "explanation": "A node with at least one child follows from the stated tree structure and the tree basics rule.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "tree-basics",
+        "multiple_choice",
+        "tree"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trees-06",
+      "slug": "subtree-gate",
+      "title": "Subtree Gate",
+      "topic": "trees",
+      "subtopic": "tree-basics",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A node together with all of its descendants forms what?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "subtree"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "subtree",
+      "options": [],
+      "hints": [
+        "Sketch the tree basics relationship and solve one branch or level at a time."
+      ],
+      "explanation": "subtree follows from the stated tree structure and the tree basics rule.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "tree-basics",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-07",
+      "slug": "depth-marker",
+      "title": "Depth Marker",
+      "topic": "trees",
+      "subtopic": "tree-basics",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "If the root has depth 0, what depth does its grandchild have?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "If the root has depth 0, what depth does its grandchild have?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Sketch the tree basics relationship and solve one branch or level at a time."
+      ],
+      "explanation": "2 follows from the stated tree structure and the tree basics rule.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "tree-basics",
+        "predict_output",
+        "tree"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "trees-08",
+      "slug": "binary-branch-limit",
+      "title": "Binary Branch Limit",
+      "topic": "trees",
+      "subtopic": "tree-basics",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What is the maximum number of children for one node in a binary tree?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Sketch the tree basics relationship and solve one branch or level at a time."
+      ],
+      "explanation": "2 follows from the stated tree structure and the tree basics rule.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "tree-basics",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trees-09",
+      "slug": "full-tree-law",
+      "title": "Full Tree Law",
+      "topic": "trees",
+      "subtopic": "tree-basics",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which rule defines a full binary tree?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "Every node has zero or two children"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Every node has zero or two children"
+        },
+        {
+          "id": "b",
+          "text": "Every level is filled"
+        },
+        {
+          "id": "c",
+          "text": "All leaves share one depth"
+        }
+      ],
+      "hints": [
+        "Sketch the tree basics relationship and solve one branch or level at a time."
+      ],
+      "explanation": "Every node has zero or two children follows from the stated tree structure and the tree basics rule.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "tree-basics",
+        "multiple_choice",
+        "tree"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trees-10",
+      "slug": "perfect-tree-count",
+      "title": "Perfect Tree Count",
+      "topic": "trees",
+      "subtopic": "tree-basics",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A perfect binary tree has three levels with the root on level 0. How many nodes does it contain?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Sketch the tree basics relationship and solve one branch or level at a time."
+      ],
+      "explanation": "7 follows from the stated tree structure and the tree basics rule.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "tree-basics",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trees-11",
+      "slug": "preorder-route",
+      "title": "Preorder Route",
+      "topic": "trees",
+      "subtopic": "tree-traversals",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which visit order defines preorder traversal?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "root left right"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "root left right"
+        },
+        {
+          "id": "b",
+          "text": "left root right"
+        },
+        {
+          "id": "c",
+          "text": "left right root"
+        }
+      ],
+      "hints": [
+        "Sketch the tree traversals relationship and solve one branch or level at a time."
+      ],
+      "explanation": "root left right follows from the stated tree structure and the tree traversals rule.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "tree-traversals",
+        "multiple_choice",
+        "tree"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trees-12",
+      "slug": "inorder-route",
+      "title": "Inorder Route",
+      "topic": "trees",
+      "subtopic": "tree-traversals",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the missing phase: traverse left, visit ___, traverse right.",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "root"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Fill the missing phase: traverse left, visit ___, traverse right.",
+      "expectedAnswer": "root",
+      "options": [],
+      "hints": [
+        "Sketch the tree traversals relationship and solve one branch or level at a time."
+      ],
+      "explanation": "root follows from the stated tree structure and the tree traversals rule.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "tree-traversals",
+        "code_blank",
+        "tree"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-13",
+      "slug": "postorder-route",
+      "title": "Postorder Route",
+      "topic": "trees",
+      "subtopic": "tree-traversals",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which node is visited last in a postorder traversal of a nonempty tree?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "root"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "root",
+      "options": [],
+      "hints": [
+        "Sketch the tree traversals relationship and solve one branch or level at a time."
+      ],
+      "explanation": "root follows from the stated tree structure and the tree traversals rule.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "tree-traversals",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-14",
+      "slug": "level-order-vessel",
+      "title": "Level Order Vessel",
+      "topic": "trees",
+      "subtopic": "tree-traversals",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Which structure drives level-order traversal?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "queue"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Which structure drives level-order traversal?",
+      "expectedAnswer": "queue",
+      "options": [],
+      "hints": [
+        "Sketch the tree traversals relationship and solve one branch or level at a time."
+      ],
+      "explanation": "queue follows from the stated tree structure and the tree traversals rule.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "tree-traversals",
+        "code_blank",
+        "tree"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-15",
+      "slug": "tiny-preorder",
+      "title": "Tiny Preorder",
+      "topic": "trees",
+      "subtopic": "tree-traversals",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Root A has left child B and right child C. Write its preorder sequence.",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "A B C"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Root A has left child B and right child C. Write its preorder sequence.",
+      "expectedAnswer": "A B C",
+      "options": [],
+      "hints": [
+        "Sketch the tree traversals relationship and solve one branch or level at a time."
+      ],
+      "explanation": "A B C follows from the stated tree structure and the tree traversals rule.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "tree-traversals",
+        "predict_output",
+        "tree"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "trees-16",
+      "slug": "tiny-inorder",
+      "title": "Tiny Inorder",
+      "topic": "trees",
+      "subtopic": "tree-traversals",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Root A has left child B and right child C. Write its inorder sequence.",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "B A C"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Root A has left child B and right child C. Write its inorder sequence.",
+      "expectedAnswer": "B A C",
+      "options": [],
+      "hints": [
+        "Sketch the tree traversals relationship and solve one branch or level at a time."
+      ],
+      "explanation": "B A C follows from the stated tree structure and the tree traversals rule.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "tree-traversals",
+        "predict_output",
+        "tree"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "trees-17",
+      "slug": "tiny-postorder",
+      "title": "Tiny Postorder",
+      "topic": "trees",
+      "subtopic": "tree-traversals",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Root A has left child B and right child C. Write its postorder sequence.",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "B C A"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Root A has left child B and right child C. Write its postorder sequence.",
+      "expectedAnswer": "B C A",
+      "options": [],
+      "hints": [
+        "Sketch the tree traversals relationship and solve one branch or level at a time."
+      ],
+      "explanation": "B C A follows from the stated tree structure and the tree traversals rule.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "tree-traversals",
+        "predict_output",
+        "tree"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "trees-18",
+      "slug": "iterative-preorder-tool",
+      "title": "Iterative Preorder Tool",
+      "topic": "trees",
+      "subtopic": "tree-traversals",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which structure replaces recursive calls in a typical iterative preorder traversal?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "stack"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "stack",
+      "options": [],
+      "hints": [
+        "Sketch the tree traversals relationship and solve one branch or level at a time."
+      ],
+      "explanation": "stack follows from the stated tree structure and the tree traversals rule.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "tree-traversals",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-19",
+      "slug": "expression-tree-order",
+      "title": "Expression Tree Order",
+      "topic": "trees",
+      "subtopic": "tree-traversals",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which traversal prints an expression tree in postfix order?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "postorder"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "postorder",
+      "options": [],
+      "hints": [
+        "Sketch the tree traversals relationship and solve one branch or level at a time."
+      ],
+      "explanation": "postorder follows from the stated tree structure and the tree traversals rule.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "tree-traversals",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-20",
+      "slug": "four-node-traverse",
+      "title": "Four Node Traverse",
+      "topic": "trees",
+      "subtopic": "tree-traversals",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Root A has children B,C; B has left child D. Write level-order traversal.",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "A B C D"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Root A has children B,C; B has left child D. Write level-order traversal.",
+      "expectedAnswer": "A B C D",
+      "options": [],
+      "hints": [
+        "Sketch the tree traversals relationship and solve one branch or level at a time."
+      ],
+      "explanation": "A B C D follows from the stated tree structure and the tree traversals rule.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "tree-traversals",
+        "predict_output",
+        "tree"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "trees-21",
+      "slug": "single-node-depth",
+      "title": "Single Node Depth",
+      "topic": "trees",
+      "subtopic": "height-depth-diameter",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Using depth measured in edges, what is the maximum depth of a single-node tree?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "Sketch the height depth diameter relationship and solve one branch or level at a time."
+      ],
+      "explanation": "0 follows from the stated tree structure and the height depth diameter rule.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "height-depth-diameter",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trees-22",
+      "slug": "empty-height-base",
+      "title": "Empty Height Base",
+      "topic": "trees",
+      "subtopic": "height-depth-diameter",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "When node height is counted in nodes, what value is commonly returned for an empty subtree?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "When node height is counted in nodes, what value is commonly returned for an empty subtree?",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "Sketch the height depth diameter relationship and solve one branch or level at a time."
+      ],
+      "explanation": "0 follows from the stated tree structure and the height depth diameter rule.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "height-depth-diameter",
+        "code_blank",
+        "tree"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-23",
+      "slug": "count-leaves",
+      "title": "Count the Leaves",
+      "topic": "trees",
+      "subtopic": "height-depth-diameter",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Root A has leaf children B and C. How many leaves exist?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Root A has leaf children B and C. How many leaves exist?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Sketch the height depth diameter relationship and solve one branch or level at a time."
+      ],
+      "explanation": "2 follows from the stated tree structure and the height depth diameter rule.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "height-depth-diameter",
+        "predict_output",
+        "tree"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "trees-24",
+      "slug": "node-count-recurrence",
+      "title": "Node Count Recurrence",
+      "topic": "trees",
+      "subtopic": "height-depth-diameter",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the recurrence: count(node) = 1 + count(left) + count(___).",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "right"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Fill the recurrence: count(node) = 1 + count(left) + count(___).",
+      "expectedAnswer": "right",
+      "options": [],
+      "hints": [
+        "Sketch the height depth diameter relationship and solve one branch or level at a time."
+      ],
+      "explanation": "right follows from the stated tree structure and the height depth diameter rule.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "height-depth-diameter",
+        "code_blank",
+        "tree"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-25",
+      "slug": "maximum-depth-choice",
+      "title": "Maximum Depth Choice",
+      "topic": "trees",
+      "subtopic": "height-depth-diameter",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which recurrence computes maximum depth in nodes?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "1 + max(leftDepth, rightDepth)"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 + max(leftDepth, rightDepth)"
+        },
+        {
+          "id": "b",
+          "text": "leftDepth + rightDepth"
+        },
+        {
+          "id": "c",
+          "text": "min(leftDepth, rightDepth)"
+        }
+      ],
+      "hints": [
+        "Sketch the height depth diameter relationship and solve one branch or level at a time."
+      ],
+      "explanation": "1 + max(leftDepth, rightDepth) follows from the stated tree structure and the height depth diameter rule.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "height-depth-diameter",
+        "multiple_choice",
+        "tree"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trees-26",
+      "slug": "minimum-depth-trap",
+      "title": "Minimum Depth Trap",
+      "topic": "trees",
+      "subtopic": "height-depth-diameter",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "If a node has only a right child, may minimum depth return through the missing left side?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "no"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "no",
+      "options": [],
+      "hints": [
+        "Sketch the height depth diameter relationship and solve one branch or level at a time."
+      ],
+      "explanation": "no follows from the stated tree structure and the height depth diameter rule.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "height-depth-diameter",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-27",
+      "slug": "balanced-difference",
+      "title": "Balanced Difference",
+      "topic": "trees",
+      "subtopic": "height-depth-diameter",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What largest height difference is allowed at every node in a height-balanced binary tree?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Sketch the height depth diameter relationship and solve one branch or level at a time."
+      ],
+      "explanation": "1 follows from the stated tree structure and the height depth diameter rule.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "height-depth-diameter",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trees-28",
+      "slug": "diameter-through-root",
+      "title": "Diameter Through Root",
+      "topic": "trees",
+      "subtopic": "height-depth-diameter",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Left height is 3 edges and right height is 2 edges. What is the path length through the root?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Left height is 3 edges and right height is 2 edges. What is the path length through the root?",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Sketch the height depth diameter relationship and solve one branch or level at a time."
+      ],
+      "explanation": "5 follows from the stated tree structure and the height depth diameter rule.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "height-depth-diameter",
+        "predict_output",
+        "tree"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "trees-29",
+      "slug": "diameter-beyond-root",
+      "title": "Diameter Beyond Root",
+      "topic": "trees",
+      "subtopic": "height-depth-diameter",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why must a diameter algorithm compare a path through each node rather than only the root?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "The longest path can lie completely inside one subtree"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "The longest path can lie completely inside one subtree"
+        },
+        {
+          "id": "b",
+          "text": "The root has no height"
+        },
+        {
+          "id": "c",
+          "text": "Diameter always uses leaves at equal depth"
+        }
+      ],
+      "hints": [
+        "Sketch the height depth diameter relationship and solve one branch or level at a time."
+      ],
+      "explanation": "The longest path can lie completely inside one subtree follows from the stated tree structure and the height depth diameter rule.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "height-depth-diameter",
+        "multiple_choice",
+        "tree"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trees-30",
+      "slug": "one-pass-balance",
+      "title": "One Pass Balance",
+      "topic": "trees",
+      "subtopic": "height-depth-diameter",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What should a height helper propagate when an unbalanced subtree is detected to avoid repeated scans?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "sentinel"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "sentinel",
+      "options": [],
+      "hints": [
+        "Sketch the height depth diameter relationship and solve one branch or level at a time."
+      ],
+      "explanation": "sentinel follows from the stated tree structure and the height depth diameter rule.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "height-depth-diameter",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-31",
+      "slug": "right-view-keeper",
+      "title": "Right View Keeper",
+      "topic": "trees",
+      "subtopic": "tree-patterns-views",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "When processing each level left to right, which node enters the right-side view?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "last"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "When processing each level left to right, which node enters the right-side view?",
+      "expectedAnswer": "last",
+      "options": [],
+      "hints": [
+        "Sketch the tree patterns views relationship and solve one branch or level at a time."
+      ],
+      "explanation": "last follows from the stated tree structure and the tree patterns views rule.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "tree-patterns-views",
+        "code_blank",
+        "tree"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-32",
+      "slug": "mirror-children",
+      "title": "Mirror Children",
+      "topic": "trees",
+      "subtopic": "tree-patterns-views",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "To invert a binary tree, what pair is swapped at every node?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "children"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "children",
+      "options": [],
+      "hints": [
+        "Sketch the tree patterns views relationship and solve one branch or level at a time."
+      ],
+      "explanation": "children follows from the stated tree structure and the tree patterns views rule.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "tree-patterns-views",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-33",
+      "slug": "symmetry-pair",
+      "title": "Symmetry Pair",
+      "topic": "trees",
+      "subtopic": "tree-patterns-views",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For mirror symmetry, the left subtree's outer child must match which child of the right subtree?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "outer"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "outer",
+      "options": [],
+      "hints": [
+        "Sketch the tree patterns views relationship and solve one branch or level at a time."
+      ],
+      "explanation": "outer follows from the stated tree structure and the tree patterns views rule.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "tree-patterns-views",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-34",
+      "slug": "path-sum-leaf",
+      "title": "Path Sum Leaf",
+      "topic": "trees",
+      "subtopic": "tree-patterns-views",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A root-to-leaf path has values 5,4,3. What target sum does it satisfy?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "12"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "A root-to-leaf path has values 5,4,3. What target sum does it satisfy?",
+      "expectedAnswer": "12",
+      "options": [],
+      "hints": [
+        "Sketch the tree patterns views relationship and solve one branch or level at a time."
+      ],
+      "explanation": "12 follows from the stated tree structure and the tree patterns views rule.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "tree-patterns-views",
+        "predict_output",
+        "tree"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "trees-35",
+      "slug": "zigzag-direction",
+      "title": "Zigzag Direction",
+      "topic": "trees",
+      "subtopic": "tree-patterns-views",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Level 0 is read left to right. In which direction is level 1 read?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "right to left"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "right to left",
+      "options": [],
+      "hints": [
+        "Sketch the tree patterns views relationship and solve one branch or level at a time."
+      ],
+      "explanation": "right to left follows from the stated tree structure and the tree patterns views rule.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "tree-patterns-views",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-36",
+      "slug": "left-view-rule",
+      "title": "Left View Rule",
+      "topic": "trees",
+      "subtopic": "tree-patterns-views",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Which node from each level is selected for the left-side view?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "first"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Which node from each level is selected for the left-side view?",
+      "expectedAnswer": "first",
+      "options": [],
+      "hints": [
+        "Sketch the tree patterns views relationship and solve one branch or level at a time."
+      ],
+      "explanation": "first follows from the stated tree structure and the tree patterns views rule.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "tree-patterns-views",
+        "code_blank",
+        "tree"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-37",
+      "slug": "lca-split",
+      "title": "LCA Split",
+      "topic": "trees",
+      "subtopic": "tree-patterns-views",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "If one target is found in each child subtree, which node is their lowest common ancestor?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "current"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "current",
+      "options": [],
+      "hints": [
+        "Sketch the tree patterns views relationship and solve one branch or level at a time."
+      ],
+      "explanation": "current follows from the stated tree structure and the tree patterns views rule.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "tree-patterns-views",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-38",
+      "slug": "subtree-match",
+      "title": "Subtree Match",
+      "topic": "trees",
+      "subtopic": "tree-patterns-views",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "After equal root values are found, what must be compared to confirm identical subtrees?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "Both corresponding child subtrees"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Both corresponding child subtrees"
+        },
+        {
+          "id": "b",
+          "text": "Only subtree sizes"
+        },
+        {
+          "id": "c",
+          "text": "Only leaf values"
+        }
+      ],
+      "hints": [
+        "Sketch the tree patterns views relationship and solve one branch or level at a time."
+      ],
+      "explanation": "Both corresponding child subtrees follows from the stated tree structure and the tree patterns views rule.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "tree-patterns-views",
+        "multiple_choice",
+        "tree"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trees-39",
+      "slug": "top-view-principle",
+      "title": "Top View Principle",
+      "topic": "trees",
+      "subtopic": "tree-patterns-views",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For each horizontal distance in a top view, which encountered node is retained?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "first"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "first",
+      "options": [],
+      "hints": [
+        "Sketch the tree patterns views relationship and solve one branch or level at a time."
+      ],
+      "explanation": "first follows from the stated tree structure and the tree patterns views rule.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "tree-patterns-views",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-40",
+      "slug": "zigzag-four-nodes",
+      "title": "Zigzag Four Nodes",
+      "topic": "trees",
+      "subtopic": "tree-patterns-views",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Root A has children B,C; B has left child D. Write zigzag levels flattened, starting left to right.",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "A C B D"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Root A has children B,C; B has left child D. Write zigzag levels flattened, starting left to right.",
+      "expectedAnswer": "A C B D",
+      "options": [],
+      "hints": [
+        "Sketch the tree patterns views relationship and solve one branch or level at a time."
+      ],
+      "explanation": "A C B D follows from the stated tree structure and the tree patterns views rule.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "tree-patterns-views",
+        "predict_output",
+        "tree"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "trees-41",
+      "slug": "traversal-seal",
+      "title": "Traversal Seal",
+      "topic": "trees",
+      "subtopic": "tree-master-trial",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Root M has left J and right R. Write inorder traversal.",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "J M R"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Root M has left J and right R. Write inorder traversal.",
+      "expectedAnswer": "J M R",
+      "options": [],
+      "hints": [
+        "Sketch the tree master trial relationship and solve one branch or level at a time."
+      ],
+      "explanation": "J M R follows from the stated tree structure and the tree master trial rule.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "tree-master-trial",
+        "predict_output",
+        "tree"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "trees-42",
+      "slug": "complete-or-perfect",
+      "title": "Complete or Perfect",
+      "topic": "trees",
+      "subtopic": "tree-master-trial",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A binary tree has all levels full except the last, whose nodes are as far left as possible. Name the property.",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "complete"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "complete",
+      "options": [],
+      "hints": [
+        "Sketch the tree master trial relationship and solve one branch or level at a time."
+      ],
+      "explanation": "complete follows from the stated tree structure and the tree master trial rule.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "tree-master-trial",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-43",
+      "slug": "recursive-null-guard",
+      "title": "Recursive Null Guard",
+      "topic": "trees",
+      "subtopic": "tree-master-trial",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the standard tree recursion guard: if (node == ___) return;",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "null"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "Fill the standard tree recursion guard: if (node == ___) return;",
+      "expectedAnswer": "null",
+      "options": [],
+      "hints": [
+        "Sketch the tree master trial relationship and solve one branch or level at a time."
+      ],
+      "explanation": "null follows from the stated tree structure and the tree master trial rule.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "tree-master-trial",
+        "code_blank",
+        "tree"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-44",
+      "slug": "height-trial",
+      "title": "Height Trial",
+      "topic": "trees",
+      "subtopic": "tree-master-trial",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A root has a left chain of three edges and a right chain of one edge. What is maximum depth in edges?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "A root has a left chain of three edges and a right chain of one edge. What is maximum depth in edges?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Sketch the tree master trial relationship and solve one branch or level at a time."
+      ],
+      "explanation": "3 follows from the stated tree structure and the tree master trial rule.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "tree-master-trial",
+        "predict_output",
+        "tree"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "trees-45",
+      "slug": "traversal-bug",
+      "title": "Traversal Bug",
+      "topic": "trees",
+      "subtopic": "tree-master-trial",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A supposed inorder function visits root before left. Which traversal is it beginning to perform?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "preorder"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "preorder",
+      "options": [],
+      "hints": [
+        "Sketch the tree master trial relationship and solve one branch or level at a time."
+      ],
+      "explanation": "preorder follows from the stated tree structure and the tree master trial rule.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "tree-master-trial",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-46",
+      "slug": "view-queue-snapshot",
+      "title": "View Queue Snapshot",
+      "topic": "trees",
+      "subtopic": "tree-master-trial",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why record queue size before processing one level?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "It fixes the boundary of the current level"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "It fixes the boundary of the current level"
+        },
+        {
+          "id": "b",
+          "text": "It sorts that level"
+        },
+        {
+          "id": "c",
+          "text": "It measures tree diameter"
+        }
+      ],
+      "hints": [
+        "Sketch the tree master trial relationship and solve one branch or level at a time."
+      ],
+      "explanation": "It fixes the boundary of the current level follows from the stated tree structure and the tree master trial rule.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "tree-master-trial",
+        "multiple_choice",
+        "tree"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trees-47",
+      "slug": "path-backtrack",
+      "title": "Path Backtrack",
+      "topic": "trees",
+      "subtopic": "tree-master-trial",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "After returning from a child during path construction, which operation restores the path list?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "remove last"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "remove last",
+      "options": [],
+      "hints": [
+        "Sketch the tree master trial relationship and solve one branch or level at a time."
+      ],
+      "explanation": "remove last follows from the stated tree structure and the tree master trial rule.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "tree-master-trial",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-48",
+      "slug": "mirror-trial",
+      "title": "Mirror Trial",
+      "topic": "trees",
+      "subtopic": "tree-master-trial",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Root 1 has children 2,2. The left 2 has left child 3; right 2 has right child 3. Is the tree symmetric?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Sketch the tree master trial relationship and solve one branch or level at a time."
+      ],
+      "explanation": "true follows from the stated tree structure and the tree master trial rule.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "tree-master-trial",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trees-49",
+      "slug": "diameter-trial",
+      "title": "Diameter Trial",
+      "topic": "trees",
+      "subtopic": "tree-master-trial",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A node has child heights 4 and 3 measured in edges. What candidate diameter passes through it?",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Sketch the tree master trial relationship and solve one branch or level at a time."
+      ],
+      "explanation": "7 follows from the stated tree structure and the tree master trial rule.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "tree-master-trial",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trees-50",
+      "slug": "ancestor-trial",
+      "title": "Ancestor Trial",
+      "topic": "trees",
+      "subtopic": "tree-master-trial",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Targets p and q are in different branches below node X, and neither is X. Identify their lowest common ancestor.",
+      "examples": [
+        {
+          "input": "Use the described tree, with children read from left to right.",
+          "output": "X"
+        }
+      ],
+      "constraints": [
+        "Treat the root as depth 0 when depth is measured in edges.",
+        "Submit only the requested option, token, value, Boolean, or traversal sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "X",
+      "options": [],
+      "hints": [
+        "Sketch the tree master trial relationship and solve one branch or level at a time."
+      ],
+      "explanation": "X follows from the stated tree structure and the tree master trial rule.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "tree-master-trial",
+        "logic_answer",
+        "tree"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "TOKEN"
+    }
+  ]
+}
