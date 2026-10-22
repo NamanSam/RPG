@@ -1,0 +1,1995 @@
+{
+  "topic": "binary-search-trees",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "BST Basics"
+    },
+    {
+      "number": 2,
+      "name": "Search / Insert / Delete"
+    },
+    {
+      "number": 3,
+      "name": "BST Validation & Properties"
+    },
+    {
+      "number": 4,
+      "name": "Advanced BST Patterns"
+    },
+    {
+      "number": 5,
+      "name": "BST Master Trial"
+    }
+  ],
+  "questions": [
+    {
+      "id": "bst-01",
+      "slug": "left-branch-law",
+      "title": "Left Branch Law",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-basics",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "In a standard BST with distinct keys, values in the left subtree are ___ than the node.",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "smaller"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "In a standard BST with distinct keys, values in the left subtree are ___ than the node.",
+      "expectedAnswer": "smaller",
+      "options": [],
+      "hints": [
+        "Use the bst basics rule and carry valid bounds down each branch."
+      ],
+      "explanation": "smaller follows from BST ordering and the stated bst basics operation.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bst-basics",
+        "code_blank",
+        "bst"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-02",
+      "slug": "right-branch-law",
+      "title": "Right Branch Law",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-basics",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In a standard BST with distinct keys, values in the right subtree are what relative to the node?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "greater"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "greater",
+      "options": [],
+      "hints": [
+        "Use the bst basics rule and carry valid bounds down each branch."
+      ],
+      "explanation": "greater follows from BST ordering and the stated bst basics operation.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bst-basics",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-03",
+      "slug": "ordered-walk",
+      "title": "Ordered Walk",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-basics",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Which traversal visits distinct BST keys in ascending order?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "inorder"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "Which traversal visits distinct BST keys in ascending order?",
+      "expectedAnswer": "inorder",
+      "options": [],
+      "hints": [
+        "Use the bst basics rule and carry valid bounds down each branch."
+      ],
+      "explanation": "inorder follows from BST ordering and the stated bst basics operation.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bst-basics",
+        "code_blank",
+        "bst"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-04",
+      "slug": "smallest-key",
+      "title": "Smallest Key",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-basics",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Where is the minimum key found in a nonempty BST?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "At the leftmost node"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "At the leftmost node"
+        },
+        {
+          "id": "b",
+          "text": "At the root always"
+        },
+        {
+          "id": "c",
+          "text": "At the deepest leaf always"
+        }
+      ],
+      "hints": [
+        "Use the bst basics rule and carry valid bounds down each branch."
+      ],
+      "explanation": "At the leftmost node follows from BST ordering and the stated bst basics operation.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bst-basics",
+        "multiple_choice",
+        "bst"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "OPTION"
+    },
+    {
+      "id": "bst-05",
+      "slug": "largest-key",
+      "title": "Largest Key",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-basics",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Starting at the root, which child direction leads to the maximum key?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "right"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "right",
+      "options": [],
+      "hints": [
+        "Use the bst basics rule and carry valid bounds down each branch."
+      ],
+      "explanation": "right follows from BST ordering and the stated bst basics operation.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bst-basics",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-06",
+      "slug": "bst-or-binary-tree",
+      "title": "BST or Binary Tree",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-basics",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Does every binary tree automatically satisfy the BST ordering property?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "no"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "no",
+      "options": [],
+      "hints": [
+        "Use the bst basics rule and carry valid bounds down each branch."
+      ],
+      "explanation": "no follows from BST ordering and the stated bst basics operation.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bst-basics",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-07",
+      "slug": "root-partition",
+      "title": "Root Partition",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-basics",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Root is 10. Which key can be its left child in a valid distinct-key BST?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "6"
+        },
+        {
+          "id": "b",
+          "text": "14"
+        },
+        {
+          "id": "c",
+          "text": "20"
+        }
+      ],
+      "hints": [
+        "Use the bst basics rule and carry valid bounds down each branch."
+      ],
+      "explanation": "6 follows from BST ordering and the stated bst basics operation.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bst-basics",
+        "multiple_choice",
+        "bst"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "OPTION"
+    },
+    {
+      "id": "bst-08",
+      "slug": "leaf-in-valley",
+      "title": "Leaf in the Valley",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-basics",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "What is a BST node with no children called?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "leaf"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "What is a BST node with no children called?",
+      "expectedAnswer": "leaf",
+      "options": [],
+      "hints": [
+        "Use the bst basics rule and carry valid bounds down each branch."
+      ],
+      "explanation": "leaf follows from BST ordering and the stated bst basics operation.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bst-basics",
+        "code_blank",
+        "bst"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-09",
+      "slug": "skewed-shape",
+      "title": "Skewed Shape",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-basics",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Insert 1,2,3,4 into an empty unbalanced BST. What shape results?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "right skewed"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "right skewed",
+      "options": [],
+      "hints": [
+        "Use the bst basics rule and carry valid bounds down each branch."
+      ],
+      "explanation": "right skewed follows from BST ordering and the stated bst basics operation.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "bst-basics",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-10",
+      "slug": "balanced-benefit",
+      "title": "Balanced Benefit",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-basics",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why is a balanced BST generally faster to search than a long skewed BST?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "Its height stays logarithmic"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Its height stays logarithmic"
+        },
+        {
+          "id": "b",
+          "text": "It stores no leaves"
+        },
+        {
+          "id": "c",
+          "text": "It avoids comparisons"
+        }
+      ],
+      "hints": [
+        "Use the bst basics rule and carry valid bounds down each branch."
+      ],
+      "explanation": "Its height stays logarithmic follows from BST ordering and the stated bst basics operation.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "bst-basics",
+        "multiple_choice",
+        "bst"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "OPTION"
+    },
+    {
+      "id": "bst-11",
+      "slug": "search-direction",
+      "title": "Search Direction",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-operations",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "At node 20, the target is 12. Which direction should search take?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "left"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "At node 20, the target is 12. Which direction should search take?",
+      "expectedAnswer": "left",
+      "options": [],
+      "hints": [
+        "Use the bst operations rule and carry valid bounds down each branch."
+      ],
+      "explanation": "left follows from BST ordering and the stated bst operations operation.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bst-operations",
+        "code_blank",
+        "bst"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-12",
+      "slug": "insert-landing",
+      "title": "Insert Landing",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-operations",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Insert 7 into a BST whose root 10 has left child 5 and no right child under 5. Which side of 5 receives 7?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "right"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "right",
+      "options": [],
+      "hints": [
+        "Use the bst operations rule and carry valid bounds down each branch."
+      ],
+      "explanation": "right follows from BST ordering and the stated bst operations operation.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bst-operations",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-13",
+      "slug": "delete-leaf",
+      "title": "Delete a Leaf",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-operations",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What replacement is needed when deleting a BST leaf?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "none"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "none",
+      "options": [],
+      "hints": [
+        "Use the bst operations rule and carry valid bounds down each branch."
+      ],
+      "explanation": "none follows from BST ordering and the stated bst operations operation.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bst-operations",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-14",
+      "slug": "search-comparisons",
+      "title": "Search Comparisons",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-operations",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Search for 15 along keys 20,10,15. How many nodes are compared?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "Search for 15 along keys 20,10,15. How many nodes are compared?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Use the bst operations rule and carry valid bounds down each branch."
+      ],
+      "explanation": "3 follows from BST ordering and the stated bst operations operation.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bst-operations",
+        "predict_output",
+        "bst"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "bst-15",
+      "slug": "one-child-delete",
+      "title": "One Child Delete",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-operations",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "When deleting a node with one child, what takes the deleted node's position?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "child"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "When deleting a node with one child, what takes the deleted node's position?",
+      "expectedAnswer": "child",
+      "options": [],
+      "hints": [
+        "Use the bst operations rule and carry valid bounds down each branch."
+      ],
+      "explanation": "child follows from BST ordering and the stated bst operations operation.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bst-operations",
+        "code_blank",
+        "bst"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-16",
+      "slug": "two-child-choice",
+      "title": "Two Child Choice",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-operations",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which key commonly replaces a deleted node that has two children?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "Its inorder successor"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Its inorder successor"
+        },
+        {
+          "id": "b",
+          "text": "Any leaf"
+        },
+        {
+          "id": "c",
+          "text": "The root key"
+        }
+      ],
+      "hints": [
+        "Use the bst operations rule and carry valid bounds down each branch."
+      ],
+      "explanation": "Its inorder successor follows from BST ordering and the stated bst operations operation.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bst-operations",
+        "multiple_choice",
+        "bst"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "OPTION"
+    },
+    {
+      "id": "bst-17",
+      "slug": "successor-location",
+      "title": "Successor Location",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-operations",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Where is a node's inorder successor found when its right subtree exists?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "right subtree minimum"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "right subtree minimum",
+      "options": [],
+      "hints": [
+        "Use the bst operations rule and carry valid bounds down each branch."
+      ],
+      "explanation": "right subtree minimum follows from BST ordering and the stated bst operations operation.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bst-operations",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-18",
+      "slug": "predecessor-location",
+      "title": "Predecessor Location",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-operations",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Where is a node's inorder predecessor found when its left subtree exists?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "left subtree maximum"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "left subtree maximum",
+      "options": [],
+      "hints": [
+        "Use the bst operations rule and carry valid bounds down each branch."
+      ],
+      "explanation": "left subtree maximum follows from BST ordering and the stated bst operations operation.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bst-operations",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-19",
+      "slug": "insertion-complexity",
+      "title": "Insertion Complexity",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-operations",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What is worst-case insertion complexity in a completely skewed BST with n nodes?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "O(n)"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "O(n)",
+      "options": [],
+      "hints": [
+        "Use the bst operations rule and carry valid bounds down each branch."
+      ],
+      "explanation": "O(n) follows from BST ordering and the stated bst operations operation.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "bst-operations",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-20",
+      "slug": "delete-trace",
+      "title": "Delete Trace",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-operations",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "BST root 8 has children 4 and 12; 12 has left child 10. Delete 12 using its only child. What becomes the root's right child?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "10"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "BST root 8 has children 4 and 12; 12 has left child 10. Delete 12 using its only child. What becomes the root's right child?",
+      "expectedAnswer": "10",
+      "options": [],
+      "hints": [
+        "Use the bst operations rule and carry valid bounds down each branch."
+      ],
+      "explanation": "10 follows from BST ordering and the stated bst operations operation.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "bst-operations",
+        "predict_output",
+        "bst"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "bst-21",
+      "slug": "local-check-trap",
+      "title": "Local Check Trap",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-validation",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Is checking only each node against its immediate children sufficient to validate a BST?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "no"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "no",
+      "options": [],
+      "hints": [
+        "Use the bst validation rule and carry valid bounds down each branch."
+      ],
+      "explanation": "no follows from BST ordering and the stated bst validation operation.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bst-validation",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-22",
+      "slug": "inorder-signal",
+      "title": "Inorder Signal",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-validation",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A valid distinct-key BST produces what kind of inorder sequence?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "strictly increasing"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "strictly increasing",
+      "options": [],
+      "hints": [
+        "Use the bst validation rule and carry valid bounds down each branch."
+      ],
+      "explanation": "strictly increasing follows from BST ordering and the stated bst validation operation.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bst-validation",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-23",
+      "slug": "range-lower-bound",
+      "title": "Range Lower Bound",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-validation",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "When validating a node's right child, which value becomes the new lower bound?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "node value"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "When validating a node's right child, which value becomes the new lower bound?",
+      "expectedAnswer": "node value",
+      "options": [],
+      "hints": [
+        "Use the bst validation rule and carry valid bounds down each branch."
+      ],
+      "explanation": "node value follows from BST ordering and the stated bst validation operation.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bst-validation",
+        "code_blank",
+        "bst"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-24",
+      "slug": "second-smallest",
+      "title": "Second Smallest",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-validation",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A BST inorder sequence is 2,5,8,11. What is the second smallest key?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "A BST inorder sequence is 2,5,8,11. What is the second smallest key?",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Use the bst validation rule and carry valid bounds down each branch."
+      ],
+      "explanation": "5 follows from BST ordering and the stated bst validation operation.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bst-validation",
+        "predict_output",
+        "bst"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "bst-25",
+      "slug": "kth-smallest-tool",
+      "title": "Kth Smallest Tool",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-validation",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Which traversal naturally counts BST keys from smallest to largest?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "inorder"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "Which traversal naturally counts BST keys from smallest to largest?",
+      "expectedAnswer": "inorder",
+      "options": [],
+      "hints": [
+        "Use the bst validation rule and carry valid bounds down each branch."
+      ],
+      "explanation": "inorder follows from BST ordering and the stated bst validation operation.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bst-validation",
+        "code_blank",
+        "bst"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-26",
+      "slug": "floor-concept",
+      "title": "Floor Concept",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-validation",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Keys are 3,7,12. What is the floor of 10?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Use the bst validation rule and carry valid bounds down each branch."
+      ],
+      "explanation": "7 follows from BST ordering and the stated bst validation operation.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bst-validation",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bst-27",
+      "slug": "ceil-concept",
+      "title": "Ceil Concept",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-validation",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Keys are 3,7,12. What is the ceiling of 10?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "12"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "12",
+      "options": [],
+      "hints": [
+        "Use the bst validation rule and carry valid bounds down each branch."
+      ],
+      "explanation": "12 follows from BST ordering and the stated bst validation operation.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bst-validation",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bst-28",
+      "slug": "bst-ancestor-split",
+      "title": "BST Ancestor Split",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-validation",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "At node 20, targets are 8 and 30. What does their ordering show?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "20 is their LCA"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "20 is their LCA"
+        },
+        {
+          "id": "b",
+          "text": "Search both to the left"
+        },
+        {
+          "id": "c",
+          "text": "Search both to the right"
+        }
+      ],
+      "hints": [
+        "Use the bst validation rule and carry valid bounds down each branch."
+      ],
+      "explanation": "20 is their LCA follows from BST ordering and the stated bst validation operation.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bst-validation",
+        "multiple_choice",
+        "bst"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "OPTION"
+    },
+    {
+      "id": "bst-29",
+      "slug": "hidden-range-violation",
+      "title": "Hidden Range Violation",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-validation",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Root 10 has right child 15, and 15 has left child 6. Is the tree a valid BST?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "Use the bst validation rule and carry valid bounds down each branch."
+      ],
+      "explanation": "false follows from BST ordering and the stated bst validation operation.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "bst-validation",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-30",
+      "slug": "duplicate-policy",
+      "title": "Duplicate Policy",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-validation",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why must a validator define a duplicate-key policy explicitly?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "Equality changes whether bounds are strict"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Equality changes whether bounds are strict"
+        },
+        {
+          "id": "b",
+          "text": "Duplicates remove the root"
+        },
+        {
+          "id": "c",
+          "text": "Duplicates always balance the tree"
+        }
+      ],
+      "hints": [
+        "Use the bst validation rule and carry valid bounds down each branch."
+      ],
+      "explanation": "Equality changes whether bounds are strict follows from BST ordering and the stated bst validation operation.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "bst-validation",
+        "multiple_choice",
+        "bst"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "OPTION"
+    },
+    {
+      "id": "bst-31",
+      "slug": "iterator-next",
+      "title": "Iterator Next",
+      "topic": "binary-search-trees",
+      "subtopic": "advanced-bst",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "A BST iterator returns keys in ascending order. Which traversal order does it simulate?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "inorder"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "A BST iterator returns keys in ascending order. Which traversal order does it simulate?",
+      "expectedAnswer": "inorder",
+      "options": [],
+      "hints": [
+        "Use the advanced bst rule and carry valid bounds down each branch."
+      ],
+      "explanation": "inorder follows from BST ordering and the stated advanced bst operation.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "advanced-bst",
+        "code_blank",
+        "bst"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-32",
+      "slug": "sorted-array-root",
+      "title": "Sorted Array Root",
+      "topic": "binary-search-trees",
+      "subtopic": "advanced-bst",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which element is commonly chosen first to build a height-balanced BST from a sorted array?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "middle"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "middle",
+      "options": [],
+      "hints": [
+        "Use the advanced bst rule and carry valid bounds down each branch."
+      ],
+      "explanation": "middle follows from BST ordering and the stated advanced bst operation.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "advanced-bst",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-33",
+      "slug": "recover-swapped-nodes",
+      "title": "Recover Swapped Nodes",
+      "topic": "binary-search-trees",
+      "subtopic": "advanced-bst",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What traversal property reveals two swapped keys in a corrupted BST?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "inorder order"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "inorder order",
+      "options": [],
+      "hints": [
+        "Use the advanced bst rule and carry valid bounds down each branch."
+      ],
+      "explanation": "inorder order follows from BST ordering and the stated advanced bst operation.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "advanced-bst",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-34",
+      "slug": "range-sum-pruning",
+      "title": "Range Sum Pruning",
+      "topic": "binary-search-trees",
+      "subtopic": "advanced-bst",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "If node value is below the requested range, which subtree can be skipped?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "left"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "If node value is below the requested range, which subtree can be skipped?",
+      "expectedAnswer": "left",
+      "options": [],
+      "hints": [
+        "Use the advanced bst rule and carry valid bounds down each branch."
+      ],
+      "explanation": "left follows from BST ordering and the stated advanced bst operation.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "advanced-bst",
+        "code_blank",
+        "bst"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-35",
+      "slug": "trim-low-node",
+      "title": "Trim Low Node",
+      "topic": "binary-search-trees",
+      "subtopic": "advanced-bst",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "While trimming to [low,high], node.value < low. Which subtree may still contain valid keys?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "right"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "right",
+      "options": [],
+      "hints": [
+        "Use the advanced bst rule and carry valid bounds down each branch."
+      ],
+      "explanation": "right follows from BST ordering and the stated advanced bst operation.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "advanced-bst",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-36",
+      "slug": "bst-two-sum",
+      "title": "BST Two Sum",
+      "topic": "binary-search-trees",
+      "subtopic": "advanced-bst",
+      "difficulty": "Medium",
+      "questionType": "CODING_CHALLENGE",
+      "description": "Keys are 2,4,7,9 and target is 11. Give a valid pair as a JSON list.",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "[2,9]"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[2,9]",
+      "options": [],
+      "hints": [
+        "Use the advanced bst rule and carry valid bounds down each branch."
+      ],
+      "explanation": "[2,9] follows from BST ordering and the stated advanced bst operation.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "advanced-bst",
+        "coding_challenge",
+        "bst"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "bst-37",
+      "slug": "closest-value",
+      "title": "Closest Value",
+      "topic": "binary-search-trees",
+      "subtopic": "advanced-bst",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "BST keys are 2,5,9 and target is 7.8. Which key is closest?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "9"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "9",
+      "options": [],
+      "hints": [
+        "Use the advanced bst rule and carry valid bounds down each branch."
+      ],
+      "explanation": "9 follows from BST ordering and the stated advanced bst operation.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "advanced-bst",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bst-38",
+      "slug": "iterator-space",
+      "title": "Iterator Space",
+      "topic": "binary-search-trees",
+      "subtopic": "advanced-bst",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A stack-based BST iterator uses space proportional to which tree measure?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "height"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "height",
+      "options": [],
+      "hints": [
+        "Use the advanced bst rule and carry valid bounds down each branch."
+      ],
+      "explanation": "height follows from BST ordering and the stated advanced bst operation.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "advanced-bst",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-39",
+      "slug": "merge-ordered-trees",
+      "title": "Merge Ordered Trees",
+      "topic": "binary-search-trees",
+      "subtopic": "advanced-bst",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which ordered outputs can be merged to combine two BSTs efficiently?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "Their inorder sequences"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Their inorder sequences"
+        },
+        {
+          "id": "b",
+          "text": "Their preorder roots only"
+        },
+        {
+          "id": "c",
+          "text": "Their leaf counts"
+        }
+      ],
+      "hints": [
+        "Use the advanced bst rule and carry valid bounds down each branch."
+      ],
+      "explanation": "Their inorder sequences follows from BST ordering and the stated advanced bst operation.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "advanced-bst",
+        "multiple_choice",
+        "bst"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "OPTION"
+    },
+    {
+      "id": "bst-40",
+      "slug": "balance-construction",
+      "title": "Balance Construction",
+      "topic": "binary-search-trees",
+      "subtopic": "advanced-bst",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why does repeatedly choosing a middle sorted key avoid a skewed result?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "It splits remaining keys into similar sizes"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "It splits remaining keys into similar sizes"
+        },
+        {
+          "id": "b",
+          "text": "It removes every leaf"
+        },
+        {
+          "id": "c",
+          "text": "It reverses inorder order"
+        }
+      ],
+      "hints": [
+        "Use the advanced bst rule and carry valid bounds down each branch."
+      ],
+      "explanation": "It splits remaining keys into similar sizes follows from BST ordering and the stated advanced bst operation.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "advanced-bst",
+        "multiple_choice",
+        "bst"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "OPTION"
+    },
+    {
+      "id": "bst-41",
+      "slug": "master-inorder",
+      "title": "Master Inorder",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-master-trial",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Root 6 has left 3 and right 9. Write its inorder sequence.",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "3 6 9"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "Root 6 has left 3 and right 9. Write its inorder sequence.",
+      "expectedAnswer": "3 6 9",
+      "options": [],
+      "hints": [
+        "Use the bst master trial rule and carry valid bounds down each branch."
+      ],
+      "explanation": "3 6 9 follows from BST ordering and the stated bst master trial operation.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bst-master-trial",
+        "predict_output",
+        "bst"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "bst-42",
+      "slug": "insert-trail",
+      "title": "Insert Trail",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-master-trial",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Root is 10 with left child 5. Insert 7. Write the visited keys including the inserted key.",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "10 5 7"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "Root is 10 with left child 5. Insert 7. Write the visited keys including the inserted key.",
+      "expectedAnswer": "10 5 7",
+      "options": [],
+      "hints": [
+        "Use the bst master trial rule and carry valid bounds down each branch."
+      ],
+      "explanation": "10 5 7 follows from BST ordering and the stated bst master trial operation.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bst-master-trial",
+        "predict_output",
+        "bst"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "bst-43",
+      "slug": "invalid-branch",
+      "title": "Invalid Branch",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-master-trial",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Root 8 has left child 4 and right child 12; node 4 has right child 10. Is it valid?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "Use the bst master trial rule and carry valid bounds down each branch."
+      ],
+      "explanation": "false follows from BST ordering and the stated bst master trial operation.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bst-master-trial",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-44",
+      "slug": "search-fill",
+      "title": "Search Fill",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-master-trial",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the branch: if (target < node.val) node = node.___;",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "left"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "Fill the branch: if (target < node.val) node = node.___;",
+      "expectedAnswer": "left",
+      "options": [],
+      "hints": [
+        "Use the bst master trial rule and carry valid bounds down each branch."
+      ],
+      "explanation": "left follows from BST ordering and the stated bst master trial operation.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bst-master-trial",
+        "code_blank",
+        "bst"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-45",
+      "slug": "balanced-search-cost",
+      "title": "Balanced Search Cost",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-master-trial",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What average search complexity is expected for a height-balanced BST?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "O(log n)"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "O(log n)",
+      "options": [],
+      "hints": [
+        "Use the bst master trial rule and carry valid bounds down each branch."
+      ],
+      "explanation": "O(log n) follows from BST ordering and the stated bst master trial operation.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bst-master-trial",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bst-46",
+      "slug": "successor-trial",
+      "title": "Successor Trial",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-master-trial",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Inorder keys are 1,4,6,9. What is the successor of 6?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "9"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "Inorder keys are 1,4,6,9. What is the successor of 6?",
+      "expectedAnswer": "9",
+      "options": [],
+      "hints": [
+        "Use the bst master trial rule and carry valid bounds down each branch."
+      ],
+      "explanation": "9 follows from BST ordering and the stated bst master trial operation.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bst-master-trial",
+        "predict_output",
+        "bst"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "bst-47",
+      "slug": "delete-root-trial",
+      "title": "Delete Root Trial",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-master-trial",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Root 5 has children 2 and 8; 8 has left 6. Using the inorder successor, which key replaces 5?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Use the bst master trial rule and carry valid bounds down each branch."
+      ],
+      "explanation": "6 follows from BST ordering and the stated bst master trial operation.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bst-master-trial",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bst-48",
+      "slug": "kth-trial",
+      "title": "Kth Trial",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-master-trial",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "BST inorder keys are 2,3,5,7,11. What is the fourth smallest?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "BST inorder keys are 2,3,5,7,11. What is the fourth smallest?",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Use the bst master trial rule and carry valid bounds down each branch."
+      ],
+      "explanation": "7 follows from BST ordering and the stated bst master trial operation.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bst-master-trial",
+        "predict_output",
+        "bst"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "bst-49",
+      "slug": "bound-bug",
+      "title": "Bound Bug",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-master-trial",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A validator passes the original upper bound into the left child instead of node.value. What can happen?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "An oversized descendant may be accepted"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "An oversized descendant may be accepted"
+        },
+        {
+          "id": "b",
+          "text": "Every leaf is rejected"
+        },
+        {
+          "id": "c",
+          "text": "Traversal becomes level order"
+        }
+      ],
+      "hints": [
+        "Use the bst master trial rule and carry valid bounds down each branch."
+      ],
+      "explanation": "An oversized descendant may be accepted follows from BST ordering and the stated bst master trial operation.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "bst-master-trial",
+        "multiple_choice",
+        "bst"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "OPTION"
+    },
+    {
+      "id": "bst-50",
+      "slug": "valley-finale",
+      "title": "Valley Finale",
+      "topic": "binary-search-trees",
+      "subtopic": "bst-master-trial",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Keys 1 through 15 form a perfect balanced BST. Which key is the root?",
+      "examples": [
+        {
+          "input": "Trace comparisons from the root and preserve BST ordering.",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Assume distinct integer keys unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, sequence, or JSON list."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Use the bst master trial rule and carry valid bounds down each branch."
+      ],
+      "explanation": "8 follows from BST ordering and the stated bst master trial operation.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "bst-master-trial",
+        "logic_answer",
+        "bst"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "INTEGER"
+    }
+  ]
+}

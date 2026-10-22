@@ -21,7 +21,7 @@ public class ContentLoader implements ApplicationRunner {
             System.out.println("Question pack validation/import succeeded.");
             context.close();
         } else {
-            for (String resource : java.util.List.of("content/dsa/arrays/v1.json", "content/dsa/strings/v1.json", "content/dsa/linked-lists/v1.json", "content/dsa/stacks/v1.json", "content/dsa/queues/v1.json", "content/dsa/trees/v1.json", "content/java/beginner-beach/v1.json", "content/java/loop-village/v1.json", "content/java/array-forest/v1.json", "content/java/oop-canyon/v1.json", "content/java/collection-kingdom/v1.json")) {
+            for (String resource : java.util.List.of("content/dsa/arrays/v1.json", "content/dsa/strings/v1.json", "content/dsa/linked-lists/v1.json", "content/dsa/stacks/v1.json", "content/dsa/queues/v1.json", "content/dsa/trees/v1.json", "content/dsa/binary-search-trees/v1.json", "content/java/beginner-beach/v1.json", "content/java/loop-village/v1.json", "content/java/array-forest/v1.json", "content/java/oop-canyon/v1.json", "content/java/collection-kingdom/v1.json")) {
                 try(var input=new ClassPathResource(resource).getInputStream()) {
                     packs.publish(new String(input.readAllBytes(),StandardCharsets.UTF_8));
                 }
