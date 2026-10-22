@@ -1,0 +1,1969 @@
+{
+  "topic": "greedy",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Greedy Basics"
+    },
+    {
+      "number": 2,
+      "name": "Sorting + Greedy"
+    },
+    {
+      "number": 3,
+      "name": "Interval & Scheduling"
+    },
+    {
+      "number": 4,
+      "name": "Advanced Greedy Patterns"
+    },
+    {
+      "number": 5,
+      "name": "Greedy Master Trial"
+    }
+  ],
+  "questions": [
+    {
+      "id": "greedy-01",
+      "slug": "immediate-choice",
+      "title": "Immediate Choice",
+      "topic": "greedy",
+      "subtopic": "greedy-basics",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A greedy algorithm repeatedly chooses which kind of available option?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "locally best"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "locally best",
+      "options": [],
+      "hints": [
+        "State the greedy basics choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "locally best follows from the safe local choice used by this greedy basics pattern.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "greedy-basics",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-02",
+      "slug": "local-or-global",
+      "title": "Local or Global",
+      "topic": "greedy",
+      "subtopic": "greedy-basics",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Does a locally optimal choice always guarantee a global optimum?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "no"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "no",
+      "options": [],
+      "hints": [
+        "State the greedy basics choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "no follows from the safe local choice used by this greedy basics pattern.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "greedy-basics",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-03",
+      "slug": "choice-property",
+      "title": "Choice Property",
+      "topic": "greedy",
+      "subtopic": "greedy-basics",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Which property says some optimal solution begins with the greedy choice?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "greedy choice property"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "Which property says some optimal solution begins with the greedy choice?",
+      "expectedAnswer": "greedy choice property",
+      "options": [],
+      "hints": [
+        "State the greedy basics choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "greedy choice property follows from the safe local choice used by this greedy basics pattern.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "greedy-basics",
+        "code_blank",
+        "greedy"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-04",
+      "slug": "optimal-substructure",
+      "title": "Optimal Substructure",
+      "topic": "greedy",
+      "subtopic": "greedy-basics",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "After a safe choice, the remaining task should itself have what property?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "optimal substructure"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "optimal substructure",
+      "options": [],
+      "hints": [
+        "State the greedy basics choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "optimal substructure follows from the safe local choice used by this greedy basics pattern.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "greedy-basics",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-05",
+      "slug": "greedy-memory",
+      "title": "Greedy Memory",
+      "topic": "greedy",
+      "subtopic": "greedy-basics",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Compared with dynamic programming, greedy algorithms usually store what amount of subproblem history?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "Little or none"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Little or none"
+        },
+        {
+          "id": "b",
+          "text": "Every possible solution"
+        },
+        {
+          "id": "c",
+          "text": "An exponential table"
+        }
+      ],
+      "hints": [
+        "State the greedy basics choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "Little or none follows from the safe local choice used by this greedy basics pattern.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "greedy-basics",
+        "multiple_choice",
+        "greedy"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "OPTION"
+    },
+    {
+      "id": "greedy-06",
+      "slug": "coin-success",
+      "title": "Coin Success",
+      "topic": "greedy",
+      "subtopic": "greedy-basics",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "For coins 1,5,10,25, which first coin does greedy choose for amount 30?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "25"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "For coins 1,5,10,25, which first coin does greedy choose for amount 30?",
+      "expectedAnswer": "25",
+      "options": [],
+      "hints": [
+        "State the greedy basics choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "25 follows from the safe local choice used by this greedy basics pattern.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "greedy-basics",
+        "predict_output",
+        "greedy"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "greedy-07",
+      "slug": "coin-counterexample",
+      "title": "Coin Counterexample",
+      "topic": "greedy",
+      "subtopic": "greedy-basics",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For coins 1,3,4 and amount 6, greedy uses 4+1+1. How many coins does the optimal solution use?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "State the greedy basics choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "2 follows from the safe local choice used by this greedy basics pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "greedy-basics",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "greedy-08",
+      "slug": "proof-exchange",
+      "title": "Proof Exchange",
+      "topic": "greedy",
+      "subtopic": "greedy-basics",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What proof technique replaces an optimal solution's first decision with the greedy one without worsening it?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "exchange argument"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "exchange argument",
+      "options": [],
+      "hints": [
+        "State the greedy basics choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "exchange argument follows from the safe local choice used by this greedy basics pattern.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "greedy-basics",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-09",
+      "slug": "irrevocable-mistake",
+      "title": "Irrevocable Mistake",
+      "topic": "greedy",
+      "subtopic": "greedy-basics",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why can an unproven greedy decision fail?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "An early choice can block a better combination"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "An early choice can block a better combination"
+        },
+        {
+          "id": "b",
+          "text": "Sorting always changes values"
+        },
+        {
+          "id": "c",
+          "text": "Greedy explores every state"
+        }
+      ],
+      "hints": [
+        "State the greedy basics choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "An early choice can block a better combination follows from the safe local choice used by this greedy basics pattern.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "greedy-basics",
+        "multiple_choice",
+        "greedy"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "OPTION"
+    },
+    {
+      "id": "greedy-10",
+      "slug": "dp-difference",
+      "title": "DP Difference",
+      "topic": "greedy",
+      "subtopic": "greedy-basics",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which approach compares reusable subproblem results instead of committing immediately?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "dynamic programming"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "dynamic programming",
+      "options": [],
+      "hints": [
+        "State the greedy basics choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "dynamic programming follows from the safe local choice used by this greedy basics pattern.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "greedy-basics",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-11",
+      "slug": "sort-before-select",
+      "title": "Sort Before Select",
+      "topic": "greedy",
+      "subtopic": "sorting-greedy",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why is input often sorted before greedy selection?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "It exposes the next safest extreme choice"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "It exposes the next safest extreme choice"
+        },
+        {
+          "id": "b",
+          "text": "It proves every algorithm correct"
+        },
+        {
+          "id": "c",
+          "text": "It removes all duplicates"
+        }
+      ],
+      "hints": [
+        "State the sorting greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "It exposes the next safest extreme choice follows from the safe local choice used by this sorting greedy pattern.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "sorting-greedy",
+        "multiple_choice",
+        "greedy"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "OPTION"
+    },
+    {
+      "id": "greedy-12",
+      "slug": "lightest-first",
+      "title": "Lightest First",
+      "topic": "greedy",
+      "subtopic": "sorting-greedy",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Weights are 8,2,5. Which is selected first by an ascending-weight greedy rule?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "Weights are 8,2,5. Which is selected first by an ascending-weight greedy rule?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "State the sorting greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "2 follows from the safe local choice used by this sorting greedy pattern.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "sorting-greedy",
+        "predict_output",
+        "greedy"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "greedy-13",
+      "slug": "assign-cookies",
+      "title": "Assign Cookies",
+      "topic": "greedy",
+      "subtopic": "sorting-greedy",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Children need sizes 1,2 and cookies have sizes 1,3. How many children can be satisfied?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "State the sorting greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "2 follows from the safe local choice used by this sorting greedy pattern.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "sorting-greedy",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "greedy-14",
+      "slug": "pair-extremes",
+      "title": "Pair Extremes",
+      "topic": "greedy",
+      "subtopic": "sorting-greedy",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "To minimize the largest pair sum after sorting, pair the smallest value with which value?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "largest"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "To minimize the largest pair sum after sorting, pair the smallest value with which value?",
+      "expectedAnswer": "largest",
+      "options": [],
+      "hints": [
+        "State the sorting greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "largest follows from the safe local choice used by this sorting greedy pattern.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "sorting-greedy",
+        "code_blank",
+        "greedy"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-15",
+      "slug": "boats-pairing",
+      "title": "Boats Pairing",
+      "topic": "greedy",
+      "subtopic": "sorting-greedy",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In a two-person rescue boat strategy, try pairing the heaviest person with whom?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "lightest"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "lightest",
+      "options": [],
+      "hints": [
+        "State the sorting greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "lightest follows from the safe local choice used by this sorting greedy pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "sorting-greedy",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-16",
+      "slug": "minimum-difference",
+      "title": "Minimum Difference",
+      "topic": "greedy",
+      "subtopic": "sorting-greedy",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Sorted values are 2,6,7,14. What is the minimum adjacent difference?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "Sorted values are 2,6,7,14. What is the minimum adjacent difference?",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "State the sorting greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "1 follows from the safe local choice used by this sorting greedy pattern.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "sorting-greedy",
+        "predict_output",
+        "greedy"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "greedy-17",
+      "slug": "largest-number-order",
+      "title": "Largest Number Order",
+      "topic": "greedy",
+      "subtopic": "sorting-greedy",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "To form the largest concatenated number, compare strings a+b against what alternative?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "b+a"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "To form the largest concatenated number, compare strings a+b against what alternative?",
+      "expectedAnswer": "b+a",
+      "options": [],
+      "hints": [
+        "State the sorting greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "b+a follows from the safe local choice used by this sorting greedy pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "sorting-greedy",
+        "code_blank",
+        "greedy"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-18",
+      "slug": "resource-sweep",
+      "title": "Resource Sweep",
+      "topic": "greedy",
+      "subtopic": "sorting-greedy",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why can sorting requests and resources support a two-pointer greedy assignment?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "Each smallest feasible resource can be committed safely"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Each smallest feasible resource can be committed safely"
+        },
+        {
+          "id": "b",
+          "text": "Pointers enumerate every subset"
+        },
+        {
+          "id": "c",
+          "text": "Sorting creates new resources"
+        }
+      ],
+      "hints": [
+        "State the sorting greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "Each smallest feasible resource can be committed safely follows from the safe local choice used by this sorting greedy pattern.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "sorting-greedy",
+        "multiple_choice",
+        "greedy"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "OPTION"
+    },
+    {
+      "id": "greedy-19",
+      "slug": "max-units",
+      "title": "Max Units",
+      "topic": "greedy",
+      "subtopic": "sorting-greedy",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Boxes give units [3,2] with counts [1,3], capacity 3. Taking highest units first yields how many units?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "State the sorting greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "7 follows from the safe local choice used by this sorting greedy pattern.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "sorting-greedy",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "greedy-20",
+      "slug": "pairing-counterexample",
+      "title": "Pairing Counterexample",
+      "topic": "greedy",
+      "subtopic": "sorting-greedy",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What should be checked before trusting an extreme-pairing rule?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "counterexample"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "counterexample",
+      "options": [],
+      "hints": [
+        "State the sorting greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "counterexample follows from the safe local choice used by this sorting greedy pattern.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "sorting-greedy",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-21",
+      "slug": "earliest-finish",
+      "title": "Earliest Finish",
+      "topic": "greedy",
+      "subtopic": "interval-scheduling",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Activity selection maximizes count by choosing the compatible activity with the earliest what?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "finish time"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "Activity selection maximizes count by choosing the compatible activity with the earliest what?",
+      "expectedAnswer": "finish time",
+      "options": [],
+      "hints": [
+        "State the interval scheduling choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "finish time follows from the safe local choice used by this interval scheduling pattern.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "interval-scheduling",
+        "code_blank",
+        "greedy"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-22",
+      "slug": "compatible-start",
+      "title": "Compatible Start",
+      "topic": "greedy",
+      "subtopic": "interval-scheduling",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Last selected meeting ends at 5. Can a meeting starting at 5 be selected under non-overlap rules?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "yes"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "yes",
+      "options": [],
+      "hints": [
+        "State the interval scheduling choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "yes follows from the safe local choice used by this interval scheduling pattern.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "interval-scheduling",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-23",
+      "slug": "simple-activities",
+      "title": "Simple Activities",
+      "topic": "greedy",
+      "subtopic": "interval-scheduling",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Intervals [1,2], [2,3], [1,4] allow at most how many non-overlapping selections?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "Intervals [1,2], [2,3], [1,4] allow at most how many non-overlapping selections?",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "State the interval scheduling choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "2 follows from the safe local choice used by this interval scheduling pattern.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "interval-scheduling",
+        "predict_output",
+        "greedy"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "greedy-24",
+      "slug": "meeting-rooms-key",
+      "title": "Meeting Rooms Key",
+      "topic": "greedy",
+      "subtopic": "interval-scheduling",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Minimum meeting rooms depends on the maximum number of what?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "overlapping meetings"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "overlapping meetings",
+      "options": [],
+      "hints": [
+        "State the interval scheduling choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "overlapping meetings follows from the safe local choice used by this interval scheduling pattern.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "interval-scheduling",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-25",
+      "slug": "erase-overlap",
+      "title": "Erase Overlap",
+      "topic": "greedy",
+      "subtopic": "interval-scheduling",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "To minimize removed overlapping intervals, which endpoint should be kept as small as possible?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "end"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "To minimize removed overlapping intervals, which endpoint should be kept as small as possible?",
+      "expectedAnswer": "end",
+      "options": [],
+      "hints": [
+        "State the interval scheduling choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "end follows from the safe local choice used by this interval scheduling pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "interval-scheduling",
+        "code_blank",
+        "greedy"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-26",
+      "slug": "platform-events",
+      "title": "Platform Events",
+      "topic": "greedy",
+      "subtopic": "interval-scheduling",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Minimum railway platforms can be found by sorting arrivals and which other events?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "departures"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "departures",
+      "options": [],
+      "hints": [
+        "State the interval scheduling choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "departures follows from the safe local choice used by this interval scheduling pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "interval-scheduling",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-27",
+      "slug": "job-slot",
+      "title": "Job Slot",
+      "topic": "greedy",
+      "subtopic": "interval-scheduling",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For unit-time jobs with deadlines, a chosen profitable job is placed in which available slot?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "latest before deadline"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "latest before deadline",
+      "options": [],
+      "hints": [
+        "State the interval scheduling choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "latest before deadline follows from the safe local choice used by this interval scheduling pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "interval-scheduling",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-28",
+      "slug": "profit-first",
+      "title": "Profit First",
+      "topic": "greedy",
+      "subtopic": "interval-scheduling",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Job sequencing considers jobs in descending order of what value?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "profit"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "Job sequencing considers jobs in descending order of what value?",
+      "expectedAnswer": "profit",
+      "options": [],
+      "hints": [
+        "State the interval scheduling choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "profit follows from the safe local choice used by this interval scheduling pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "interval-scheduling",
+        "code_blank",
+        "greedy"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-29",
+      "slug": "arrow-cover",
+      "title": "Arrow Cover",
+      "topic": "greedy",
+      "subtopic": "interval-scheduling",
+      "difficulty": "Hard",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Balloons [1,4] and [2,5] overlap. What minimum arrows can burst both?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "Balloons [1,4] and [2,5] overlap. What minimum arrows can burst both?",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "State the interval scheduling choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "1 follows from the safe local choice used by this interval scheduling pattern.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "interval-scheduling",
+        "predict_output",
+        "greedy"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "greedy-30",
+      "slug": "interval-cover-choice",
+      "title": "Interval Cover Choice",
+      "topic": "greedy",
+      "subtopic": "interval-scheduling",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "When covering a target line with intervals, a common greedy step chooses the candidate reaching where?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "farthest"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "farthest",
+      "options": [],
+      "hints": [
+        "State the interval scheduling choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "farthest follows from the safe local choice used by this interval scheduling pattern.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "interval-scheduling",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-31",
+      "slug": "fractional-ratio",
+      "title": "Fractional Ratio",
+      "topic": "greedy",
+      "subtopic": "advanced-greedy",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Fractional Knapsack orders items by value divided by what?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "weight"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "Fractional Knapsack orders items by value divided by what?",
+      "expectedAnswer": "weight",
+      "options": [],
+      "hints": [
+        "State the advanced greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "weight follows from the safe local choice used by this advanced greedy pattern.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "advanced-greedy",
+        "code_blank",
+        "greedy"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-32",
+      "slug": "fraction-allowed",
+      "title": "Fraction Allowed",
+      "topic": "greedy",
+      "subtopic": "advanced-greedy",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Why does ratio-first work for fractional but not necessarily 0/1 knapsack?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "fractions can be taken"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "fractions can be taken",
+      "options": [],
+      "hints": [
+        "State the advanced greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "fractions can be taken follows from the safe local choice used by this advanced greedy pattern.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "advanced-greedy",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-33",
+      "slug": "jump-reach",
+      "title": "Jump Reach",
+      "topic": "greedy",
+      "subtopic": "advanced-greedy",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In Jump Game, what frontier is greedily maintained while scanning?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "farthest reachable index"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "farthest reachable index",
+      "options": [],
+      "hints": [
+        "State the advanced greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "farthest reachable index follows from the safe local choice used by this advanced greedy pattern.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "advanced-greedy",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-34",
+      "slug": "gas-total",
+      "title": "Gas Total",
+      "topic": "greedy",
+      "subtopic": "advanced-greedy",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "A circular gas route is impossible when total gas is less than total what?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "cost"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "A circular gas route is impossible when total gas is less than total what?",
+      "expectedAnswer": "cost",
+      "options": [],
+      "hints": [
+        "State the advanced greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "cost follows from the safe local choice used by this advanced greedy pattern.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "advanced-greedy",
+        "code_blank",
+        "greedy"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-35",
+      "slug": "candy-direction",
+      "title": "Candy Direction",
+      "topic": "greedy",
+      "subtopic": "advanced-greedy",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Why are left-to-right and right-to-left passes useful in Candy?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "They enforce both neighbor directions"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "They enforce both neighbor directions"
+        },
+        {
+          "id": "b",
+          "text": "They sort children by name"
+        },
+        {
+          "id": "c",
+          "text": "They remove equal ratings"
+        }
+      ],
+      "hints": [
+        "State the advanced greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "They enforce both neighbor directions follows from the safe local choice used by this advanced greedy pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "advanced-greedy",
+        "multiple_choice",
+        "greedy"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "OPTION"
+    },
+    {
+      "id": "greedy-36",
+      "slug": "huffman-merge",
+      "title": "Huffman Merge",
+      "topic": "greedy",
+      "subtopic": "advanced-greedy",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Huffman coding repeatedly combines which two frequencies?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "smallest"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "smallest",
+      "options": [],
+      "hints": [
+        "State the advanced greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "smallest follows from the safe local choice used by this advanced greedy pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "advanced-greedy",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-37",
+      "slug": "task-cooldown",
+      "title": "Task Cooldown",
+      "topic": "greedy",
+      "subtopic": "advanced-greedy",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Task scheduling idle time is driven mainly by the frequency of which task?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "most frequent"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "most frequent",
+      "options": [],
+      "hints": [
+        "State the advanced greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "most frequent follows from the safe local choice used by this advanced greedy pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "advanced-greedy",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-38",
+      "slug": "arrow-endpoint",
+      "title": "Arrow Endpoint",
+      "topic": "greedy",
+      "subtopic": "advanced-greedy",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For balloon intervals sorted by end, where is the next arrow placed?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "earliest end"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "earliest end",
+      "options": [],
+      "hints": [
+        "State the advanced greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "earliest end follows from the safe local choice used by this advanced greedy pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "advanced-greedy",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-39",
+      "slug": "gas-restart",
+      "title": "Gas Restart",
+      "topic": "greedy",
+      "subtopic": "advanced-greedy",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "If the running gas balance becomes negative at station i, where can the next candidate start?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "i+1"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "i+1",
+      "options": [],
+      "hints": [
+        "State the advanced greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "i+1 follows from the safe local choice used by this advanced greedy pattern.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "advanced-greedy",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-40",
+      "slug": "greedy-proof-duty",
+      "title": "Greedy Proof Duty",
+      "topic": "greedy",
+      "subtopic": "advanced-greedy",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "What must a proof show about replacing an optimal decision with the greedy decision?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "The replacement does not worsen the solution"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "The replacement does not worsen the solution"
+        },
+        {
+          "id": "b",
+          "text": "The input becomes sorted"
+        },
+        {
+          "id": "c",
+          "text": "All choices are identical"
+        }
+      ],
+      "hints": [
+        "State the advanced greedy choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "The replacement does not worsen the solution follows from the safe local choice used by this advanced greedy pattern.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "advanced-greedy",
+        "multiple_choice",
+        "greedy"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "OPTION"
+    },
+    {
+      "id": "greedy-41",
+      "slug": "master-selection",
+      "title": "Master Selection",
+      "topic": "greedy",
+      "subtopic": "greedy-master-trial",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "To maximize non-overlapping meetings, sort by which field?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "finish time"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "To maximize non-overlapping meetings, sort by which field?",
+      "expectedAnswer": "finish time",
+      "options": [],
+      "hints": [
+        "State the greedy master trial choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "finish time follows from the safe local choice used by this greedy master trial pattern.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "greedy-master-trial",
+        "code_blank",
+        "greedy"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-42",
+      "slug": "coin-failure-trial",
+      "title": "Coin Failure Trial",
+      "topic": "greedy",
+      "subtopic": "greedy-master-trial",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Coins 1,3,4 and amount 6: how many coins does greedy largest-first use?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "Coins 1,3,4 and amount 6: how many coins does greedy largest-first use?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "State the greedy master trial choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "3 follows from the safe local choice used by this greedy master trial pattern.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "greedy-master-trial",
+        "predict_output",
+        "greedy"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "greedy-43",
+      "slug": "scheduling-result",
+      "title": "Scheduling Result",
+      "topic": "greedy",
+      "subtopic": "greedy-master-trial",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "Intervals [1,3], [2,4], [3,5], [5,7] permit how many selections by earliest finish?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "Intervals [1,3], [2,4], [3,5], [5,7] permit how many selections by earliest finish?",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "State the greedy master trial choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "3 follows from the safe local choice used by this greedy master trial pattern.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "greedy-master-trial",
+        "predict_output",
+        "greedy"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "greedy-44",
+      "slug": "jump-failure",
+      "title": "Jump Failure",
+      "topic": "greedy",
+      "subtopic": "greedy-master-trial",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For jumps [3,2,1,0,4], can the final index be reached?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "State the greedy master trial choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "false follows from the safe local choice used by this greedy master trial pattern.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "greedy-master-trial",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-45",
+      "slug": "comparator-bug",
+      "title": "Comparator Bug",
+      "topic": "greedy",
+      "subtopic": "greedy-master-trial",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "An activity selector sorts by start time. Which field should replace it?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "end time"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "An activity selector sorts by start time. Which field should replace it?",
+      "expectedAnswer": "end time",
+      "options": [],
+      "hints": [
+        "State the greedy master trial choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "end time follows from the safe local choice used by this greedy master trial pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "greedy-master-trial",
+        "code_blank",
+        "greedy"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-46",
+      "slug": "knapsack-trial",
+      "title": "Knapsack Trial",
+      "topic": "greedy",
+      "subtopic": "greedy-master-trial",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "An item has value 60 and weight 10. What is its value-to-weight ratio?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "An item has value 60 and weight 10. What is its value-to-weight ratio?",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "State the greedy master trial choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "6 follows from the safe local choice used by this greedy master trial pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "greedy-master-trial",
+        "predict_output",
+        "greedy"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "greedy-47",
+      "slug": "platform-trial",
+      "title": "Platform Trial",
+      "topic": "greedy",
+      "subtopic": "greedy-master-trial",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "At one moment three trains overlap. What minimum platforms are required?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "State the greedy master trial choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "3 follows from the safe local choice used by this greedy master trial pattern.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "greedy-master-trial",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "greedy-48",
+      "slug": "proof-trial",
+      "title": "Proof Trial",
+      "topic": "greedy",
+      "subtopic": "greedy-master-trial",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which artifact disproves a claimed greedy rule most directly?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "counterexample"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "counterexample",
+      "options": [],
+      "hints": [
+        "State the greedy master trial choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "counterexample follows from the safe local choice used by this greedy master trial pattern.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "greedy-master-trial",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "greedy-49",
+      "slug": "job-sequence-trial",
+      "title": "Job Sequence Trial",
+      "topic": "greedy",
+      "subtopic": "greedy-master-trial",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Jobs A(d1,p20), B(d2,p50), C(d2,p10). What maximum profit fits two slots?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "70"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "70",
+      "options": [],
+      "hints": [
+        "State the greedy master trial choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "70 follows from the safe local choice used by this greedy master trial pattern.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "greedy-master-trial",
+        "logic_answer",
+        "greedy"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "greedy-50",
+      "slug": "desert-finale",
+      "title": "Desert Finale",
+      "topic": "greedy",
+      "subtopic": "greedy-master-trial",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which strategy solves minimum arrows for balloon intervals?",
+      "examples": [
+        {
+          "input": "Apply the immediate choice rule described in the challenge.",
+          "output": "Sort by end and shoot at the earliest uncovered end"
+        }
+      ],
+      "constraints": [
+        "Use each item or interval at most once unless stated otherwise.",
+        "Submit only the requested option, token, value, Boolean, or sequence."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sort by end and shoot at the earliest uncovered end"
+        },
+        {
+          "id": "b",
+          "text": "Sort by width and shoot every balloon"
+        },
+        {
+          "id": "c",
+          "text": "Always shoot at the largest start"
+        }
+      ],
+      "hints": [
+        "State the greedy master trial choice, then check whether it leaves the best feasible remainder."
+      ],
+      "explanation": "Sort by end and shoot at the earliest uncovered end follows from the safe local choice used by this greedy master trial pattern.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "greedy-master-trial",
+        "multiple_choice",
+        "greedy"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "OPTION"
+    }
+  ]
+}
