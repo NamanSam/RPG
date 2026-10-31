@@ -1,0 +1,2101 @@
+{
+  "topic": "recursion",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Recursion Fundamentals"
+    },
+    {
+      "number": 2,
+      "name": "Base Cases and Call Stack"
+    },
+    {
+      "number": 3,
+      "name": "Recursive Arrays and Strings"
+    },
+    {
+      "number": 4,
+      "name": "Divide and Conquer"
+    },
+    {
+      "number": 5,
+      "name": "Advanced Recursion Challenges"
+    }
+  ],
+  "questions": [
+    {
+      "id": "recursion-01",
+      "slug": "recursion-01-what-makes-a-method-recursive",
+      "title": "What makes a method recursive?",
+      "topic": "recursion",
+      "subtopic": "fundamentals",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which description best identifies a recursive method?",
+      "examples": [
+        {
+          "input": "method calls itself",
+          "output": "recursive call"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "It calls itself directly or indirectly"
+        },
+        {
+          "id": "B",
+          "text": "It always uses a for loop"
+        },
+        {
+          "id": "C",
+          "text": "It must return an array"
+        },
+        {
+          "id": "D",
+          "text": "It has no parameters"
+        }
+      ],
+      "hints": [
+        "Look for a call path that returns to the same method."
+      ],
+      "explanation": "It calls itself directly or through another method.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-02",
+      "slug": "recursion-02-factorial-base-case",
+      "title": "Factorial base case",
+      "topic": "recursion",
+      "subtopic": "fundamentals",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "For factorial(n), where n is a nonnegative integer, which base result stops recursion correctly?",
+      "examples": [
+        {
+          "input": "factorial(0)",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "return 1 when n == 0"
+        },
+        {
+          "id": "B",
+          "text": "return n * factorial(n + 1)"
+        },
+        {
+          "id": "C",
+          "text": "return 0 when n == 0"
+        },
+        {
+          "id": "D",
+          "text": "call factorial(n) again"
+        }
+      ],
+      "hints": [
+        "Choose the smallest valid input whose answer is known."
+      ],
+      "explanation": "By definition, 0! equals 1, so that input can return without another call.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-03",
+      "slug": "recursion-03-count-down-result",
+      "title": "Count down result",
+      "topic": "recursion",
+      "subtopic": "fundamentals",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "What does countDown(3) print if it prints n, then calls countDown(n - 1) while n > 0?",
+      "examples": [
+        {
+          "input": "countDown(3)",
+          "output": "3 2 1"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3 2 1",
+      "options": [],
+      "hints": [
+        "Trace each call until the stopping condition."
+      ],
+      "explanation": "The method prints the current value before the smaller call.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "recursion-04",
+      "slug": "recursion-04-recursive-sum-of-one",
+      "title": "Recursive sum of one",
+      "topic": "recursion",
+      "subtopic": "fundamentals",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A method returns 0 for n == 0; otherwise it returns n + sum(n - 1). What is sum(1)?",
+      "examples": [
+        {
+          "input": "sum(1)",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Expand just one call."
+      ],
+      "explanation": "The recursive step adds 1 to the base result 0.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-05",
+      "slug": "recursion-05-sum-from-zero-through-n",
+      "title": "Sum from zero through n",
+      "topic": "recursion",
+      "subtopic": "fundamentals",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "Fill the missing recursive argument: return n + sumTo(___); the base case is n == 0.",
+      "examples": [
+        {
+          "input": "sumTo(4)",
+          "output": "n - 1"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "n - 1",
+      "options": [],
+      "hints": [
+        "Decrease the argument by one."
+      ],
+      "explanation": "The next call must move one step closer to zero.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "recursion-06",
+      "slug": "recursion-06-trace-recursive-product",
+      "title": "Trace recursive product",
+      "topic": "recursion",
+      "subtopic": "fundamentals",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A product(n) method returns 1 at n == 1, otherwise n * product(n - 1). What is product(4)?",
+      "examples": [
+        {
+          "input": "product(4)",
+          "output": "24"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "24",
+      "options": [],
+      "hints": [
+        "Write the call chain down to the base case."
+      ],
+      "explanation": "The calls multiply 4 × 3 × 2 × 1.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-07",
+      "slug": "recursion-07-identify-the-recursive-step",
+      "title": "Identify the recursive step",
+      "topic": "recursion",
+      "subtopic": "fundamentals",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A recursive power method handles exponent 0 and computes base * power(base, exponent - 1). Which part is the recursive step?",
+      "examples": [
+        {
+          "input": "power(2,3)",
+          "output": "recursive step"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "base * power(base, exponent - 1)"
+        },
+        {
+          "id": "B",
+          "text": "return 1 when exponent == 0"
+        },
+        {
+          "id": "C",
+          "text": "the method declaration"
+        },
+        {
+          "id": "D",
+          "text": "the caller printing the result"
+        }
+      ],
+      "hints": [
+        "The base case returns without calling the method."
+      ],
+      "explanation": "The multiplication followed by the call with a smaller exponent makes progress.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-08",
+      "slug": "recursion-08-recursive-triangular-number",
+      "title": "Recursive triangular number",
+      "topic": "recursion",
+      "subtopic": "fundamentals",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Define tri(0)=0 and tri(n)=n+tri(n-1). What is tri(5)?",
+      "examples": [
+        {
+          "input": "tri(5)",
+          "output": "15"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "15",
+      "options": [],
+      "hints": [
+        "Accumulate each value while descending."
+      ],
+      "explanation": "The result is 5+4+3+2+1+0.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-09",
+      "slug": "recursion-09-call-count-for-a-linear-recursion",
+      "title": "Call count for a linear recursion",
+      "topic": "recursion",
+      "subtopic": "fundamentals",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A method makes one call with n-1 until n reaches 0. Starting at n=6, how many total invocations occur, including the initial call and base call?",
+      "examples": [
+        {
+          "input": "walk(6)",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Count the base invocation too."
+      ],
+      "explanation": "Calls occur for 6, 5, 4, 3, 2, 1, and 0.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-10",
+      "slug": "recursion-10-when-direct-recursion-fails-to-progress",
+      "title": "When direct recursion fails to progress",
+      "topic": "recursion",
+      "subtopic": "fundamentals",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A method has base case n == 0, but for positive n it calls solve(n). What is the main defect?",
+      "examples": [
+        {
+          "input": "solve(2)",
+          "output": "no progress"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "The recursive call makes no progress toward the base case"
+        },
+        {
+          "id": "B",
+          "text": "The method has too many parameters"
+        },
+        {
+          "id": "C",
+          "text": "Every recursive method must use two calls"
+        },
+        {
+          "id": "D",
+          "text": "The base case should always return n"
+        }
+      ],
+      "hints": [
+        "Compare the recursive argument with the stopping condition."
+      ],
+      "explanation": "The argument never approaches zero, so the base case is unreachable for positive input.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-11",
+      "slug": "recursion-11-empty-range-base-case",
+      "title": "Empty range base case",
+      "topic": "recursion",
+      "subtopic": "call-stack",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A method processes indices from left to right using index i. Which condition naturally ends when the array is exhausted?",
+      "examples": [
+        {
+          "input": "i begins at 0",
+          "output": "stop at length"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "i == values.length"
+        },
+        {
+          "id": "B",
+          "text": "i == 0"
+        },
+        {
+          "id": "C",
+          "text": "i < 0 only"
+        },
+        {
+          "id": "D",
+          "text": "values.length == 1"
+        }
+      ],
+      "hints": [
+        "Valid indices stop at length - 1."
+      ],
+      "explanation": "When i reaches the array length, there is no element left to process.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "call-stack"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-12",
+      "slug": "recursion-12-stack-frames-unwind",
+      "title": "Stack frames unwind",
+      "topic": "recursion",
+      "subtopic": "call-stack",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A method prints enter; if n > 0 it calls itself with n-1; then it prints exit. What is output for n=1?",
+      "examples": [
+        {
+          "input": "trace(1)",
+          "output": "enter enter exit exit"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "enter enter exit exit",
+      "options": [],
+      "hints": [
+        "Separate work before and after the recursive call."
+      ],
+      "explanation": "The second call reaches its base behavior before either frame prints exit.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "call-stack"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "recursion-13",
+      "slug": "recursion-13-base-case-for-countdown",
+      "title": "Base case for countdown",
+      "topic": "recursion",
+      "subtopic": "call-stack",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Complete the condition that stops a countdown for all n <= 0: if (n ___ 0) return;",
+      "examples": [
+        {
+          "input": "countdown(3)",
+          "output": "<="
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "<=",
+      "options": [],
+      "hints": [
+        "Use the comparison that includes equality and smaller values."
+      ],
+      "explanation": "The stop condition includes zero and negative values.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "call-stack"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "recursion-14",
+      "slug": "recursion-14-stack-depth",
+      "title": "Stack depth",
+      "topic": "recursion",
+      "subtopic": "call-stack",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A recursive method makes one call for each integer from 4 down to 0. What is its maximum number of simultaneously active frames?",
+      "examples": [
+        {
+          "input": "depth(4)",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Count the inclusive sequence."
+      ],
+      "explanation": "All five calls are active before the deepest frame returns.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "call-stack"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-15",
+      "slug": "recursion-15-find-the-missing-base-return",
+      "title": "Find the missing base return",
+      "topic": "recursion",
+      "subtopic": "call-stack",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A boolean recursive search checks one item then advances. Which base return is appropriate when index == array.length?",
+      "examples": [
+        {
+          "input": "search empty suffix",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "return false"
+        },
+        {
+          "id": "B",
+          "text": "return true"
+        },
+        {
+          "id": "C",
+          "text": "return index"
+        },
+        {
+          "id": "D",
+          "text": "call search(index)"
+        }
+      ],
+      "hints": [
+        "The success case returns true at the matching item."
+      ],
+      "explanation": "Once every element has been checked without a match, the search should report false.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "call-stack"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-16",
+      "slug": "recursion-16-output-after-recursive-call",
+      "title": "Output after recursive call",
+      "topic": "recursion",
+      "subtopic": "call-stack",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "For n>0, method f prints n after calling f(n-1), and returns at n==0. What is printed by f(3)?",
+      "examples": [
+        {
+          "input": "f(3)",
+          "output": "1 2 3"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1 2 3",
+      "options": [],
+      "hints": [
+        "Follow the return order."
+      ],
+      "explanation": "Printing after the call happens during unwinding, from the smallest positive frame upward.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "call-stack"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "recursion-17",
+      "slug": "recursion-17-avoiding-a-missing-base-case",
+      "title": "Avoiding a missing base case",
+      "topic": "recursion",
+      "subtopic": "call-stack",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A recursive method handles n>0 but has no branch for n<=0. What risk does calling it with 0 create?",
+      "examples": [
+        {
+          "input": "input n=0",
+          "output": "stack overflow"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "Non-terminating recursion and eventual stack overflow"
+        },
+        {
+          "id": "B",
+          "text": "Automatic conversion to a loop"
+        },
+        {
+          "id": "C",
+          "text": "A guaranteed null result"
+        },
+        {
+          "id": "D",
+          "text": "Only a slower first call"
+        }
+      ],
+      "hints": [
+        "Check whether every valid input path returns or stops."
+      ],
+      "explanation": "It can repeatedly call itself without reaching a terminating return.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "call-stack"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-18",
+      "slug": "recursion-18-correct-recursive-descent",
+      "title": "Correct recursive descent",
+      "topic": "recursion",
+      "subtopic": "call-stack",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "For a method that must reach base case n == 1 from n > 1, fill in the argument: solve(___).",
+      "examples": [
+        {
+          "input": "solve(5)",
+          "output": "n - 1"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "n - 1",
+      "options": [],
+      "hints": [
+        "Use the predecessor."
+      ],
+      "explanation": "The argument must strictly decrease toward one.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "call-stack"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "recursion-19",
+      "slug": "recursion-19-two-branch-call-count",
+      "title": "Two-branch call count",
+      "topic": "recursion",
+      "subtopic": "call-stack",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "calls(n) returns at n==0; otherwise it calls calls(n-1) twice. How many invocations occur for calls(2), including the first call?",
+      "examples": [
+        {
+          "input": "calls(2)",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Count the repeated subtrees separately."
+      ],
+      "explanation": "T(0)=1 and T(n)=1+2T(n-1), so T(1)=3 and T(2)=7.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "call-stack"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-20",
+      "slug": "recursion-20-exception-safe-stack-reasoning",
+      "title": "Exception-safe stack reasoning",
+      "topic": "recursion",
+      "subtopic": "call-stack",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A recursive parser opens a resource before recursing and closes it only after return. Which concern matters for deep input?",
+      "examples": [
+        {
+          "input": "deep nested input",
+          "output": "cleanup risk"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "A stack overflow may interrupt normal unwind and skip cleanup"
+        },
+        {
+          "id": "B",
+          "text": "Recursion automatically closes every resource"
+        },
+        {
+          "id": "C",
+          "text": "The base case is evaluated after cleanup"
+        },
+        {
+          "id": "D",
+          "text": "The resource is duplicated by the JVM"
+        }
+      ],
+      "hints": [
+        "Consider what happens if the deepest call fails."
+      ],
+      "explanation": "Deep recursion can exhaust the call stack before unwinding reaches the close operation.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "call-stack"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-21",
+      "slug": "recursion-21-sum-an-array-recursively",
+      "title": "Sum an array recursively",
+      "topic": "recursion",
+      "subtopic": "arrays-strings",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "sum(a,i) returns 0 when i == a.length; otherwise it returns a[i] + sum(a,i+1). For a=[2,5,1], what is sum(a,0)?",
+      "examples": [
+        {
+          "input": "a=[2,5,1]",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Expand until i reaches 3."
+      ],
+      "explanation": "Each element contributes once before the empty suffix returns zero.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "arrays-strings"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-22",
+      "slug": "recursion-22-reverse-string-base-case",
+      "title": "Reverse string base case",
+      "topic": "recursion",
+      "subtopic": "arrays-strings",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A recursive string reversal swaps characters at left and right, then moves inward. When should it stop?",
+      "examples": [
+        {
+          "input": "left=0,right=len-1",
+          "output": "pointers meet/cross"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "left >= right"
+        },
+        {
+          "id": "B",
+          "text": "left == 0"
+        },
+        {
+          "id": "C",
+          "text": "right == text.length()"
+        },
+        {
+          "id": "D",
+          "text": "text is empty only"
+        }
+      ],
+      "hints": [
+        "No swap is needed for an interval of length zero or one."
+      ],
+      "explanation": "When pointers meet or cross, all needed swaps are complete.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "arrays-strings"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-23",
+      "slug": "recursion-23-find-the-last-element-recursively",
+      "title": "Find the last element recursively",
+      "topic": "recursion",
+      "subtopic": "arrays-strings",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "last(a,i) returns a[i] at the final index; otherwise it calls last(a,i+1). What does last([4,7,9],0) return?",
+      "examples": [
+        {
+          "input": "[4,7,9], i=0",
+          "output": "9"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "9",
+      "options": [],
+      "hints": [
+        "Trace indices 0, 1, then 2."
+      ],
+      "explanation": "The index advances until it reaches the final valid position.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "arrays-strings"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-24",
+      "slug": "recursion-24-string-prefix-recursion",
+      "title": "String prefix recursion",
+      "topic": "recursion",
+      "subtopic": "arrays-strings",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "A method counts characters recursively. To process the next character after index i, call count(text, ___).",
+      "examples": [
+        {
+          "input": "count(\"cat\",0)",
+          "output": "i + 1"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "i + 1",
+      "options": [],
+      "hints": [
+        "Advance by one."
+      ],
+      "explanation": "The next character is at the following index.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "arrays-strings"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "recursion-25",
+      "slug": "recursion-25-recursive-maximum",
+      "title": "Recursive maximum",
+      "topic": "recursion",
+      "subtopic": "arrays-strings",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "max(a,i) returns a[i] at the final index; otherwise returns max(a[i], max(a,i+1)). For [3,8,2,6], what is the result from i=0?",
+      "examples": [
+        {
+          "input": "[3,8,2,6]",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Reduce from the final element toward the first."
+      ],
+      "explanation": "The nested comparisons retain the greatest value in the suffix.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "arrays-strings"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-26",
+      "slug": "recursion-26-count-matching-values",
+      "title": "Count matching values",
+      "topic": "recursion",
+      "subtopic": "arrays-strings",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "A recursive count returns 0 at the end. Fill the contribution when a[i] equals target: (a[i] == target ? ___ : 0) + count(a,i+1).",
+      "examples": [
+        {
+          "input": "a=[2,2,5], target=2",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "The contribution is a count, not the matched value."
+      ],
+      "explanation": "A match contributes one occurrence.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "arrays-strings"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "recursion-27",
+      "slug": "recursion-27-palindrome-recursion",
+      "title": "Palindrome recursion",
+      "topic": "recursion",
+      "subtopic": "arrays-strings",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "For a recursive palindrome check, after equal end characters are confirmed, what smaller subproblem should be checked?",
+      "examples": [
+        {
+          "input": "\"level\"",
+          "output": "inner substring"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "check(left + 1, right - 1)"
+        },
+        {
+          "id": "B",
+          "text": "check(left, right + 1)"
+        },
+        {
+          "id": "C",
+          "text": "check(left - 1, right)"
+        },
+        {
+          "id": "D",
+          "text": "restart from the full string"
+        }
+      ],
+      "hints": [
+        "Both boundaries move inward together."
+      ],
+      "explanation": "Removing both equal outer characters leaves the inner substring.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "arrays-strings"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-28",
+      "slug": "recursion-28-binary-search-recursive-range",
+      "title": "Binary search recursive range",
+      "topic": "recursion",
+      "subtopic": "arrays-strings",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "In recursive binary search with inclusive bounds, when mid is too small, the next lower bound is ___.",
+      "examples": [
+        {
+          "input": "sorted array, target > a[mid]",
+          "output": "mid + 1"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "mid + 1",
+      "options": [],
+      "hints": [
+        "The next candidate begins immediately after mid."
+      ],
+      "explanation": "Discard mid and everything to its left.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "arrays-strings"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "recursion-29",
+      "slug": "recursion-29-recursive-merge-sort-space",
+      "title": "Recursive merge sort space",
+      "topic": "recursion",
+      "subtopic": "arrays-strings",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A standard recursive merge sort uses a temporary array during merging. What is its auxiliary space complexity?",
+      "examples": [
+        {
+          "input": "n elements",
+          "output": "O(n)"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "O(n)"
+        },
+        {
+          "id": "B",
+          "text": "O(1)"
+        },
+        {
+          "id": "C",
+          "text": "O(log n) total"
+        },
+        {
+          "id": "D",
+          "text": "O(n squared)"
+        }
+      ],
+      "hints": [
+        "The temporary array dominates the stack."
+      ],
+      "explanation": "Temporary merge storage is linear; recursion adds logarithmic stack space.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "recursion",
+        "arrays-strings"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-30",
+      "slug": "recursion-30-skip-adjacent-duplicates-recursively",
+      "title": "Skip adjacent duplicates recursively",
+      "topic": "recursion",
+      "subtopic": "arrays-strings",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A sorted array scan counts the first value, then adds one whenever a[i] differs from a[i-1]. For [1,1,2,2,2,4], how many distinct values are counted?",
+      "examples": [
+        {
+          "input": "[1,1,2,2,2,4]",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Count transitions plus the first element."
+      ],
+      "explanation": "The first value counts once, then changes to 2 and 4 add two more.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "arrays-strings"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-31",
+      "slug": "recursion-31-divide-and-conquer-shape",
+      "title": "Divide and conquer shape",
+      "topic": "recursion",
+      "subtopic": "divide-conquer",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which sequence best describes divide and conquer?",
+      "examples": [
+        {
+          "input": "merge sort",
+          "output": "split solve combine"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "divide, solve smaller parts, combine"
+        },
+        {
+          "id": "B",
+          "text": "sort once, then stop"
+        },
+        {
+          "id": "C",
+          "text": "repeat the same full input forever"
+        },
+        {
+          "id": "D",
+          "text": "choose a random result"
+        }
+      ],
+      "hints": [
+        "Look for splitting plus combining."
+      ],
+      "explanation": "A problem is split into smaller instances, their results are combined, and a base case handles small instances.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "divide-conquer"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-32",
+      "slug": "recursion-32-binary-search-midpoint",
+      "title": "Binary search midpoint",
+      "topic": "recursion",
+      "subtopic": "divide-conquer",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "For low and high inclusive, fill a safe midpoint expression: low + (high - low) / ___.",
+      "examples": [
+        {
+          "input": "low=0, high=8",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Use the number of halves."
+      ],
+      "explanation": "Integer division by two finds the middle offset.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "divide-conquer"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "recursion-33",
+      "slug": "recursion-33-merge-sort-base-case",
+      "title": "Merge sort base case",
+      "topic": "recursion",
+      "subtopic": "divide-conquer",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A merge sort call works on indices left through right. Which range is already sorted without further splitting?",
+      "examples": [
+        {
+          "input": "range [k,k]",
+          "output": "single element"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "left >= right"
+        },
+        {
+          "id": "B",
+          "text": "right - left > 1"
+        },
+        {
+          "id": "C",
+          "text": "left == 0"
+        },
+        {
+          "id": "D",
+          "text": "array length is even"
+        }
+      ],
+      "hints": [
+        "A singleton is trivially ordered."
+      ],
+      "explanation": "A range with zero or one element needs no sorting.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "divide-conquer"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-34",
+      "slug": "recursion-34-sum-split-halves",
+      "title": "Sum split halves",
+      "topic": "recursion",
+      "subtopic": "divide-conquer",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A recursive method splits [1,2,3,4] into halves, sums each, then adds them. What total is returned?",
+      "examples": [
+        {
+          "input": "[1,2,3,4]",
+          "output": "10"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "10",
+      "options": [],
+      "hints": [
+        "The split does not change the included values."
+      ],
+      "explanation": "Combining the partial sums gives the original array sum.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "divide-conquer"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-35",
+      "slug": "recursion-35-binary-search-call-depth",
+      "title": "Binary search call depth",
+      "topic": "recursion",
+      "subtopic": "divide-conquer",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A balanced binary search reduces 64 candidates by half each call. How many halvings reach one candidate?",
+      "examples": [
+        {
+          "input": "64 candidates",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Solve 64 / 2^k = 1."
+      ],
+      "explanation": "Six halvings take 64 to 32, 16, 8, 4, 2, then 1.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "divide-conquer"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-36",
+      "slug": "recursion-36-combine-inversion-counts",
+      "title": "Combine inversion counts",
+      "topic": "recursion",
+      "subtopic": "divide-conquer",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A divide-and-conquer inversion counter sorts each half recursively. Where are cross-half inversions counted?",
+      "examples": [
+        {
+          "input": "two sorted halves",
+          "output": "merge"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "During the merge step"
+        },
+        {
+          "id": "B",
+          "text": "Only in the base case"
+        },
+        {
+          "id": "C",
+          "text": "Before splitting"
+        },
+        {
+          "id": "D",
+          "text": "After returning the final count"
+        }
+      ],
+      "hints": [
+        "The halves are individually sorted at that point."
+      ],
+      "explanation": "During merge, a right value placed before remaining left values forms cross inversions.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "divide-conquer"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-37",
+      "slug": "recursion-37-quicksort-partition-recursion",
+      "title": "Quicksort partition recursion",
+      "topic": "recursion",
+      "subtopic": "divide-conquer",
+      "difficulty": "Medium",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A partition step places a pivot at index p. Which ranges are recursively sorted next, excluding the pivot?",
+      "examples": [
+        {
+          "input": "pivot index p",
+          "output": "low..p-1 and p+1..high"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "low..p-1 and p+1..high",
+      "options": [],
+      "hints": [
+        "Do not include p in either recursive range."
+      ],
+      "explanation": "The pivot is settled; only ranges on either side remain.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "divide-conquer"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "recursion-38",
+      "slug": "recursion-38-merge-two-sorted-arrays-logic",
+      "title": "Merge two sorted arrays logic",
+      "topic": "recursion",
+      "subtopic": "divide-conquer",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "While merging, if left[i] <= right[j], copy left[i] and advance ___.",
+      "examples": [
+        {
+          "input": "left=[1,4], right=[2,3]",
+          "output": "i"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "i",
+      "options": [],
+      "hints": [
+        "Advance the pointer whose item was consumed."
+      ],
+      "explanation": "The chosen item came from the left sequence.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "divide-conquer"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "recursion-39",
+      "slug": "recursion-39-recurrence-for-merge-sort",
+      "title": "Recurrence for merge sort",
+      "topic": "recursion",
+      "subtopic": "divide-conquer",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Which recurrence models merge sort with two half-size calls and linear merging?",
+      "examples": [
+        {
+          "input": "merge sort",
+          "output": "2T(n/2)+O(n)"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "T(n)=2T(n/2)+O(n)"
+        },
+        {
+          "id": "B",
+          "text": "T(n)=T(n-1)+O(1)"
+        },
+        {
+          "id": "C",
+          "text": "T(n)=T(n/2)+O(1)"
+        },
+        {
+          "id": "D",
+          "text": "T(n)=2T(n)+O(n)"
+        }
+      ],
+      "hints": [
+        "Account for both halves and the merge scan."
+      ],
+      "explanation": "There are two subproblems of size n/2 plus linear combine work.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "recursion",
+        "divide-conquer"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-40",
+      "slug": "recursion-40-binary-search-off-by-one",
+      "title": "Binary search off-by-one",
+      "topic": "recursion",
+      "subtopic": "divide-conquer",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "An inclusive binary search recurses right with low = mid. When low < high and mid rounds down, what bug can occur?",
+      "examples": [
+        {
+          "input": "target greater than a[mid]",
+          "output": "non-shrinking range"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "The range may not shrink, so recursion can repeat forever"
+        },
+        {
+          "id": "B",
+          "text": "The array becomes unsorted"
+        },
+        {
+          "id": "C",
+          "text": "The left half is skipped"
+        },
+        {
+          "id": "D",
+          "text": "The algorithm becomes O(1)"
+        }
+      ],
+      "hints": [
+        "The midpoint itself was already checked."
+      ],
+      "explanation": "The interval may remain unchanged; use mid+1 after checking mid.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "divide-conquer"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-41",
+      "slug": "recursion-41-tower-of-hanoi-smallest-move-count",
+      "title": "Tower of Hanoi smallest move count",
+      "topic": "recursion",
+      "subtopic": "advanced",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For three pegs and n disks, the minimum number of moves is 2^n - 1. How many moves for n=3?",
+      "examples": [
+        {
+          "input": "n=3",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Compute the power first."
+      ],
+      "explanation": "Substitute three: eight minus one.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "recursion",
+        "advanced"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-42",
+      "slug": "recursion-42-recursive-digit-sum",
+      "title": "Recursive digit sum",
+      "topic": "recursion",
+      "subtopic": "advanced",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "digitSum(n) returns n when n < 10; otherwise it returns n%10 + digitSum(n/10) using integer division. What is digitSum(472)?",
+      "examples": [
+        {
+          "input": "472",
+          "output": "13"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "13",
+      "options": [],
+      "hints": [
+        "Remove the last digit on each call."
+      ],
+      "explanation": "The calls add 2, then 7, then the base digit 4.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "advanced"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-43",
+      "slug": "recursion-43-choose-a-base-result",
+      "title": "Choose a base result",
+      "topic": "recursion",
+      "subtopic": "advanced",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A recursive method counts nodes in an empty tree. What should count(null) return?",
+      "examples": [
+        {
+          "input": "empty tree",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "null"
+        },
+        {
+          "id": "D",
+          "text": "-1"
+        }
+      ],
+      "hints": [
+        "The base case should represent the empty structure."
+      ],
+      "explanation": "An empty tree contains no nodes.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "advanced"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-44",
+      "slug": "recursion-44-nested-recursive-list-size",
+      "title": "Nested recursive list size",
+      "topic": "recursion",
+      "subtopic": "advanced",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "size(n) returns 0 for null; otherwise returns 1 + size(n.next). How many nodes are counted in a chain of four nodes?",
+      "examples": [
+        {
+          "input": "four-node chain",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Count non-null node frames, not the null frame."
+      ],
+      "explanation": "Each non-null node contributes one before the null base case.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "advanced"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-45",
+      "slug": "recursion-45-generate-binary-strings",
+      "title": "Generate binary strings",
+      "topic": "recursion",
+      "subtopic": "advanced",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A recursion branches into appending 0 or 1 until length 3. How many distinct strings are generated?",
+      "examples": [
+        {
+          "input": "length 3",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "The recursion tree has 2^3 leaves."
+      ],
+      "explanation": "Each of three positions has two independent choices.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "advanced"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-46",
+      "slug": "recursion-46-memoization-effect",
+      "title": "Memoization effect",
+      "topic": "recursion",
+      "subtopic": "advanced",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A naive Fibonacci recursion recomputes many values. What does memoization change?",
+      "examples": [
+        {
+          "input": "fib(n)",
+          "output": "linear number of states"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "It stores computed results and reuses them"
+        },
+        {
+          "id": "B",
+          "text": "It increases the number of recursive branches"
+        },
+        {
+          "id": "C",
+          "text": "It removes the base case"
+        },
+        {
+          "id": "D",
+          "text": "It sorts the inputs"
+        }
+      ],
+      "hints": [
+        "Cache results by input while preserving the recursive relation."
+      ],
+      "explanation": "It stores answers so each subproblem is solved once, reducing repeated work.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "advanced"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-47",
+      "slug": "recursion-47-recursive-tree-height",
+      "title": "Recursive tree height",
+      "topic": "recursion",
+      "subtopic": "advanced",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A perfect binary tree has height 2 when height counts edges from root to leaf. How many levels does it contain?",
+      "examples": [
+        {
+          "input": "height=2 edges",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Levels equal edge height plus one."
+      ],
+      "explanation": "Edge height two means root plus two further levels.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "advanced"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "recursion-48",
+      "slug": "recursion-48-fix-exponent-recursion",
+      "title": "Fix exponent recursion",
+      "topic": "recursion",
+      "subtopic": "advanced",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "For power(x,n) with n>0, the simple recursive rule is x * power(x, ___), with base power(x,0)=1.",
+      "examples": [
+        {
+          "input": "power(2,3)",
+          "output": "n - 1"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "n - 1",
+      "options": [],
+      "hints": [
+        "This version performs n recursive steps."
+      ],
+      "explanation": "Reduce the exponent by one for this direct recurrence.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "advanced"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "recursion-49",
+      "slug": "recursion-49-fast-exponentiation-recurrence",
+      "title": "Fast exponentiation recurrence",
+      "topic": "recursion",
+      "subtopic": "advanced",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "For even n, fast power computes half=power(x,n/2) then returns half*half. What is recursion depth for positive n?",
+      "examples": [
+        {
+          "input": "n exponent",
+          "output": "O(log n)"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "A",
+      "options": [
+        {
+          "id": "A",
+          "text": "O(log n)"
+        },
+        {
+          "id": "B",
+          "text": "O(n)"
+        },
+        {
+          "id": "C",
+          "text": "O(n log n)"
+        },
+        {
+          "id": "D",
+          "text": "O(1)"
+        }
+      ],
+      "hints": [
+        "Repeatedly halve until the exponent is zero."
+      ],
+      "explanation": "Halving n at each level gives logarithmic depth.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "recursion",
+        "advanced"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "OPTION"
+    },
+    {
+      "id": "recursion-50",
+      "slug": "recursion-50-recursive-subset-count",
+      "title": "Recursive subset count",
+      "topic": "recursion",
+      "subtopic": "advanced",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A subset generator branches into include/exclude for each of 5 distinct items. How many subsets are produced, including the empty set?",
+      "examples": [
+        {
+          "input": "5 items",
+          "output": "32"
+        }
+      ],
+      "constraints": [
+        "Use the stated recursive rule; assume valid inputs unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "32",
+      "options": [],
+      "hints": [
+        "Count the leaves of a binary decision tree of depth five."
+      ],
+      "explanation": "Every item independently has two choices.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "recursion",
+        "advanced"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "INTEGER"
+    }
+  ]
+}

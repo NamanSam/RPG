@@ -10,6 +10,14 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 @Component
 public class ContentLoader implements ApplicationRunner {
+    static final java.util.List<String> PACK_RESOURCES = java.util.List.of(
+            "content/dsa/arrays/v1.json", "content/dsa/strings/v1.json", "content/dsa/linked-lists/v1.json",
+            "content/dsa/stacks/v1.json", "content/dsa/queues/v1.json", "content/dsa/trees/v1.json",
+            "content/dsa/binary-search-trees/v1.json", "content/dsa/graphs/v1.json", "content/dsa/greedy/v1.json",
+            "content/dsa/dynamic-programming/v1.json", "content/dsa/heaps/v1.json", "content/dsa/recursion/v1.json",
+            "content/java/beginner-beach/v1.json", "content/java/loop-village/v1.json",
+            "content/java/array-forest/v1.json", "content/java/oop-canyon/v1.json",
+            "content/java/collection-kingdom/v1.json");
     private final PackService packs;
     private final ConfigurableApplicationContext context;
     public ContentLoader(PackService packs, ConfigurableApplicationContext context) { this.packs=packs; this.context=context; }
@@ -21,7 +29,7 @@ public class ContentLoader implements ApplicationRunner {
             System.out.println("Question pack validation/import succeeded.");
             context.close();
         } else {
-            for (String resource : java.util.List.of("content/dsa/arrays/v1.json", "content/dsa/strings/v1.json", "content/dsa/linked-lists/v1.json", "content/dsa/stacks/v1.json", "content/dsa/queues/v1.json", "content/dsa/trees/v1.json", "content/dsa/binary-search-trees/v1.json", "content/dsa/graphs/v1.json", "content/dsa/greedy/v1.json", "content/dsa/dynamic-programming/v1.json", "content/dsa/heaps/v1.json", "content/java/beginner-beach/v1.json", "content/java/loop-village/v1.json", "content/java/array-forest/v1.json", "content/java/oop-canyon/v1.json", "content/java/collection-kingdom/v1.json")) {
+            for (String resource : PACK_RESOURCES) {
                 try(var input=new ClassPathResource(resource).getInputStream()) {
                     packs.publish(new String(input.readAllBytes(),StandardCharsets.UTF_8));
                 }
