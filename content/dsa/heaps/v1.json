@@ -1,0 +1,1778 @@
+{
+  "questions": [
+    {
+      "trail": 1.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "fundamentals"
+      ],
+      "id": "heap-01",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "minimum",
+      "isClassic": false,
+      "order": 1,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Min heap root",
+      "description": "Answer this Heap Highlands challenge: Min heap root.",
+      "topic": "heaps",
+      "explanation": "A min heap keeps every parent no greater than its children.",
+      "subtopic": "heap-fundamentals",
+      "slug": "min-heap-root",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "minimum",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 1.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "fundamentals"
+      ],
+      "id": "heap-02",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "maximum",
+      "isClassic": false,
+      "order": 2,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Max heap root",
+      "description": "Answer this Heap Highlands challenge: Max heap root.",
+      "topic": "heaps",
+      "explanation": "A max heap keeps every parent no less than its children.",
+      "subtopic": "heap-fundamentals",
+      "slug": "max-heap-root",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "maximum",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 1.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "fundamentals"
+      ],
+      "id": "heap-03",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "left to right",
+      "isClassic": false,
+      "order": 3,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Complete tree fill",
+      "description": "Answer this Heap Highlands challenge: Complete tree fill.",
+      "topic": "heaps",
+      "explanation": "The final tree level is filled from the left without gaps.",
+      "subtopic": "heap-fundamentals",
+      "slug": "complete-tree-fill",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "left to right",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 1.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "fundamentals"
+      ],
+      "id": "heap-04",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "2 * i + 1",
+      "isClassic": false,
+      "order": 4,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Left child index",
+      "description": "Answer this Heap Highlands challenge: Left child index.",
+      "topic": "heaps",
+      "explanation": "Zero based heap arrays place the left child at 2i plus one.",
+      "subtopic": "heap-fundamentals",
+      "slug": "left-child-index",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "2 * i + 1",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 1.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "fundamentals"
+      ],
+      "id": "heap-05",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "BST",
+      "isClassic": false,
+      "order": 5,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Heap versus BST",
+      "description": "Answer this Heap Highlands challenge: Heap versus BST.",
+      "topic": "heaps",
+      "explanation": "A BST orders subtrees while a heap only orders parent and child.",
+      "subtopic": "heap-fundamentals",
+      "slug": "heap-versus-bst",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "BST",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 1.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "fundamentals"
+      ],
+      "id": "heap-06",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "smallest",
+      "isClassic": false,
+      "order": 6,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Java queue head",
+      "description": "Answer this Heap Highlands challenge: Java queue head.",
+      "topic": "heaps",
+      "explanation": "Natural-order Java PriorityQueue exposes the least element.",
+      "subtopic": "heap-fundamentals",
+      "slug": "java-queue-head",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "smallest",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 1.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "fundamentals"
+      ],
+      "id": "heap-07",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "(i - 1) / 2",
+      "isClassic": false,
+      "order": 7,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Parent index",
+      "description": "Answer this Heap Highlands challenge: Parent index.",
+      "topic": "heaps",
+      "explanation": "Integer division gives the zero based parent position.",
+      "subtopic": "heap-fundamentals",
+      "slug": "parent-index",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "(i - 1) / 2",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 1.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "fundamentals"
+      ],
+      "id": "heap-08",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "2 * i + 2",
+      "isClassic": false,
+      "order": 8,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Right child index",
+      "description": "Answer this Heap Highlands challenge: Right child index.",
+      "topic": "heaps",
+      "explanation": "The right child follows the left child in a zero based array.",
+      "subtopic": "heap-fundamentals",
+      "slug": "right-child-index",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "2 * i + 2",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 1.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "fundamentals"
+      ],
+      "id": "heap-09",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "O(1)",
+      "isClassic": false,
+      "order": 9,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Peek complexity",
+      "description": "Answer this Heap Highlands challenge: Peek complexity.",
+      "topic": "heaps",
+      "explanation": "The root is stored at index zero.",
+      "subtopic": "heap-fundamentals",
+      "slug": "peek-complexity",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Hard",
+      "starterCode": "",
+      "xpReward": 30,
+      "examples": [
+        {
+          "output": "O(1)",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 1.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "fundamentals"
+      ],
+      "id": "heap-10",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "3",
+      "isClassic": false,
+      "order": 10,
+      "options": [],
+      "validator": "INTEGER",
+      "title": "Last parent n=9",
+      "description": "Answer this Heap Highlands challenge: Last parent n=9.",
+      "topic": "heaps",
+      "explanation": "floor(n/2)-1 is the last internal node.",
+      "subtopic": "heap-fundamentals",
+      "slug": "last-parent-n-9",
+      "questionType": "PREDICT_OUTPUT",
+      "difficulty": "Hard",
+      "starterCode": "",
+      "xpReward": 30,
+      "examples": [
+        {
+          "output": "3",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 2.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "operations"
+      ],
+      "id": "heap-11",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "sift up",
+      "isClassic": false,
+      "order": 11,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Insert repair",
+      "description": "Answer this Heap Highlands challenge: Insert repair.",
+      "topic": "heaps",
+      "explanation": "A newly appended element moves toward its parent while heap order is violated.",
+      "subtopic": "heap-operations",
+      "slug": "insert-repair",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "sift up",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 2.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "operations"
+      ],
+      "id": "heap-12",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "last element",
+      "isClassic": false,
+      "order": 12,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Extract repair",
+      "description": "Answer this Heap Highlands challenge: Extract repair.",
+      "topic": "heaps",
+      "explanation": "The final leaf replaces the root before sift down restores order.",
+      "subtopic": "heap-operations",
+      "slug": "extract-repair",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "last element",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 2.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "operations"
+      ],
+      "id": "heap-13",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "smaller child",
+      "isClassic": false,
+      "order": 13,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Min sift choice",
+      "description": "Answer this Heap Highlands challenge: Min sift choice.",
+      "topic": "heaps",
+      "explanation": "Promoting the smaller child preserves the min heap invariant.",
+      "subtopic": "heap-operations",
+      "slug": "min-sift-choice",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "smaller child",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 2.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "operations"
+      ],
+      "id": "heap-14",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "O(log n)",
+      "isClassic": false,
+      "order": 14,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Insert complexity",
+      "description": "Answer this Heap Highlands challenge: Insert complexity.",
+      "topic": "heaps",
+      "explanation": "An insertion can travel at most the tree height.",
+      "subtopic": "heap-operations",
+      "slug": "insert-complexity",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "O(log n)",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 2.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "operations"
+      ],
+      "id": "heap-15",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "O(log n)",
+      "isClassic": false,
+      "order": 15,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Extract complexity",
+      "description": "Answer this Heap Highlands challenge: Extract complexity.",
+      "topic": "heaps",
+      "explanation": "Root repair follows a single height-bounded path.",
+      "subtopic": "heap-operations",
+      "slug": "extract-complexity",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "O(log n)",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 2.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "operations"
+      ],
+      "id": "heap-16",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "down",
+      "isClassic": false,
+      "order": 16,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Heapify direction",
+      "description": "Answer this Heap Highlands challenge: Heapify direction.",
+      "topic": "heaps",
+      "explanation": "Sift down repairs a node toward the leaves.",
+      "subtopic": "heap-operations",
+      "slug": "heapify-direction",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "down",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 2.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "operations"
+      ],
+      "id": "heap-17",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "O(log n)",
+      "isClassic": false,
+      "order": 17,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Arbitrary deletion",
+      "description": "Answer this Heap Highlands challenge: Arbitrary deletion.",
+      "topic": "heaps",
+      "explanation": "Replace the removed slot and repair along a tree path.",
+      "subtopic": "heap-operations",
+      "slug": "arbitrary-deletion",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "O(log n)",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 2.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "operations"
+      ],
+      "id": "heap-18",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "maximum",
+      "isClassic": false,
+      "order": 18,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Peek max heap",
+      "description": "Answer this Heap Highlands challenge: Peek max heap.",
+      "topic": "heaps",
+      "explanation": "The root of a max heap is the largest key.",
+      "subtopic": "heap-operations",
+      "slug": "peek-max-heap",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "maximum",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 2.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "operations"
+      ],
+      "id": "heap-19",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "O(n)",
+      "isClassic": false,
+      "order": 19,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Heap storage",
+      "description": "Answer this Heap Highlands challenge: Heap storage.",
+      "topic": "heaps",
+      "explanation": "An array heap stores each element once.",
+      "subtopic": "heap-operations",
+      "slug": "heap-storage",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Hard",
+      "starterCode": "",
+      "xpReward": 30,
+      "examples": [
+        {
+          "output": "O(n)",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 2.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "operations"
+      ],
+      "id": "heap-20",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "parent is ordered",
+      "isClassic": false,
+      "order": 20,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Sift up stop",
+      "description": "Answer this Heap Highlands challenge: Sift up stop.",
+      "topic": "heaps",
+      "explanation": "Sift up stops when the parent is no greater for a min heap.",
+      "subtopic": "heap-operations",
+      "slug": "sift-up-stop",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Hard",
+      "starterCode": "",
+      "xpReward": 30,
+      "examples": [
+        {
+          "output": "parent is ordered",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 3.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "construction"
+      ],
+      "id": "heap-21",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "O(n)",
+      "isClassic": false,
+      "order": 21,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Build heap cost",
+      "description": "Answer this Heap Highlands challenge: Build heap cost.",
+      "topic": "heaps",
+      "explanation": "Bottom up heap construction is linear overall.",
+      "subtopic": "heap-construction",
+      "slug": "build-heap-cost",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "O(n)",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 3.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "construction"
+      ],
+      "id": "heap-22",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "floor(n / 2) - 1",
+      "isClassic": false,
+      "order": 22,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Build start index",
+      "description": "Answer this Heap Highlands challenge: Build start index.",
+      "topic": "heaps",
+      "explanation": "Leaves require no sift down, so begin at the final parent.",
+      "subtopic": "heap-construction",
+      "slug": "build-start-index",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "floor(n / 2) - 1",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 3.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "construction"
+      ],
+      "id": "heap-23",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "O(n log n)",
+      "isClassic": false,
+      "order": 23,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Heap sort cost",
+      "description": "Answer this Heap Highlands challenge: Heap sort cost.",
+      "topic": "heaps",
+      "explanation": "Linear construction plus n logarithmic removals gives this bound.",
+      "subtopic": "heap-construction",
+      "slug": "heap-sort-cost",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "O(n log n)",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 3.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "construction"
+      ],
+      "id": "heap-24",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "max heap",
+      "isClassic": false,
+      "order": 24,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Ascending heapsort",
+      "description": "Answer this Heap Highlands challenge: Ascending heapsort.",
+      "topic": "heaps",
+      "explanation": "Repeatedly moving the maximum to the suffix creates ascending order.",
+      "subtopic": "heap-construction",
+      "slug": "ascending-heapsort",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "max heap",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 3.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "construction"
+      ],
+      "id": "heap-25",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "min heap",
+      "isClassic": false,
+      "order": 25,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Descending heapsort",
+      "description": "Answer this Heap Highlands challenge: Descending heapsort.",
+      "topic": "heaps",
+      "explanation": "Repeatedly moving the minimum to the suffix creates descending order.",
+      "subtopic": "heap-construction",
+      "slug": "descending-heapsort",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "min heap",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 3.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "construction"
+      ],
+      "id": "heap-26",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "O(1)",
+      "isClassic": false,
+      "order": 26,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Heap sort space",
+      "description": "Answer this Heap Highlands challenge: Heap sort space.",
+      "topic": "heaps",
+      "explanation": "In place heap sort rearranges the input array.",
+      "subtopic": "heap-construction",
+      "slug": "heap-sort-space",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "O(1)",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 3.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "construction"
+      ],
+      "id": "heap-27",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "no",
+      "isClassic": false,
+      "order": 27,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Heap sort stable",
+      "description": "Answer this Heap Highlands challenge: Heap sort stable.",
+      "topic": "heaps",
+      "explanation": "Heap swaps can change the order of equal keys.",
+      "subtopic": "heap-construction",
+      "slug": "heap-sort-stable",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "no",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 3.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "construction"
+      ],
+      "id": "heap-28",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "most nodes are near leaves",
+      "isClassic": false,
+      "order": 28,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Build reason",
+      "description": "Answer this Heap Highlands challenge: Build reason.",
+      "topic": "heaps",
+      "explanation": "The majority of nodes have small heights and little repair work.",
+      "subtopic": "heap-construction",
+      "slug": "build-reason",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "most nodes are near leaves",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 3.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "construction"
+      ],
+      "id": "heap-29",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "ascending",
+      "isClassic": false,
+      "order": 29,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Heap sort result",
+      "description": "Answer this Heap Highlands challenge: Heap sort result.",
+      "topic": "heaps",
+      "explanation": "Max heap extraction places each greatest remaining key at the end.",
+      "subtopic": "heap-construction",
+      "slug": "heap-sort-result",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Hard",
+      "starterCode": "",
+      "xpReward": 30,
+      "examples": [
+        {
+          "output": "ascending",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 3.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "construction"
+      ],
+      "id": "heap-30",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "max child",
+      "isClassic": false,
+      "order": 30,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Sift-down swap",
+      "description": "Answer this Heap Highlands challenge: Sift-down swap.",
+      "topic": "heaps",
+      "explanation": "A max heap must promote the larger child.",
+      "subtopic": "heap-construction",
+      "slug": "sift-down-swap",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Hard",
+      "starterCode": "",
+      "xpReward": 30,
+      "examples": [
+        {
+          "output": "max child",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 4.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "priority-queues"
+      ],
+      "id": "heap-31",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "Comparator.reverseOrder()",
+      "isClassic": false,
+      "order": 31,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Reverse comparator",
+      "description": "Answer this Heap Highlands challenge: Reverse comparator.",
+      "topic": "heaps",
+      "explanation": "Reverse ordering makes the maximum the PriorityQueue head.",
+      "subtopic": "priority-queues",
+      "slug": "reverse-comparator",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "Comparator.reverseOrder()",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 4.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "priority-queues"
+      ],
+      "id": "heap-32",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "k",
+      "isClassic": true,
+      "order": 32,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Kth largest heap size",
+      "description": "Answer this Heap Highlands challenge: Kth largest heap size.",
+      "topic": "heaps",
+      "explanation": "A size k min heap retains the largest k values.",
+      "subtopic": "priority-queues",
+      "slug": "kth-largest-heap-size",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "k",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 4.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "priority-queues"
+      ],
+      "id": "heap-33",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "max heap",
+      "isClassic": true,
+      "order": 33,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Kth smallest root",
+      "description": "Answer this Heap Highlands challenge: Kth smallest root.",
+      "topic": "heaps",
+      "explanation": "The maximum among the smallest k retained candidates is the kth smallest.",
+      "subtopic": "priority-queues",
+      "slug": "kth-smallest-root",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "max heap",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 4.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "priority-queues"
+      ],
+      "id": "heap-34",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "lowest frequency",
+      "isClassic": true,
+      "order": 34,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Top k eviction",
+      "description": "Answer this Heap Highlands challenge: Top k eviction.",
+      "topic": "heaps",
+      "explanation": "A min heap exposes the weakest retained frequency.",
+      "subtopic": "priority-queues",
+      "slug": "top-k-eviction",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "lowest frequency",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 4.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "priority-queues"
+      ],
+      "id": "heap-35",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "farthest",
+      "isClassic": true,
+      "order": 35,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Closest points root",
+      "description": "Answer this Heap Highlands challenge: Closest points root.",
+      "topic": "heaps",
+      "explanation": "A bounded max heap evicts the farthest retained point.",
+      "subtopic": "priority-queues",
+      "slug": "closest-points-root",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "farthest",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 4.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "priority-queues"
+      ],
+      "id": "heap-36",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "one value per array",
+      "isClassic": true,
+      "order": 36,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Merge arrays frontier",
+      "description": "Answer this Heap Highlands challenge: Merge arrays frontier.",
+      "topic": "heaps",
+      "explanation": "The heap keeps one current candidate from each nonempty array.",
+      "subtopic": "priority-queues",
+      "slug": "merge-arrays-frontier",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "one value per array",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 4.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "priority-queues"
+      ],
+      "id": "heap-37",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "current node",
+      "isClassic": true,
+      "order": 37,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Merge lists entry",
+      "description": "Answer this Heap Highlands challenge: Merge lists entry.",
+      "topic": "heaps",
+      "explanation": "After removing a node, offer its successor from that list.",
+      "subtopic": "priority-queues",
+      "slug": "merge-lists-entry",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "current node",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 4.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "priority-queues"
+      ],
+      "id": "heap-38",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "max heap and min heap",
+      "isClassic": true,
+      "order": 38,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Median structure",
+      "description": "Answer this Heap Highlands challenge: Median structure.",
+      "topic": "heaps",
+      "explanation": "Two balanced heaps expose the middle values.",
+      "subtopic": "priority-queues",
+      "slug": "median-structure",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "max heap and min heap",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 4.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "priority-queues"
+      ],
+      "id": "heap-39",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "O(N log k)",
+      "isClassic": true,
+      "order": 39,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Merge k complexity",
+      "description": "Answer this Heap Highlands challenge: Merge k complexity.",
+      "topic": "heaps",
+      "explanation": "Each of N elements updates a heap containing at most k entries.",
+      "subtopic": "priority-queues",
+      "slug": "merge-k-complexity",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Hard",
+      "starterCode": "",
+      "xpReward": 30,
+      "examples": [
+        {
+          "output": "O(N log k)",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 4.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "priority-queues"
+      ],
+      "id": "heap-40",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "3",
+      "isClassic": true,
+      "order": 40,
+      "options": [],
+      "validator": "INTEGER",
+      "title": "Poll values 8,3,5",
+      "description": "Answer this Heap Highlands challenge: Poll values 8,3,5.",
+      "topic": "heaps",
+      "explanation": "Natural-order PriorityQueue polls the least key first.",
+      "subtopic": "priority-queues",
+      "slug": "poll-values-8-3-5",
+      "questionType": "PREDICT_OUTPUT",
+      "difficulty": "Hard",
+      "starterCode": "",
+      "xpReward": 30,
+      "examples": [
+        {
+          "output": "3",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 5.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "advanced"
+      ],
+      "id": "heap-41",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "integer overflow",
+      "isClassic": false,
+      "order": 41,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Comparator subtraction",
+      "description": "Answer this Heap Highlands challenge: Comparator subtraction.",
+      "topic": "heaps",
+      "explanation": "Subtracting extreme integers can invert comparison order.",
+      "subtopic": "advanced-heaps",
+      "slug": "comparator-subtraction",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "integer overflow",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 5.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "advanced"
+      ],
+      "id": "heap-42",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "7",
+      "isClassic": false,
+      "order": 42,
+      "options": [],
+      "validator": "INTEGER",
+      "title": "Size two largest [9,2,7,4]",
+      "description": "Answer this Heap Highlands challenge: Size two largest [9,2,7,4].",
+      "topic": "heaps",
+      "explanation": "The retained keys are 9 and 7, with 7 at the min heap root.",
+      "subtopic": "advanced-heaps",
+      "slug": "size-two-largest-9-2-7-4",
+      "questionType": "PREDICT_OUTPUT",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "7",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 5.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "advanced"
+      ],
+      "id": "heap-43",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "A,C",
+      "isClassic": false,
+      "order": 43,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Top frequencies A6 B3 C5",
+      "description": "Answer this Heap Highlands challenge: Top frequencies A6 B3 C5.",
+      "topic": "heaps",
+      "explanation": "The two largest counts are six and five.",
+      "subtopic": "advanced-heaps",
+      "slug": "top-frequencies-a6-b3-c5",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "A,C",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 5.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "advanced"
+      ],
+      "id": "heap-44",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "4",
+      "isClassic": false,
+      "order": 44,
+      "options": [],
+      "validator": "INTEGER",
+      "title": "Median of 2,9,4",
+      "description": "Answer this Heap Highlands challenge: Median of 2,9,4.",
+      "topic": "heaps",
+      "explanation": "The sorted stream is 2,4,9.",
+      "subtopic": "advanced-heaps",
+      "slug": "median-of-2-9-4",
+      "questionType": "PREDICT_OUTPUT",
+      "difficulty": "Easy",
+      "starterCode": "",
+      "xpReward": 10,
+      "examples": [
+        {
+          "output": "4",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 5.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "advanced"
+      ],
+      "id": "heap-45",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "k",
+      "isClassic": false,
+      "order": 45,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Merge frontier maximum",
+      "description": "Answer this Heap Highlands challenge: Merge frontier maximum.",
+      "topic": "heaps",
+      "explanation": "At most one candidate from each sorted list is in the heap.",
+      "subtopic": "advanced-heaps",
+      "slug": "merge-frontier-maximum",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "k",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 5.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "advanced"
+      ],
+      "id": "heap-46",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "repeated priority removal",
+      "isClassic": false,
+      "order": 46,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Priority queue use",
+      "description": "Answer this Heap Highlands challenge: Priority queue use.",
+      "topic": "heaps",
+      "explanation": "A priority queue fits repeated insertion and extremal extraction.",
+      "subtopic": "advanced-heaps",
+      "slug": "priority-queue-use",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "repeated priority removal",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 5.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "advanced"
+      ],
+      "id": "heap-47",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "max heap",
+      "isClassic": false,
+      "order": 47,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Ascending sort heap",
+      "description": "Answer this Heap Highlands challenge: Ascending sort heap.",
+      "topic": "heaps",
+      "explanation": "Move each root maximum to the sorted suffix.",
+      "subtopic": "advanced-heaps",
+      "slug": "ascending-sort-heap",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "max heap",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 5.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "advanced"
+      ],
+      "id": "heap-48",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "up or down",
+      "isClassic": false,
+      "order": 48,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Delete repair choice",
+      "description": "Answer this Heap Highlands challenge: Delete repair choice.",
+      "topic": "heaps",
+      "explanation": "Compare the replacement with its parent and children to choose direction.",
+      "subtopic": "advanced-heaps",
+      "slug": "delete-repair-choice",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Medium",
+      "starterCode": "",
+      "xpReward": 20,
+      "examples": [
+        {
+          "output": "up or down",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 5.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "advanced"
+      ],
+      "id": "heap-49",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "O(n log k)",
+      "isClassic": false,
+      "order": 49,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Top k selection",
+      "description": "Answer this Heap Highlands challenge: Top k selection.",
+      "topic": "heaps",
+      "explanation": "Each input can update a bounded heap of size k.",
+      "subtopic": "advanced-heaps",
+      "slug": "top-k-selection",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Hard",
+      "starterCode": "",
+      "xpReward": 30,
+      "examples": [
+        {
+          "output": "O(n log k)",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    },
+    {
+      "trail": 5.0,
+      "hints": [
+        "Use the parent-child heap invariant and trace only the affected path."
+      ],
+      "tags": [
+        "heaps",
+        "advanced"
+      ],
+      "id": "heap-50",
+      "constraints": [
+        "Assume a binary heap with zero based array indices unless stated otherwise."
+      ],
+      "expectedAnswer": "maximum",
+      "isClassic": false,
+      "order": 50,
+      "options": [],
+      "validator": "TOKEN",
+      "title": "Final root extraction",
+      "description": "Answer this Heap Highlands challenge: Final root extraction.",
+      "topic": "heaps",
+      "explanation": "The root is the extremal key selected by heap ordering.",
+      "subtopic": "advanced-heaps",
+      "slug": "final-root-extraction",
+      "questionType": "LOGIC_ANSWER",
+      "difficulty": "Hard",
+      "starterCode": "",
+      "xpReward": 30,
+      "examples": [
+        {
+          "output": "maximum",
+          "input": "Apply the stated heap property or operation."
+        }
+      ]
+    }
+  ],
+  "topic": "heaps",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Heap Fundamentals"
+    },
+    {
+      "number": 2,
+      "name": "Heap Operations"
+    },
+    {
+      "number": 3,
+      "name": "Heap Construction"
+    },
+    {
+      "number": 4,
+      "name": "Priority Queue Challenges"
+    },
+    {
+      "number": 5,
+      "name": "Advanced Heap Problems"
+    }
+  ]
+}

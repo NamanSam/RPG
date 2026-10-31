@@ -12,15 +12,39 @@ import { BstValleyScene } from "../features/array-isles/BstValleyScene";
 import { GraphMountainsScene } from "../features/array-isles/GraphMountainsScene";
 import { GreedyDesertScene } from "../features/array-isles/GreedyDesertScene";
 import { DynamicProgrammingTempleScene } from "../features/array-isles/DynamicProgrammingTempleScene";
+import { HeapHighlandsScene } from "../features/array-isles/HeapHighlandsScene";
 import "../features/array-isles/isles.css";
 
 export function DsaWorldMap() {
   const [map,setMap]=useState(null),[topics,setTopics]=useState({}),[error,setError]=useState("");
   const [question,setQuestion]=useState(null),[celebration,setCelebration]=useState(null),[pending,setPending]=useState(null);
-  useEffect(()=>{let active=true;(async()=>{try{const value=await api("/campaigns/dsa/map");if(!active)return;setMap(value);if(value.unlocked){const arrays=await api("/topics/arrays/progress"),next={arrays};if(arrays.complete){next.strings=await api("/topics/strings/progress");if(next.strings.complete){next.linked=await api("/topics/linked-lists/progress");if(next.linked.complete){next.stacks=await api("/topics/stacks/progress");if(next.stacks.complete){next.queues=await api("/topics/queues/progress");if(next.queues.complete){next.trees=await api("/topics/trees/progress");if(next.trees.complete){next.bst=await api("/topics/binary-search-trees/progress");if(next.bst.complete){next.graphs=await api("/topics/graphs/progress");if(next.graphs.complete){next.greedy=await api("/topics/greedy/progress");if(next.greedy.complete)next.dp=await api("/topics/dynamic-programming/progress");}}}}}}}}if(active)setTopics(next);}}catch(e){if(active)setError(e.message);}})();return()=>{active=false;};},[]);
-  async function result(r){const key=r.progress.topic==="linked-lists"?"linked":r.progress.topic==="binary-search-trees"?"bst":r.progress.topic==="dynamic-programming"?"dp":r.progress.topic;setTopics(old=>({...old,[key]:r.progress}));if(r.topicCompletedNow||r.trailCompletedNow)setPending(r);const next={arrays:"strings",strings:"linked-lists","linked-lists":"stacks",stacks:"queues",queues:"trees",trees:"binary-search-trees","binary-search-trees":"graphs",graphs:"greedy",greedy:"dynamic-programming"}[r.progress.topic];if(r.topicCompletedNow&&next){const p=await api(`/topics/${next}/progress`);setTopics(old=>({...old,[next==="linked-lists"?"linked":next==="binary-search-trees"?"bst":next==="dynamic-programming"?"dp":next]:p}));}}
+  useEffect(()=>{
+    let active=true;
+    (async()=>{
+      try {
+        const value=await api("/campaigns/dsa/map");
+        if(!active)return;
+        setMap(value);
+        if(!value.unlocked)return;
+        const next={arrays:await api("/topics/arrays/progress")};
+        if(next.arrays.complete)next.strings=await api("/topics/strings/progress");
+        if(next.strings?.complete)next.linked=await api("/topics/linked-lists/progress");
+        if(next.linked?.complete)next.stacks=await api("/topics/stacks/progress");
+        if(next.stacks?.complete)next.queues=await api("/topics/queues/progress");
+        if(next.queues?.complete)next.trees=await api("/topics/trees/progress");
+        if(next.trees?.complete)next.bst=await api("/topics/binary-search-trees/progress");
+        if(next.bst?.complete)next.graphs=await api("/topics/graphs/progress");
+        if(next.graphs?.complete)next.greedy=await api("/topics/greedy/progress");
+        if(next.greedy?.complete)next.dp=await api("/topics/dynamic-programming/progress");
+        if(next.dp?.complete)next.heaps=await api("/topics/heaps/progress");
+        if(active)setTopics(next);
+      } catch(e) { if(active)setError(e.message); }
+    })();
+    return()=>{active=false;};
+  },[]);
+  async function result(r){const key=r.progress.topic==="linked-lists"?"linked":r.progress.topic==="binary-search-trees"?"bst":r.progress.topic==="dynamic-programming"?"dp":r.progress.topic;setTopics(old=>({...old,[key]:r.progress}));if(r.topicCompletedNow||r.trailCompletedNow)setPending(r);const next={arrays:"strings",strings:"linked-lists","linked-lists":"stacks",stacks:"queues",queues:"trees",trees:"binary-search-trees","binary-search-trees":"graphs",graphs:"greedy",greedy:"dynamic-programming","dynamic-programming":"heaps"}[r.progress.topic];if(r.topicCompletedNow&&next){const p=await api(`/topics/${next}/progress`);setTopics(old=>({...old,[next==="linked-lists"?"linked":next==="binary-search-trees"?"bst":next==="dynamic-programming"?"dp":next]:p}));}}
   function close(){setQuestion(null);if(pending){setCelebration(pending);setPending(null);}}
-  const arrays=topics.arrays,strings=topics.strings,linked=topics.linked,stacks=topics.stacks,queues=topics.queues,trees=topics.trees,bst=topics.bst,graphs=topics.graphs,greedy=topics.greedy,dp=topics.dp;
+  const arrays=topics.arrays,strings=topics.strings,linked=topics.linked,stacks=topics.stacks,queues=topics.queues,trees=topics.trees,bst=topics.bst,graphs=topics.graphs,greedy=topics.greedy,dp=topics.dp,heaps=topics.heaps;
   return <div className="archipelago"><header className="isles-nav"><Link to="/world">← The Java Realm</Link><span>CODEQUEST · DSA CAMPAIGN</span></header>
     <main className="isles-main"><p className="eyebrow">THE ALGORITHM ARCHIPELAGO</p><h1>DSA Realm</h1><p>Restore each region to reveal the next route across the sea.</p>
       {error&&<p role="alert">{error} <Link to="/login">Return to sign in</Link></p>}{!map&&!error&&<p>Charting the sea…</p>}
@@ -62,11 +86,12 @@ export function DsaWorldMap() {
         {!greedy.complete&&<div className="temple-locked"><span aria-hidden="true">◇</span><h3>TEMPLE RUNES DORMANT</h3><p>Complete all 50 Greedy Desert encounters to awaken the temple.</p></div>}
         {dp&&<><TopicStatus progress={dp}/><TrailNav progress={dp} prefix="dp-trail"/><div className="island-map temple-map">{dp.trails.map(t=><DynamicProgrammingTempleScene key={t.number} trail={t} onQuestion={setQuestion}/>)}</div>{dp.complete&&<p className="island-future">Dynamic Programming Temple restored. Every state now resolves from its foundations.</p>}</>}
       </section>}
+      {dp&&<section className="heap-region"><RegionHeader eyebrow="DSA REGION 11" title="Heap Highlands" description="Climb five passes and master the priority queue."/>{!dp.complete&&<div className="heap-locked"><h3>HIGHLAND PASS SEALED</h3><p>Complete Dynamic Programming Temple to open this ascent.</p></div>}{heaps&&<><TopicStatus progress={heaps}/><TrailNav progress={heaps} prefix="heap-trail"/><div className="island-map heap-map">{heaps.trails.map(t=><HeapHighlandsScene key={t.number} trail={t} onQuestion={setQuestion}/>)}</div></>}</section>}
     </main>
-    {question&&<QuestionPanel key={question} id={question} onClose={close} onResult={result}/>} {celebration&&<Completion result={celebration} onClose={()=>{const p=celebration.progress,prefix=p.topic==="dynamic-programming"?"dp-trail":p.topic==="greedy"?"greedy-trail":p.topic==="graphs"?"graph-trail":p.topic==="binary-search-trees"?"bst-trail":p.topic==="trees"?"tree-trail":p.topic==="queues"?"queue-trail":p.topic==="stacks"?"stack-trail":p.topic==="linked-lists"?"linked-trail":p.topic==="strings"?"strings-trail":"trail";setCelebration(null);if(!celebration.topicCompletedNow)document.getElementById(`${prefix}-${p.unlockedTrail}`)?.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});}}/>}
+    {question&&<QuestionPanel key={question} id={question} onClose={close} onResult={result}/>} {celebration&&<Completion result={celebration} onClose={()=>{const p=celebration.progress,prefix=p.topic==="heaps"?"heap-trail":p.topic==="dynamic-programming"?"dp-trail":p.topic==="greedy"?"greedy-trail":p.topic==="graphs"?"graph-trail":p.topic==="binary-search-trees"?"bst-trail":p.topic==="trees"?"tree-trail":p.topic==="queues"?"queue-trail":p.topic==="stacks"?"stack-trail":p.topic==="linked-lists"?"linked-trail":p.topic==="strings"?"strings-trail":"trail";setCelebration(null);if(!celebration.topicCompletedNow)document.getElementById(`${prefix}-${p.unlockedTrail}`)?.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});}}/>}
   </div>;
 }
 function RegionHeader({eyebrow,title,description}){return <div className="region-heading"><p className="eyebrow">{eyebrow}</p><h2>{title}</h2><p>{description}</p></div>}
 function TopicStatus({progress}){return <div className="isles-pass"><strong>{progress.completed}/50 encounters restored</strong><span>Level {progress.level} · {progress.totalXp} total XP</span>{progress.badge&&<span>⚑ {progress.badge}</span>}</div>}
 function TrailNav({progress,prefix}){return <nav className="trail-navigation" aria-label={`${progress.regionName} trails`}>{progress.trails.map(t=><a key={t.number} href={`#${prefix}-${t.number}`}>{t.unlocked?"◆":"◇"} {t.name}</a>)}</nav>}
-function Completion({result,onClose}){const ref=useRef(null);useEffect(()=>{const el=ref.current;el.showModal();return()=>el.close();},[]);const names={arrays:"ARRAY ISLES",strings:"STRING HARBOR","linked-lists":"LINKED LIST WOODS",stacks:"STACK TOWER",queues:"QUEUE STATION",trees:"TREE KINGDOM","binary-search-trees":"BST VALLEY",graphs:"GRAPH MOUNTAINS",greedy:"GREEDY DESERT","dynamic-programming":"DYNAMIC PROGRAMMING TEMPLE"},icons={arrays:"▥",strings:"⚓","linked-lists":"♣",stacks:"✦",queues:"⇥",trees:"♛","binary-search-trees":"⚖",graphs:"▲",greedy:"☀","dynamic-programming":"♦"};return <dialog ref={ref} className="guide-dialog island-completion" aria-labelledby="dsa-complete" onCancel={onClose}><div className="island-badge" aria-hidden="true">{icons[result.progress.topic]}<br/>◆ ◆ ◆</div><h2 id="dsa-complete">{result.topicCompletedNow?`${names[result.progress.topic]} COMPLETE`:"TRAIL RESTORED"}</h2><p>{result.topicCompletedNow?`50 discoveries. ${result.progress.badge} badge earned.`:"All ten encounters completed. The next trail is open."}</p><p>{result.progress.totalXp} total XP</p><button className="primary-button" onClick={onClose}>{result.topicCompletedNow?"Return to the region":"Explore the next trail →"}</button></dialog>}
+function Completion({result,onClose}){const ref=useRef(null);useEffect(()=>{const el=ref.current;el.showModal();return()=>el.close();},[]);const names={arrays:"ARRAY ISLES",strings:"STRING HARBOR","linked-lists":"LINKED LIST WOODS",stacks:"STACK TOWER",queues:"QUEUE STATION",trees:"TREE KINGDOM","binary-search-trees":"BST VALLEY",graphs:"GRAPH MOUNTAINS",greedy:"GREEDY DESERT","dynamic-programming":"DYNAMIC PROGRAMMING TEMPLE",heaps:"HEAP HIGHLANDS"},icons={arrays:"▥",strings:"⚓","linked-lists":"♣",stacks:"✦",queues:"⇥",trees:"♛","binary-search-trees":"⚖",graphs:"▲",greedy:"☀","dynamic-programming":"♦",heaps:"▲"};return <dialog ref={ref} className="guide-dialog island-completion" aria-labelledby="dsa-complete" onCancel={onClose}><div className="island-badge" aria-hidden="true">{icons[result.progress.topic]}<br/>◆ ◆ ◆</div><h2 id="dsa-complete">{result.topicCompletedNow?`${names[result.progress.topic]} COMPLETE`:"TRAIL RESTORED"}</h2><p>{result.topicCompletedNow?`50 discoveries. ${result.progress.badge} badge earned.`:"All ten encounters completed. The next trail is open."}</p><p>{result.progress.totalXp} total XP</p><button className="primary-button" onClick={onClose}>{result.topicCompletedNow?"Return to the region":"Explore the next trail →"}</button></dialog>}
