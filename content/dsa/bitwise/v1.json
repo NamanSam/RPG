@@ -1,0 +1,1778 @@
+{
+  "topic": "bitwise",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Bitwise Foundations"
+    },
+    {
+      "number": 2,
+      "name": "Bit Shifts & Masks"
+    },
+    {
+      "number": 3,
+      "name": "Bitwise Tricks"
+    },
+    {
+      "number": 4,
+      "name": "Bitmask Problems"
+    },
+    {
+      "number": 5,
+      "name": "Advanced Bitwise Challenges"
+    }
+  ],
+  "questions": [
+    {
+      "id": "bitwise-01",
+      "slug": "bitwise-01-and-keeps-shared-one-bits",
+      "title": "AND keeps shared one bits",
+      "topic": "bitwise",
+      "subtopic": "and",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Evaluate 1100 AND 1010, treating each string as a four-bit binary value.",
+      "examples": [
+        {
+          "input": "1100 AND 1010",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Compare the two operands column by column; a result bit is one only when both bits are one."
+      ],
+      "explanation": "Only positions set in both operands remain: 1000₂, which is 8.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "and"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-02",
+      "slug": "bitwise-02-or-combines-set-bits",
+      "title": "OR combines set bits",
+      "topic": "bitwise",
+      "subtopic": "or",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What decimal value results from 0101 OR 0011?",
+      "examples": [
+        {
+          "input": "0101 OR 0011",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Mark each position that contains at least one one."
+      ],
+      "explanation": "The OR result is 0111₂ because a position is set when either operand has a one.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "or"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-03",
+      "slug": "bitwise-03-xor-with-an-identical-value",
+      "title": "XOR with an identical value",
+      "topic": "bitwise",
+      "subtopic": "xor",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What is 1010 XOR 1010?",
+      "examples": [
+        {
+          "input": "1010 XOR 1010",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "XOR is one only when the two bits differ."
+      ],
+      "explanation": "Equal bits XOR to zero, so a value XOR itself is zero.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "xor"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-04",
+      "slug": "bitwise-04-xor-two-small-values",
+      "title": "XOR two small values",
+      "topic": "bitwise",
+      "subtopic": "xor",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Compute 6 XOR 3 in decimal.",
+      "examples": [
+        {
+          "input": "6 XOR 3",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Write both values in binary before comparing bit positions."
+      ],
+      "explanation": "6 is 110₂ and 3 is 011₂; their XOR is 101₂, or 5.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "xor"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-05",
+      "slug": "bitwise-05-complement-of-a-java-int",
+      "title": "Complement of a Java int",
+      "topic": "bitwise",
+      "subtopic": "not",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What does Java evaluate for the int expression ~5?",
+      "examples": [
+        {
+          "input": "Java int expression: ~5",
+          "output": "-6"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "-6",
+      "options": [],
+      "hints": [
+        "Remember that Java int uses 32-bit signed two’s-complement representation."
+      ],
+      "explanation": "For signed two’s-complement integers, ~x equals -x-1; therefore ~5 is -6.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "not"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-06",
+      "slug": "bitwise-06-and-of-decimal-values",
+      "title": "AND of decimal values",
+      "topic": "bitwise",
+      "subtopic": "and",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Evaluate 12 & 10 using Java integer bitwise AND.",
+      "examples": [
+        {
+          "input": "12 & 10",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Convert both decimal operands to binary."
+      ],
+      "explanation": "12 is 1100₂ and 10 is 1010₂; AND leaves 1000₂, which is 8.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "and"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-07",
+      "slug": "bitwise-07-xor-cancels-paired-values",
+      "title": "XOR cancels paired values",
+      "topic": "bitwise",
+      "subtopic": "xor",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A value x is XORed with itself. What value remains, regardless of x?",
+      "examples": [
+        {
+          "input": "x ^ x",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "Use the identity x ^ x = 0."
+      ],
+      "explanation": "Every bit is equal to itself, so every XOR result bit is zero.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "xor"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-08",
+      "slug": "bitwise-08-zero-or-a-value",
+      "title": "Zero OR a value",
+      "topic": "bitwise",
+      "subtopic": "or",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For any int x, what does x | 0 return? Answer with the preserved operand.",
+      "examples": [
+        {
+          "input": "x | 0",
+          "output": "x"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "x",
+      "options": [],
+      "hints": [
+        "At every position, OR with zero keeps the other bit."
+      ],
+      "explanation": "OR with zero leaves every bit unchanged, so the expression evaluates to x.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "or"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bitwise-09",
+      "slug": "bitwise-09-bitwise-operator-precedence",
+      "title": "Bitwise operator precedence",
+      "topic": "bitwise",
+      "subtopic": "precedence",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In Java, evaluate 5 | 2 & 1. Bitwise AND has higher precedence than bitwise OR.",
+      "examples": [
+        {
+          "input": "5 | 2 & 1",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Apply & before |, then evaluate the resulting bit patterns."
+      ],
+      "explanation": "First 2 & 1 is 0; then 5 | 0 remains 5.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "precedence"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-10",
+      "slug": "bitwise-10-ones-in-a-negative-int",
+      "title": "Ones in a negative int",
+      "topic": "bitwise",
+      "subtopic": "two-complement",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many one bits are in the Java int value -1?",
+      "examples": [
+        {
+          "input": "Integer.bitCount(-1)",
+          "output": "32"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "32",
+      "options": [],
+      "hints": [
+        "The question specifies a Java int, whose width is 32 bits."
+      ],
+      "explanation": "In 32-bit two’s-complement form, -1 has every bit set.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "two-complement"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-11",
+      "slug": "bitwise-11-shift-left-once",
+      "title": "Shift left once",
+      "topic": "bitwise",
+      "subtopic": "left-shift",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What value is produced by 6 << 1?",
+      "examples": [
+        {
+          "input": "6 << 1",
+          "output": "12"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "12",
+      "options": [],
+      "hints": [
+        "A left shift by one moves every bit one position toward higher significance."
+      ],
+      "explanation": "For this positive value, shifting left one place multiplies by two: 6 becomes 12.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "left-shift"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-12",
+      "slug": "bitwise-12-unsigned-shift-right",
+      "title": "Unsigned shift right",
+      "topic": "bitwise",
+      "subtopic": "unsigned-right-shift",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Evaluate 20 >>> 2 for a positive Java int.",
+      "examples": [
+        {
+          "input": "20 >>> 2",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "For positive values, >>> and >> both shift in zero bits at the left."
+      ],
+      "explanation": "20 is 10100₂; moving its bits right twice yields 00101₂, or 5.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "unsigned-right-shift"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-13",
+      "slug": "bitwise-13-create-a-one-bit-mask",
+      "title": "Create a one-bit mask",
+      "topic": "bitwise",
+      "subtopic": "mask-construction",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What decimal value does 1 << 3 produce?",
+      "examples": [
+        {
+          "input": "1 << 3",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "The shift count is the bit position of the one."
+      ],
+      "explanation": "Shifting the value one left by three positions creates binary 1000₂, which is 8.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "mask-construction"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-14",
+      "slug": "bitwise-14-oddness-from-the-low-bit",
+      "title": "Oddness from the low bit",
+      "topic": "bitwise",
+      "subtopic": "parity",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What is the result of 13 & 1?",
+      "examples": [
+        {
+          "input": "13 & 1",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "The mask 1 isolates bit zero."
+      ],
+      "explanation": "13 is odd, so its least significant bit is one and the AND result is 1.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "parity"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-15",
+      "slug": "bitwise-15-set-a-selected-bit",
+      "title": "Set a selected bit",
+      "topic": "bitwise",
+      "subtopic": "set-bit",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Set bit position 2 of value 8, with positions numbered from zero. Return the resulting decimal value.",
+      "examples": [
+        {
+          "input": "8 with bit 2 set",
+          "output": "12"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "12",
+      "options": [],
+      "hints": [
+        "Create the mask for position 2, then OR it with the value."
+      ],
+      "explanation": "The mask 1 << 2 is 4; 8 | 4 sets that bit and gives 12.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "set-bit"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-16",
+      "slug": "bitwise-16-clear-one-selected-bit",
+      "title": "Clear one selected bit",
+      "topic": "bitwise",
+      "subtopic": "clear-bit",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Clear bit position 1 of 15, numbering positions from zero. Return the decimal result.",
+      "examples": [
+        {
+          "input": "15 with bit 1 cleared",
+          "output": "13"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "13",
+      "options": [],
+      "hints": [
+        "AND with the complement of 1 << 1."
+      ],
+      "explanation": "15 is 1111₂; clearing position 1 leaves 1101₂, which is 13.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "clear-bit"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-17",
+      "slug": "bitwise-17-toggle-the-low-bit",
+      "title": "Toggle the low bit",
+      "topic": "bitwise",
+      "subtopic": "toggle-bit",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Toggle bit position 0 of 10. What decimal value results?",
+      "examples": [
+        {
+          "input": "10 ^ (1 << 0)",
+          "output": "11"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "11",
+      "options": [],
+      "hints": [
+        "XOR changes exactly the positions selected by the mask."
+      ],
+      "explanation": "10 is 1010₂; XOR with 1 toggles its low bit to produce 1011₂, or 11.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "toggle-bit"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-18",
+      "slug": "bitwise-18-mask-the-lowest-four-bits",
+      "title": "Mask the lowest four bits",
+      "topic": "bitwise",
+      "subtopic": "bit-mask",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What decimal value is left by 0b101101 & 0b001111?",
+      "examples": [
+        {
+          "input": "0b101101 & 0b001111",
+          "output": "13"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "13",
+      "options": [],
+      "hints": [
+        "The mask has ones only in positions zero through three."
+      ],
+      "explanation": "The mask retains the lowest four positions: 1101₂, which is 13.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "bit-mask"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-19",
+      "slug": "bitwise-19-java-int-shift-distance",
+      "title": "Java int shift distance",
+      "topic": "bitwise",
+      "subtopic": "shift-distance",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For a Java int, evaluate 1 << 34. Java uses only the low five bits of an int shift distance.",
+      "examples": [
+        {
+          "input": "1 << 34",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "An int shift count is reduced modulo 32."
+      ],
+      "explanation": "34 & 31 equals 2, so Java evaluates 1 << 2, which is 4.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "shift-distance"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-20",
+      "slug": "bitwise-20-test-bit-five",
+      "title": "Test bit five",
+      "topic": "bitwise",
+      "subtopic": "test-bit",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Is bit position 5 set in decimal value 41? Answer true or false.",
+      "examples": [
+        {
+          "input": "41 & (1 << 5)",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Use (41 & (1 << 5)) != 0."
+      ],
+      "explanation": "41 is 101001₂; bit 5 is one, so the masked test is nonzero.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "test-bit"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bitwise-21",
+      "slug": "bitwise-21-check-an-even-number",
+      "title": "Check an even number",
+      "topic": "bitwise",
+      "subtopic": "parity",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A program tests (n & 1) == 0. For n = 42, what does this test return?",
+      "examples": [
+        {
+          "input": "(42 & 1) == 0",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Even integers have a zero in bit position zero."
+      ],
+      "explanation": "42 is even and its lowest bit is zero, so the comparison is true.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "parity"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bitwise-22",
+      "slug": "bitwise-22-power-of-two-check",
+      "title": "Power of two check",
+      "topic": "bitwise",
+      "subtopic": "power-of-two",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Does the positive integer 64 satisfy (n & (n - 1)) == 0?",
+      "examples": [
+        {
+          "input": "64 & 63",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "The standard check also requires n > 0; here n is positive."
+      ],
+      "explanation": "A positive power of two has one set bit; subtracting one clears it and sets lower bits, making the AND zero.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "power-of-two"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bitwise-23",
+      "slug": "bitwise-23-clear-the-lowest-set-bit",
+      "title": "Clear the lowest set bit",
+      "topic": "bitwise",
+      "subtopic": "clear-lowest-bit",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Evaluate 12 & (12 - 1).",
+      "examples": [
+        {
+          "input": "12 & 11",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Subtracting one flips the lowest one and the trailing zeros."
+      ],
+      "explanation": "12 is 1100₂ and 11 is 1011₂; the AND is 1000₂, or 8.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "clear-lowest-bit"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-24",
+      "slug": "bitwise-24-find-the-unpaired-value",
+      "title": "Find the unpaired value",
+      "topic": "bitwise",
+      "subtopic": "single-number",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In [4, 1, 4, 7, 1], every value appears twice except one. What value remains after XORing the list?",
+      "examples": [
+        {
+          "input": "[4, 1, 4, 7, 1]",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "XOR is associative and a ^ a equals zero."
+      ],
+      "explanation": "The repeated 4s and 1s cancel in XOR, leaving 7.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "single-number"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-25",
+      "slug": "bitwise-25-count-set-bits-manually",
+      "title": "Count set bits manually",
+      "topic": "bitwise",
+      "subtopic": "population-count",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many one bits are in binary 1101?",
+      "examples": [
+        {
+          "input": "1101₂",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Count the one digits, not the binary numeral’s length."
+      ],
+      "explanation": "1101₂ contains ones in positions 3, 2, and 0, for a total of three.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "population-count"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-26",
+      "slug": "bitwise-26-isolate-the-lowest-one-bit",
+      "title": "Isolate the lowest one bit",
+      "topic": "bitwise",
+      "subtopic": "lowest-set-bit",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For positive x = 40, what decimal value is x & -x?",
+      "examples": [
+        {
+          "input": "40 & -40",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "The identity x & -x isolates the least significant set bit."
+      ],
+      "explanation": "40 is 101000₂; its lowest set bit is 001000₂, which is 8.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "lowest-set-bit"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-27",
+      "slug": "bitwise-27-java-population-count",
+      "title": "Java population count",
+      "topic": "bitwise",
+      "subtopic": "population-count",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What does Integer.bitCount(29) return?",
+      "examples": [
+        {
+          "input": "Integer.bitCount(29)",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Convert 29 to binary, or count its set positions."
+      ],
+      "explanation": "29 is 11101₂ and contains four one bits.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "population-count"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-28",
+      "slug": "bitwise-28-reject-zero-as-a-power-of-two",
+      "title": "Reject zero as a power of two",
+      "topic": "bitwise",
+      "subtopic": "power-of-two",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A check is n > 0 && (n & (n - 1)) == 0. For n = 0, what is the final boolean result?",
+      "examples": [
+        {
+          "input": "0 > 0 && (0 & -1) == 0",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "A power-of-two test must exclude zero explicitly."
+      ],
+      "explanation": "The first condition, 0 > 0, is false, so the conjunction is false.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "power-of-two"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bitwise-29",
+      "slug": "bitwise-29-find-a-missing-value-with-xor",
+      "title": "Find a missing value with XOR",
+      "topic": "bitwise",
+      "subtopic": "missing-number",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "The values are [0, 1, 3, 4], drawn from the complete range 0 through 4. Which value is missing?",
+      "examples": [
+        {
+          "input": "Range [0..4], present [0,1,3,4]",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Use that each value appears once in the range and once in the list except the missing one."
+      ],
+      "explanation": "XORing the full range with the present values cancels 0, 1, 3, and 4, leaving 2.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "missing-number"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-30",
+      "slug": "bitwise-30-recover-two-odd-frequency-values",
+      "title": "Recover two odd-frequency values",
+      "topic": "bitwise",
+      "subtopic": "two-unique-values",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In [1, 2, 3, 2, 1, 4], exactly two values occur an odd number of times. Return them in ascending order as a JSON integer list.",
+      "examples": [
+        {
+          "input": "[1, 2, 3, 2, 1, 4]",
+          "output": "[3,4]"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[3,4]",
+      "options": [],
+      "hints": [
+        "XOR all values to separate the two unique values by a differing set bit."
+      ],
+      "explanation": "The paired 1s and 2s cancel; the odd-frequency values are 3 and 4.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "two-unique-values"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "bitwise-31",
+      "slug": "bitwise-31-count-all-subsets-by-masks",
+      "title": "Count all subsets by masks",
+      "topic": "bitwise",
+      "subtopic": "subset-count",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many subsets can be represented by bitmasks for a set of three distinct elements?",
+      "examples": [
+        {
+          "input": "Three elements; one bit per element",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Each element contributes one independent binary choice."
+      ],
+      "explanation": "Each of three positions can be absent or present, giving 2^3 = 8 masks.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "subset-count"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-32",
+      "slug": "bitwise-32-decode-selected-indices",
+      "title": "Decode selected indices",
+      "topic": "bitwise",
+      "subtopic": "mask-decoding",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Mask 1010₂ represents selected zero-based indices. Return those indices as a JSON integer list in ascending order.",
+      "examples": [
+        {
+          "input": "mask = 0b1010",
+          "output": "[1,3]"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[1,3]",
+      "options": [],
+      "hints": [
+        "Read the bit positions from right to left starting at zero."
+      ],
+      "explanation": "Bits one and three are set in 1010₂, so the selected indices are 1 and 3.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "mask-decoding"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "bitwise-33",
+      "slug": "bitwise-33-check-membership-in-a-mask",
+      "title": "Check membership in a mask",
+      "topic": "bitwise",
+      "subtopic": "mask-membership",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Mask 10110₂ represents a subset. Is element index 2 present? Answer true or false.",
+      "examples": [
+        {
+          "input": "mask = 0b10110, index = 2",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "Test (mask & (1 << 2)) != 0."
+      ],
+      "explanation": "Bit two of 10110₂ is one, so the element is present.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "mask-membership"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bitwise-34",
+      "slug": "bitwise-34-decode-a-small-subset",
+      "title": "Decode a small subset",
+      "topic": "bitwise",
+      "subtopic": "mask-decoding",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Mask 101₂ selects positions from zero. Return the selected positions as a JSON integer list in ascending order.",
+      "examples": [
+        {
+          "input": "mask = 0b101",
+          "output": "[0,2]"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[0,2]",
+      "options": [],
+      "hints": [
+        "Associate each binary digit with its zero-based bit position."
+      ],
+      "explanation": "The rightmost and leftmost bits are one, selecting positions 0 and 2.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "mask-decoding"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "bitwise-35",
+      "slug": "bitwise-35-count-submasks-including-zero",
+      "title": "Count submasks including zero",
+      "topic": "bitwise",
+      "subtopic": "submask-enumeration",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many submasks does 101₂ have when the enumeration includes zero and the mask itself?",
+      "examples": [
+        {
+          "input": "submasks of 0b101",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Only the set bits of the original mask can vary."
+      ],
+      "explanation": "The mask has two set bits, so each can be included or omitted: 2^2 = 4 submasks.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "submask-enumeration"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-36",
+      "slug": "bitwise-36-choose-two-from-five",
+      "title": "Choose two from five",
+      "topic": "bitwise",
+      "subtopic": "combinations",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many distinct subsets of size two can be selected from five distinct elements?",
+      "examples": [
+        {
+          "input": "5 distinct elements, subset size 2",
+          "output": "10"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "10",
+      "options": [],
+      "hints": [
+        "Count unordered pairs; swapping the two selected elements does not make a new subset."
+      ],
+      "explanation": "There are 5 choose 2 = 10 such subsets.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "combinations"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-37",
+      "slug": "bitwise-37-build-a-selection-mask",
+      "title": "Build a selection mask",
+      "topic": "bitwise",
+      "subtopic": "mask-construction",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Starting with mask 0, set positions 1 and 4. What decimal mask results?",
+      "examples": [
+        {
+          "input": "set bits 1 and 4",
+          "output": "18"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "18",
+      "options": [],
+      "hints": [
+        "Set both requested positions with OR."
+      ],
+      "explanation": "The mask is (1 << 1) | (1 << 4) = 2 | 16 = 18.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "mask-construction"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-38",
+      "slug": "bitwise-38-remove-a-selected-item",
+      "title": "Remove a selected item",
+      "topic": "bitwise",
+      "subtopic": "mask-update",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Mask 1101₂ records selected indices. Clear index 2 and return the decimal mask.",
+      "examples": [
+        {
+          "input": "mask 0b1101, clear index 2",
+          "output": "9"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "9",
+      "options": [],
+      "hints": [
+        "Use mask & ~(1 << 2)."
+      ],
+      "explanation": "Clearing bit two changes 1101₂ to 1001₂, which is 9.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "mask-update"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-39",
+      "slug": "bitwise-39-subsets-containing-a-fixed-item",
+      "title": "Subsets containing a fixed item",
+      "topic": "bitwise",
+      "subtopic": "subset-count",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many subsets of six distinct elements contain one particular required element?",
+      "examples": [
+        {
+          "input": "Six elements; one specified element must be present",
+          "output": "32"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "32",
+      "options": [],
+      "hints": [
+        "Fix the required element, then count choices for the remaining elements."
+      ],
+      "explanation": "Once the required element is included, each of the other five elements is independently optional: 2^5 = 32.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "subset-count"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-40",
+      "slug": "bitwise-40-total-submask-loop-work",
+      "title": "Total submask-loop work",
+      "topic": "bitwise",
+      "subtopic": "submask-complexity",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Across every mask of four bit positions, a loop visits all submasks of each mask, including zero. What is the total number of visits?",
+      "examples": [
+        {
+          "input": "sum of submask counts for masks 0 through 15",
+          "output": "81"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "81",
+      "options": [],
+      "hints": [
+        "Count mask/submask pairs independently for each bit."
+      ],
+      "explanation": "Across all masks, each bit can be absent from the mask, absent from its submask, or present in both: 3^4 = 81 pairs.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "submask-complexity"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-41",
+      "slug": "bitwise-41-single-value-among-pairs",
+      "title": "Single value among pairs",
+      "topic": "bitwise",
+      "subtopic": "single-number",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In [9, 3, 9, 2, 3], every value occurs twice except one. Which value remains after XOR cancellation?",
+      "examples": [
+        {
+          "input": "[9, 3, 9, 2, 3]",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "XOR each element once; paired values disappear."
+      ],
+      "explanation": "The two 9s and two 3s cancel, leaving 2.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "single-number"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-42",
+      "slug": "bitwise-42-trace-a-short-xor-reduction",
+      "title": "Trace a short XOR reduction",
+      "topic": "bitwise",
+      "subtopic": "xor-trace",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Evaluate 1 ^ 2 ^ 3 ^ 4 from left to right.",
+      "examples": [
+        {
+          "input": "1 ^ 2 ^ 3 ^ 4",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Use associativity and cancel equal pairs."
+      ],
+      "explanation": "1 ^ 2 is 3, 3 ^ 3 is 0, and 0 ^ 4 is 4.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "xor-trace"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-43",
+      "slug": "bitwise-43-toggle-one-bit-in-a-mask",
+      "title": "Toggle one bit in a mask",
+      "topic": "bitwise",
+      "subtopic": "toggle-bit",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Toggle bit position 2 of mask 0111₂. Return the decimal result.",
+      "examples": [
+        {
+          "input": "0b0111 ^ (1 << 2)",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "A set bit in the XOR mask toggles the corresponding original bit."
+      ],
+      "explanation": "XOR with 0100₂ flips that bit off, leaving 0011₂, or 3.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "toggle-bit"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-44",
+      "slug": "bitwise-44-encode-two-permission-flags",
+      "title": "Encode two permission flags",
+      "topic": "bitwise",
+      "subtopic": "permission-mask",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A permission mask sets zero-based flags 1 and 4. What is its decimal value?",
+      "examples": [
+        {
+          "input": "(1 << 1) | (1 << 4)",
+          "output": "18"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "18",
+      "options": [],
+      "hints": [
+        "Build the mask by ORing the two one-bit values."
+      ],
+      "explanation": "The set bits contribute 2^1 + 2^4 = 2 + 16 = 18.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "permission-mask"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-45",
+      "slug": "bitwise-45-count-bits-in-a-byte-pattern",
+      "title": "Count bits in a byte pattern",
+      "topic": "bitwise",
+      "subtopic": "population-count",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many set bits are in 255 when considered as an 8-bit value?",
+      "examples": [
+        {
+          "input": "Integer.bitCount(255)",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "The binary representation of 255 fills one byte with ones."
+      ],
+      "explanation": "255 is 11111111₂, so all eight bits are set.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "population-count"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-46",
+      "slug": "bitwise-46-check-whether-masks-are-disjoint",
+      "title": "Check whether masks are disjoint",
+      "topic": "bitwise",
+      "subtopic": "disjoint-masks",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Masks a = 1010₂ and b = 0101₂ select no common positions. Does (a & b) == 0 evaluate to true?",
+      "examples": [
+        {
+          "input": "(0b1010 & 0b0101) == 0",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "An AND result of zero means there is no shared set bit."
+      ],
+      "explanation": "The set positions do not overlap, so their AND is zero and the test is true.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "disjoint-masks"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "bitwise-47",
+      "slug": "bitwise-47-find-the-missing-value-from-a-range",
+      "title": "Find the missing value from a range",
+      "topic": "bitwise",
+      "subtopic": "missing-number",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Values [0, 1, 2, 4, 5, 6, 7] contain every value from 0 through 7 except one. Which value is missing?",
+      "examples": [
+        {
+          "input": "range 0..7; values [0,1,2,4,5,6,7]",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Each present value appears once in both XOR groups."
+      ],
+      "explanation": "XORing the complete range with the provided values cancels every value except 3.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "missing-number"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-48",
+      "slug": "bitwise-48-apply-a-sequence-of-mask-updates",
+      "title": "Apply a sequence of mask updates",
+      "topic": "bitwise",
+      "subtopic": "mask-update",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Start with mask 0. Set positions 1 and 3, then clear position 1. What decimal mask remains?",
+      "examples": [
+        {
+          "input": "start 0; set 1, set 3, clear 1",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Track the mask after each operation rather than combining them mentally."
+      ],
+      "explanation": "Setting the two positions makes 1010₂; clearing bit one leaves 1000₂, or 8.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "bitwise",
+        "mask-update"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-49",
+      "slug": "bitwise-49-maximum-xor-pair",
+      "title": "Maximum XOR pair",
+      "topic": "bitwise",
+      "subtopic": "maximum-xor",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For values [3, 10, 5, 25, 2, 8], what is the maximum XOR obtainable from any pair?",
+      "examples": [
+        {
+          "input": "[3, 10, 5, 25, 2, 8]",
+          "output": "28"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "28",
+      "options": [],
+      "hints": [
+        "Compare high-order bits first; a trie or greedy prefix test is a common strategy."
+      ],
+      "explanation": "25 XOR 5 equals 28, and no pair in the list yields a larger XOR.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "maximum-xor"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "bitwise-50",
+      "slug": "bitwise-50-answer-a-prefix-xor-range-query",
+      "title": "Answer a prefix-XOR range query",
+      "topic": "bitwise",
+      "subtopic": "range-xor",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For array [3, 1, 6, 4], compute the XOR of inclusive indices 1 through 3.",
+      "examples": [
+        {
+          "input": "array [3,1,6,4], left=1, right=3",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Assume Java int uses 32-bit signed two’s-complement representation unless the prompt specifies another width."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "XOR the selected range, or use prefixXor[right] ^ prefixXor[left - 1]."
+      ],
+      "explanation": "The requested values are 1, 6, and 4; 1 ^ 6 ^ 4 equals 3.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "bitwise",
+        "range-xor"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "INTEGER"
+    }
+  ]
+}
