@@ -15,6 +15,7 @@ public class ContentLoader implements ApplicationRunner {
             "content/dsa/stacks/v1.json", "content/dsa/queues/v1.json", "content/dsa/trees/v1.json",
             "content/dsa/binary-search-trees/v1.json", "content/dsa/graphs/v1.json", "content/dsa/greedy/v1.json",
             "content/dsa/dynamic-programming/v1.json", "content/dsa/heaps/v1.json", "content/dsa/recursion/v1.json",
+            "content/dsa/backtracking/v1.json",
             "content/java/beginner-beach/v1.json", "content/java/loop-village/v1.json",
             "content/java/array-forest/v1.json", "content/java/oop-canyon/v1.json",
             "content/java/collection-kingdom/v1.json");

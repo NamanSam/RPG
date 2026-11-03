@@ -1,0 +1,1778 @@
+{
+  "topic": "backtracking",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Backtracking Fundamentals"
+    },
+    {
+      "number": 2,
+      "name": "Subsets and Subsequences"
+    },
+    {
+      "number": 3,
+      "name": "Permutations and Combinations"
+    },
+    {
+      "number": 4,
+      "name": "Constraint Satisfaction Problems"
+    },
+    {
+      "number": 5,
+      "name": "Advanced Backtracking Challenges"
+    }
+  ],
+  "questions": [
+    {
+      "id": "backtracking-01",
+      "slug": "backtracking-01-choose-explore-unchoose",
+      "title": "Choose-explore-unchoose",
+      "topic": "backtracking",
+      "subtopic": "fundamentals",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which sequence describes one typical backtracking branch?",
+      "examples": [
+        {
+          "input": "Which sequence describes one typical backtracking branch?",
+          "output": "choose, explore, unchoose"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "choose, explore, unchoose",
+      "options": [],
+      "hints": [
+        "Remember that sibling branches need a clean starting state."
+      ],
+      "explanation": "A choice is made, its consequences are explored, then state is restored for a sibling branch.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-02",
+      "slug": "backtracking-02-backtracking-in-a-maze",
+      "title": "Backtracking in a maze",
+      "topic": "backtracking",
+      "subtopic": "fundamentals",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A maze solver follows a legal direction and reverses it after reaching a dead end. Name this search approach.",
+      "examples": [
+        {
+          "input": "A maze solver follows a legal direction and reverses it after reaching a dead end. Name this search approach.",
+          "output": "backtracking"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "backtracking",
+      "options": [],
+      "hints": [
+        "It systematically reverses an unsuccessful choice."
+      ],
+      "explanation": "It explores a partial path and abandons it when it cannot lead to a solution.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-03",
+      "slug": "backtracking-03-initial-state-space-tree",
+      "title": "Initial state-space tree",
+      "topic": "backtracking",
+      "subtopic": "state-space-tree",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A search begins with one initial state before making any choices. How many root nodes does its state-space tree have?",
+      "examples": [
+        {
+          "input": "A search begins with one initial state before making any choices. How many root nodes does its state-space tree have?",
+          "output": "1"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "1",
+      "options": [],
+      "hints": [
+        "Count the starting state, not its children."
+      ],
+      "explanation": "The initial state is represented by the tree root.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "state-space-tree"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "backtracking-04",
+      "slug": "backtracking-04-restore-a-path",
+      "title": "Restore a path",
+      "topic": "backtracking",
+      "subtopic": "fundamentals",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A branch appends 4 to a shared path. What should it do after the recursive call returns and before trying a sibling?",
+      "examples": [
+        {
+          "input": "A branch appends 4 to a shared path. What should it do after the recursive call returns and before trying a sibling?",
+          "output": "remove 4"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "remove 4",
+      "options": [],
+      "hints": [
+        "Sibling choices must be independent."
+      ],
+      "explanation": "Undo the branch-local change so the sibling does not inherit it.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-05",
+      "slug": "backtracking-05-solution-at-a-leaf",
+      "title": "Solution at a leaf",
+      "topic": "backtracking",
+      "subtopic": "state-space-tree",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A combination search constructs partial candidates. What condition should decide whether the candidate is recorded?",
+      "examples": [
+        {
+          "input": "A combination search constructs partial candidates. What condition should decide whether the candidate is recorded?",
+          "output": "goal condition"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "goal condition",
+      "options": [],
+      "hints": [
+        "Use the problem definition of a valid complete result."
+      ],
+      "explanation": "A leaf or partial candidate is a solution only when it satisfies the task goal.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "state-space-tree"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-06",
+      "slug": "backtracking-06-backtracking-versus-factorial-recursion",
+      "title": "Backtracking versus factorial recursion",
+      "topic": "backtracking",
+      "subtopic": "fundamentals",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which behavior is characteristic of backtracking but not necessarily a simple recursive factorial calculation?",
+      "examples": [
+        {
+          "input": "Which behavior is characteristic of backtracking but not necessarily a simple recursive factorial calculation?",
+          "output": "explore alternatives and restore choice state"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "explore alternatives and restore choice state",
+      "options": [],
+      "hints": [
+        "Look for branching and reversible choices."
+      ],
+      "explanation": "Backtracking commonly branches over choices and restores state between alternatives.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "fundamentals"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-07",
+      "slug": "backtracking-07-binary-tree-node-count",
+      "title": "Binary tree node count",
+      "topic": "backtracking",
+      "subtopic": "state-space-tree",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A complete binary choice tree has levels 0, 1, and 2. How many nodes are in it?",
+      "examples": [
+        {
+          "input": "A complete binary choice tree has levels 0, 1, and 2. How many nodes are in it?",
+          "output": "7"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "7",
+      "options": [],
+      "hints": [
+        "Add 1 + 2 + 4."
+      ],
+      "explanation": "The levels contain 1, 2, and 4 nodes, totaling 7.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "state-space-tree"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "backtracking-08",
+      "slug": "backtracking-08-prune-a-queen-conflict",
+      "title": "Prune a queen conflict",
+      "topic": "backtracking",
+      "subtopic": "pruning",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A partial N-Queens board already has two queens in the same column. What should the search do with this branch?",
+      "examples": [
+        {
+          "input": "A partial N-Queens board already has two queens in the same column. What should the search do with this branch?",
+          "output": "prune"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "prune",
+      "options": [],
+      "hints": [
+        "Ask whether future choices can repair the current violation."
+      ],
+      "explanation": "Adding more queens cannot remove the existing conflict, so the branch cannot become valid.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "pruning"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-09",
+      "slug": "backtracking-09-subset-tree-leaves",
+      "title": "Subset tree leaves",
+      "topic": "backtracking",
+      "subtopic": "state-space-tree",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A generator makes an include/exclude decision for each of 5 distinct items. How many leaves are in its complete tree?",
+      "examples": [
+        {
+          "input": "A generator makes an include/exclude decision for each of 5 distinct items. How many leaves are in its complete tree?",
+          "output": "32"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "32",
+      "options": [],
+      "hints": [
+        "Each item doubles the number of outcomes."
+      ],
+      "explanation": "There are 2 choices per item, giving 2^5 = 32 subsets.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "state-space-tree"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "backtracking-10",
+      "slug": "backtracking-10-safe-pruning-rule",
+      "title": "Safe pruning rule",
+      "topic": "backtracking",
+      "subtopic": "pruning",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Give the essential condition that makes pruning a search branch correct.",
+      "examples": [
+        {
+          "input": "Give the essential condition that makes pruning a search branch correct.",
+          "output": "cannot lead to a valid solution"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "cannot lead to a valid solution",
+      "options": [],
+      "hints": [
+        "Pruning must not discard a possible answer."
+      ],
+      "explanation": "A branch may be discarded only when it cannot contain a valid answer (or cannot improve a soundly bounded optimum).",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "pruning"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-11",
+      "slug": "backtracking-11-subset-decisions",
+      "title": "Subset decisions",
+      "topic": "backtracking",
+      "subtopic": "subsets",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For each element in a basic subset generator, what are the two decisions?",
+      "examples": [
+        {
+          "input": "For each element in a basic subset generator, what are the two decisions?",
+          "output": "include or exclude"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "include or exclude",
+      "options": [],
+      "hints": [
+        "Think of membership for one element at a time."
+      ],
+      "explanation": "Each element either belongs to a subset or does not.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "subsets"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-12",
+      "slug": "backtracking-12-subsets-of-two-items",
+      "title": "Subsets of two items",
+      "topic": "backtracking",
+      "subtopic": "subsets",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many subsets, including the empty subset, can be formed from two distinct items?",
+      "examples": [
+        {
+          "input": "How many subsets, including the empty subset, can be formed from two distinct items?",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "Use one binary decision per item."
+      ],
+      "explanation": "Each item has two membership choices, so 2^2 = 4.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "subsets"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "backtracking-13",
+      "slug": "backtracking-13-always-present-subset",
+      "title": "Always-present subset",
+      "topic": "backtracking",
+      "subtopic": "subsets",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which subset exists for every input set, even when the input is empty?",
+      "examples": [
+        {
+          "input": "Which subset exists for every input set, even when the input is empty?",
+          "output": "empty subset"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "empty subset",
+      "options": [],
+      "hints": [
+        "It is the outcome of excluding every element."
+      ],
+      "explanation": "The empty subset contains no elements and is always included.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "subsets"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-14",
+      "slug": "backtracking-14-subsequence-order",
+      "title": "Subsequence order",
+      "topic": "backtracking",
+      "subtopic": "subsequences",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "When elements are omitted to form a subsequence, what happens to the relative order of selected elements?",
+      "examples": [
+        {
+          "input": "When elements are omitted to form a subsequence, what happens to the relative order of selected elements?",
+          "output": "preserved"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "preserved",
+      "options": [],
+      "hints": [
+        "Contrast selection with permutation."
+      ],
+      "explanation": "A subsequence skips positions but does not reorder the selected positions.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "subsequences"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-15",
+      "slug": "backtracking-15-distinct-subsets-with-repeats",
+      "title": "Distinct subsets with repeats",
+      "topic": "backtracking",
+      "subtopic": "subsets",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For multiset [1,1,2], how many distinct value-subsets exist?",
+      "examples": [
+        {
+          "input": "For multiset [1,1,2], how many distinct value-subsets exist?",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Group equal values, then choose a count for each group."
+      ],
+      "explanation": "The count of 1 may be 0, 1, or 2, and 2 may be absent or present: 3 × 2 = 6.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "subsets"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "backtracking-16",
+      "slug": "backtracking-16-prune-subset-sum",
+      "title": "Prune subset sum",
+      "topic": "backtracking",
+      "subtopic": "subsets",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "All remaining values are nonnegative. A partial sum is 14 and target is 10. What can the search safely do?",
+      "examples": [
+        {
+          "input": "All remaining values are nonnegative. A partial sum is 14 and target is 10. What can the search safely do?",
+          "output": "prune"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "prune",
+      "options": [],
+      "hints": [
+        "The nonnegative constraint makes the sum monotonic."
+      ],
+      "explanation": "Adding nonnegative values cannot reduce 14 to the target 10.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "subsets"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-17",
+      "slug": "backtracking-17-subsequences-of-length-three",
+      "title": "Subsequences of length three",
+      "topic": "backtracking",
+      "subtopic": "subsequences",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many subsequences including the empty one are selectable from a sequence of length 3, treating positions as distinct?",
+      "examples": [
+        {
+          "input": "How many subsequences including the empty one are selectable from a sequence of length 3, treating positions as distinct?",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Count positions even if some values are equal."
+      ],
+      "explanation": "Each position is kept or skipped, giving 2^3 = 8.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "subsequences"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "backtracking-18",
+      "slug": "backtracking-18-record-a-completed-subset",
+      "title": "Record a completed subset",
+      "topic": "backtracking",
+      "subtopic": "subsets",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In include/exclude recursion over indices, when does the current path represent one complete subset?",
+      "examples": [
+        {
+          "input": "In include/exclude recursion over indices, when does the current path represent one complete subset?",
+          "output": "after every index has a decision"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "after every index has a decision",
+      "options": [],
+      "hints": [
+        "A leaf represents all positions decided."
+      ],
+      "explanation": "At that point each input position was either included or excluded.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "subsets"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-19",
+      "slug": "backtracking-19-subset-output-lower-bound",
+      "title": "Subset output lower bound",
+      "topic": "backtracking",
+      "subtopic": "subsets",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A program explicitly returns every subset of n distinct elements. What output-size lower bound applies?",
+      "examples": [
+        {
+          "input": "A program explicitly returns every subset of n distinct elements. What output-size lower bound applies?",
+          "output": "2^n"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2^n",
+      "options": [],
+      "hints": [
+        "Count the results the program must materialize."
+      ],
+      "explanation": "There are 2^n subsets to emit, requiring at least that much output work.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "subsets"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-20",
+      "slug": "backtracking-20-skip-duplicate-subset-branches",
+      "title": "Skip duplicate subset branches",
+      "topic": "backtracking",
+      "subtopic": "subsets",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "After sorting values, what rule avoids duplicate subsets from equal values at one recursion depth?",
+      "examples": [
+        {
+          "input": "After sorting values, what rule avoids duplicate subsets from equal values at one recursion depth?",
+          "output": "skip equal values at the same recursion depth"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "skip equal values at the same recursion depth",
+      "options": [],
+      "hints": [
+        "The rule is local to sibling choices."
+      ],
+      "explanation": "Only one equal value should initiate an equivalent sibling branch; deeper choices can still select repeated copies.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "subsets"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-21",
+      "slug": "backtracking-21-permutation-choice",
+      "title": "Permutation choice",
+      "topic": "backtracking",
+      "subtopic": "permutations",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "To build permutations of distinct items, what is commonly selected for the next position?",
+      "examples": [
+        {
+          "input": "To build permutations of distinct items, what is commonly selected for the next position?",
+          "output": "one unused item"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "one unused item",
+      "options": [],
+      "hints": [
+        "Every position receives a remaining item."
+      ],
+      "explanation": "A permutation prefix is extended with an item not already in that prefix.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "permutations"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-22",
+      "slug": "backtracking-22-permutations-of-three",
+      "title": "Permutations of three",
+      "topic": "backtracking",
+      "subtopic": "permutations",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many permutations exist for three distinct objects?",
+      "examples": [
+        {
+          "input": "How many permutations exist for three distinct objects?",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Multiply the remaining choices at each position."
+      ],
+      "explanation": "There are 3 × 2 × 1 = 3! = 6 arrangements.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "permutations"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "backtracking-23",
+      "slug": "backtracking-23-undo-used-marker",
+      "title": "Undo used marker",
+      "topic": "backtracking",
+      "subtopic": "permutations",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A branch sets used[i] to true before recursion. Which value should be restored after it returns?",
+      "examples": [
+        {
+          "input": "A branch sets used[i] to true before recursion. Which value should be restored after it returns?",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "Undo the mark made by this branch."
+      ],
+      "explanation": "The item must become available to sibling branches.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "permutations"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-24",
+      "slug": "backtracking-24-combination-start-index",
+      "title": "Combination start index",
+      "topic": "backtracking",
+      "subtopic": "combinations",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Why does combination recursion commonly pass a start index to the next call?",
+      "examples": [
+        {
+          "input": "Why does combination recursion commonly pass a start index to the next call?",
+          "output": "avoid choosing earlier items again"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "avoid choosing earlier items again",
+      "options": [],
+      "hints": [
+        "It avoids generating both [2,5] and [5,2]."
+      ],
+      "explanation": "Restricting the next choice to the remaining suffix prevents permutations of the same combination.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "combinations"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-25",
+      "slug": "backtracking-25-reusable-combination-sum-index",
+      "title": "Reusable Combination Sum index",
+      "topic": "backtracking",
+      "subtopic": "combinations",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In positive-candidate Combination Sum where a candidate may be reused, after choosing index i, what next start index allows reuse without reordering?",
+      "examples": [
+        {
+          "input": "In positive-candidate Combination Sum where a candidate may be reused, after choosing index i, what next start index allows reuse without reordering?",
+          "output": "i"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "i",
+      "options": [],
+      "hints": [
+        "Reuse the current choice but do not go backward."
+      ],
+      "explanation": "Starting again at i permits reuse while choices stay nondecreasing by index.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "combinations"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-26",
+      "slug": "backtracking-26-choose-three-of-five",
+      "title": "Choose three of five",
+      "topic": "backtracking",
+      "subtopic": "combinations",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many combinations choose 3 items from 5 distinct items when order does not matter?",
+      "examples": [
+        {
+          "input": "How many combinations choose 3 items from 5 distinct items when order does not matter?",
+          "output": "10"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "10",
+      "options": [],
+      "hints": [
+        "Use the binomial coefficient."
+      ],
+      "explanation": "C(5,3) = 5!/(3!2!) = 10.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "combinations"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "backtracking-27",
+      "slug": "backtracking-27-prune-positive-combination-sum",
+      "title": "Prune positive combination sum",
+      "topic": "backtracking",
+      "subtopic": "combinations",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Candidates are positive and the running sum already exceeds the target. Give the safe pruning reason.",
+      "examples": [
+        {
+          "input": "Candidates are positive and the running sum already exceeds the target. Give the safe pruning reason.",
+          "output": "further choices only increase the sum"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "further choices only increase the sum",
+      "options": [],
+      "hints": [
+        "This reasoning relies on candidates being positive."
+      ],
+      "explanation": "Positive additions cannot return an exceeded sum to the target.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "combinations"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-28",
+      "slug": "backtracking-28-unique-repeated-value-permutations",
+      "title": "Unique repeated-value permutations",
+      "topic": "backtracking",
+      "subtopic": "permutations",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "After sorting [1,1,2], what rule avoids duplicate permutations while allowing both 1s to be used?",
+      "examples": [
+        {
+          "input": "After sorting [1,1,2], what rule avoids duplicate permutations while allowing both 1s to be used?",
+          "output": "skip equal item when its previous equal item is unused"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "skip equal item when its previous equal item is unused",
+      "options": [],
+      "hints": [
+        "The skip applies when the prior identical copy is not in the prefix."
+      ],
+      "explanation": "This forces equal copies to be consumed in a consistent order.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "permutations"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-29",
+      "slug": "backtracking-29-all-combinations-complexity",
+      "title": "All combinations complexity",
+      "topic": "backtracking",
+      "subtopic": "combinations",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What broad worst-case time description applies when an algorithm explicitly generates all subsets?",
+      "examples": [
+        {
+          "input": "What broad worst-case time description applies when an algorithm explicitly generates all subsets?",
+          "output": "exponential"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "exponential",
+      "options": [],
+      "hints": [
+        "The output count itself grows exponentially."
+      ],
+      "explanation": "There are exponentially many possible outputs, so total work is exponential in the worst case.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "combinations"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-30",
+      "slug": "backtracking-30-permutation-tree-leaves",
+      "title": "Permutation tree leaves",
+      "topic": "backtracking",
+      "subtopic": "permutations",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A generator permutes four distinct values by choosing one unused value per depth. How many complete leaves are there?",
+      "examples": [
+        {
+          "input": "A generator permutes four distinct values by choosing one unused value per depth. How many complete leaves are there?",
+          "output": "24"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "24",
+      "options": [],
+      "hints": [
+        "Multiply 4 × 3 × 2 × 1."
+      ],
+      "explanation": "The leaves correspond to 4! arrangements, or 24.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "permutations"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "backtracking-31",
+      "slug": "backtracking-31-n-queens-constraint",
+      "title": "N-Queens constraint",
+      "topic": "backtracking",
+      "subtopic": "n-queens",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "When placing one queen per row, what conflicts must be checked against already placed queens?",
+      "examples": [
+        {
+          "input": "When placing one queen per row, what conflicts must be checked against already placed queens?",
+          "output": "column and diagonal conflicts"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "column and diagonal conflicts",
+      "options": [],
+      "hints": [
+        "One queen per row is already enforced by depth."
+      ],
+      "explanation": "Rows are unique by construction; columns and both diagonal directions must also be unique.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "n-queens"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-32",
+      "slug": "backtracking-32-restore-word-search-visit",
+      "title": "Restore Word Search visit",
+      "topic": "backtracking",
+      "subtopic": "word-search",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A grid word-search path cannot reuse a cell. What happens to a cell’s visited mark when its recursive branch returns?",
+      "examples": [
+        {
+          "input": "A grid word-search path cannot reuse a cell. What happens to a cell’s visited mark when its recursive branch returns?",
+          "output": "unmark it"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "unmark it",
+      "options": [],
+      "hints": [
+        "Mark during the path, then restore on return."
+      ],
+      "explanation": "The mark applies to the current path only; other paths may use that cell.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "word-search"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-33",
+      "slug": "backtracking-33-sudoku-placement-check",
+      "title": "Sudoku placement check",
+      "topic": "backtracking",
+      "subtopic": "sudoku",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Before placing a digit in an empty Sudoku cell, which groups must be checked for that digit?",
+      "examples": [
+        {
+          "input": "Before placing a digit in an empty Sudoku cell, which groups must be checked for that digit?",
+          "output": "row, column, and box"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "row, column, and box",
+      "options": [],
+      "hints": [
+        "Check all three Sudoku constraints."
+      ],
+      "explanation": "A valid digit must be absent from its row, column, and 3×3 subgrid.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "sudoku"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-34",
+      "slug": "backtracking-34-no-legal-graph-color",
+      "title": "No legal graph color",
+      "topic": "backtracking",
+      "subtopic": "graph-coloring",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A vertex has no available color because each color appears on a colored neighbor. How many valid choices remain?",
+      "examples": [
+        {
+          "input": "A vertex has no available color because each color appears on a colored neighbor. How many valid choices remain?",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "Count legal colors, not total palette colors."
+      ],
+      "explanation": "Every candidate violates the adjacency constraint, so there are no legal choices.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "graph-coloring"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "backtracking-35",
+      "slug": "backtracking-35-n-queens-diagonal-condition",
+      "title": "N-Queens diagonal condition",
+      "topic": "backtracking",
+      "subtopic": "n-queens",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "For queens at (r1,c1) and (r2,c2), what equality indicates a shared diagonal?",
+      "examples": [
+        {
+          "input": "For queens at (r1,c1) and (r2,c2), what equality indicates a shared diagonal?",
+          "output": "abs(r1-r2) = abs(c1-c2)"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "abs(r1-r2) = abs(c1-c2)",
+      "options": [],
+      "hints": [
+        "Compare the distances on both axes."
+      ],
+      "explanation": "Diagonal movement changes row and column by equal absolute amounts.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "n-queens"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-36",
+      "slug": "backtracking-36-sudoku-mrv-heuristic",
+      "title": "Sudoku MRV heuristic",
+      "topic": "backtracking",
+      "subtopic": "sudoku",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Which empty Sudoku cell is a useful next choice under the minimum-remaining-values heuristic?",
+      "examples": [
+        {
+          "input": "Which empty Sudoku cell is a useful next choice under the minimum-remaining-values heuristic?",
+          "output": "cell with fewest legal candidates"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "cell with fewest legal candidates",
+      "options": [],
+      "hints": [
+        "Fail early on the tightest constraint."
+      ],
+      "explanation": "Trying the most constrained cell often reveals contradictions early.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "sudoku"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-37",
+      "slug": "backtracking-37-avoid-maze-cycles",
+      "title": "Avoid maze cycles",
+      "topic": "backtracking",
+      "subtopic": "rat-in-maze",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A maze allows four-direction movement and contains cycles. What path state prevents recursive loops?",
+      "examples": [
+        {
+          "input": "A maze allows four-direction movement and contains cycles. What path state prevents recursive loops?",
+          "output": "track cells visited on the current path"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "track cells visited on the current path",
+      "options": [],
+      "hints": [
+        "Use path-local rather than permanently global marking."
+      ],
+      "explanation": "Reject a revisit on the active route, then remove its mark when backtracking.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "rat-in-maze"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-38",
+      "slug": "backtracking-38-graph-coloring-consistency",
+      "title": "Graph coloring consistency",
+      "topic": "backtracking",
+      "subtopic": "graph-coloring",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "When trying a color for a vertex, what immediate consistency test should be applied?",
+      "examples": [
+        {
+          "input": "When trying a color for a vertex, what immediate consistency test should be applied?",
+          "output": "reject a color used by an adjacent colored vertex"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "reject a color used by an adjacent colored vertex",
+      "options": [],
+      "hints": [
+        "Only neighbors constrain this assignment."
+      ],
+      "explanation": "Adjacent vertices must have different colors.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "graph-coloring"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-39",
+      "slug": "backtracking-39-four-queens-solutions",
+      "title": "Four Queens solutions",
+      "topic": "backtracking",
+      "subtopic": "n-queens",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "How many 4-Queens solutions exist when mirrored boards count as different placements?",
+      "examples": [
+        {
+          "input": "How many 4-Queens solutions exist when mirrored boards count as different placements?",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Count both arrangements."
+      ],
+      "explanation": "There are two valid placements, which are mirror images.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "n-queens"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "backtracking-40",
+      "slug": "backtracking-40-sudoku-constrained-cell-benefit",
+      "title": "Sudoku constrained-cell benefit",
+      "topic": "backtracking",
+      "subtopic": "sudoku",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Why can selecting the empty Sudoku cell with the fewest candidates improve a backtracking search?",
+      "examples": [
+        {
+          "input": "Why can selecting the empty Sudoku cell with the fewest candidates improve a backtracking search?",
+          "output": "it exposes contradictions earlier"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "it exposes contradictions earlier",
+      "options": [],
+      "hints": [
+        "It is a search-order heuristic, not a rule change."
+      ],
+      "explanation": "The heuristic changes search order so impossible branches are often detected sooner; it does not change the solution set.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "sudoku"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-41",
+      "slug": "backtracking-41-word-search-success",
+      "title": "Word Search success",
+      "topic": "backtracking",
+      "subtopic": "word-search",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A recursive search has matched every character in the target word. What should it return?",
+      "examples": [
+        {
+          "input": "A recursive search has matched every character in the target word. What should it return?",
+          "output": "success"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "success",
+      "options": [],
+      "hints": [
+        "The matched-character index has reached the word length."
+      ],
+      "explanation": "The full target has been matched, so no further grid step is needed.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "word-search"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-42",
+      "slug": "backtracking-42-record-maze-route",
+      "title": "Record maze route",
+      "topic": "backtracking",
+      "subtopic": "rat-in-maze",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "When the current maze path reaches the destination, what valid result can be recorded?",
+      "examples": [
+        {
+          "input": "When the current maze path reaches the destination, what valid result can be recorded?",
+          "output": "current path from start to goal"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "current path from start to goal",
+      "options": [],
+      "hints": [
+        "Record the choices on this successful branch."
+      ],
+      "explanation": "The current branch’s coordinates form a route from the start to the destination.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "rat-in-maze"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-43",
+      "slug": "backtracking-43-prune-overshot-sum",
+      "title": "Prune overshot sum",
+      "topic": "backtracking",
+      "subtopic": "pruning",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Positive numbers are selected to reach target 12. The partial sum is 15. What action is sound?",
+      "examples": [
+        {
+          "input": "Positive numbers are selected to reach target 12. The partial sum is 15. What action is sound?",
+          "output": "prune"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "prune",
+      "options": [],
+      "hints": [
+        "The argument depends on all remaining values being positive."
+      ],
+      "explanation": "Further positive selections cannot lower the sum to 12.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "pruning"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-44",
+      "slug": "backtracking-44-sibling-path-trace",
+      "title": "Sibling path trace",
+      "topic": "backtracking",
+      "subtopic": "state-restoration",
+      "difficulty": "Easy",
+      "questionType": "PREDICT_OUTPUT",
+      "description": "A subset search includes 1, then explores include-2, removes 2, and then explores exclude-2. Which two paths are recorded in order?",
+      "examples": [
+        {
+          "input": "A subset search includes 1, then explores include-2, removes 2, and then explores exclude-2. Which two paths are recorded in order?",
+          "output": "[1,2] then [1]"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[1,2] then [1]",
+      "options": [],
+      "hints": [
+        "Track the path contents after restoration."
+      ],
+      "explanation": "The first leaf contains both values; after undoing 2, the next contains only 1.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "state-restoration"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "OUTPUT"
+    },
+    {
+      "id": "backtracking-45",
+      "slug": "backtracking-45-combination-sum-ii-duplicate-skip",
+      "title": "Combination Sum II duplicate skip",
+      "topic": "backtracking",
+      "subtopic": "combinations",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In sorted, single-use Combination Sum, why skip an equal candidate already tried at the same recursion depth?",
+      "examples": [
+        {
+          "input": "In sorted, single-use Combination Sum, why skip an equal candidate already tried at the same recursion depth?",
+          "output": "avoid duplicate combinations"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "avoid duplicate combinations",
+      "options": [],
+      "hints": [
+        "The skip is for duplicate branches at one depth."
+      ],
+      "explanation": "Equal sibling choices would produce the same value combination through different indices.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "combinations"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-46",
+      "slug": "backtracking-46-binary-tree-nodes-to-depth-three",
+      "title": "Binary tree nodes to depth three",
+      "topic": "backtracking",
+      "subtopic": "state-space-tree",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A binary recursion tree has levels 0 through 3 and no pruning. How many total nodes does it contain?",
+      "examples": [
+        {
+          "input": "A binary recursion tree has levels 0 through 3 and no pruning. How many total nodes does it contain?",
+          "output": "15"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "15",
+      "options": [],
+      "hints": [
+        "Sum powers of two from 2^0 through 2^3."
+      ],
+      "explanation": "The levels contain 1 + 2 + 4 + 8 = 15 nodes.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "state-space-tree"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "backtracking-47",
+      "slug": "backtracking-47-prune-optimization-branch",
+      "title": "Prune optimization branch",
+      "topic": "backtracking",
+      "subtopic": "pruning",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In a maximization search, when may an optimistic upper bound justify pruning a branch?",
+      "examples": [
+        {
+          "input": "In a maximization search, when may an optimistic upper bound justify pruning a branch?",
+          "output": "when the bound cannot beat the best solution"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "when the bound cannot beat the best solution",
+      "options": [],
+      "hints": [
+        "The bound must be valid for every completion."
+      ],
+      "explanation": "If even the best possible completion is no better than the incumbent, the branch cannot contain an optimum.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "pruning"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-48",
+      "slug": "backtracking-48-n-queens-partial-state",
+      "title": "N-Queens partial state",
+      "topic": "backtracking",
+      "subtopic": "n-queens",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A solver places exactly one queen in each row. What compact array can represent its partial board?",
+      "examples": [
+        {
+          "input": "A solver places exactly one queen in each row. What compact array can represent its partial board?",
+          "output": "row-to-column array"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "row-to-column array",
+      "options": [],
+      "hints": [
+        "The recursion depth supplies the row."
+      ],
+      "explanation": "Store the selected column at each processed row; the array index identifies the row.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "n-queens"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-49",
+      "slug": "backtracking-49-word-search-branching-bound",
+      "title": "Word Search branching bound",
+      "topic": "backtracking",
+      "subtopic": "word-search",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A word has length L and each grid cell has at most four neighbors; the previous cell cannot be revisited. What common worst-case bound applies per start cell?",
+      "examples": [
+        {
+          "input": "A word has length L and each grid cell has at most four neighbors; the previous cell cannot be revisited. What common worst-case bound applies per start cell?",
+          "output": "O(4*3^(L-1))"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "O(4*3^(L-1))",
+      "options": [],
+      "hints": [
+        "The immediate previous cell is not a legal next choice."
+      ],
+      "explanation": "There are at most four first moves, then at most three choices per step after excluding the prior cell.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "backtracking",
+        "word-search"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "backtracking-50",
+      "slug": "backtracking-50-sound-branch-and-bound-pruning",
+      "title": "Sound branch-and-bound pruning",
+      "topic": "backtracking",
+      "subtopic": "pruning",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "What must an optimizer establish before pruning a subtree using a bound?",
+      "examples": [
+        {
+          "input": "What must an optimizer establish before pruning a subtree using a bound?",
+          "output": "no completion can satisfy the goal or improve the incumbent"
+        }
+      ],
+      "constraints": [
+        "Assume the stated search rules and valid input unless the prompt says otherwise."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "no completion can satisfy the goal or improve the incumbent",
+      "options": [],
+      "hints": [
+        "A guess or merely promising heuristic is not enough."
+      ],
+      "explanation": "A sound bound must rule out every completion in the subtree as a valid or better answer.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "backtracking",
+        "pruning"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "TOKEN"
+    }
+  ]
+}
