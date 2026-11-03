@@ -1,0 +1,2292 @@
+{
+  "topic": "trie",
+  "version": 1,
+  "trails": [
+    {
+      "number": 1,
+      "name": "Trie Foundations"
+    },
+    {
+      "number": 2,
+      "name": "Insert & Search"
+    },
+    {
+      "number": 3,
+      "name": "Prefix Explorers"
+    },
+    {
+      "number": 4,
+      "name": "Word Search Challenges"
+    },
+    {
+      "number": 5,
+      "name": "Advanced Trie Challenges"
+    }
+  ],
+  "questions": [
+    {
+      "id": "trie-01",
+      "slug": "trie-01-origin-of-the-term-trie",
+      "title": "Origin of the term trie",
+      "topic": "trie",
+      "subtopic": "etymology",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "The word 'Trie' was coined in 1960 by Edward Fredkin. From which English word is 'trie' derived?",
+      "examples": [
+        {
+          "input": "Identify the root English word for Trie",
+          "output": "Retrieval"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID.",
+        "Fredkin intended it as a pronunciation identical to 'tree', though 'try' is also widely accepted."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Retrieval"
+        },
+        {
+          "id": "b",
+          "text": "Binary tree"
+        },
+        {
+          "id": "c",
+          "text": "Iteration"
+        },
+        {
+          "id": "d",
+          "text": "Trial"
+        }
+      ],
+      "hints": [
+        "Consider the primary algorithmic operation a trie optimizes: retrieving stored keys."
+      ],
+      "explanation": "The name comes from re-TRIE-val, because the data structure was invented for efficient information retrieval.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "fundamentals",
+        "etymology"
+      ],
+      "trail": 1,
+      "order": 1,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-02",
+      "slug": "trie-02-fixed-alphabet-array-size",
+      "title": "Standard English branching factor",
+      "topic": "trie",
+      "subtopic": "node-structure",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In a standard Trie node storing words composed exclusively of lowercase English letters ('a' through 'z'), how many child pointers are typically kept in the children array?",
+      "examples": [
+        {
+          "input": "Alphabet: 'a' through 'z'",
+          "output": "26"
+        }
+      ],
+      "constraints": [
+        "Assume standard English lowercase characters only (ASCII 97-122).",
+        "Submit an integer."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "26",
+      "options": [],
+      "hints": [
+        "Count the letters in the English alphabet from 'a' to 'z' inclusive."
+      ],
+      "explanation": "There are 26 lowercase English letters. Using an array of 26 pointers allows direct O(1) child indexing via `ch - 'a'`.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "node-structure",
+        "alphabet"
+      ],
+      "trail": 1,
+      "order": 2,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-03",
+      "slug": "trie-03-root-node-representation",
+      "title": "The root node value",
+      "topic": "trie",
+      "subtopic": "node-structure",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "In a standard Trie representing a set of words, what does the root node represent?",
+      "examples": [
+        {
+          "input": "Inspect prefix at depth 0 (the root)",
+          "output": "empty prefix"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "The first letter of the shortest word"
+        },
+        {
+          "id": "b",
+          "text": "An empty string / empty prefix"
+        },
+        {
+          "id": "c",
+          "text": "A sentinel null character terminating the dictionary"
+        },
+        {
+          "id": "d",
+          "text": "The most frequent character in the dataset"
+        }
+      ],
+      "hints": [
+        "Consider the prefix accumulated before following any child pointers."
+      ],
+      "explanation": "The root node corresponds to the empty prefix (\"\"); child links descending from the root represent the first characters of words.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "node-structure",
+        "root"
+      ],
+      "trail": 1,
+      "order": 3,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-04",
+      "slug": "trie-04-word-termination-indicator",
+      "title": "Word termination indicator",
+      "topic": "trie",
+      "subtopic": "node-structure",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "Each Trie node contains child references and a boolean flag signaling that the node completes a valid word. Complete the field declaration: boolean _____ = false;",
+      "examples": [
+        {
+          "input": "boolean _____ = false;",
+          "output": "isEndOfWord"
+        }
+      ],
+      "constraints": [
+        "Use camelCase naming standard for trie word termination: isEndOfWord."
+      ],
+      "starterCode": "boolean _____ = false;",
+      "expectedAnswer": "isEndOfWord",
+      "options": [],
+      "hints": [
+        "Standard implementations name this flag isEndOfWord or isEnd."
+      ],
+      "explanation": "The boolean flag `isEndOfWord` indicates whether the path from the root to this node constitutes a complete stored word.",
+      "xpReward": 10,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "node-structure",
+        "fields"
+      ],
+      "trail": 1,
+      "order": 4,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trie-05",
+      "slug": "trie-05-sparse-alphabet-representation",
+      "title": "Sparse alphabet representation",
+      "topic": "trie",
+      "subtopic": "node-structure",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "When building a Trie that supports arbitrary Unicode characters, why is a Map (like HashMap<Character, TrieNode>) preferred over a fixed-size array in each node?",
+      "examples": [
+        {
+          "input": "Unicode alphabet with sparse branching",
+          "output": "HashMap avoids massive null pointer arrays"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hash maps guarantee O(1) worst-case search regardless of hash collisions"
+        },
+        {
+          "id": "b",
+          "text": "Hash maps automatically keep the child keys in sorted alphabetical order"
+        },
+        {
+          "id": "c",
+          "text": "A fixed array of 65,536+ pointers per node would consume immense memory for sparse branching"
+        },
+        {
+          "id": "d",
+          "text": "Fixed-size arrays in Java cannot hold references to custom objects"
+        }
+      ],
+      "hints": [
+        "Consider the memory footprint if every node had an array large enough for all Unicode characters."
+      ],
+      "explanation": "Unicode has over 65,536 Basic Multilingual Plane characters (and 1,114,112 total codepoints). Allocating arrays of that size per node causes unacceptable memory bloat, whereas a map only stores active transitions.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "memory",
+        "hashmap"
+      ],
+      "trail": 1,
+      "order": 5,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-06",
+      "slug": "trie-06-node-count-for-single-word",
+      "title": "Node count for a single word",
+      "topic": "trie",
+      "subtopic": "tree-growth",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Starting with an empty Trie containing only the root node, you insert the word 'dragon'. How many new TrieNode objects are allocated?",
+      "examples": [
+        {
+          "input": "insert(\"dragon\") into root-only trie",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Count only newly allocated nodes, excluding the pre-existing root."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Count one node for each character in the inserted word."
+      ],
+      "explanation": "Each letter in 'dragon' ('d', 'r', 'a', 'g', 'o', 'n') requires a new node since none existed. Length is 6, so 6 new nodes are created.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "tree-growth",
+        "allocation"
+      ],
+      "trail": 1,
+      "order": 6,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-07",
+      "slug": "trie-07-total-nodes-with-common-prefix",
+      "title": "Total nodes with common prefix",
+      "topic": "trie",
+      "subtopic": "tree-growth",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "The words 'car', 'cat', and 'cart' are inserted into an initially empty Trie. What is the total number of nodes in the Trie, including the root node?",
+      "examples": [
+        {
+          "input": "words = [\"car\", \"cat\", \"cart\"]",
+          "output": "6"
+        }
+      ],
+      "constraints": [
+        "Include the root node in the total count."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "6",
+      "options": [],
+      "hints": [
+        "Draw the tree: root -> 'c' -> 'a' -> branches to 'r' (with child 't') and 't'."
+      ],
+      "explanation": "Root (1) + 'c' (1) + 'a' (1) + 'r' (1) + 't' child of 'r' (1) + 't' child of 'a' (1) = 6 nodes total.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "tree-growth",
+        "node-counting"
+      ],
+      "trail": 1,
+      "order": 7,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-08",
+      "slug": "trie-08-worst-case-space-bound",
+      "title": "Worst-case space bound",
+      "topic": "trie",
+      "subtopic": "complexity",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "For a dictionary of N words where each word has length at most L, what is the tightest upper bound on the maximum number of nodes in a standard Trie?",
+      "examples": [
+        {
+          "input": "N words of length L",
+          "output": "O(N * L)"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "d",
+      "options": [
+        {
+          "id": "a",
+          "text": "O(2^(N * L))"
+        },
+        {
+          "id": "b",
+          "text": "O(L^N)"
+        },
+        {
+          "id": "c",
+          "text": "O(N^2)"
+        },
+        {
+          "id": "d",
+          "text": "O(N * L)"
+        }
+      ],
+      "hints": [
+        "Consider the scenario where no two words share any prefix characters."
+      ],
+      "explanation": "If no two words share any common prefix, every character of every word creates a distinct node, giving at most N * L + 1 nodes, which is O(N * L).",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "complexity",
+        "space-bound"
+      ],
+      "trail": 1,
+      "order": 8,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-09",
+      "slug": "trie-09-complete-binary-trie-node-count",
+      "title": "Complete binary trie node count",
+      "topic": "trie",
+      "subtopic": "binary-trie",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A binary Trie contains words formed solely of characters '0' and '1'. If it contains all possible binary words of length up to 3 (lengths 0, 1, 2, and 3), how many total nodes exist in the Trie (including the root)?",
+      "examples": [
+        {
+          "input": "Full binary alphabet up to depth 3",
+          "output": "15"
+        }
+      ],
+      "constraints": [
+        "Include the root node at depth 0.",
+        "Submit an integer."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "15",
+      "options": [],
+      "hints": [
+        "Calculate nodes at depth 0, depth 1, depth 2, and depth 3."
+      ],
+      "explanation": "Depth 0 (root): 1 node. Depth 1: 2 nodes. Depth 2: 4 nodes. Depth 3: 8 nodes. Total = 1 + 2 + 4 + 8 = 15 nodes.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "binary-trie",
+        "counting"
+      ],
+      "trail": 1,
+      "order": 9,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-10",
+      "slug": "trie-10-compressed-trie-internal-nodes",
+      "title": "Compressed trie internal nodes",
+      "topic": "trie",
+      "subtopic": "compressed-trie",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "In a Compressed Trie (Radix Tree / Patricia Trie), non-branching single-child paths are compressed into single edges labeled by substrings. What structural invariant holds for every internal (non-leaf, non-root) node in a Compressed Trie?",
+      "examples": [
+        {
+          "input": "Compressed Trie internal node degree",
+          "output": "at least 2 children"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "The depth of every leaf is identical"
+        },
+        {
+          "id": "b",
+          "text": "Every internal node has at least two children"
+        },
+        {
+          "id": "c",
+          "text": "Every internal node stores a complete dictionary word"
+        },
+        {
+          "id": "d",
+          "text": "Every internal node has exactly 26 children"
+        }
+      ],
+      "hints": [
+        "If an internal node had only one child, it would have been compressed into the edge."
+      ],
+      "explanation": "By definition of path compression, any node with degree 1 is merged with its child. Hence every internal node must have a branching factor of at least 2.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "compressed-trie",
+        "radix-tree"
+      ],
+      "trail": 1,
+      "order": 10,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-11",
+      "slug": "trie-11-search-time-complexity",
+      "title": "Search time complexity",
+      "topic": "trie",
+      "subtopic": "search",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "What is the time complexity to search for a word of length L in a Trie containing N words?",
+      "examples": [
+        {
+          "input": "Search word of length L",
+          "output": "O(L)"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "O(N * L)"
+        },
+        {
+          "id": "b",
+          "text": "O(log N)"
+        },
+        {
+          "id": "c",
+          "text": "O(L)"
+        },
+        {
+          "id": "d",
+          "text": "O(N)"
+        }
+      ],
+      "hints": [
+        "At each character, we follow a single pointer in O(1) time."
+      ],
+      "explanation": "Finding or rejecting a word of length L takes at most L step-downs from root to leaf, each taking O(1) time with array indexing, so total time is O(L), independent of N.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "search",
+        "complexity"
+      ],
+      "trail": 2,
+      "order": 11,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-12",
+      "slug": "trie-12-prefix-match-without-word-flag",
+      "title": "Prefix match without word flag",
+      "topic": "trie",
+      "subtopic": "search",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A Trie contains only the word 'keyboard'. An exact search query calls search('key'). Assuming the node for 'y' exists but has isEndOfWord = false, what does search('key') return?",
+      "examples": [
+        {
+          "input": "search(\"key\") when only \"keyboard\" inserted",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "true"
+        },
+        {
+          "id": "b",
+          "text": "false"
+        },
+        {
+          "id": "c",
+          "text": "null"
+        },
+        {
+          "id": "d",
+          "text": "Throws an exception"
+        }
+      ],
+      "hints": [
+        "Exact search requires both the path to exist and isEndOfWord to be true."
+      ],
+      "explanation": "Even though 'key' forms a valid path in the Trie, its terminal node does not mark the end of an inserted word, so search returns false.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "search",
+        "boolean"
+      ],
+      "trail": 2,
+      "order": 12,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-13",
+      "slug": "trie-13-character-array-index-offset",
+      "title": "Character array index offset",
+      "topic": "trie",
+      "subtopic": "insert",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "To map a lowercase letter ch ('a'..'z') to an array index 0..25, complete the expression: int idx = ch - _____ ;",
+      "examples": [
+        {
+          "input": "ch = 'a'",
+          "output": "'a'"
+        }
+      ],
+      "constraints": [
+        "Provide the character literal token including single quotes: 'a'."
+      ],
+      "starterCode": "int idx = ch - _____ ;",
+      "expectedAnswer": "'a'",
+      "options": [],
+      "hints": [
+        "Subtract the ASCII character literal for lowercase a."
+      ],
+      "explanation": "Subtracting the character literal 'a' normalizes 'a' to 0, 'b' to 1, ..., 'z' to 25.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "insert",
+        "code_blank"
+      ],
+      "trail": 2,
+      "order": 13,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trie-14",
+      "slug": "trie-14-null-pointer-during-insertion",
+      "title": "Null pointer during insertion",
+      "topic": "trie",
+      "subtopic": "insert",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "During word insertion, if curr.children[index] is null for the next character, what step must be taken?",
+      "examples": [
+        {
+          "input": "curr.children[idx] == null",
+          "output": "allocate new TrieNode"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "Abort insertion and return false"
+        },
+        {
+          "id": "b",
+          "text": "Instantiate a new TrieNode and assign it to curr.children[index]"
+        },
+        {
+          "id": "c",
+          "text": "Redirect curr to the root node"
+        },
+        {
+          "id": "d",
+          "text": "Throw an IllegalArgumentException"
+        }
+      ],
+      "hints": [
+        "The missing character path must be created."
+      ],
+      "explanation": "When no edge exists for the character, a new TrieNode is created and linked at that child slot so insertion can proceed down the new branch.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "insert",
+        "algorithm"
+      ],
+      "trail": 2,
+      "order": 14,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-15",
+      "slug": "trie-15-terminal-nodes-in-dictionary",
+      "title": "Terminal nodes in dictionary",
+      "topic": "trie",
+      "subtopic": "insert",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "The words ['apple', 'app', 'application', 'apt', 'apply'] are inserted into an empty Trie. How many distinct nodes in the Trie have isEndOfWord == true?",
+      "examples": [
+        {
+          "input": "words = [\"apple\", \"app\", \"application\", \"apt\", \"apply\"]",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "All 5 inserted words are distinct."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Each distinct inserted word terminates at a unique node."
+      ],
+      "explanation": "Since all 5 strings are distinct, each terminates at its own unique node where isEndOfWord is flagged true, yielding 5 terminal nodes.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "insert",
+        "isEndOfWord"
+      ],
+      "trail": 2,
+      "order": 15,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-16",
+      "slug": "trie-16-duplicate-word-insertion",
+      "title": "Duplicate word insertion",
+      "topic": "trie",
+      "subtopic": "insert",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A program inserts 'quest' into an empty Trie, and then inserts 'quest' a second time. How many new TrieNode objects are allocated during the second call?",
+      "examples": [
+        {
+          "input": "insert(\"quest\"); insert(\"quest\");",
+          "output": "0"
+        }
+      ],
+      "constraints": [
+        "Count only allocations made in the second call."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "0",
+      "options": [],
+      "hints": [
+        "All character nodes already exist from the first insertion."
+      ],
+      "explanation": "During the second insertion of 'quest', all child pointers along the path already exist. Only the boolean flag is updated, allocating 0 new nodes.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "insert",
+        "idempotence"
+      ],
+      "trail": 2,
+      "order": 16,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-17",
+      "slug": "trie-17-preserving-prefixes-on-deletion",
+      "title": "Preserving prefixes on deletion",
+      "topic": "trie",
+      "subtopic": "delete",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A Trie contains the two words 'app' and 'apple'. You delete the word 'app'. What is the correct operation on the Trie?",
+      "examples": [
+        {
+          "input": "delete(\"app\") when \"apple\" is also present",
+          "output": "set isEndOfWord = false on 'p'"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "Delete the second 'p' node and all its descendants"
+        },
+        {
+          "id": "b",
+          "text": "Remove the 'a' node from the root's children array"
+        },
+        {
+          "id": "c",
+          "text": "Set isEndOfWord = false on the second 'p' node without deleting any nodes"
+        },
+        {
+          "id": "d",
+          "text": "Set isEndOfWord = false on the 'e' node"
+        }
+      ],
+      "hints": [
+        "The second 'p' node is still required as part of 'apple'."
+      ],
+      "explanation": "Because 'app' is a prefix of 'apple', its terminal node has active children. Deleting it requires only unsetting `isEndOfWord = false`; no nodes can be removed.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "delete",
+        "prefix-preservation"
+      ],
+      "trail": 2,
+      "order": 17,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-18",
+      "slug": "trie-18-pruning-threshold-during-deletion",
+      "title": "Pruning threshold during deletion",
+      "topic": "trie",
+      "subtopic": "delete",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A Trie contains the words 'dog' and 'door'. You delete 'door'. Bottom-up pruning deletes childless non-terminal nodes. Which node is the highest (closest to the root) that gets pruned (set to null)?",
+      "examples": [
+        {
+          "input": "Trie with \"dog\", \"door\"; delete \"door\"",
+          "output": "second 'o' node"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "d",
+      "options": [
+        {
+          "id": "a",
+          "text": "The 'd' node"
+        },
+        {
+          "id": "b",
+          "text": "The first 'o' node"
+        },
+        {
+          "id": "c",
+          "text": "The 'r' node only"
+        },
+        {
+          "id": "d",
+          "text": "The second 'o' node"
+        }
+      ],
+      "hints": [
+        "'dog' and 'door' share prefix 'do'. At the first 'o', does it have other children?"
+      ],
+      "explanation": "The first 'o' has child 'g' (from 'dog') and child 'o' (from 'door'). When 'door' is deleted, 'r' is deleted, and the second 'o' becomes childless with no word end, so it is pruned. The first 'o' cannot be pruned because it has child 'g'.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "delete",
+        "pruning"
+      ],
+      "trail": 2,
+      "order": 18,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-19",
+      "slug": "trie-19-pruned-node-count-on-deletion",
+      "title": "Pruned node count on deletion",
+      "topic": "trie",
+      "subtopic": "delete",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Words ['car', 'care', 'careful', 'card'] are inserted into an empty Trie. We then delete 'careful' with bottom-up cleanup of childless non-word nodes. How many nodes are physically removed from the Trie?",
+      "examples": [
+        {
+          "input": "Insert [\"car\",\"care\",\"careful\",\"card\"], delete \"careful\"",
+          "output": "3"
+        }
+      ],
+      "constraints": [
+        "Count all pruned nodes as an integer."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "3",
+      "options": [],
+      "hints": [
+        "Trace from the end of 'careful' back towards 'care'."
+      ],
+      "explanation": "The suffix of 'careful' after 'care' consists of 'f' -> 'u' -> 'l'. None of these 3 nodes branch to any other word or terminate another word. When 'careful' is deleted, 'l', 'u', and 'f' are pruned. Node 'e' terminates 'care' and is preserved. Total pruned = 3.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "delete",
+        "pruning-count"
+      ],
+      "trail": 2,
+      "order": 19,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-20",
+      "slug": "trie-20-trie-vs-hash-set-tradeoff",
+      "title": "Trie vs hash set performance trade-off",
+      "topic": "trie",
+      "subtopic": "comparison",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Both a Trie and a HashSet<String> can search for a string of length L in O(L) time. For which functional requirement does a Trie provide native algorithmic support that a HashSet cannot efficiently fulfill?",
+      "examples": [
+        {
+          "input": "Prefix query on Trie vs HashSet",
+          "output": "Trie supports prefix queries natively"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "Prefix-based operations (like startsWith and common prefix search) and sorted traversal"
+        },
+        {
+          "id": "b",
+          "text": "Strictly lower memory per character than any hash table"
+        },
+        {
+          "id": "c",
+          "text": "Better CPU cache locality on deep pointer dereferencing"
+        },
+        {
+          "id": "d",
+          "text": "Supporting O(1) worst-case time independent of string length L"
+        }
+      ],
+      "hints": [
+        "Hash sets scatter keys across buckets; tries structure keys by prefixes."
+      ],
+      "explanation": "A Trie naturally organizes keys by common prefixes, making prefix searches, autocomplete, longest common prefixes, and lexicographical iteration trivial in O(L) time, whereas a hash set requires scanning all keys.",
+      "xpReward": 30,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "comparison",
+        "hash-table"
+      ],
+      "trail": 2,
+      "order": 20,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-21",
+      "slug": "trie-21-startswith-vs-search-condition",
+      "title": "startsWith vs search condition",
+      "topic": "trie",
+      "subtopic": "prefix-search",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "How does the return condition of startsWith(prefix) differ from search(word) upon reaching the end of the input string?",
+      "examples": [
+        {
+          "input": "startsWith(\"app\") on \"apple\"",
+          "output": "returns true without checking isEndOfWord"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "search does not inspect child pointers for null values"
+        },
+        {
+          "id": "b",
+          "text": "startsWith returns true once the prefix path exists, regardless of isEndOfWord"
+        },
+        {
+          "id": "c",
+          "text": "startsWith requires the final node to have at least one child"
+        },
+        {
+          "id": "d",
+          "text": "startsWith traverses backwards from the leaf to the root"
+        }
+      ],
+      "hints": [
+        "A prefix does not need to be a full word."
+      ],
+      "explanation": "startsWith only requires that the path of characters exists in the Trie; `isEndOfWord` can be true or false. In contrast, `search` strictly requires `isEndOfWord == true`.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "prefix-search",
+        "startsWith"
+      ],
+      "trail": 3,
+      "order": 21,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-22",
+      "slug": "trie-22-existing-prefix-query",
+      "title": "Existing prefix query",
+      "topic": "trie",
+      "subtopic": "prefix-search",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A Trie contains the words ['forest', 'formal', 'forge']. Does startsWith('for') evaluate to true or false?",
+      "examples": [
+        {
+          "input": "words = [\"forest\", \"formal\", \"forge\"], startsWith(\"for\")",
+          "output": "true"
+        }
+      ],
+      "constraints": [
+        "Submit 'true' or 'false'."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "true",
+      "options": [],
+      "hints": [
+        "All three words share the prefix 'for'."
+      ],
+      "explanation": "All three words start with 'f'-'o'-'r', so the path exists and startsWith('for') returns true.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "prefix-search",
+        "evaluation"
+      ],
+      "trail": 3,
+      "order": 22,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trie-23",
+      "slug": "trie-23-missing-prefix-query",
+      "title": "Missing prefix query",
+      "topic": "trie",
+      "subtopic": "prefix-search",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A Trie contains the words ['code', 'coder', 'codec']. Does startsWith('cat') evaluate to true or false?",
+      "examples": [
+        {
+          "input": "words = [\"code\", \"coder\", \"codec\"], startsWith(\"cat\")",
+          "output": "false"
+        }
+      ],
+      "constraints": [
+        "Submit 'true' or 'false'."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "false",
+      "options": [],
+      "hints": [
+        "Check if child 'a' exists under node 'c'."
+      ],
+      "explanation": "Under node 'c', the only child is 'o'. Child 'a' is null, so traversal terminates and returns false.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "prefix-search",
+        "evaluation"
+      ],
+      "trail": 3,
+      "order": 23,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trie-24",
+      "slug": "trie-24-prefix-search-time-complexity",
+      "title": "Prefix search time complexity",
+      "topic": "trie",
+      "subtopic": "prefix-search",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "What is the time complexity of startsWith(prefix) on a Trie, where P is the length of prefix?",
+      "examples": [
+        {
+          "input": "Prefix length P",
+          "output": "O(P)"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "O(N * P)"
+        },
+        {
+          "id": "b",
+          "text": "O(P * log N)"
+        },
+        {
+          "id": "c",
+          "text": "O(P)"
+        },
+        {
+          "id": "d",
+          "text": "O(2^P)"
+        }
+      ],
+      "hints": [
+        "At most P node transitions are followed."
+      ],
+      "explanation": "The algorithm traverses at most P edges corresponding to the characters of the prefix, taking O(1) time per edge for a total of O(P) time.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "prefix-search",
+        "complexity"
+      ],
+      "trail": 3,
+      "order": 24,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-25",
+      "slug": "trie-25-augmenting-node-with-prefix-count",
+      "title": "Augmenting node with prefix count",
+      "topic": "trie",
+      "subtopic": "prefix-count",
+      "difficulty": "Medium",
+      "questionType": "CODE_BLANK",
+      "description": "To answer countWordsStartingWith(prefix) in O(prefix.length) time, every TrieNode maintains a counter incremented each time an inserted word visits it. Complete the field declaration: int _____ = 0;",
+      "examples": [
+        {
+          "input": "int _____ = 0;",
+          "output": "prefixCount"
+        }
+      ],
+      "constraints": [
+        "Provide only the identifier in camelCase: prefixCount."
+      ],
+      "starterCode": "int _____ = 0;",
+      "expectedAnswer": "prefixCount",
+      "options": [],
+      "hints": [
+        "Name the variable using camelCase: prefixCount."
+      ],
+      "explanation": "`prefixCount` tracks how many inserted words share the prefix represented by this node, enabling O(prefix.length) prefix count queries.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "prefix-count",
+        "augmentation"
+      ],
+      "trail": 3,
+      "order": 25,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trie-26",
+      "slug": "trie-26-counting-words-by-prefix",
+      "title": "Counting words by prefix",
+      "topic": "trie",
+      "subtopic": "prefix-count",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "The words ['sea', 'seashell', 'season', 'seat', 'seal', 'shore'] are inserted into a Trie augmented with prefix counters. What is the value of prefixCount at the node for 'a' along the path 's' -> 'e' -> 'a'?",
+      "examples": [
+        {
+          "input": "Words: [\"sea\", \"seashell\", \"season\", \"seat\", \"seal\", \"shore\"], prefix \"sea\"",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Calculate the count of words passing through node 'a'."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Count which words begin with 'sea'."
+      ],
+      "explanation": "Words starting with 'sea' are 'sea', 'seashell', 'season', 'seat', and 'seal' (5 words). 'shore' does not pass through 'e'. Thus prefixCount at 'a' is 5.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "prefix-count",
+        "calculation"
+      ],
+      "trail": 3,
+      "order": 26,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-27",
+      "slug": "trie-27-longest-common-prefix-termination",
+      "title": "Longest common prefix termination condition",
+      "topic": "trie",
+      "subtopic": "longest-common-prefix",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "When using a Trie to find the Longest Common Prefix (LCP) of N non-empty strings by traversing downward from the root, at what point must traversal terminate?",
+      "examples": [
+        {
+          "input": "Node has 2 children or isEndOfWord is true",
+          "output": "stop traversal"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "When the current node has more than one child or has isEndOfWord == true"
+        },
+        {
+          "id": "b",
+          "text": "When the current node has exactly one child"
+        },
+        {
+          "id": "c",
+          "text": "When the depth reaches the number of words N"
+        },
+        {
+          "id": "d",
+          "text": "When a leaf node with 26 children is encountered"
+        }
+      ],
+      "hints": [
+        "If there are multiple children, the words branch. If isEndOfWord is true, a shortest word has ended."
+      ],
+      "explanation": "If a node has more than one child, words diverge into different characters. If `isEndOfWord == true`, one of the words has ended and the common prefix cannot extend further.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "longest-common-prefix",
+        "algorithm"
+      ],
+      "trail": 3,
+      "order": 27,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-28",
+      "slug": "trie-28-shared-prefix-character-count",
+      "title": "Shared prefix character count",
+      "topic": "trie",
+      "subtopic": "longest-common-prefix",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Given the words ['interspecies', 'interstellar', 'interstate', 'interview'], what is the length of their longest common prefix?",
+      "examples": [
+        {
+          "input": "[\"interspecies\", \"interstellar\", \"interstate\", \"interview\"]",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Return the integer length."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "Identify the shared prefix: 'inter'."
+      ],
+      "explanation": "All four words share the prefix 'i'-'n'-'t'-'e'-'r', which has 5 characters. After 'r', the characters diverge ('s', 's', 's', 'v').",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "longest-common-prefix",
+        "counting"
+      ],
+      "trail": 3,
+      "order": 28,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-29",
+      "slug": "trie-29-optimizing-top-k-autocomplete",
+      "title": "Optimizing top-k autocomplete",
+      "topic": "trie",
+      "subtopic": "autocomplete",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A search engine needs to return the top 3 highest-ranked word completions for any prefix in O(prefix.length) time without traversing the entire subtree during the query. How should the Trie nodes be designed?",
+      "examples": [
+        {
+          "input": "O(P) top-3 autocomplete query",
+          "output": "precomputed top-K list in each node"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "Perform a full breadth-first search across all descendants on each query"
+        },
+        {
+          "id": "b",
+          "text": "Maintain a precomputed list of top-K word suggestions directly inside each TrieNode"
+        },
+        {
+          "id": "c",
+          "text": "Compress all descendant nodes into a single array of size K"
+        },
+        {
+          "id": "d",
+          "text": "Use a separate red-black tree for every individual letter"
+        }
+      ],
+      "hints": [
+        "Store precomputed results on each node during insertion/indexing."
+      ],
+      "explanation": "By updating a fixed-size list of top-K word candidates stored inside each TrieNode during insertion, the autocomplete query simply walks to the prefix node and immediately reads its precomputed top-K list in O(1) extra time.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "autocomplete",
+        "design"
+      ],
+      "trail": 3,
+      "order": 29,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-30",
+      "slug": "trie-30-shortest-unique-prefix-lengths",
+      "title": "Shortest unique prefix lengths",
+      "topic": "trie",
+      "subtopic": "unique-prefix",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Words ['zebra', 'dog', 'duck', 'dove'] are inserted into a Trie with prefix counts to find the shortest unique prefix for each word. What are the lengths of these shortest unique prefixes, in order? Provide a JSON array of integers.",
+      "examples": [
+        {
+          "input": "[\"zebra\", \"dog\", \"duck\", \"dove\"]",
+          "output": "[1, 3, 2, 3]"
+        }
+      ],
+      "constraints": [
+        "Return a valid JSON array of integers."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "[1, 3, 2, 3]",
+      "options": [],
+      "hints": [
+        "Traverse each word until reaching a node with prefixCount == 1."
+      ],
+      "explanation": "'zebra': 'z' has count 1 -> length 1 ('z'). 'dog': 'd'(3), 'do'(2), 'dog'(1) -> length 3 ('dog'). 'duck': 'd'(3), 'du'(1) -> length 2 ('du'). 'dove': 'd'(3), 'do'(2), 'dov'(1) -> length 3 ('dov'). List of lengths is [1, 3, 2, 3].",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "unique-prefix",
+        "int-list"
+      ],
+      "trail": 3,
+      "order": 30,
+      "validator": "INT_LIST"
+    },
+    {
+      "id": "trie-31",
+      "slug": "trie-31-wildcard-dictionary-pattern-symbol",
+      "title": "Wildcard dictionary pattern symbol",
+      "topic": "trie",
+      "subtopic": "wildcard-search",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "In classic Trie dictionary problems like LeetCode 211 ('Design Add and Search Words Data Structure'), which character acts as a wildcard matching any single letter?",
+      "examples": [
+        {
+          "input": "Wildcard matching any single letter",
+          "output": "."
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "*"
+        },
+        {
+          "id": "b",
+          "text": "?"
+        },
+        {
+          "id": "c",
+          "text": "."
+        },
+        {
+          "id": "d",
+          "text": "%"
+        }
+      ],
+      "hints": [
+        "Standard regex and LeetCode convention uses dot."
+      ],
+      "explanation": "A dot ('.') represents a wildcard character that matches any single letter from 'a' to 'z'.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "wildcard-search",
+        "symbol"
+      ],
+      "trail": 4,
+      "order": 31,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-32",
+      "slug": "trie-32-handling-wildcard-dot-in-search",
+      "title": "Handling wildcard dot in trie search",
+      "topic": "trie",
+      "subtopic": "wildcard-search",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "When searching a word in a Trie and encountering wildcard '.' at position i, how must the search proceed?",
+      "examples": [
+        {
+          "input": "Encounter '.' at curr",
+          "output": "recursively search all non-null children"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "d",
+      "options": [
+        {
+          "id": "a",
+          "text": "Skip the '.' character and continue searching from curr for the same index"
+        },
+        {
+          "id": "b",
+          "text": "Jump directly to the root node and restart the search"
+        },
+        {
+          "id": "c",
+          "text": "Return true immediately without further checks"
+        },
+        {
+          "id": "d",
+          "text": "Iterate over all children of curr, recursively calling search on every non-null child for the next character"
+        }
+      ],
+      "hints": [
+        "Since '.' can match any character, every existing branch must be explored."
+      ],
+      "explanation": "Because '.' matches any character, the search branches across all non-null children of the current node, exploring each subtree recursively for the remainder of the pattern.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "wildcard-search",
+        "branching"
+      ],
+      "trail": 4,
+      "order": 32,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-33",
+      "slug": "trie-33-trie-prefix-pruning-in-grid-word-search",
+      "title": "Trie prefix pruning in grid word search",
+      "topic": "trie",
+      "subtopic": "word-search-ii",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "In Word Search II (searching dictionary words on a 2D character grid), why is a Trie combined with DFS dramatically faster than searching each word individually?",
+      "examples": [
+        {
+          "input": "Grid DFS with Trie",
+          "output": "early prefix pruning"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Trie enables early backtracking by pruning grid paths as soon as their prefix is absent"
+        },
+        {
+          "id": "b",
+          "text": "A Trie eliminates the need for backtracking on the grid entirely"
+        },
+        {
+          "id": "c",
+          "text": "A Trie converts the 2D grid into a 1D linked list"
+        },
+        {
+          "id": "d",
+          "text": "A Trie guarantees O(1) space complexity on the grid"
+        }
+      ],
+      "hints": [
+        "If 'z' has no words starting with 'zq', any grid path starting 'z'->'q' can be abandoned immediately."
+      ],
+      "explanation": "A Trie validates prefixes on the fly. As soon as the grid path forms a prefix not present in the Trie, DFS backtracks immediately, pruning thousands of redundant paths.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "word-search-ii",
+        "pruning"
+      ],
+      "trail": 4,
+      "order": 33,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-34",
+      "slug": "trie-34-in-place-grid-cell-marking",
+      "title": "In-place grid cell marking",
+      "topic": "trie",
+      "subtopic": "word-search-ii",
+      "difficulty": "Easy",
+      "questionType": "CODE_BLANK",
+      "description": "In 2D grid word search, to avoid allocating a boolean visited matrix, a cell is marked visited by temporarily replacing its character with a non-alphabet sentinel. Complete the line: board[r][c] = '_____' ;",
+      "examples": [
+        {
+          "input": "Mark cell (r, c) visited",
+          "output": "#"
+        }
+      ],
+      "constraints": [
+        "Provide only the single character symbol token: #."
+      ],
+      "starterCode": "board[r][c] = '_____' ;",
+      "expectedAnswer": "#",
+      "options": [],
+      "hints": [
+        "The hash/pound symbol '#' is standard."
+      ],
+      "explanation": "Overwriting `board[r][c] = '#'` marks the cell visited. Upon backtracking, `board[r][c] = originalChar` restores it, avoiding extra heap allocations.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "word-search-ii",
+        "backtracking"
+      ],
+      "trail": 4,
+      "order": 34,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trie-35",
+      "slug": "trie-35-wildcard-match-counting",
+      "title": "Wildcard match counting",
+      "topic": "trie",
+      "subtopic": "wildcard-search",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A Trie contains words ['pat', 'pot', 'pit', 'put', 'pet', 'part', 'plot', 'port']. How many words match the wildcard query 'p.t'?",
+      "examples": [
+        {
+          "input": "dict = [\"pat\", \"pot\", \"pit\", \"put\", \"pet\", \"part\", \"plot\", \"port\"], query = \"p.t\"",
+          "output": "5"
+        }
+      ],
+      "constraints": [
+        "Wildcard '.' matches exactly one character."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "5",
+      "options": [],
+      "hints": [
+        "The query has length 3, starts with 'p' and ends with 't'."
+      ],
+      "explanation": "'pat', 'pot', 'pit', 'put', and 'pet' all match 'p.t'. Words 'part', 'plot', and 'port' have length 4 and do not match. Count is 5.",
+      "xpReward": 20,
+      "isClassic": false,
+      "tags": [
+        "trie",
+        "wildcard-search",
+        "counting"
+      ],
+      "trail": 4,
+      "order": 35,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-36",
+      "slug": "trie-36-deduplicating-word-search-results",
+      "title": "Deduplicating word search results",
+      "topic": "trie",
+      "subtopic": "word-search-ii",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "In Word Search II, the same word can often be reached via multiple distinct paths on the grid. How can duplicate additions to the result list be prevented without using a HashSet?",
+      "examples": [
+        {
+          "input": "Word found at Trie terminal node",
+          "output": "set node.word = null"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "Restart the entire grid search from (0,0) every time a word is found"
+        },
+        {
+          "id": "b",
+          "text": "Clear the Trie children array after each match"
+        },
+        {
+          "id": "c",
+          "text": "Store the matched word at the terminal node and set node.word = null after finding it"
+        },
+        {
+          "id": "d",
+          "text": "Throw an exception to abort and restart DFS"
+        }
+      ],
+      "hints": [
+        "Once node.word is recorded, clear that reference so future paths find null."
+      ],
+      "explanation": "Storing the word string directly in the terminal node allows adding it to results in O(1). Setting `node.word = null` immediately after ensures any future grid paths reaching the same node will not re-add it.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "word-search-ii",
+        "deduplication"
+      ],
+      "trail": 4,
+      "order": 36,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-37",
+      "slug": "trie-37-grid-word-count-tracing",
+      "title": "Grid word count tracing",
+      "topic": "trie",
+      "subtopic": "word-search-ii",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "A 2x2 board has characters:\n[['c', 'a'],\n ['t', 's']]\nWords are formed by moving horizontally or vertically to adjacent unvisited cells (no diagonal moves, no cell reuse). How many of the following words can be formed: ['cast', 'acts', 'act', 'cas', 'star', 'cat']?",
+      "examples": [
+        {
+          "input": "board = [['c','a'],['t','s']], words = ['cast','acts','act','cas','star','cat']",
+          "output": "4"
+        }
+      ],
+      "constraints": [
+        "Horizontal and vertical moves only; no diagonals.",
+        "Submit an integer."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "4",
+      "options": [],
+      "hints": [
+        "'cat' requires a diagonal step from (0,1) 'a' to (1,0) 't', which is disallowed."
+      ],
+      "explanation": "'cast': (0,0)->(0,1)->(1,1)->(1,0) (valid). 'acts': (0,1)->(0,0)->(1,0)->(1,1) (valid). 'act': (0,1)->(0,0)->(1,0) (valid). 'cas': (0,0)->(0,1)->(1,1) (valid). 'star': 'r' does not exist on board. 'cat': 'a' is at (0,1) and 't' is at (1,0), which are diagonally adjacent, not horizontally/vertically adjacent. Total = 4.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "word-search-ii",
+        "tracing"
+      ],
+      "trail": 4,
+      "order": 37,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-38",
+      "slug": "trie-38-dynamic-leaf-pruning-in-grid-search",
+      "title": "Dynamic leaf pruning in grid search",
+      "topic": "trie",
+      "subtopic": "word-search-ii",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "In Word Search II, after a leaf word in the Trie is found, what pruning technique provides the greatest speedup for the remaining grid searches?",
+      "examples": [
+        {
+          "input": "Leaf word found in Trie",
+          "output": "prune node from parent"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "Invert all edges in the Trie"
+        },
+        {
+          "id": "b",
+          "text": "Prune that leaf node from its parent, cascading upward if the parent has no other children"
+        },
+        {
+          "id": "c",
+          "text": "Replace the entire Trie with a suffix array"
+        },
+        {
+          "id": "d",
+          "text": "Double the size of the children array"
+        }
+      ],
+      "hints": [
+        "If a node has no remaining words below it, remove it so subsequent DFS passes skip it."
+      ],
+      "explanation": "Once a leaf word is discovered, that branch cannot yield any more words. Pruning it (and any ancestors that become childless non-words) prevents future grid searches from even exploring that branch.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "word-search-ii",
+        "leaf-pruning"
+      ],
+      "trail": 4,
+      "order": 38,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-39",
+      "slug": "trie-39-trie-accelerated-word-break",
+      "title": "Trie-accelerated word break",
+      "topic": "trie",
+      "subtopic": "word-break",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "In Word Break (determining if string s can be segmented into dictionary words), how does storing the dictionary in a Trie accelerate the DP transition dp[i]?",
+      "examples": [
+        {
+          "input": "DP with Trie vs HashSet",
+          "output": "early termination on missing prefix"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "By matching characters against the Trie from index j forward, we can break early as soon as a prefix is invalid"
+        },
+        {
+          "id": "b",
+          "text": "It reduces the number of DP states from O(N) to O(1)"
+        },
+        {
+          "id": "c",
+          "text": "It eliminates the need for any boolean DP memoization array"
+        },
+        {
+          "id": "d",
+          "text": "It sorts the dictionary words in topological order"
+        }
+      ],
+      "hints": [
+        "Instead of checking substring existence in a hash set for every length, follow the Trie branch until it fails."
+      ],
+      "explanation": "Instead of extracting every substring s[j..i] and hashing it, the algorithm advances through the Trie from index j. If a character transition is null, no longer dictionary words can match, allowing the inner loop to terminate immediately.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "word-break",
+        "dynamic-programming"
+      ],
+      "trail": 4,
+      "order": 39,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-40",
+      "slug": "trie-40-word-squares-prefix-requirement",
+      "title": "Word squares prefix requirement",
+      "topic": "trie",
+      "subtopic": "word-squares",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In a 4x4 Word Square, the k-th row and k-th column must read identically. If Row 0 is 'wall' and Row 1 is 'area', what two-letter prefix must Row 2 start with?",
+      "examples": [
+        {
+          "input": "Row 0 = \"wall\", Row 1 = \"area\"",
+          "output": "le"
+        }
+      ],
+      "constraints": [
+        "Provide the lowercase two-letter prefix token."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "le",
+      "options": [],
+      "hints": [
+        "Row 2 must match column 2 for the first two characters."
+      ],
+      "explanation": "Column 2 is formed by character 2 of Row 0 ('l') and character 2 of Row 1 ('e'). Because Row 2 must match Column 2, Row 2 must begin with prefix 'le'.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "word-squares",
+        "prefix-constraint"
+      ],
+      "trail": 4,
+      "order": 40,
+      "validator": "TOKEN"
+    },
+    {
+      "id": "trie-41",
+      "slug": "trie-41-bitwise-trie-maximum-branching-factor",
+      "title": "Bitwise trie maximum branching factor",
+      "topic": "trie",
+      "subtopic": "bitwise-trie",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In a Bitwise Trie (0-1 Trie) used for bit manipulation problems like Maximum XOR of Two Numbers, what is the maximum number of children any node can have?",
+      "examples": [
+        {
+          "input": "Binary bit representation",
+          "output": "2"
+        }
+      ],
+      "constraints": [
+        "Branches represent binary digits 0 and 1."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "2",
+      "options": [],
+      "hints": [
+        "Binary bits can only be 0 or 1."
+      ],
+      "explanation": "Each bit is either 0 or 1, so every node has at most two child pointers: `children[0]` and `children[1]`.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "bitwise-trie",
+        "branching"
+      ],
+      "trail": 5,
+      "order": 41,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-42",
+      "slug": "trie-42-bitwise-trie-starting-bit-index",
+      "title": "Bitwise trie starting bit index",
+      "topic": "trie",
+      "subtopic": "bitwise-trie",
+      "difficulty": "Easy",
+      "questionType": "LOGIC_ANSWER",
+      "description": "When inserting standard 32-bit signed non-negative integers into a Bitwise Trie, at which bit index (MSB) does insertion begin?",
+      "examples": [
+        {
+          "input": "32-bit integer MSB index",
+          "output": "31"
+        }
+      ],
+      "constraints": [
+        "Use 0-based indexing up to 31."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "31",
+      "options": [],
+      "hints": [
+        "32-bit integers range from bit 0 (LSB) to bit 31 (MSB)."
+      ],
+      "explanation": "We insert from the most significant bit (bit 31) down to the least significant bit (bit 0) to enable greedy decisions on higher-order bits.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "bitwise-trie",
+        "msb"
+      ],
+      "trail": 5,
+      "order": 42,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-43",
+      "slug": "trie-43-greedy-branch-selection-for-maximum-xor",
+      "title": "Greedy branch selection for maximum XOR",
+      "topic": "trie",
+      "subtopic": "bitwise-trie",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "To find a number in a Bitwise Trie that maximizes the XOR sum with integer num, when inspecting bit b of num (where bit is 0 or 1), which child branch should be greedily selected if it exists?",
+      "examples": [
+        {
+          "input": "Bit is 1, opposite is 0",
+          "output": "1 - bit"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "d",
+      "options": [
+        {
+          "id": "a",
+          "text": "Always bit 0"
+        },
+        {
+          "id": "b",
+          "text": "Always bit 1"
+        },
+        {
+          "id": "c",
+          "text": "bit (the identical bit)"
+        },
+        {
+          "id": "d",
+          "text": "1 - bit (the opposite bit)"
+        }
+      ],
+      "hints": [
+        "XOR yields 1 when the bits differ."
+      ],
+      "explanation": "Because b XOR (1 - b) = 1, taking the opposite bit branch whenever it exists maximizes the resulting XOR sum at that bit position.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "bitwise-trie",
+        "greedy"
+      ],
+      "trail": 5,
+      "order": 43,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-44",
+      "slug": "trie-44-suffix-trie-construction-elements",
+      "title": "Suffix trie construction elements",
+      "topic": "trie",
+      "subtopic": "suffix-trie",
+      "difficulty": "Easy",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "What collection of strings is inserted into a standard Suffix Trie for a string S of length N?",
+      "examples": [
+        {
+          "input": "String S of length N",
+          "output": "All N suffixes"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "All N prefixes of S"
+        },
+        {
+          "id": "b",
+          "text": "All N suffixes of S"
+        },
+        {
+          "id": "c",
+          "text": "Only single-character substrings of S"
+        },
+        {
+          "id": "d",
+          "text": "Only the reversed string of S"
+        }
+      ],
+      "hints": [
+        "It is named for the suffixes it indexes."
+      ],
+      "explanation": "A Suffix Trie is formed by inserting all N suffixes of string S, allowing any substring of S to be found as a prefix of some suffix.",
+      "xpReward": 10,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "suffix-trie",
+        "definition"
+      ],
+      "trail": 5,
+      "order": 44,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-45",
+      "slug": "trie-45-maximum-xor-of-two-numbers-in-array",
+      "title": "Maximum XOR of two numbers in array",
+      "topic": "trie",
+      "subtopic": "bitwise-trie",
+      "difficulty": "Medium",
+      "questionType": "LOGIC_ANSWER",
+      "description": "Given the array [3, 10, 5, 25, 2, 8], what is the maximum XOR value obtainable from any pair of numbers in the array?",
+      "examples": [
+        {
+          "input": "[3, 10, 5, 25, 2, 8]",
+          "output": "28"
+        }
+      ],
+      "constraints": [
+        "Find maximum a ^ b for a, b in the array.",
+        "Submit an integer."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "28",
+      "options": [],
+      "hints": [
+        "5 in binary is 00101, 25 is 11001."
+      ],
+      "explanation": "5 ^ 25 = 00101₂ ^ 11001₂ = 11100₂ = 28. Checking all pairs reveals 28 is the maximum.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "bitwise-trie",
+        "maximum-xor"
+      ],
+      "trail": 5,
+      "order": 45,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-46",
+      "slug": "trie-46-naive-suffix-trie-worst-case-space",
+      "title": "Naive suffix trie worst-case space",
+      "topic": "trie",
+      "subtopic": "suffix-trie",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "For a string of length N consisting of repeated characters (e.g. 'aaaa...a'), what is the worst-case space complexity of a naive uncompressed Suffix Trie?",
+      "examples": [
+        {
+          "input": "String length N",
+          "output": "O(N^2)"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "c",
+      "options": [
+        {
+          "id": "a",
+          "text": "O(N)"
+        },
+        {
+          "id": "b",
+          "text": "O(log N)"
+        },
+        {
+          "id": "c",
+          "text": "O(N^2)"
+        },
+        {
+          "id": "d",
+          "text": "O(N^3)"
+        }
+      ],
+      "hints": [
+        "Suffixes have lengths N, N-1, ..., 1. What is their total length?"
+      ],
+      "explanation": "The sum of suffix lengths is N + (N-1) + ... + 1 = N*(N+1)/2, which requires O(N^2) space in a naive uncompressed Suffix Trie. (Ukkonen's Suffix Tree compresses this to O(N)).",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "suffix-trie",
+        "complexity"
+      ],
+      "trail": 5,
+      "order": 46,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-47",
+      "slug": "trie-47-aho-corasick-failure-link-target",
+      "title": "Aho-Corasick failure link target",
+      "topic": "trie",
+      "subtopic": "aho-corasick",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "In the Aho-Corasick multi-pattern string matching automaton, where does the failure link (suffix link) of a node u representing prefix string P point?",
+      "examples": [
+        {
+          "input": "Node representing string P",
+          "output": "longest proper suffix of P in Trie"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "d",
+      "options": [
+        {
+          "id": "a",
+          "text": "The root node always"
+        },
+        {
+          "id": "b",
+          "text": "The node representing the longest proper prefix of P"
+        },
+        {
+          "id": "c",
+          "text": "The parent node of u"
+        },
+        {
+          "id": "d",
+          "text": "The node representing the longest proper suffix of P that exists in the Trie"
+        }
+      ],
+      "hints": [
+        "Analogous to the failure function in KMP, but generalized across a Trie."
+      ],
+      "explanation": "Like KMP's failure table, the failure link in Aho-Corasick points to the node corresponding to the longest proper suffix of the string matched so far that is present in the Trie.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "aho-corasick",
+        "failure-link"
+      ],
+      "trail": 5,
+      "order": 47,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-48",
+      "slug": "trie-48-aho-corasick-total-search-time",
+      "title": "Aho-Corasick total search time",
+      "topic": "trie",
+      "subtopic": "aho-corasick",
+      "difficulty": "Medium",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "Given a text of length T and a set of dictionary patterns of total length M, what is the total time complexity to find all occurrences of all patterns using the Aho-Corasick algorithm (where Z is total matches found)?",
+      "examples": [
+        {
+          "input": "Text length T, pattern total length M, matches Z",
+          "output": "O(T + M + Z)"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "a",
+      "options": [
+        {
+          "id": "a",
+          "text": "O(T + M + Z)"
+        },
+        {
+          "id": "b",
+          "text": "O(T * M)"
+        },
+        {
+          "id": "c",
+          "text": "O(T * log M)"
+        },
+        {
+          "id": "d",
+          "text": "O(M^2 + T^2)"
+        }
+      ],
+      "hints": [
+        "Building the automaton takes linear time in patterns, searching takes linear time in text."
+      ],
+      "explanation": "Preprocessing and building failure links takes O(M) time, and scanning the text takes O(T + Z) time where Z is the number of reported occurrences, yielding O(T + M + Z) total time.",
+      "xpReward": 20,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "aho-corasick",
+        "complexity"
+      ],
+      "trail": 5,
+      "order": 48,
+      "validator": "OPTION"
+    },
+    {
+      "id": "trie-49",
+      "slug": "trie-49-persistent-trie-path-copying-node-count",
+      "title": "Persistent trie path-copying node count",
+      "topic": "trie",
+      "subtopic": "persistent-trie",
+      "difficulty": "Hard",
+      "questionType": "LOGIC_ANSWER",
+      "description": "In a fully Persistent Trie using path copying, inserting a new word of length L = 7 creates a new version while sharing unaffected subtrees. How many new nodes are allocated (including the new root version)?",
+      "examples": [
+        {
+          "input": "Path copying insertion with length L = 7",
+          "output": "8"
+        }
+      ],
+      "constraints": [
+        "Include the newly created root node in the count."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "8",
+      "options": [],
+      "hints": [
+        "Path copying clones the root plus one node per character in the path."
+      ],
+      "explanation": "Only nodes on the path from the root to the new word's leaf are duplicated. For a word of length L = 7, exactly 1 root node + 7 character nodes = 8 new nodes are created.",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "persistent-trie",
+        "path-copying"
+      ],
+      "trail": 5,
+      "order": 49,
+      "validator": "INTEGER"
+    },
+    {
+      "id": "trie-50",
+      "slug": "trie-50-double-array-trie-primary-arrays",
+      "title": "Double-array trie primary arrays",
+      "topic": "trie",
+      "subtopic": "double-array-trie",
+      "difficulty": "Hard",
+      "questionType": "MULTIPLE_CHOICE",
+      "description": "A Double-Array Trie (DAT) compresses trie transitions into two parallel 1D integer arrays, enabling O(1) state transitions with minimal memory overhead. What are the standard names of these two arrays?",
+      "examples": [
+        {
+          "input": "Double-Array Trie architecture",
+          "output": "BASE and CHECK"
+        }
+      ],
+      "constraints": [
+        "Select the single correct option ID."
+      ],
+      "starterCode": "",
+      "expectedAnswer": "b",
+      "options": [
+        {
+          "id": "a",
+          "text": "LEFT and RIGHT"
+        },
+        {
+          "id": "b",
+          "text": "BASE and CHECK"
+        },
+        {
+          "id": "c",
+          "text": "PREFIX and SUFFIX"
+        },
+        {
+          "id": "d",
+          "text": "HEAD and TAIL"
+        }
+      ],
+      "hints": [
+        "BASE holds offset values; CHECK validates the origin state."
+      ],
+      "explanation": "In Aoe's Double-Array Trie, BASE[s] provides the base offset for state s, and CHECK[t] verifies that t was reached from s (i.e. CHECK[BASE[s] + c] == s).",
+      "xpReward": 30,
+      "isClassic": true,
+      "tags": [
+        "trie",
+        "double-array-trie",
+        "data-structures"
+      ],
+      "trail": 5,
+      "order": 50,
+      "validator": "OPTION"
+    }
+  ]
+}
